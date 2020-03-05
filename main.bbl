@@ -1,0 +1,19 @@
+\begin{thebibliography}{3}
+\newcommand{\enquote}[1]{``#1''}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[\protect\citeauthoryear{Barberis}{Barberis}{2013}]{Barberis2013}
+\textsc{Barberis, N.~C.} (2013): \enquote{Thirty Years of Prospect Theory in
+  Economics: A Review and Assessment,} \emph{Journal of Economic Perspectives},
+  27, 173--96.
+
+\bibitem[\protect\citeauthoryear{Peters}{Peters}{2019}]{Peters2019b}
+\textsc{Peters, O.} (2019): \enquote{The Ergodicity Problem in Economics,}
+  \emph{Nature Physics}, 15, 1216--1221.
+
+\bibitem[\protect\citeauthoryear{Tversky and Kahneman}{Tversky and
+  Kahneman}{1992}]{TverskyKahneman1992}
+\textsc{Tversky, A. and D.~Kahneman} (1992): \enquote{{A}dvances in {P}rospect
+  {T}heory: {C}umulative {R}epresentation of {U}ncertainty,} 5, 297--323.
+
+\end{thebibliography}

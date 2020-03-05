@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: ecta.bst
+Database file #1: ./../LML_bibliography/bibliography.bib
+Warning--empty journal in TverskyKahneman1992
+You've used 3 entries,
+            2849 wiz_defined-function locations,
+            619 strings with 5070 characters,
+and the built_in function-call counts, 1705 in all, are:
+= -- 151
+> -- 47
+< -- 6
++ -- 17
+- -- 12
+* -- 138
+:= -- 266
+add.period$ -- 6
+call.type$ -- 3
+change.case$ -- 16
+chr.to.int$ -- 3
+cite$ -- 4
+duplicate$ -- 121
+empty$ -- 137
+format.name$ -- 24
+if$ -- 336
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 22
+newline$ -- 14
+num.names$ -- 15
+pop$ -- 34
+preamble$ -- 1
+purify$ -- 16
+quote$ -- 0
+skip$ -- 49
+stack$ -- 0
+substring$ -- 116
+swap$ -- 58
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 36
+warning$ -- 1
+while$ -- 15
+width$ -- 0
+write$ -- 39
+(There was 1 warning)
