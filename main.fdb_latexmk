@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1583396477 "main.aux" "main.bbl" "main" 1583402225
+["bibtex main"] 1583486325 "main.aux" "main.bbl" "main" 1583486377
   "./../LML_bibliography/bibliography.bib" 1582376256 262320 8073884d55e20be39e21ee13f5b5d535 ""
   "/usr/local/texlive/2016/texmf-dist/bibtex/bst/economic/ecta.bst" 1389482635 29983 0ef0a2bd678e76d0ae833edd63f5ad06 ""
-  "main.aux" 1583402225 8452 d2f67ba68eb9eb63f969a808c9e074d0 ""
+  "main.aux" 1583486327 9963 b5071b765cf292bea5c12d2c69e4c904 ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1583402223 "main.tex" "main.pdf" "main" 1583402225
+["pdflatex"] 1583486326 "main.tex" "main.pdf" "main" 1583486377
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -254,15 +254,16 @@
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "figs/Gauss_scale_location_both_KT.pdf" 1583329505 21979 c570b6d9b049774222e1bb69158de2ce ""
   "figs/Student-t.pdf" 1582705921 14528 dd692ef3aee60fe4d43be47746717796 ""
+  "figs/TK1992.PNG" 1583343310 120635 98d47abdf904426df5ea612b7e38355a ""
   "figs/decision_map.pdf" 1582705921 15428 48cc42ece076e709363833f4152a366e ""
   "figs/decision_weights.pdf" 1582705921 14744 ad687bf075e672618a9ab34fc8dee595 ""
   "figs/probability_dists.pdf" 1583316001 15665 2b85ab559adc28122cb8345ab03e9693 ""
-  "main.aux" 1583402225 8452 d2f67ba68eb9eb63f969a808c9e074d0 ""
-  "main.bbl" 1583396478 848 d9a51818226b681bd157503364b83d1b "bibtex main"
-  "main.out" 1583402225 466 4c7ba1b2f229e178f94be131a8d0f23a ""
-  "main.tex" 1583402202 33302 d8c98ccf16b32a64a9d3c20bd1433bb5 ""
+  "main.aux" 1583486327 9963 b5071b765cf292bea5c12d2c69e4c904 ""
+  "main.bbl" 1583486326 848 d9a51818226b681bd157503364b83d1b "bibtex main"
+  "main.out" 1583486327 516 a350185968630881f9a9ff44a9494a62 ""
+  "main.tex" 1583486316 36027 caaa65ca428df1a788f9ad2dd866ea8d ""
   (generated)
+  "main.aux"
   "main.pdf"
   "main.log"
   "main.out"
-  "main.aux"
