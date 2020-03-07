@@ -238,10 +238,10 @@ urlcolor={blue!50!black}}
 
 \begin{abstract}
 \noindent 
-Behavioral economics collects observations of human economic behavior and provides labels for those observations. 
-Probability weighting is one such label. It expresses a mismatch, in decision problems, between probabilities used in a formal model of a decision problem (\ie model parameters) and probabilities inferred from real people's behavior faced with the modelled decision problem (the same parameters estimated empirically). The inferred probabilities are called ``decision weights.'' 
-It is considered a robust observation that decision weights are higher than probabilities for extreme events, and (necessarily, because of normalization) lower than probabilities for common events.
-The observed behavior thus amounts to the refusal by real decision-makers totally to rely on a formal model, and instead to exercise extra caution. In this paper we model well-specified reasons for such caution and find the resulting probability weighting, as a benchmark for reasonable behavior. We find close agreement with empirical studies.
+Behavioural economics collects observations of human economic behaviour and provides labels for those observations. 
+Probability weighting is one such label. It expresses a mismatch, in decision problems, between probabilities used in a formal model of a decision problem (\ie model parameters) and probabilities inferred from real people's behaviour faced with the modelled decision problem (the same parameters estimated empirically). The inferred probabilities are called ``decision weights.'' 
+It is considered a robust observation that decision weights are higher than probabilities for extreme events, and (necessarily, because of normalisation) lower than probabilities for common events.
+The observed behaviour thus amounts to the refusal by real decision-makers totally to rely on a formal model, and instead to exercise extra caution. In this paper we model well-specified reasons for such caution and find the resulting probability weighting, as a benchmark for reasonable behaviour. We find close agreement with empirical studies.
 \\
 \\
 
@@ -260,7 +260,7 @@ The observed behavior thus amounts to the refusal by real decision-makers totall
 %\nopagebreak
 
 \section{Nomenclature and key observation}
-Probability weighting originates in prospect theory  \citep{Barberis2013}. It is one way to conceptualize a pattern in human behavior of caution with respect to formal models. This is best explained with an example:  
+Probability weighting originates in prospect theory  \citep{Barberis2013}. It is one way to conceptualise a pattern in human behaviour of caution with respect to formal models. This is best explained with an example:  
 \bi
 \item 
 a {\it disinterested observer} (DO), such as an experimenter, tells
@@ -274,10 +274,10 @@ Specifically, it is consistently observed that DMs act as though extreme events 
 \item
 By ``{\it probabilities},'' expressed as probability density functions (PDFs) and denoted $p(x)$, we will mean the numbers specified by a DO.
 \item
-By ``{\it decision weights},'' also expressed as PDFs and denoted $w(x)$, we will mean the numbers that best describe the behaviour of a DM.\footnote{In the literature, decision weights are not always normalised, but for simplicity we will work with normalised decision weights. Mathematically speaking, they are therefore proper probabilities even though we don't call them that. Our results are unaffected because normalizing just means dividing by a constant (the sum or integral of the non-normalised decision weights).}
+By ``{\it decision weights},'' also expressed as PDFs and denoted $w(x)$, we will mean the numbers that best describe the behaviour of a DM.\footnote{In the literature, decision weights are not always normalised, but for simplicity we will work with normalised decision weights. Mathematically speaking, they are therefore proper probabilities even though we don't call them that. Our results are unaffected because normalising just means dividing by a constant (the sum or integral of the non-normalised decision weights).}
 \ei
 
-This key observation is often summarized visually with a comparison between 
+This key observation is often summarised visually with a comparison between 
 \bi
 \item
 cumulative probability density functions (CDFs), denoted 
@@ -291,18 +291,18 @@ decision weight CDFs, denoted
 F_w(x)=\int_{-\infty}^x p(s) ds.
 \ee
 \ei
-In \fref{TK1992} we reproduce the first such visual summary from \citep{TverskyKahneman1992}
+In \fref{TK1992} we reproduce the first such visual summary from \citet{TverskyKahneman1992}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.7\textwidth]{./figs/TK1992.PNG}
-\caption{Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \cite{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the x axis (the probability used by a DM) and look up the corresponding value on the y axis (the decision weight). For small (cumulative) probabilities (left) the decision weight exceeds the probability, and for large probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
+\caption{Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \citet{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the x axis (the probability used by a DM) and look up the corresponding value on the y axis (the decision weight). For small (cumulative) probabilities (left) the decision weight exceeds the probability, and for large probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
 \flabel{TK1992}
 \end{figure}
 
 As a final piece of nomenclature, we will use the terms {\it location} and {\it scale} when discussing probability distributions. Consider a standard normal distribution $\ND(0,1)$ -- here, the parameters indicate location 0 and squared scale 1 (for a Gaussian that's the mean and variance). In general, the identically-shaped distribution of location $\mu$ and scale $\sigma$ is obtained from the location-0, scale-1 distribution by transforming the argument $x$ according to 
 \be
-y=\frac{x-\overbrace{\mu}^{\text{location}}}{\underbrace{\sigma}_{\text{scale}}}
+y=\frac{x-\overbrace{\mu}^{\text{location}}}{\underbrace{\sigma}_{\text{scale}}}.
 \ee
 The PDF $p(y)$ has location $\mu$ and scale $\sigma$.
 
@@ -317,7 +317,7 @@ We will show below that these observations are predicted by considerations of un
 
 \section{Consistent probability weighting as a difference between models}
 
-Behavioral economics interprets \fref{TK1992} as evidence for  a perception bias in the DM. We will keep a neutral stance. We don't consider the DO to know ``the truth'' -- he has a model of the world. Nor do we consider the DM to know ``the truth'' -- he has another model of the world. \Fref{TK1992} shows that the two models differ. Below we will go through a few generic reasons why the models may differ, and we will find that the inverse-S curve is a robust prediction in ergodicity economics -- when we emphasize that DMs have to operate along time lines.
+Behavioural economics interprets \fref{TK1992} as evidence for  a perception bias in the DM. We will keep a neutral stance. We don't consider the DO to know ``the truth'' -- he has a model of the world. Nor do we consider the DM to know ``the truth'' -- he has another model of the world. \Fref{TK1992} shows that the two models differ. Below we will go through a few generic reasons why the models may differ, and we will find that the inverse-S curve is a robust prediction in ergodicity economics -- when we emphasise that DMs have to operate along time lines.
 
 
 \subsection{Generic case: the Gaussian example}
@@ -361,7 +361,7 @@ Let's assume that a DO models an observable $x$ -- which will often be a future 
 %
 %Both DO models give $g_p\sim\ND(\mu,\sigma_1^2)$, whereas the DM will choose the model $g_w \sim \ND(\mu,\sigma_1^2+\sigma_2^2)$.
 
-Generically, the effect of the DM using a greater scale in his model is higher decision weights for low-probability events, and (because of normalization), lower decision weights for high-probability events.
+Generically, the effect of the DM using a greater scale in his model is higher decision weights for low-probability events, and (because of normalisation), lower decision weights for high-probability events.
 
 %We can choose to express the DM's behaviour in terms of a mapping between the decision weights used by the DM, $w$ (red in \fref{probability_dists}), and the probabilities estimated by the DO, $p$ (blue in \fref{probability_dists}).
 
@@ -408,21 +408,18 @@ This mechanism does not, of course, rely on the Gaussian assumption: the inverse
 
 We have put forward the possibility that probability weighting is not cognitive bias but a complicated way to say DMs tend to assume a greater range of plausible outcomes than DOs. For this to be a likely explanation of the phenomenon, two conditions must be satisfied. First, there must be a reason for frequent disagreement about probabilities used in a model; second, there must be a reason for such disagreement to be consistent: there must be a relevant systematic difference between the DO and the DM. 
 
-The first condition is satisfied because the word ``probability'' is commonly interpreted in different ways. Even once one has settled on a definition, numerical values for probabilities are still difficult to estimate from real-world observations, \sref{tricky}.
+The first condition is satisfied because the word ``probability'' is commonly interpreted in different ways. Even once one has settled on a definition, numerical values for probabilities are still difficult to estimate from real-world observations (see \sref{tricky}).
 
-The second condition is satisfied as follows. A DO has to build a formal model, and will include a number of sources of uncertainty in it, but often not all sources. A DM just has to make decisions in the real world, and rules of thumb like the precautionary principle (better err on the side of caution) will often lead to extra uncertainty. For example, in an experiment, the DO may know the true probabilities of some gamble and build a forma model accordingly; the DM may in addition have doubts about the DO's sincerity, or about his understanding of the rules of the game. We will return to this in \sref{condition2}.
+The second condition is satisfied as follows. A DO has to build a formal model, and will include a number of sources of uncertainty in it, but often not all sources. A DM just has to make decisions in the real world, and rules of thumb like the precautionary principle (better err on the side of caution) will often lead to extra uncertainty. For example, in an experiment, the DO may know the true probabilities of some gamble and build a formal model accordingly; the DM may in addition have doubts about the DO's sincerity, or about his understanding of the rules of the game. We will return to this in \sref{condition2}.
 
 \subsection{Probabilities are tricky\seclabel{tricky}}
 \subhead{Lack of conceptual clarity}
-
-
 %systematically different incentives from a real-world DM. The DO tends to have an incentive to estimate, or indeed state, probabilities as their most likely value or ``true'' value (if the DO can control the probabilities, \eg in an experiment); the DM simply strives to behave optimally under uncertainty, and that uncertainty often includes uncertainty about the probabilities or model parameters.
-
 It's not easy to unpack a simple probability statement like ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so rain happens in 70\% of what? The technical answer to this question is usually: rain happens in 70\% of the members of an ensemble of computer-simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of possible futures.'' 
 
 How exactly such a statement is linked to physical reality is not completely clear. Sometimes ensembles are real, for instance, when we say the probability of having a car accident is 1\% per 10,000km driven -- that's a summary of statistics collected over a large ensemble of cars. In this case, it's a real ensemble that existed in the past, not an imagined one in the future. 
 
-In some situations, the statement 70\% chance of rain tomorrow refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare recent measurements (of wind and pressure today, say) to measurements further in the past - weeks, months, years earlier, that were similar and where one had reason to believe that what had happened 1 day later would be similar to what will happen tomorrow.
+In some situations, the statement 70\% chance of rain tomorrow refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare recent measurements (of wind and pressure today, say) to measurements further in the past -- weeks, months, years earlier, that were similar and where one had reason to believe that what had happened 1 day later would be similar to what will happen tomorrow.
 
 No matter how ``probability'' relates to a frequentist physical statement (whether with respect to an ensemble of simultaneous possibilities or to a time series), it also corresponds to a mental state of believing something with a degree of conviction: ``I'm 90\% sure I left my wallet in that taxi.''
 
@@ -430,7 +427,8 @@ Many long books have been written about the meaning of probability; for our purp
 
 \subhead{Estimation errors for probabilities}
 Let's imagine the DO and DM have agreed explicitly on an interpretation of the word ``probability.'' Say they agree that they mean the relative frequency in a long time series. Real time series are, of course, of finite length. In order to estimate the relative frequency of some event in a time series, we basically count -- out of $T$ time intervals, the event $i$ occurred in $n_i$ of them, so our best estimate for the probability is $n_i/T$. In the simplest case (and we rarely consider anything more complicated), we model the arrival of events as a Poisson process, where the standard error in the count of an event famously goes as $\sqrt{n_i}$. The standard error in the probability of an event is therefore $\frac{\sqrt{n_i}}{T}$, and the relative error is $\frac{1}{\sqrt{n_i}}$. Low probabilities therefore come with larger relative errors, see \tref{errors}. We note that behaviourally, it will make little difference whether a DM assigns a 0.49 probability to an event or a 0.51 probability. It will make a large difference, however, whether a DM assigns a 0 probability or a 0.0002 probability.
-The most important message from this example computation is that errors in probability estimates behave differently for small probabilities than for large probabilities: absolute errors are smaller for small probabilities, and relative errors are larger for small probabilities.
+
+The most important message from this example is that errors in probability estimates behave differently for small probabilities than for large probabilities: absolute errors are smaller for small probabilities, and relative errors are larger for small probabilities.
 
 \begin{table}[!htb]
 \ra{1.25}
