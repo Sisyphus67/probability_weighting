@@ -22,8 +22,8 @@ if SCfigure:
 
 sigma=.2
 sigma1=0.13
-mu=.1
-dt=.1
+mu=0
+dt=.2
 
 def re(p):
     ss=sigma*sigma
@@ -83,7 +83,7 @@ prosp=re(p)
 plt.plot(lnr,prob,'b', label=r'PDF $p$ modeled by DO')
 plt.plot(lnr,reweighted,'r', label=r'PDF $w$ modeled by DM')
 plt.ylabel(r'PDF $p$')
-plt.xlabel(r'log return')
+plt.xlabel(r'x')
 plt.legend(loc='upper left',fontsize='x-small')
 
 plt.savefig("./../probability_dists.pdf", bbox_inches='tight')

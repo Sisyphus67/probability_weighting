@@ -1,48 +1,38 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is 8-bit Big BibTeX version 0.99d
+Implementation:  Microsoft(R) C/C++ for Win32
+Release version: 3.71 (04 mar 2019)
+
+The 8-bit codepage and sorting file: 88591lat.csf
 The top-level auxiliary file: main.aux
-The style file: ecta.bst
-Database file #1: ./../LML_bibliography/bibliography.bib
-Warning--empty journal in TverskyKahneman1992
-You've used 3 entries,
-            2849 wiz_defined-function locations,
-            619 strings with 5070 characters,
-and the built_in function-call counts, 1705 in all, are:
-= -- 151
-> -- 47
-< -- 6
-+ -- 17
-- -- 12
-* -- 138
-:= -- 266
-add.period$ -- 6
-call.type$ -- 3
-change.case$ -- 16
-chr.to.int$ -- 3
-cite$ -- 4
-duplicate$ -- 121
-empty$ -- 137
-format.name$ -- 24
-if$ -- 336
-int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 22
-newline$ -- 14
-num.names$ -- 15
-pop$ -- 34
-preamble$ -- 1
-purify$ -- 16
-quote$ -- 0
-skip$ -- 49
-stack$ -- 0
-substring$ -- 116
-swap$ -- 58
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 36
-warning$ -- 1
-while$ -- 15
-width$ -- 0
-write$ -- 39
-(There was 1 warning)
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 10 items from 0.
+Reallocated global_strs (elt_size=1001) to 10 items from 0.
+Reallocated glb_str_end (elt_size=4) to 10 items from 0.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=1001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: main-blx.bib
+Database file #2: ../LML_bibliography/bibliography.bib
+Biblatex version: 3.13
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+
+Here's how much of BibTeX's memory you used:
+ Cites:                 4 out of 750
+ Fields:              416 out of 5000
+ Hash table:         4336 out of 5000
+ Strings:            1220 out of 4000
+ Free string pool:  10595 out of 65000
+ Wizard functions:   6365 out of 9000

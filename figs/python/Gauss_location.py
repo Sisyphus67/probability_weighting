@@ -150,6 +150,6 @@ plt.legend()
 plt.xlabel(r'CDF $p$')
 plt.ylabel(r'decision weights CDF $w(p)$')
 
-plt.savefig("./../Gauss_location.pdf", bbox_inches='tight')
+plt.savefig("./../Gauss_locationMK.pdf", bbox_inches='tight')
 plt.show()
 

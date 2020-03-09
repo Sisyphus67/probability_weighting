@@ -1,19 +1,134 @@
-\begin{thebibliography}{3}
-\newcommand{\enquote}[1]{``#1''}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[\protect\citeauthoryear{Barberis}{Barberis}{2013}]{Barberis2013}
-\textsc{Barberis, N.~C.} (2013): \enquote{Thirty Years of Prospect Theory in
-  Economics: A Review and Assessment,} \emph{Journal of Economic Perspectives},
-  27, 173--96.
+\datalist[entry]{nyt/global//global/global}
+  \entry{Barberis2013}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BNC}{%
+         family={Barberis},
+         familyi={B\bibinitperiod},
+         given={Nicholas\bibnamedelima C.},
+         giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BNC1}
+    \strng{fullhash}{BNC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1257/jep.27.1.173
+    \endverb
+    \field{issue}{1}
+    \field{pages}{173\bibrangedash 96}
+    \field{title}{Thirty Years of Prospect Theory in Economics: A Review and
+  Assessment}
+    \field{volume}{27}
+    \field{journaltitle}{Journal of Economic Perspectives}
+    \field{year}{2013}
+  \endentry
 
-\bibitem[\protect\citeauthoryear{Peters}{Peters}{2019}]{Peters2019b}
-\textsc{Peters, O.} (2019): \enquote{The Ergodicity Problem in Economics,}
-  \emph{Nature Physics}, 15, 1216--1221.
+  \entry{Peters2019b}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PO}{%
+         family={Peters},
+         familyi={P\bibinitperiod},
+         given={Ole},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PO1}
+    \strng{fullhash}{PO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{abstract}{%
+    The ergodic hypothesis is a key analytical device of equilibrium
+  statistical mechanics. It underlies the assumption that the time average and
+  the expectation value of an observable are the same. Where it is valid,
+  dynamical descriptions can often be replaced with much simpler probabilistic
+  ones ---time is essentially eliminated from the models. The conditions for
+  validity are restrictive, even more so for non-equilibrium systems. Economics
+  typically deals with systems far from equilibrium ---specifically with models
+  of growth. It may therefore come as a surprise to learn that the prevailing
+  formulations of economic theory ---expected utility theory and its
+  descendants ---make an indiscriminate assumption of ergodicity. This is
+  largely because foundational concepts to do with risk and randomness
+  originated in seventeenth-century economics, predating by some 200 years the
+  concept of ergodicity, which arose in nineteenth-century physics. In this
+  Perspective, I argue that by carefully addressing the question of ergodicity,
+  many puzzles besetting the current economic formalism are resolved in a
+  natural and empirically testable way.%
+    }
+    \verb{doi}
+    \verb 10.1038/s41567-019-0732-0
+    \endverb
+    \field{isbn}{1745-2481}
+    \field{issue}{12}
+    \field{pages}{1216\bibrangedash 1221}
+    \field{title}{The Ergodicity Problem in Economics}
+    \verb{url}
+    \verb https://doi.org/10.1038/s41567-019-0732-0
+    \endverb
+    \field{volume}{15}
+    \field{journaltitle}{Nature Physics}
+    \field{year}{2019}
+  \endentry
 
-\bibitem[\protect\citeauthoryear{Tversky and Kahneman}{Tversky and
-  Kahneman}{1992}]{TverskyKahneman1992}
-\textsc{Tversky, A. and D.~Kahneman} (1992): \enquote{{A}dvances in {P}rospect
-  {T}heory: {C}umulative {R}epresentation of {U}ncertainty,} 5, 297--323.
-
-\end{thebibliography}
+  \entry{TverskyKahneman1992}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TA}{%
+         family={Tversky},
+         familyi={T\bibinitperiod},
+         given={Amos},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kahneman},
+         familyi={K\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TAKD1}
+    \strng{fullhash}{TAKD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1992}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.1007/BF00122574
+    \endverb
+    \field{issue}{4}
+    \field{pages}{297\bibrangedash 323}
+    \field{title}{{A}dvances in {P}rospect {T}heory: {C}umulative
+  {R}epresentation of {U}ncertainty}
+    \field{volume}{5}
+    \field{journaltitle}{Journal of Risk and Uncertainty}
+    \field{year}{1992}
+  \endentry
+\enddatalist
+\endinput

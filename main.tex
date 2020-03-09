@@ -1,69 +1,173 @@
-\documentclass[11pt]{article}
+% CONVENTIONS
+% British English: Behaviour, maximisation etc
+% alphabetical ordering of packages (if possible, exception i.a. hyperref) -> quicker search
+% low/high probabilities instead of small/large
+
+\documentclass[%
+	11pt,
+	abstract=true,	
+% 	captions=figureheading,
+% 	numbers=noenddot,
+	bibliography=oldstyle					% more compact
+]{scrartcl}
+
+% \documentclass[11pt]{article}
 %\documentclass[12pt]{article}
 %\documentclass[12pt,a4paper]{article}
 
-\usepackage[percent]{overpic}
-\usepackage{float}
-\usepackage{makecell}
-\usepackage{pgfplots}
+\usepackage[UKenglish]{babel}
 %\usepackage[cmbold]{mathtime}
 %\usepackage{mt11p}
-\usepackage{placeins}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{color}
-\usepackage{amssymb}
-\usepackage{mathtools}
-\usepackage{subfigure}
-\usepackage{multirow}
-\usepackage{epsfig}
-\usepackage{listings}
-\usepackage{enumitem}
-\usepackage{rotating,tabularx}
-%\usepackage[graphicx]{realboxes}
-\usepackage{graphicx}
-\usepackage{graphics}
-\usepackage{epstopdf}
-\usepackage{longtable}
-\usepackage[pdftex]{hyperref}
-%\usepackage{breakurl}
-\usepackage{epigraph}
-\usepackage{xspace}
+% \usepackage[blocks,auth-sc-lg,affil-it]{authblk}
 \usepackage{amsfonts}
-\usepackage{eurosym}
-\usepackage{ulem}
-\usepackage{footmisc}
-\usepackage{comment}
-\usepackage{setspace}
-\usepackage{geometry}
-\usepackage{caption}
-\usepackage{pdflscape}
+\usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{array}
-\usepackage[round]{natbib}
 \usepackage{booktabs}
-\usepackage{dcolumn}
-\usepackage{mathrsfs}
+%\usepackage{breakurl}
+%\usepackage{breakurl}
+\usepackage{caption}
 %\usepackage[justification=centering]{caption}
 %\captionsetup[table]{format=plain,labelformat=simple,labelsep=period,singlelinecheck=true}%
-
-%\bibliographystyle{unsrtnat}
-\bibliographystyle{ecta}
+\usepackage{comment}
+\usepackage{dcolumn}
 \usepackage{enumitem}
-\usepackage{tikz}
-\usetikzlibrary{decorations.pathreplacing}
-%\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
-%\usepackage{tikz}
+\usepackage{epigraph}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+%\usepackage{eurosym}
+\usepackage{float}
+\usepackage{footmisc}
+\usepackage{geometry}
+% \geometry{left=3cm,right=2cm,bottom=4cm,top=3cm}
+% \geometry{left=1.25in,right=1.25in,top=1.25in,bottom=1.25in}
+% \geometry{left=1in,right=1in,top=1in,bottom=1in}
+\usepackage{graphicx}			% automatically \usepackage{graphics}
+%\usepackage[misc]{ifsym}
+\usepackage{listings}
+\usepackage{makecell}
+\usepackage{mathrsfs}
+\usepackage{mathtools}		% superset of amsmath
+\usepackage{marvosym}
+% \usepackage[round]{natbib}
+%	\bibliographystyle{unsrtnat}
+% \bibliographystyle{ecta}
+\usepackage{multirow}
+\usepackage{nicefrac}
+\usepackage[percent]{overpic}
+\usepackage{pdflscape}
+\usepackage{pgfplots}							% loads xcolor
+\usepackage{placeins}
+\usepackage{rotating,tabularx}
+%\usepackage[graphicx]{realboxes}
+\usepackage{setspace}
+\usepackage{subcaption}							% for subfigure & -captions [better than subfig(ure)]
+% \usepackage{subfigure}
+\usepackage[decimalsymbol={.},exponent-product=\cdot,group-separator={,}]{siunitx}	% nice formatting of units, digit grouping, etc. 
+\usepackage{threeparttable}
+\usepackage{tikz}																% loads xcolor
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
 %\usetikzlibrary{snakes}
 %\usetikzlibrary{patterns}
+\usetikzlibrary{decorations.pathreplacing}
+%\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+\usepackage[normalem]{ulem}					% no underline instead of emphasis/italic
+\usepackage{xspace}
 
-%\draftSpacing{1.5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%   HYPERREF		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{xcolor}
+\usepackage[
+% 	dvipdfm,
+%   pdftex,
+%   bookmarksopen,
+%   bookmarksopenlevel={2},
+%   bookmarksnumbered=true,
+ 	breaklinks=true,
+ 	urlcolor=blue,															% affects DOIs & URLs
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+%   hyperfootnotes=false,
+% 	linktocpage=true,
+%   pdfstartview=FitB,
+%   pdfpagelayout = SinglePage,
+%   pdfview=FitH,
+%   pdfcenterwindow = false
+%   pdfpagemode = FullScreen
+]{hyperref}
+\usepackage{url,doi} 											% !! load after hyperref (colouring issues)
+\usepackage{showlabels}										% !! load after amsmath, hyperref
+
 \hypersetup{
-colorlinks,
-linkcolor={blue!50!black},
-citecolor={blue!50!black},
-urlcolor={blue!50!black}}
+pdfauthor={Ole Peters, Alexander Adamou, Yonatan Berman, Mark Kirstein},
+pdftitle={What are we weighting?},
+pdfsubject={See abstract},
+% pdfsubject={ECTA Submission},
+pdfkeywords={Decision Theory, Prospect Theory, Probability Weighting, Ergodicity Economics}
+% colorlinks,
+% linkcolor={blue!50!black},
+% citecolor={blue!50!black},
+% urlcolor={blue!50!black}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%   CAPTION FORMAT   %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setkomafont{caption}{\sffamily}										%  Caption-Formatierung
+\setkomafont{captionlabel}{\sffamily\bfseries}
+\setcapindent{1em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%   BibLateX w/ BibTeX(8)   %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[
+arxiv=abs,																					% Link to arXiv abstract page
+autocite=inline,																		% structur of \autocite{key}
+autolang=hyphen,																		% active if langid is set
+% autopunct=false,																	%
+backend=bibtex,
+% backend=bibtex8,																		% Backend choice BibTeX8 case-sensitive sorting 
+backref=true,																				% page cited in the paper
+% bibencoding=latin1,
+bibstyle=authoryear,																% style in bibliography
+% bibstyle=draft,																		% style in bibliography
+% bibwarn=true,
+citestyle=authoryear-comp,													% style in the document
+dashed=false,																				% always repeat author names in bibliography
+% -- hyperref=true,																		%
+% language=autobib,																		% bibliography language same as language of origin
+% sortcites=true,																			% sort citations in the text
+sortcites=false,																		% do not sort citations in the text
+% sorting=nyt,																				% sorting in bibliography
+maxbibnames=11,																			% limit authors in bibliography to 11
+maxcitenames=2,																			% start to use et alii
+% minbibnames=10																			% Angabe wie vieler Autoren nach Schnitt
+mincitenames=1,																			% cut to X authors with et al.
+url=true,doi=true,eprint=true,											% print url,doi,eprint
+useprefix=true,																			% consider nobiliary particle von, van, de, etc.
+]{biblatex}
+
+\addbibresource{../LML_bibliography/bibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%   STYLE OF THE REFERENCES   %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand*\person[1]{\textsc{#1}}									% prints author names as small caps
+\renewcommand{\mkbibnamegiven}[1]{\person{#1}}
+\renewcommand{\mkbibnamefamily}[1]{\person{#1}}
+\renewcommand{\mkbibnameprefix}[1]{\person{#1}}
+% \renewcommand{\mkbibnamesuffix}[1]{\textsc{#1}}
+
+\setlength{\bibitemsep}{1.5\itemsep}			% space between 2 bibitems	
+
+% \DeclareFieldFormat{pages}{#1}		% removes pagination (p./pp.) before page numbers
+
+\renewbibmacro{in:}{}					% print no 'In:' before the <Journal Name>'
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\renewcommand{\familydefault}{\sfdefault}
 %\usepackage{helvet}
@@ -71,16 +175,14 @@ urlcolor={blue!50!black}}
 %\setlength{\parindent}{2em}
 %\setlength{\parskip}{1em}
 
-%\normalem
-
-%\doublespacing
-\onehalfspacing
 %\singlespacing
+\onehalfspacing
+%\doublespacing
 %\linespread{1.5}
 
+\newcommand{\bsf}[1]{\textsf{\textbf{#1}}}		% bold sans serif
+
 \newtheorem{theorem}{Theorem}
-\newcommand{\bc}{\begin{center}}
-\newcommand{\ec}{\end{center}}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}{Proposition}
 \newtheorem{definition}{Definition}
@@ -99,18 +201,12 @@ urlcolor={blue!50!black}}
 \newtheorem{subhyp}{Hypothesis}[hyp]
 \renewcommand{\thesubhyp}{\thehyp\alph{subhyp}}
 
-\newcommand{\red}[1]{\textcolor{red} {#1}}
-\newcommand{\blue}[1]{\textcolor{blue} {#1}}
-\newcommand{\green}[1]{\textcolor{green}{#1}}
-
 %\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
 
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
 
-%\geometry{left=1.25in,right=1.25in,top=1.25in,bottom=1.25in}
-\geometry{left=1in,right=1in,top=1in,bottom=1in}
 
 \epstopdfsetup{outdir=./}
 
@@ -119,7 +215,6 @@ urlcolor={blue!50!black}}
 \newcommand{\ceref}[2]{(\ref{eq:#1}#2)}
 \newcommand{\Eref}[1]{Equation~(\ref{eq:#1})}
 \newcommand{\erefs}[2]{Eqs.~(\ref{eq:#1}--\ref{eq:#2})}
-
 
 \newcommand{\seclabel}[1]{\label{sec:#1}}
 \newcommand{\Sref}[1]{Section~\ref{sec:#1}}
@@ -137,17 +232,6 @@ urlcolor={blue!50!black}}
 \newcommand{\cref}[1]{Cor.~\ref{coro:#1}}
 \newcommand{\creflong}[1]{corollary~\ref{coro:#1}}
 
-\newcommand{\etal}{{\it et~al.}\xspace}
-\newcommand{\ie}{{\it i.e.}\xspace}
-\newcommand{\eg}{{\it e.g.}\xspace}
-\newcommand{\etc}{{\it etc.}\xspace}
-\newcommand{\cf}{{\it c.f.}\xspace}
-\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
-\newcommand{\person}[1]{{\it \sc #1}}
-
-\newcommand{\AAA}[1]{\red{{\it AA: #1 AA}}}
-\newcommand{\YB}[1]{\blue{{\it YB: #1 YB}}}
-
 \newcommand{\flabel}[1]{\label{fig:#1}}
 \newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
 \newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
@@ -156,8 +240,35 @@ urlcolor={blue!50!black}}
 \newcommand{\tref}[1]{Tab.~\ref{tab:#1}}
 \newcommand{\Tref}[1]{Table~\ref{tab:#1}}
 
+\newcommand{\cf}{\textit{cf.}\xspace}
+\newcommand{\eg}{\textit{e.g.}\xspace}
+\newcommand{\etal}{\textit{et~al.}\xspace}
+\newcommand{\etc}{\textit{etc.}\xspace}
+\newcommand{\ia}{\textit{i.a.}\xspace}
+\newcommand{\ie}{\textit{i.e.}\xspace}
+
+
+\newcommand{\ave}[1]{\left\langle#1 \right\rangle}
+
+
+\newcommand{\red}[1]{\textcolor{red} {#1}}
+\newcommand{\blue}[1]{\textcolor{violet} {#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\violet}[1]{\textcolor{violet} {#1}}
+\newcommand{\orange}[1]{\textcolor{orange}{#1}}			% 'coz he is in Portugal now ;)
+\newcommand{\teal}[1]{\textcolor{teal}{#1}}
+
+\newcommand{\AAA}[1]{\red{\textit{AA: #1 AA}}}
+\newcommand{\YB}[1]{\violet{\textit{YB: #1 YB}}}
+\newcommand{\OP}[1]{\orange{\textit{OP: #1 OP}}}
+\newcommand{\MK}[1]{\teal{\textit{MK: #1 MK}}}
+
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+
 \newcommand{\be}{\begin{equation}}
 \newcommand{\ee}{\end{equation}}
+
 \newcommand{\bea}{\begin{eqnarray}}
 \newcommand{\eea}{\end{eqnarray}}
 
@@ -219,22 +330,36 @@ urlcolor={blue!50!black}}
 \DeclareMathOperator\erf{erf}
 %\let\endtitlepage\relax
 
+
+\hyphenation{pro-vi-de pro-vi-des}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%		METADATA		%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \title{Probability weighting as model calibration}
+\title{What are we weighting?}
+\subtitle{Ergodicity Economics explains Probability Weighting}
+
+\author{
+	\person{Ole Peters}\footnote{~London Mathematical Laboratory and Santa Fe Institute, \texttt{\href{mailto:o.peters@lml.org.uk}{o.peters@lml.org.uk}}}
+	\and \person{Alexander Adamou}\footnote{~London Mathematical Laboratory, \texttt{\href{mailto:a.adamou@lml.org.uk}{a.adamou@lml.org.uk}}}
+	\and \person{Mark Kirstein}\footnote{~London Mathematical Laboratory, Max-Planck-Institute for Mathematics in the Sciences and Institute of Mathematics, Leipzig University, \texttt{\href{mailto:m.kirstein@lml.org.uk}{m.kirstein@lml.org.uk}}}
+	\and
+	\person{Yonatan Berman}\footnote{~London Mathematical Laboratory, The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York, \texttt{\href{mailto:y.berman@lml.org.uk}{y.berman@lml.org.uk}}} 
+% \thanks{}
+}
+% \date{First version: August 26, 2018 \hfill Last revised: \today}
+\date{\today}
+
 \begin{document}
 
 %\onehalfspacing
 \begin{titlepage}
-%\title{Temporal Discounting Without Uncertainty: Growth Rates, Preference Reversal and Hyperbolic Discounting}
-\title{Probability weighting as model calibration}
-\author{Ole Peters\footnote{London Mathematical Laboratory and Santa Fe Institute,~\url{o.peters@lml.org.uk}}  \and Alexander Adamou\footnote{London Mathematical Laboratory,~\url{a.adamou@lml.org.uk}} \and Mark Kirstein\footnote{London Mathematical Laboratory,~\url{m.kirstein@lml.org.uk}}  \and Yonatan Berman\footnote{London Mathematical Laboratory,~\url{y.berman@lml.org.uk}} \,\, %\thanks{}
-}
-%\date{First version: August 26, 2018\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,Last revised: \today}
-%\date{}
-\date{\today}
-\maketitle
-
-%\bc
-%\red{Preliminary version, please do not circulate}
-%\ec
+	\maketitle
+% 	\bc
+% 		\red{Preliminary version, please do not circulate}
+% 	\ec
 
 \begin{abstract}
 \noindent 
@@ -242,80 +367,88 @@ Behavioural economics collects observations of human economic behaviour and prov
 Probability weighting is one such label. It expresses a mismatch, in decision problems, between probabilities used in a formal model of a decision problem (\ie model parameters) and probabilities inferred from real people's behaviour faced with the modelled decision problem (the same parameters estimated empirically). The inferred probabilities are called ``decision weights.'' 
 It is considered a robust observation that decision weights are higher than probabilities for extreme events, and (necessarily, because of normalisation) lower than probabilities for common events.
 The observed behaviour thus amounts to the refusal by real decision-makers totally to rely on a formal model, and instead to exercise extra caution. In this paper we model well-specified reasons for such caution and find the resulting probability weighting, as a benchmark for reasonable behaviour. We find close agreement with empirical studies.
-\\
-\\
 
+\vspace{1em}
 
-\noindent\textbf{Keywords: decision theory, prospect theory, probability weighting, ergodicity economics}
-%\\
-%\noindent\textbf{JEL codes: D8, D9}\\
+\noindent\textsf{\textbf{Keywords}} ~ Decision Theory, Prospect Theory, Probability Weighting, Ergodicity Economics
+\vspace{.5em}
 
-%\bigskip
+\noindent\textsf{\textbf{JEL Codes}} ~
+% \href{https://www.aeaweb.org/econlit/jelCodes.php?view=jel#B}{%
+% B16, % HET: Quantitative and Mathematical 
+\href{https://www.aeaweb.org/econlit/jelCodes.php?view=jel#C}{%
+% C60		% Mathematical Models
+% $\cdot$
+C61		% Optimization Techniques • Programming Models • Dynamic Analysis
+$\cdot$
+}%
+\href{https://www.aeaweb.org/econlit/jelCodes.php?view=jel#D}{%
+D01 	% Microeconomic Behaviour: Underlying Principles
+$\cdot$
+D81 	% Criteria for Decision-Making under Risk and Uncertainty
+% $\cdot$
+% D9		% Micro-Based Behavioral Economics 
+}
 \end{abstract}
-\setcounter{page}{0}
-\thispagestyle{empty}
-%\nopagebreak
 \end{titlepage}
-\pagebreak \newpage
-%\nopagebreak
 
 \section{Nomenclature and key observation}
-Probability weighting originates in prospect theory  \citep{Barberis2013}. It is one way to conceptualise a pattern in human behaviour of caution with respect to formal models. This is best explained with an example:  
-\bi
-\item 
-a {\it disinterested observer} (DO), such as an experimenter, tells
-\item
-a {\it decision maker} (DM) 
-\ei
-that an event occurs with some probability. The DM's behaviour is then observed, and is found to be consistent with a behavioural model (for example expected-utility optimization) where the DM uses a probability that differs systematically from what the DO has declared. 
+In this paper, we provide a mechanistic explanation of the phenomenon traditionally labelled probability weighting.
 
+Probability weighting originates in prospect theory \parencite{Barberis2013}. It is one way to conceptualise a pattern in human behaviour of caution with respect to formal models. This is best explained with an example:  
+\bi
+	\item a \textit{disinterested observer} (DO), such as an experimenter, tells
+	\item a \textit{decision maker} (DM) 
+\ei
+that an event occurs with some probability. The DM's behaviour is then observed, and is found to be consistent with a behavioural model (for example expected-utility optimization) where the DM uses a probability that differs systematically from what the DO has declared.
+% 
 Specifically, it is consistently observed that DMs act as though extreme events (those of low probability) had higher probabilities than what's specified by the DO. These apparent ``higher probabilities'' are called ``decision weights'' because they are better at describing the decisions actually made than the probabilities specified by the DO. We will adopt this nomenclature here. 
 \bi
-\item
-By ``{\it probabilities},'' expressed as probability density functions (PDFs) and denoted $p(x)$, we will mean the numbers specified by a DO.
-\item
-By ``{\it decision weights},'' also expressed as PDFs and denoted $w(x)$, we will mean the numbers that best describe the behaviour of a DM.\footnote{In the literature, decision weights are not always normalised, but for simplicity we will work with normalised decision weights. Mathematically speaking, they are therefore proper probabilities even though we don't call them that. Our results are unaffected because normalising just means dividing by a constant (the sum or integral of the non-normalised decision weights).}
+	\item By ``\textit{probabilities,}'' expressed as probability density functions (PDFs) and denoted $p(x)$, we will mean the numbers specified by a DO.
+	\item By ``\textit{decision weights,}'' also expressed as PDFs and denoted $w(x)$, we will mean the numbers that best describe the behaviour of a DM.\footnote{In the literature, decision weights are not always normalised, but for simplicity we will work with normalised decision weights. Mathematically speaking, they are therefore proper probabilities even though we don't call them that. Our results are unaffected because normalising just means dividing by a constant (the sum or integral of the non-normalised decision weights).}
 \ei
 
 This key observation is often summarised visually with a comparison between 
 \bi
-\item
-cumulative probability density functions (CDFs), denoted 
+	\item cumulative probability density functions (CDFs), denoted 
+% 
 \be
-F_p(x)=\int_{-\infty}^x p(s) ds
+	F_p(x)=\int_{-\infty}^x p(s) ds
 \ee
- and 
-\item
-decision weight CDFs, denoted
+%
+% and
+	\item and decision weight CDFs, denoted
+% 
 \be
-F_w(x)=\int_{-\infty}^x p(s) ds.
+	F_w(x)=\int_{-\infty}^x w(s) ds.
 \ee
 \ei
-In \fref{TK1992} we reproduce the first such visual summary from \citet{TverskyKahneman1992}
+In \fref{TK1992} we reproduce the first such visual summary from \textcite{TverskyKahneman1992}.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.7\textwidth]{./figs/TK1992.PNG}
-\caption{Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \citet{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the x axis (the probability used by a DM) and look up the corresponding value on the y axis (the decision weight). For small (cumulative) probabilities (left) the decision weight exceeds the probability, and for large probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
+\includegraphics[width=0.5\textwidth]{./figs/TK1992.PNG}
+\caption{Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the probability used by a DM) and look up the corresponding value on the vertical axis (the decision weight). For low (cumulative) probabilities (left) the decision weight exceeds the probability, and for high probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
 \flabel{TK1992}
 \end{figure}
 
-As a final piece of nomenclature, we will use the terms {\it location} and {\it scale} when discussing probability distributions. Consider a standard normal distribution $\ND(0,1)$ -- here, the parameters indicate location 0 and squared scale 1 (for a Gaussian that's the mean and variance). In general, the identically-shaped distribution of location $\mu$ and scale $\sigma$ is obtained from the location-0, scale-1 distribution by transforming the argument $x$ according to 
-\be
-y=\frac{x-\overbrace{\mu}^{\text{location}}}{\underbrace{\sigma}_{\text{scale}}}.
+As a final piece of nomenclature, we will use the terms \textit{location} and \textit{scale} when discussing probability distributions. Consider a standard normal distribution $\ND(0,1)$ -- here, the parameters indicate location 0 and squared scale 1 (for a Gaussian that's the mean and variance). In general, for a Gaussian random variable $X$ with arbitrary location $\mu_X$ and scale $\sigma_X$ parameters, the transformation in \eref{SN} obtains the identically-shaped location-0 and scale-1 distribution for the so standardised or normalised random variable $Z$
+\be \elabel{SN}
+	Z = \frac{X-\overbrace{\mu_X \mathstrut}^{\text{location}}}{\underbrace{\sigma_X\mathstrut}_{\text{scale}}}.
 \ee
-The PDF $p(y)$ has location $\mu$ and scale $\sigma$.
+The PDF $p(z)$ is the standard normal density with location $\mu_Z=0$ and scale $\sigma_Z=1$, $Z \sim \ND(0,1)$.
 
-We will show below that these observations are predicted by considerations of uncertainty about probabilities, or more generally by uncertainty about model parameters. 
+We will show below that these observations are predicted by considerations of uncertainty about probabilities, or more generally by uncertainty about model parameters.
 
+% \paragraph{Organisation of the paper}
 %We begin by discussing the necessity for using decision weights that are greater than the probabilities for rare events. Next, we discuss as an example how the same effect can arise when repeatedly facing prospects with a Gaussian random variable whose mean fluctuates in time.
 %
-%Finally, we calculate analytically, and plot, the probability weighting curves one would expect on this basis. We compare these to the empirical results summarised by \citet{Barberis2013}, and we comment on the function fitted to these data by \citet{TverskyKahneman1992}.
+%Finally, we calculate analytically, and plot, the probability weighting curves one would expect on this basis. We compare these to the empirical results summarised by \textcite{Barberis2013}, and we comment on the function fitted to these data by \textcite{TverskyKahneman1992}.
 %
 %Our work contributes to the growing field of ergodicity economics
-%\citep{Peters2019b} where decision makers are modelled as behaving optimally over time (as opposed to optimally in a statistical-ensemble sense).
+%\parencite{Peters2019b} where decision makers are modelled as behaving optimally over time (as opposed to optimally in a statistical-ensemble sense).
 
-\section{Consistent probability weighting as a difference between models}
+\section{Consistent probability weighting as a difference between models} \seclabel{ModelDiff}
 
 Behavioural economics interprets \fref{TK1992} as evidence for  a perception bias in the DM. We will keep a neutral stance. We don't consider the DO to know ``the truth'' -- he has a model of the world. Nor do we consider the DM to know ``the truth'' -- he has another model of the world. \Fref{TK1992} shows that the two models differ. Below we will go through a few generic reasons why the models may differ, and we will find that the inverse-S curve is a robust prediction in ergodicity economics -- when we emphasise that DMs have to operate along time lines.
 
@@ -342,7 +475,7 @@ Let's assume that a DO models an observable $x$ -- which will often be a future 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.7\textwidth]{./figs/probability_dists.pdf}
-\caption{Probability density function (blue), estimated by a DO; and decision-weight density function (red), estimated by a DM. The DO models returns with a best estimate for the variance and assumes the true frequency distribution is the blue line. The DM wants to be on the safe side, models returns with a greater variance, and assumes the true frequency distribution is the red line. The DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events.}
+\caption{\bsf{Two PDFs.} Probability density function (blue), estimated by a DO; and decision-weight density function (red), estimated by a DM. The DO models returns with a best estimate for the variance and assumes the true frequency distribution is the blue line. The DM wants to be on the safe side, models returns with a greater variance, and assumes the true frequency distribution is the red line. The DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events.}
 \flabel{probability_dists}
 \end{figure}
 
@@ -351,7 +484,7 @@ Let's assume that a DO models an observable $x$ -- which will often be a future 
 %
 %Let's stay with the investment example, and again say annual logarithmic returns are Gaussian-distributed. Let's also assume (somewhat unrealistically) that we know the variance of these returns to be $\sigma_1^2$, with certainty.
 %
-%Finally, we assume that the mean of the returns fluctuates. Over time, we don't always draw from the same Gaussian, but sometimes from one with a larger mean and sometimes from one with a smaller mean.
+%Finally, we assume that the mean of the returns fluctuates. Over time, we don't always draw from the same Gaussian, but sometimes from one with a higher mean and sometimes from one with a lower mean.
 %We implement this as follows: first, generate a mean, $\gamma$, from a Gaussian distribution $\gamma \sim \ND(\mu, \sigma_2^2)$. Then draw a return from a Gaussian with this mean and variance $\sigma_1^2$, meaning $g\sim\ND(\gamma,\sigma_1^2)$. Over time, the total log return is just the sum of the annual log returns, and it is equivalent to the total log return that would be generated with a Gaussian with known mean and higher variance, $g\sim \ND(\mu,\sigma_1^2+\sigma_2^2)$.
 %
 %Considering a single round, a DO might well use the best estimate for $\gamma$, which is $\mu$, and the known variance $\sigma_1^2$, so that $g_p\sim \ND(\mu,\sigma_1^2)$. A DM, on the other hand, who has to live with the consequences of what happens in a long sequence realizations of $g$ would use $g_w\sim \ND(\mu,\sigma_1^2+\sigma_2^2)$. Again, the situations and incentives of the DO and the DM are different, leading them to use different models (the same models as in \Secref{Survival})
@@ -366,22 +499,24 @@ Generically, the effect of the DM using a greater scale in his model is higher d
 %We can choose to express the DM's behaviour in terms of a mapping between the decision weights used by the DM, $w$ (red in \fref{probability_dists}), and the probabilities estimated by the DO, $p$ (blue in \fref{probability_dists}).
 
 In the Gaussian case we can write the distributions explicitly
-\be
-w=\frac{1}{\sqrt{2\pi (\sigma_1^2+\sigma_2^2)}}\exp\left[\frac{-(x -\mu )^2}{2 (\sigma_1^2+\sigma_2^2)}\right]
-\elabel{q}
+\be \elabel{DecisionW}
+	w=\frac{1}{\sqrt{2\pi (\sigma_1^2+\sigma_2^2)}}\exp\left[\frac{-(x -\mu )^2}{2 (\sigma_1^2+\sigma_2^2)}\right]
 \ee
 and
 \be
-p=\frac{1}{\sqrt{2\pi \sigma_1^2}}\exp\left[\frac{-(x -\mu )^2}{2 \sigma_1^2}\right].
+	p=\frac{1}{\sqrt{2\pi \sigma_1^2}}\exp\left[\frac{-(x -\mu )^2}{2 \sigma_1^2}\right].
 \elabel{p}
 \ee
 
-Furthermore, we can solve \eref{p} for $(x -\mu )^2$ and substitute that in in \eref{q}. Thereby, we obtain the following expression for decision weights directly as a function of probabilities
+Furthermore, we can solve \eref{p} for $(x -\mu )^2$ and substitute that in in \eref{DecisionW}. Thereby, we obtain the following expression for decision weights directly as a function of probabilities
 \be
 w(p)=p^{\frac{\sigma_1^2}{\sigma_1^2+\sigma_2^2}} \frac{\left(\sqrt{2\pi\sigma_1^2}\right)^{\frac{\sigma_2^2}{\sigma_1^2+\sigma_2^2}}}{\sqrt{2\pi(\sigma_1^2+\sigma_2^2)}},
 \elabel{q_of_p}
 \ee
 which we plot in \fref{probability_weights}. 
+
+\MK{Express $w(p)$ in terms of $\alpha$}
+
 
 \begin{figure}[!htb]
 \centering
@@ -390,7 +525,7 @@ which we plot in \fref{probability_weights}.
 \flabel{probability_weights}
 \end{figure}
 
-In \fref{decision_map} we plot the corresponding CDFs, $F_w$ against $F_p$. 
+In \fref{TwoCDFs} we plot the corresponding CDFs, $F_w$ against $F_p$. 
 This mechanism does not, of course, rely on the Gaussian assumption: the inverse-S shape is found whenever the DM assumes a greater scale for a unimodal distribution.
 
 %We denote these by $F_p=\int_{-\infty}^x p(s) ds$ (for the DO) and by $F_w=\int_{-\infty}^x w(s) ds$ (for the DM). 
@@ -400,9 +535,11 @@ This mechanism does not, of course, rely on the Gaussian assumption: the inverse
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.7\textwidth]{./figs/decision_map.pdf}
-\caption{CDF as assumed by the DO (red) and by the DM (blue), Gaussian distributions, where the DO assumes scale 1 and the DM cautiously assumes scale 2. Following the dashed vertical lines (left to right), we see that for small values of the CDF the DM's is larger than the DO's; the curves coincide at 0.5 because no difference in location is assumed; and for large values of the CDF the DM's is smaller than the DO's }
-\flabel{decision_map}
+\includegraphics[width=0.7\textwidth]{./figs/TwoCDFs.pdf}
+\caption{\bsf{Two Gaussian CDFs.} The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution with identical location, \ie a Gaussian with larger scale, $X \sim \ND(0,3)$ depicted by $F_w$ (blue). 
+% 
+Following the dashed vertical lines (left to right), we see that for low values of the event probability $x$ the DM's CDF is larger than the DO's CDF, $F_p(x) < F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be lower than the DO's.}
+\flabel{TwoCDFs}
 \end{figure}
 
 
@@ -412,30 +549,36 @@ The first condition is satisfied because the word ``probability'' is commonly in
 
 The second condition is satisfied as follows. A DO has to build a formal model, and will include a number of sources of uncertainty in it, but often not all sources. A DM just has to make decisions in the real world, and rules of thumb like the precautionary principle (better err on the side of caution) will often lead to extra uncertainty. For example, in an experiment, the DO may know the true probabilities of some gamble and build a formal model accordingly; the DM may in addition have doubts about the DO's sincerity, or about his understanding of the rules of the game. We will return to this in \sref{condition2}.
 
-\subsection{Probabilities are tricky\seclabel{tricky}}
-\subhead{Lack of conceptual clarity}
+\subsection{Lack of conceptual clarity about whose probabilities are analysed?} \seclabel{tricky}
 %systematically different incentives from a real-world DM. The DO tends to have an incentive to estimate, or indeed state, probabilities as their most likely value or ``true'' value (if the DO can control the probabilities, \eg in an experiment); the DM simply strives to behave optimally under uncertainty, and that uncertainty often includes uncertainty about the probabilities or model parameters.
-It's not easy to unpack a simple probability statement like ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so rain happens in 70\% of what? The technical answer to this question is usually: rain happens in 70\% of the members of an ensemble of computer-simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of possible futures.'' 
+
+The conundrum surrounding the observed phenomenon of [PW] vanishes if probability is understood as individual ignorance, \ie somebody's uncertainty about an observable.
+
+\paragraph{Frequency-in-an-ensemble interpretation of probability}
+It's not easy to unpack a simple probability statement like ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so rain happens in 70\% of what? The technical answer to this question is usually: rain happens in 70\% of the members of an ensemble of computer simulations of what may happen tomorrow run by a weather service. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of possible futures.'' 
 
 How exactly such a statement is linked to physical reality is not completely clear. Sometimes ensembles are real, for instance, when we say the probability of having a car accident is 1\% per 10,000km driven -- that's a summary of statistics collected over a large ensemble of cars. In this case, it's a real ensemble that existed in the past, not an imagined one in the future. 
 
-In some situations, the statement 70\% chance of rain tomorrow refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare recent measurements (of wind and pressure today, say) to measurements further in the past -- weeks, months, years earlier, that were similar and where one had reason to believe that what had happened 1 day later would be similar to what will happen tomorrow.
+\paragraph{Frequency-over-time interpretation of probability}
+In some situations, the statement ``70\% chance of rain tomorrow'' refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare recent measurements (of wind and pressure today, say) to measurements further in the past -- weeks, months, years earlier, that were similar and where one had reason to believe that what had happened 1 day later would be similar to what will happen tomorrow.
 
 No matter how ``probability'' relates to a frequentist physical statement (whether with respect to an ensemble of simultaneous possibilities or to a time series), it also corresponds to a mental state of believing something with a degree of conviction: ``I'm 90\% sure I left my wallet in that taxi.''
 
 Many long books have been written about the meaning of probability; for our purpose it suffices to say that there's no guarantee that a probabilistic statement will be interpreted by the listener as it was intended by whoever made the statement.
 
-\subhead{Estimation errors for probabilities}
-Let's imagine the DO and DM have agreed explicitly on an interpretation of the word ``probability.'' Say they agree that they mean the relative frequency in a long time series. Real time series are, of course, of finite length. In order to estimate the relative frequency of some event in a time series, we basically count -- out of $T$ time intervals, the event $i$ occurred in $n_i$ of them, so our best estimate for the probability is $n_i/T$. In the simplest case (and we rarely consider anything more complicated), we model the arrival of events as a Poisson process, where the standard error in the count of an event famously goes as $\sqrt{n_i}$. The standard error in the probability of an event is therefore $\frac{\sqrt{n_i}}{T}$, and the relative error is $\frac{1}{\sqrt{n_i}}$. Low probabilities therefore come with larger relative errors, see \tref{errors}. We note that behaviourally, it will make little difference whether a DM assigns a 0.49 probability to an event or a 0.51 probability. It will make a large difference, however, whether a DM assigns a 0 probability or a 0.0002 probability.
+\subsubsection*{Estimation errors for probabilities}
+Let's imagine the DO and DM have agreed explicitly on an interpretation of the word ``probability.'' Say they agree that they mean the relative frequency in a long time series. Real time series are, of course, of finite length. In order to estimate the relative frequency of some event in a time series, we basically count -- out of $T$ time intervals, the event $i$ occurred in $n_i$ of them, so our best estimate for the probability is $\nicefrak{n_i}{T}$. In the simplest case (and we rarely consider anything more complicated), we model the arrival of events as a Poisson process, where the standard error in the count of an event famously goes as $\sqrt{n_i}$. The standard error in the probability of an event is therefore $\nicefrac{\sqrt{n_i}}{T}$, and the relative error is $\nicefrac{1}{\sqrt{n_i}}$. Low probabilities therefore come with larger relative errors, see \tref{errors}. We note that behaviourally, it will make little difference whether a DM assigns a 0.49 probability to an event or a 0.51 probability. It will make a large difference, however, whether a DM assigns a 0 probability or a 0.0002 probability.
 
-The most important message from this example is that errors in probability estimates behave differently for small probabilities than for large probabilities: absolute errors are smaller for small probabilities, and relative errors are larger for small probabilities.
+The most important message from this example is that errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for low probabilities, and relative errors are larger for high probabilities.
 
 \begin{table}[!htb]
 \ra{1.25}
 %\small
 \centering
-\captionof{table}{This table assumes $T=$10,000 observed time intervals. To be read as follows (first line): for an event of true probability 0.5, the most likely count in 10,000 trials is 5,000. Assuming Poissonian statistics, this comes with an estimation error of $\sqrt{5,000}/10,000=0.01$, which is 2\% of the true probability.}\tlabel{errors}
-\begin{tabular}{@{}cccc@{}}\toprule[2pt]
+\captionof{table}{This table assumes $T = \num{10000}$ observed time intervals. To be read as follows (first line): for an event of true probability 0.5, the most likely count in $\num{10000}$ trials is $\num{5000}$. Assuming Poissonian statistics, this comes with an estimation error of $\sqrt{\num{5000}}/\num{5000}=0.01$, which is 2\% of the true probability.}\tlabel{errors}
+\begin{tabular}{@{}cccc@{}}
+\addlinespace
+\toprule[2pt]
 \makecell{Asymptotic\\(true) probability} & \makecell{Most likely\\count} & \makecell{Estimation\\error} & \makecell{Relative\\error}\\
 \midrule[2pt]
 .5 & 5000 & .01 & 2\%\\
@@ -451,13 +594,13 @@ The most important message from this example is that errors in probability estim
 The observations that led to the concept of probability weighting in prospect theory can be expressed as follows: DOs assign systematically lower weights to low-probability events than DMs.
 Which of the two is wrong is unclear so long as it is unclear who means what by the word ``probability.'' Because the two types of modellers (DO and DM) pursue different goals, it may be the case that neither is wrong about the probabilities, just wrong about the goals of the other modeller.
 
-Being a good neutral scientist, a DO has no particular interest in the success or failure of a DM. Being a good DM, the DM has every interest in the success or failure of the DM. Throughout the history of economics, it has been a common mistake, by DOs, to assume that DMs optimise what happens to them on average in an ensemble. To the DM what happens to the ensemble is usually not a primary concern -- instead, the concern of the DM is what happens to him over time. Not distinguishing between these two perspectives is only permissible if they lead to identical predictions, and that is only the case in ergodic situations \citep{Peters2019b}. 
+Being a good neutral scientist, a DO has no particular interest in the success or failure of a DM. Being a good DM, the DM has every interest in his own success or failure. Throughout the history of economics, it has been a common mistake, by DOs, to assume that DMs optimise what happens to them on average in an ensemble. To the DM what happens to the ensemble is usually not a primary concern -- instead, the concern of the DM is what happens to him over time. Not distinguishing between these two perspectives is only permissible if they lead to identical predictions, and that is only the case in ergodic situations \parencite{Peters2019b}. 
 
 It is now well known that the situation usually studied in decision theory is not ergodic in the following sense: DMs are usually observed making choices that affect their wealth, and wealth is usually modelled as a stochastic process that is not ergodic. The ensemble average of wealth does not behave like the time average of wealth.
 
 The most striking example is the universally important case of noisy multiplicative growth -- universal because it is the fundamental process that drives evolution: noise generates the diversity (of phenotypes) necessary for evolution, and multiplicative growth (self-reproduction) is how successful phenotypes spread their traits in a population. This process operates on amoeba, as it does on forms of institutions, and on investment strategies. 
 
-The simplest model of noisy multiplicative growth is geometric Brownian motion, $dx=x(\mu dt+\sigma dW)$. The average over the full statistical ensemble (often studied by the DO) of geometric Brownian motion grows as $\exp(\mu t)$. The individual trajectory of geometric Brownian motion, on the other hand, grows in the long run as $\exp[(\mu-\frac{\sigma^2}{2})t]$.
+The simplest model of noisy multiplicative growth is geometric Brownian motion, $dx=x(\mu dt+\sigma dW)$. The average over the full statistical ensemble (often studied by the DO) of geometric Brownian motion grows as $\exp(\mu t)$. The individual trajectory of geometric Brownian motion, on the other hand, grows in the long run as $\exp[(\mu-\nicefrac{\sigma^2}{2})t]$.
 
 In the DO's ensemble perspective, noise does not affect growth and is often deemed irrelevant.
 
@@ -466,9 +609,9 @@ In the DM's time perspective, noise reduces growth, and  underestimating it woul
 The difference between how these two perspectives evaluate the effects of noise (\ie of the probabilistic events) is qualitatively in line with the observed phenomena we set out to explain. The DM typically has large uncertainties, especially for small-probability events, and has an evolutionary incentive to err on the side of caution, \ie to behave as though low-probability (extreme) events had a higher probability.
 
 
-In \fref{CDF_weights} we show maps that result from the procedure illustrated in \fref{decision_map}. We show separately maps that arise when the DM models the scale of the distribution differently, and when the DM models the location differently. We then put the two together and compare the result to the functional shape \citet{TverskyKahneman1992} chose to fit to their observations.
+In \fref{CDF_weights} we show maps that result from the procedure illustrated in \fref{TwoCDFs}. We show separately maps that arise when the DM models the scale of the distribution differently, and when the DM models the location differently. We then put the two together and compare the result to the functional shape \textcite{TverskyKahneman1992} chose to fit to their observations.
 
-Without a mathematical derivation or physical motivation of the functional form,  \citet{TverskyKahneman1992} chose to fit the following function to resemble their data
+Without a mathematical derivation or physical motivation of the functional form,  \textcite{TverskyKahneman1992} chose to fit the following function to resemble their data
 \be
 F_{w_{TK}}(F_{p_{TK}})=F_{p_{TK}}^\alpha \frac{1}{(F_{p_{TK}}^\alpha+(1-F_{p_{TK}}))^{1/\alpha}}.
 \elabel{correspondence}
@@ -476,8 +619,21 @@ F_{w_{TK}}(F_{p_{TK}})=F_{p_{TK}}^\alpha \frac{1}{(F_{p_{TK}}^\alpha+(1-F_{p_{TK
 
 This function 
 %resembles the analytical result in that it is essentially a power law in $p_{TK}$, especially if we use $\alpha=\frac{\sigma_1^2}{\sigma_1^2+\sigma_2^2}$. It 
-only has one free parameter, $\alpha$, and has the following property: any curvature (\ie any deviation from $F_{w_{TK}}(F_{p_{TK}})=F_{p_{TK}}$, which is the shape it takes for $\alpha=1$) moves the intersection with the diagonal away from the mid-point $1/2$. For this feature to be reproduced in the Gaussian case, it is necessary to introduce a difference between the locations used by DO and DM in addition to the difference between scales. If we allow the possibility that the DM uses different estimates for scale and location, we can reproduce the observations in \citep{TverskyKahneman1992} accurately, see \fref{CDF_weights}.
+only has one free parameter, $\alpha$, and has the following property: any curvature (\ie any deviation from $F_{w_{TK}}(F_{p_{TK}})=F_{p_{TK}}$, which is the shape it takes for $\alpha=1$) moves the intersection with the diagonal away from the mid-point $1/2$. For this feature to be reproduced in the Gaussian case, it is necessary to introduce a difference between the locations used by DO and DM in addition to the difference between scales. If we allow the possibility that the DM uses different estimates for scale and location, we can reproduce the observations in \parencite{TverskyKahneman1992} accurately, see \fref{CDF_weights}.
 
+% \begin{figure}
+% \centering
+% \includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
+% \caption{Decision weight CDFs used by a DM vs. probability CDFs used by a DO.\\ 
+% Top left) Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\\ 
+% Top right) Gaussian distribution, difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.
+% Bottom left) Gaussian distribution, differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\\ 
+% Bottom right) Fit to observations reported by \textcite{TverskyKahneman1992}. This is \eref{correspondence} with $\alpha=0.65$.
+% The observations by \textcite{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.}
+% \flabel{CDF_weights}
+% \end{figure}
+
+% same figure using subfigure and reps. captions 
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
@@ -485,10 +641,11 @@ only has one free parameter, $\alpha$, and has the following property: any curva
 Top left) Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\\ 
 Top right) Gaussian distribution, difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.
 Bottom left) Gaussian distribution, differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\\ 
-Bottom right) Fit to observations reported by \citet{TverskyKahneman1992}. This is \eref{correspondence} with $\alpha=0.65$.
-The observations by \citet{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.}
+Bottom right) Fit to observations reported by \textcite{TverskyKahneman1992}. This is \eref{correspondence} with $\alpha=0.65$.
+The observations by \textcite{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.}
 \flabel{CDF_weights}
 \end{figure}
+
 
 
 \section{Other probability distributions}
@@ -514,5 +671,7 @@ It is telling that assuming only a difference in scale and location, for the sim
 
 \clearpage
 %\bibliographystyle{humannat}
-\bibliography{./../LML_bibliography/bibliography} % name your BibTeX data base
+% \bibliography{./../LML_bibliography/bibliography} % name your BibTeX data base
+\printbibliography
+
 \end{document}

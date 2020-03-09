@@ -123,3 +123,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.project
+.texlipse
+/main.synctex.gz
+/main.blg
+/main-blx.bib
+/main.run.xml
+/main.pdf

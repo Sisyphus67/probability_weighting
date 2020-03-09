@@ -23,16 +23,14 @@ if SCfigure:
     plt.rc('font', **font)
     
 
-
 pos_x=np.linspace(0.01,10,1000)
 all_x=np.linspace(-10,10,1000)
 
-
-#Gaussian
+#Gaussian locations and scales
 g_loc_p=0
 g_loc_w=0
 g_scale_p=1
-g_scale_w=2.7
+g_scale_w=3
 def gauss_p(x):
     p=1/(np.sqrt(2*np.pi*(g_scale_p)))*np.exp(-np.power((x-g_loc_p),2)/(2*(g_scale_p)))
     return p
@@ -50,8 +48,10 @@ def cdf_gauss_w(x):
     return cdf
 
 
-#Exponential
+#Exponential: scales
 e_scale_p=1
+e_scale_w=1.5
+
 def exp_p(x):
     p=1/e_scale_p*np.exp(-x/e_scale_p)
     return p
@@ -60,7 +60,6 @@ def cdf_exp_p(x):
     cdf=quad(exp_p,0,x)
     return cdf
 
-e_scale_w=1.5
 def exp_w(x):
     w=1/e_scale_w*np.exp(-x/e_scale_w)
     return w
@@ -69,9 +68,13 @@ def cdf_exp_w(x):
     cdf=quad(exp_w,0,x)
     return cdf
 
-#Student-t
+#Student-t: location and scales
 s_scale_p=1
 nu_p=1/s_scale_p
+
+s_scale_w=2
+nu_w=1/s_scale_w
+
 def stu_p(x):
     p=gamma((nu_p+1.)/2)/(np.sqrt(np.pi*nu_p)*gamma(nu_p/2)*np.power((1+x*x/nu_p),(nu_p+1)/2))
     return p
@@ -80,8 +83,6 @@ def cdf_stu_p(x):
     cdf=quad(stu_p,-100,x)
     return cdf
 
-s_scale_w=2
-nu_w=1/s_scale_w
 def stu_w(x):
     p=gamma((nu_w+1.)/2)/(np.sqrt(np.pi*nu_w)*gamma(nu_w/2)*np.power((1+x*x/nu_w),(nu_w+1)/2))
     return p
@@ -89,10 +90,6 @@ def stu_w(x):
 def cdf_stu_w(x):
     cdf=quad(stu_w,-1000,x)
     return cdf
-
-
-
-
 
 
 #plotting CDFs
@@ -145,14 +142,14 @@ for x in all_x:
 plt.axvline(x=0.,LineStyle='--')
 plt.axvline(x=-1.,LineStyle='--')
 plt.axvline(x=1.,LineStyle='--')
-plt.plot(cp[0],cp[1],'r', lineWidth='3',label=r'$F_p(x)$')
-plt.plot(cw[0],cw[1],'b', lineWidth='3',label=r'$F_w(x)$')
+plt.plot(cp[0],cp[1],'r', lineWidth='3',label=r'$F_{p,0,1}(x)$')
+plt.plot(cw[0],cw[1],'b', lineWidth='3',label=r'$F_{w,0,3}(x)$')
 plt.title('')
 plt.xlim(-4,4)
 plt.legend(loc='upper left',fontsize='x-small')
-plt.xlabel(r'CDF $p$')
-plt.ylabel(r'decision weights CDF $w(p)$')
+plt.xlabel(r'$x$')
+plt.ylabel(r'CDF  $F(x)$')
 
-plt.savefig("./../decision_map.pdf", bbox_inches='tight')
+plt.savefig("./../TwoCDFs.pdf", bbox_inches='tight')
 plt.show()
 
