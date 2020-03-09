@@ -147,7 +147,7 @@ plt.axvline(x=0.5,LineStyle='--')
 plt.plot(cp[1],cw[1],'b', lineWidth='3',label=r'')
 plt.title('Student-t')
 
-plt.legend(loc='upper left',fontsize='x-small')
+#plt.legend(loc='upper left',fontsize='x-small')
 plt.xlabel(r'CDF $p$')
 plt.ylabel(r'decision weights CDF $w(p)$')
 
