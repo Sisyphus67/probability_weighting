@@ -38,12 +38,80 @@
     \verb 10.1257/jep.27.1.173
     \endverb
     \field{issue}{1}
-    \field{pages}{173\bibrangedash 96}
+    \field{pages}{173\bibrangedash 196}
     \field{title}{Thirty Years of Prospect Theory in Economics: A Review and
   Assessment}
     \field{volume}{27}
     \field{journaltitle}{Journal of Economic Perspectives}
     \field{year}{2013}
+  \endentry
+
+  \entry{DeGiorgi2006}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DGE}{%
+         family={De\bibnamedelima Giorgi},
+         familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+         given={Enrico},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HT}{%
+         family={Hens},
+         familyi={H\bibinitperiod},
+         given={Thorsten},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DGEHT1}
+    \strng{fullhash}{DGEHT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1007/s11408-006-0019-1
+    \endverb
+    \field{issue}{3}
+    \field{pages}{339\bibrangedash 360}
+    \field{title}{Making prospect theory fit for finance}
+    \field{volume}{20}
+    \field{journaltitle}{Financial Markets and Portfolio Management}
+    \field{year}{2006}
+  \endentry
+
+  \entry{GonzalezWu1999}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GR}{%
+         family={Gonzalez},
+         familyi={G\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=WG}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={George},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GRWG1}
+    \strng{fullhash}{GRWG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1999}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1006/cogp.1998.0710
+    \endverb
+    \field{issue}{1}
+    \field{pages}{129\bibrangedash 166}
+    \field{title}{On the Shape of the Probability Weighting Function}
+    \field{volume}{38}
+    \field{journaltitle}{Cognitive Psychology}
+    \field{year}{1999}
   \endentry
 
   \entry{Peters2019b}{article}{}
@@ -96,6 +164,98 @@
     \field{year}{2019}
   \endentry
 
+  \entry{PetersAdamou2015a}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PO}{%
+         family={Peters},
+         familyi={P\bibinitperiod},
+         given={Ole},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Adamou},
+         familyi={A\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{POAA1}
+    \strng{fullhash}{POAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{eprint}
+    \verb 1506.03414
+    \endverb
+    \field{title}{An evolutionary advantage of cooperation}
+    \verb{url}
+    \verb http://arxiv.org/abs/1506.03414
+    \endverb
+    \field{journaltitle}{ar{X}iv:1506.03414}
+    \field{eprinttype}{arxiv}
+    \field{month}{05}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Prelec1998}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PD}{%
+         family={Prelec},
+         familyi={P\bibinitperiod},
+         given={Dra\u{z}en},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PD1}
+    \strng{fullhash}{PD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.2307/2998573
+    \endverb
+    \field{issue}{3}
+    \field{pages}{497\bibrangedash 527}
+    \field{title}{The Probability Weighting Function}
+    \field{volume}{66}
+    \field{journaltitle}{Econometrica}
+    \field{year}{1998}
+  \endentry
+
+  \entry{Stott2006}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SHP}{%
+         family={Stott},
+         familyi={S\bibinitperiod},
+         given={Henry\bibnamedelima P.},
+         giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SHP1}
+    \strng{fullhash}{SHP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1007/s11166-006-8289-6
+    \endverb
+    \field{issue}{2}
+    \field{pages}{101\bibrangedash 130}
+    \field{title}{Cumulative prospect theory's functional menagerie}
+    \field{volume}{32}
+    \field{journaltitle}{Journal of Risk and Uncertainty}
+    \field{year}{2006}
+  \endentry
+
   \entry{TverskyKahneman1992}{article}{}
     \name{author}{2}{}{%
       {{hash=TA}{%
@@ -129,6 +289,68 @@
     \field{volume}{5}
     \field{journaltitle}{Journal of Risk and Uncertainty}
     \field{year}{1992}
+  \endentry
+
+  \entry{Wakker2010}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WP}{%
+         family={Wakker},
+         familyi={W\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{WP1}
+    \strng{fullhash}{WP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{subtitle}{For Risk and Ambiguitys}
+    \field{title}{Prospect Theory}
+    \verb{url}
+    \verb www.cambridge.org/9780521765015
+    \endverb
+    \field{year}{2010}
+  \endentry
+
+  \entry{WuGonzalez1996}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WG}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={George},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={Gonzalez},
+         familyi={G\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WGGR1}
+    \strng{fullhash}{WGGR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{labeldatesource}{}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{doi}
+    \verb 10.1287/mnsc.42.12.1676
+    \endverb
+    \field{issue}{12}
+    \field{pages}{1676\bibrangedash 1690}
+    \field{title}{Curvature of the Probability Weighting Function}
+    \field{volume}{42}
+    \field{journaltitle}{Management Science}
+    \field{year}{1996}
   \endentry
 \enddatalist
 \endinput

@@ -144,10 +144,10 @@ for x in all_x:
 
 plt.plot(cp[1],cp[1],'--k', label=r'')
 plt.axvline(x=0.5,LineStyle='--')
-plt.plot(cp[1],cw[1],'b', lineWidth='3',label=r'')
-plt.title('Student-t')
+plt.plot(cp[1],cw[1],'b', lineWidth='3',label=r'Student-t with larger scale')
+plt.title('General effect for heavy-tailed distributions')
 
-#plt.legend(loc='upper left',fontsize='x-small')
+plt.legend(loc='upper left',fontsize='x-small')
 plt.xlabel(r'CDF $p$')
 plt.ylabel(r'decision weights CDF $w(p)$')
 

@@ -82,7 +82,7 @@ prosp=re(p)
 #Plotting distributions
 plt.plot(lnr,prob,'b', label=r'PDF $p$ modeled by DO')
 plt.plot(lnr,reweighted,'r', label=r'PDF $w$ modeled by DM')
-plt.ylabel(r'PDF $p$')
+plt.ylabel(r'PDF $p,w$')
 plt.xlabel(r'x')
 plt.legend(loc='upper left',fontsize='x-small')
 

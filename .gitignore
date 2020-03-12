@@ -130,3 +130,7 @@ dmypy.json
 /main-blx.bib
 /main.run.xml
 /main.pdf
+*.aux
+*.bbl
+*.blg
+*.gz
