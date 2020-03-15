@@ -448,7 +448,7 @@ In \fref{TK1992} we reproduce the first such visual summary from \textcite[310]{
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/TK1992.PNG}
-\caption{\bsf{Empricial phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p. 310, Fig. 1]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the probability used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the decision weight used by a DM). For low (cumulative) probabilities (left) the decision weight exceeds the probability, and for high probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
+\caption{\bsf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p. 310, Fig. 1]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the probability used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the decision weight used by a DM). For low (cumulative) probabilities (left) the decision weight exceeds the probability, and for high probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
 \flabel{TK1992}
 \end{figure}
 
@@ -626,7 +626,7 @@ The difference between how these two perspectives evaluate the effects of noise 
 
 In \fref{CDF_weights} we show maps that result from the procedure illustrated in \fref{TwoCDFs}. We show separately maps that arise when the DM models the scale of the distribution differently (see \fref{subfig:GaussScale}), and when the DM models the location differently (see \fref{subfig:GaussLocation}). We then put the two together (see \fref{subfig:GaussLocScale}) and compare the result to the functional shape of $F^*_w$ which \textcite{TverskyKahneman1992} chose to fit to their observations (see \fref{subfig:PW_TK}).
 
-Without any derivation from a physical mechanism which would motivate the specific functional form, \textcite{TverskyKahneman1992} chose to fit the following function to resemble their data\footnote{\Eref{correspondence} is the consensus functional form in the community \parencite{Barberis2013}. Whereas we provide a mechanistic explanation, psychological explanations prevail in the behavioural economics and finance literature, see \ia \textcite{WuGonzalez1996,Prelec1998,GonzalezWu1999,Stott2006,DeGiorgi2006,AbdellouiETAL2011,Wakker2010} and references especially in the latter. It remains doubtful how a psychological explanation shall compensate for a missing and/or not yet understood mechanism, generating a particular phenomenon like probability weighting.}
+Without any derivation from a physical mechanism which would motivate the specific functional form, \textcite{TverskyKahneman1992} chose to fit the following function to resemble their data\footnote{\Eref{correspondence} is the consensus functional form in the community \parencite{Barberis2013}. Whereas we provide a mechanistic explanation, psychological explanations prevail in the behavioural economics and finance literature, see \ia \textcite{WuGonzalez1996,Prelec1998,GonzalezWu1999,Stott2006,DeGiorgi2006,Wakker2010,AbdellaouiETAL2011} and references especially in the latter. It remains doubtful how a psychological explanation shall compensate for a missing and/or not yet understood mechanism, generating a particular phenomenon like probability weighting.}
 % 
 \be
 \elabel{correspondence}
@@ -690,16 +690,37 @@ construct a list of values for the CDF assumed by the DM, $F_w(x)$.
 \item
 plot $F_w(x)$ vs $F_p(x)$.
 \end{enumerate}
-Of course, the DM could assume a type of distribution that differs from the DO's. An infinity of combinations of assumed distributions can be explored. To illustrate the generality of the procedure, in \fref{fat_tailed_CDF} we carry it out for a (power-law tailed) Student-t distribution, where DO and DM use different shape parameters and different locations. The result is qualitatively similar to \fref{subfig:PW_TK}, corresponding to \eref{correspondence}. 
+Of course, the DM could assume a type of distribution that differs from the DO's. An infinity of combinations of assumed distributions can be explored. To illustrate the generality of the procedure, in \fref{fat_tailed_CDF} we carry it out for a (power-law tailed) Student's-t distribution, where DO and DM use different shape parameters and different locations. The result is qualitatively similar to \fref{subfig:PW_TK}, corresponding to \eref{correspondence}. 
 
 It is telling that assuming only a difference in scale and location (for the simplest Gaussian case) is already sufficient to reproduce the observations that are characterised an irrational bias and are labelled as ``probability weighting.''
 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.7\textwidth]{./figs/Student-t.pdf}
-\caption{Probability weighting for Student-t distributions, where the DM uses a different shape parameter (1) and a different location parameter (0) from those of the DO (2 and 0.2, respectively).}
+\caption{Probability weighting for Student's-t distributions, where the DM uses a different shape parameter (1) and a different location parameter (0) from those of the DO (2 and 0.2, respectively).}
 \flabel{fat_tailed_CDF}
 \end{figure}
+
+\section{Fitting the model to experimental results}
+To test whether our model is in line with existing evidence on probability weighting, we fit the Gaussian and Student's-t distributions to experimental data. Specifically, we fit the location ($\mu$) and scale ($\sigma$) parameters in the Gaussian case and the shape parameters ($\nu$ and $\delta$) in the Student's-t case to experimental results from \textcite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \textcite{TverskyFox1995}. In addition, we fit the function
+%
+\be
+w(p)=\frac{\delta p^{\gamma}}{\delta p^{\gamma} + (1-p)^{\gamma}}\,,
+\elabel{LattimoreFunction}
+\ee
+%
+suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe probability weighting, and was commonly used since (see, \eg \textcite{tversky1995risk}).
+
+\Fref{TK_TF_fit} presents these results. We obtain very good fit to data for both Gaussian and student's-t distributions, as well as for \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the three fitted functions within standard errors. We conclude that our model fit the data well, and unlike \eref{LattimoreFunction}, the fitted functions are directly derived from a mechanistic model, and are not simply phenomenological.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/TK_TF_fit.pdf}
+\caption{Model fitting to experimental data from \textcite{TverskyKahneman1992} (left) and \textcite{TverskyFox1995} (right).
+Left) Gaussian model: $\mu=0.4\,\left(SE = 0.13\right)$, $\sigma=1.5\,\left(\pm0.2\right)$; Student's-t model: $\nu=0.39\,\left(\pm0.06\right)$, $\delta=0.29\,\left(\pm0.08\right)$; \textcite{LattimoreBakerWitte1992}: $\delta=0.67\,\left(\pm0.07\right)$, $\gamma=0.59\,\left(\pm0.06\right)$. Right) Gaussian model: $\mu=0.23\,\left(\pm0.03\right)$, $\sigma=1.4\,\left(\pm0.06\right)$; Student's-t model: $\nu=0.47\,\left(\pm0.05\right)$, $\delta=0.17\,\left(\pm0.03\right)$; \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.02\right)$, $\gamma=0.69\,\left(\pm0.02\right)$. The fit was done by implementing the method of least squares with the Nelder-Mead algorithm \parencite{NelderMead1965}, and the standard errors were obtained by bootstrapping.}
+\flabel{TK_TF_fit}
+\end{figure}
+
 
 \section{Conclusion/Summary}
 \MK{Discuss the general action of change of measure in relation to Girsanov and risk-neutral prob measure $\mathbb{Q}$ in Math Finance?}
