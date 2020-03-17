@@ -41,20 +41,28 @@ fig.tight_layout(pad=3)
 
 #TK1992
 wp1 = (deltaTK * (xx ** gammaTK)) / (deltaTK * (xx ** gammaTK) + ((1 - xx) ** gammaTK))
-dtmpL = deltaTK + nse * SEdTK; gtmpL = gammaTK - nse * SEgTK
-dtmpH = deltaTK - nse * SEdTK; gtmpH = gammaTK + nse * SEgTK
-wp1L = (dtmpL * (xx ** gtmpL)) / (dtmpL * (xx ** gtmpL) + ((1 - xx) ** gtmpL))
-wp1H = (dtmpH * (xx ** gtmpH)) / (dtmpH * (xx ** gtmpH) + ((1 - xx) ** gtmpH))
+dtmp1 = deltaTK + nse * SEdTK; gtmp1 = gammaTK + nse * SEgTK
+dtmp2 = deltaTK - nse * SEdTK; gtmp2 = gammaTK + nse * SEgTK
+dtmp3 = deltaTK + nse * SEdTK; gtmp3 = gammaTK - nse * SEgTK
+dtmp4 = deltaTK - nse * SEdTK; gtmp4 = gammaTK - nse * SEgTK
+wp1m1 = (dtmp1 * (xx ** gtmp1)) / (dtmp1 * (xx ** gtmp1) + ((1 - xx) ** gtmp1))
+wp1m2 = (dtmp2 * (xx ** gtmp2)) / (dtmp2 * (xx ** gtmp2) + ((1 - xx) ** gtmp2))
+wp1m3 = (dtmp3 * (xx ** gtmp3)) / (dtmp3 * (xx ** gtmp3) + ((1 - xx) ** gtmp3))
+wp1m4 = (dtmp4 * (xx ** gtmp4)) / (dtmp4 * (xx ** gtmp4) + ((1 - xx) ** gtmp4))
 wp2 = stat.norm.cdf(x, locTK, scaTK)
-wp2L = stat.norm.cdf(x, locTK - nse * SElTK, scaTK + nse * SEsTK)
-wp2H = stat.norm.cdf(x, locTK + nse * SElTK, scaTK - nse * SEsTK)
+wp1g1 = stat.norm.cdf(x, locTK + nse * SElTK, scaTK + nse * SEsTK)
+wp1g2 = stat.norm.cdf(x, locTK - nse * SElTK, scaTK + nse * SEsTK)
+wp1g3 = stat.norm.cdf(x, locTK + nse * SElTK, scaTK - nse * SEsTK)
+wp1g4 = stat.norm.cdf(x, locTK - nse * SElTK, scaTK - nse * SEsTK)
 wp3 = stat.nct.cdf(x, df = nuTK, nc = deltatTK, loc = 0, scale = 1)
-wp3L = stat.nct.cdf(x, df = nuTK - nse * SEnTK, nc = deltatTK - nse * SEdtTK, loc = 0, scale = 1)
-wp3H = stat.nct.cdf(x, df = nuTK + nse * SEnTK, nc = deltatTK + nse * SEdtTK, loc = 0, scale = 1)
+wp1t1 = stat.nct.cdf(x, df = nuTK + nse * SEnTK, nc = deltatTK + nse * SEdtTK, loc = 0, scale = 1)
+wp1t2 = stat.nct.cdf(x, df = nuTK - nse * SEnTK, nc = deltatTK + nse * SEdtTK, loc = 0, scale = 1)
+wp1t3 = stat.nct.cdf(x, df = nuTK + nse * SEnTK, nc = deltatTK - nse * SEdtTK, loc = 0, scale = 1)
+wp1t4 = stat.nct.cdf(x, df = nuTK - nse * SEnTK, nc = deltatTK - nse * SEdtTK, loc = 0, scale = 1)
 
-axes[0].fill_between(xx, wp1L, wp1H, facecolor='b', alpha=0.25, interpolate=True)
-axes[0].fill_between(p, wp2L, wp2H, facecolor='r', alpha=0.25, interpolate=True)
-axes[0].fill_between(pT, wp3L, wp3H, facecolor='0.5', alpha=0.25, interpolate=True)
+axes[0].fill_between(xx, np.minimum(wp1m4, np.minimum(wp1m3, np.minimum(wp1m2, wp1m1))), np.maximum(wp1m4, np.maximum(wp1m3, np.maximum(wp1m2, wp1m1))), facecolor='b', alpha=0.25, interpolate=True)
+axes[0].fill_between(p, np.minimum(wp1g4, np.minimum(wp1g3, np.minimum(wp1g2, wp1g1))), np.maximum(wp1g4, np.maximum(wp1g3, np.maximum(wp1g2, wp1g1))), facecolor='r', alpha=0.25, interpolate=True)
+axes[0].fill_between(pT, np.minimum(wp1t4, np.minimum(wp1t3, np.minimum(wp1t2, wp1t1))), np.maximum(wp1t4, np.maximum(wp1t3, np.maximum(wp1t2, wp1t1))), facecolor='0.5', alpha=0.25, interpolate=True)
 axes[0].plot(xx, xx, '--k', label=r'')
 axes[0].axvline(x=0.5, LineStyle='--')
 axes[0].plot(xx, wp1, 'b', lineWidth='3', label=r'$w(p)=\delta p^{\gamma} / (\delta p^{\gamma} + (1-p)^{\gamma})$')
@@ -70,20 +78,28 @@ axes[0].legend(loc='upper left', fontsize='x-small')
 
 #TF1995
 wp1 = (deltaTF * (xx ** gammaTF)) / (deltaTF * (xx ** gammaTF) + ((1 - xx) ** gammaTF))
-dtmpL = deltaTF + nse * SEdTF; gtmpL = gammaTF - nse * SEgTF
-dtmpH = deltaTF - nse * SEdTF; gtmpH = gammaTF + nse * SEgTF
-wp1L = (dtmpL * (xx ** gtmpL)) / (dtmpL * (xx ** gtmpL) + ((1 - xx) ** gtmpL))
-wp1H = (dtmpH * (xx ** gtmpH)) / (dtmpH * (xx ** gtmpH) + ((1 - xx) ** gtmpH))
+dtmp1 = deltaTF + nse * SEdTF; gtmp1 = gammaTF + nse * SEgTF
+dtmp2 = deltaTF - nse * SEdTF; gtmp2 = gammaTF + nse * SEgTF
+dtmp3 = deltaTF + nse * SEdTF; gtmp3 = gammaTF - nse * SEgTF
+dtmp4 = deltaTF - nse * SEdTF; gtmp4 = gammaTF - nse * SEgTF
+wp1m1 = (dtmp1 * (xx ** gtmp1)) / (dtmp1 * (xx ** gtmp1) + ((1 - xx) ** gtmp1))
+wp1m2 = (dtmp2 * (xx ** gtmp2)) / (dtmp2 * (xx ** gtmp2) + ((1 - xx) ** gtmp2))
+wp1m3 = (dtmp3 * (xx ** gtmp3)) / (dtmp3 * (xx ** gtmp3) + ((1 - xx) ** gtmp3))
+wp1m4 = (dtmp4 * (xx ** gtmp4)) / (dtmp4 * (xx ** gtmp4) + ((1 - xx) ** gtmp4))
 wp2 = stat.norm.cdf(x, locTF, scaTF)
-wp2L = stat.norm.cdf(x, locTF - nse * SElTF, scaTF + nse * SEsTF)
-wp2H = stat.norm.cdf(x, locTF + nse * SElTF, scaTF - nse * SEsTF)
+wp1g1 = stat.norm.cdf(x, locTF + nse * SElTF, scaTF + nse * SEsTF)
+wp1g2 = stat.norm.cdf(x, locTF - nse * SElTF, scaTF + nse * SEsTF)
+wp1g3 = stat.norm.cdf(x, locTF + nse * SElTF, scaTF - nse * SEsTF)
+wp1g4 = stat.norm.cdf(x, locTF - nse * SElTF, scaTF - nse * SEsTF)
 wp3 = stat.nct.cdf(x, df = nuTF, nc = deltatTF, loc = 0, scale = 1)
-wp3L = stat.nct.cdf(x, df = nuTF - nse * SEnTF, nc = deltatTF - nse * SEdtTF, loc = 0, scale = 1)
-wp3H = stat.nct.cdf(x, df = nuTF + nse * SEnTF, nc = deltatTF + nse * SEdtTF, loc = 0, scale = 1)
+wp1t1 = stat.nct.cdf(x, df = nuTF + nse * SEnTF, nc = deltatTF + nse * SEdtTF, loc = 0, scale = 1)
+wp1t2 = stat.nct.cdf(x, df = nuTF - nse * SEnTF, nc = deltatTF + nse * SEdtTF, loc = 0, scale = 1)
+wp1t3 = stat.nct.cdf(x, df = nuTF + nse * SEnTF, nc = deltatTF - nse * SEdtTF, loc = 0, scale = 1)
+wp1t4 = stat.nct.cdf(x, df = nuTF - nse * SEnTF, nc = deltatTF - nse * SEdtTF, loc = 0, scale = 1)
 
-axes[1].fill_between(xx, wp1L, wp1H, facecolor='b', alpha=0.25, interpolate=True)
-axes[1].fill_between(p, wp2L, wp2H, facecolor='r', alpha=0.25, interpolate=True)
-axes[1].fill_between(pT, wp3L, wp3H, facecolor='0.5', alpha=0.25, interpolate=True)
+axes[1].fill_between(xx, np.minimum(wp1m4, np.minimum(wp1m3, np.minimum(wp1m2, wp1m1))), np.maximum(wp1m4, np.maximum(wp1m3, np.maximum(wp1m2, wp1m1))), facecolor='b', alpha=0.25, interpolate=True)
+axes[1].fill_between(p, np.minimum(wp1g4, np.minimum(wp1g3, np.minimum(wp1g2, wp1g1))), np.maximum(wp1g4, np.maximum(wp1g3, np.maximum(wp1g2, wp1g1))), facecolor='r', alpha=0.25, interpolate=True)
+axes[1].fill_between(pT, np.minimum(wp1t4, np.minimum(wp1t3, np.minimum(wp1t2, wp1t1))), np.maximum(wp1t4, np.maximum(wp1t3, np.maximum(wp1t2, wp1t1))), facecolor='0.5', alpha=0.25, interpolate=True)
 axes[1].plot(xx, xx, '--k', label=r'')
 axes[1].axvline(x=0.5, LineStyle='--')
 axes[1].plot(xx, wp1, 'b', lineWidth='3', label=r'$w(p)=\delta p^{\gamma} / (\delta p^{\gamma} + (1-p)^{\gamma})$')
@@ -97,7 +113,7 @@ axes[1].set_xticks(np.arange(0, 1.1, step=0.2))
 axes[1].set_yticks(np.arange(0, 1.1, step=0.2))
 axes[1].legend(loc='upper left', fontsize='x-small')
 
-plt.savefig("./../TK_TF_fit.pdf", bbox_inches='tight')
+plt.savefig("./TK_TF_fit.pdf", bbox_inches='tight')
 plt.show()
 plt.clf()
 
