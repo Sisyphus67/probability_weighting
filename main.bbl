@@ -1,356 +1,81 @@
-% $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.1 $
-% Do not modify the above lines!
-%
-% This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
-%
-\begingroup
-\makeatletter
-\@ifundefined{ver@biblatex.sty}
-  {\@latex@error
-     {Missing 'biblatex' package}
-     {The bibliography requires the 'biblatex' package.}
-      \aftergroup\endinput}
-  {}
-\endgroup
+\begin{thebibliography}{}
 
-\datalist[entry]{nyt/global//global/global}
-  \entry{Barberis2013}{article}{}
-    \name{author}{1}{}{%
-      {{hash=BNC}{%
-         family={Barberis},
-         familyi={B\bibinitperiod},
-         given={Nicholas\bibnamedelima C.},
-         giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{BNC1}
-    \strng{fullhash}{BNC1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2013}
-    \field{labeldatesource}{}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
-    \verb{doi}
-    \verb 10.1257/jep.27.1.173
-    \endverb
-    \field{issue}{1}
-    \field{pages}{173\bibrangedash 196}
-    \field{title}{Thirty Years of Prospect Theory in Economics: A Review and
-  Assessment}
-    \field{volume}{27}
-    \field{journaltitle}{Journal of Economic Perspectives}
-    \field{year}{2013}
-  \endentry
+\bibitem[Abdellaoui et~al., 2011]{AbdellaouiETAL2011}
+Abdellaoui, M., Baillon, A., Placido, L., and Wakker, P.~P. (2011).
+\newblock The rich domain of uncertainty: Source functions and their
+  experimental implementation.
+\newblock 101:695--723.
 
-  \entry{DeGiorgi2006}{article}{}
-    \name{author}{2}{}{%
-      {{hash=DGE}{%
-         family={De\bibnamedelima Giorgi},
-         familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
-         given={Enrico},
-         giveni={E\bibinitperiod},
-      }}%
-      {{hash=HT}{%
-         family={Hens},
-         familyi={H\bibinitperiod},
-         given={Thorsten},
-         giveni={T\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{DGEHT1}
-    \strng{fullhash}{DGEHT1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2006}
-    \field{labeldatesource}{}
-    \field{sortinit}{D}
-    \field{sortinithash}{D}
-    \verb{doi}
-    \verb 10.1007/s11408-006-0019-1
-    \endverb
-    \field{issue}{3}
-    \field{pages}{339\bibrangedash 360}
-    \field{title}{Making prospect theory fit for finance}
-    \field{volume}{20}
-    \field{journaltitle}{Financial Markets and Portfolio Management}
-    \field{year}{2006}
-  \endentry
+\bibitem[Barberis, 2013]{Barberis2013}
+Barberis, N.~C. (2013).
+\newblock Thirty years of prospect theory in economics: A review and
+  assessment.
+\newblock {\em Journal of Economic Perspectives}, 27:173--196.
 
-  \entry{GonzalezWu1999}{article}{}
-    \name{author}{2}{}{%
-      {{hash=GR}{%
-         family={Gonzalez},
-         familyi={G\bibinitperiod},
-         given={Richard},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=WG}{%
-         family={Wu},
-         familyi={W\bibinitperiod},
-         given={George},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GRWG1}
-    \strng{fullhash}{GRWG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1999}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \verb{doi}
-    \verb 10.1006/cogp.1998.0710
-    \endverb
-    \field{issue}{1}
-    \field{pages}{129\bibrangedash 166}
-    \field{title}{On the Shape of the Probability Weighting Function}
-    \field{volume}{38}
-    \field{journaltitle}{Cognitive Psychology}
-    \field{year}{1999}
-  \endentry
+\bibitem[De~Giorgi and Hens, 2006]{DeGiorgi2006}
+De~Giorgi, E. and Hens, T. (2006).
+\newblock Making prospect theory fit for finance.
+\newblock 20:339--360.
 
-  \entry{Peters2019b}{article}{}
-    \name{author}{1}{}{%
-      {{hash=PO}{%
-         family={Peters},
-         familyi={P\bibinitperiod},
-         given={Ole},
-         giveni={O\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{PO1}
-    \strng{fullhash}{PO1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2019}
-    \field{labeldatesource}{}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
-    \field{abstract}{%
-    The ergodic hypothesis is a key analytical device of equilibrium
-  statistical mechanics. It underlies the assumption that the time average and
-  the expectation value of an observable are the same. Where it is valid,
-  dynamical descriptions can often be replaced with much simpler probabilistic
-  ones ---time is essentially eliminated from the models. The conditions for
-  validity are restrictive, even more so for non-equilibrium systems. Economics
-  typically deals with systems far from equilibrium ---specifically with models
-  of growth. It may therefore come as a surprise to learn that the prevailing
-  formulations of economic theory ---expected utility theory and its
-  descendants ---make an indiscriminate assumption of ergodicity. This is
-  largely because foundational concepts to do with risk and randomness
-  originated in seventeenth-century economics, predating by some 200 years the
-  concept of ergodicity, which arose in nineteenth-century physics. In this
-  Perspective, I argue that by carefully addressing the question of ergodicity,
-  many puzzles besetting the current economic formalism are resolved in a
-  natural and empirically testable way.%
-    }
-    \verb{doi}
-    \verb 10.1038/s41567-019-0732-0
-    \endverb
-    \field{isbn}{1745-2481}
-    \field{issue}{12}
-    \field{pages}{1216\bibrangedash 1221}
-    \field{title}{The Ergodicity Problem in Economics}
-    \verb{url}
-    \verb https://doi.org/10.1038/s41567-019-0732-0
-    \endverb
-    \field{volume}{15}
-    \field{journaltitle}{Nature Physics}
-    \field{year}{2019}
-  \endentry
+\bibitem[Gonzalez and Wu, 1999]{GonzalezWu1999}
+Gonzalez, R. and Wu, G. (1999).
+\newblock On the shape of the probability weighting function.
+\newblock {\em Cognitive Psychology}, 38:129--166.
 
-  \entry{PetersAdamou2015a}{article}{}
-    \name{author}{2}{}{%
-      {{hash=PO}{%
-         family={Peters},
-         familyi={P\bibinitperiod},
-         given={Ole},
-         giveni={O\bibinitperiod},
-      }}%
-      {{hash=AA}{%
-         family={Adamou},
-         familyi={A\bibinitperiod},
-         given={Alexander},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{POAA1}
-    \strng{fullhash}{POAA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2018}
-    \field{labeldatesource}{}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
-    \verb{eprint}
-    \verb 1506.03414
-    \endverb
-    \field{title}{An evolutionary advantage of cooperation}
-    \verb{url}
-    \verb http://arxiv.org/abs/1506.03414
-    \endverb
-    \field{journaltitle}{ar{X}iv:1506.03414}
-    \field{eprinttype}{arxiv}
-    \field{month}{05}
-    \field{year}{2018}
-  \endentry
+\bibitem[Lattimore et~al., 1992]{LattimoreBakerWitte1992}
+Lattimore, P.~K., Baker, J.~R., and Witte, A.~D. (1992).
+\newblock Influence of probability on risky choice: A parametric examination.
+\newblock {\em Journal of Economic Behavior and Organization}, 17:377--400.
 
-  \entry{Prelec1998}{article}{}
-    \name{author}{1}{}{%
-      {{hash=PD}{%
-         family={Prelec},
-         familyi={P\bibinitperiod},
-         given={Dra\u{z}en},
-         giveni={D\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{PD1}
-    \strng{fullhash}{PD1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1998}
-    \field{labeldatesource}{}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
-    \verb{doi}
-    \verb 10.2307/2998573
-    \endverb
-    \field{issue}{3}
-    \field{pages}{497\bibrangedash 527}
-    \field{title}{The Probability Weighting Function}
-    \field{volume}{66}
-    \field{journaltitle}{Econometrica}
-    \field{year}{1998}
-  \endentry
+\bibitem[Nelder and Mead, 1965]{NelderMead1965}
+Nelder, J.~A. and Mead, R. (1965).
+\newblock A simplex method for function minimization.
+\newblock {\em The Computer Journal}, 7(4):308--313.
 
-  \entry{Stott2006}{article}{}
-    \name{author}{1}{}{%
-      {{hash=SHP}{%
-         family={Stott},
-         familyi={S\bibinitperiod},
-         given={Henry\bibnamedelima P.},
-         giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{SHP1}
-    \strng{fullhash}{SHP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2006}
-    \field{labeldatesource}{}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \verb{doi}
-    \verb 10.1007/s11166-006-8289-6
-    \endverb
-    \field{issue}{2}
-    \field{pages}{101\bibrangedash 130}
-    \field{title}{Cumulative prospect theory's functional menagerie}
-    \field{volume}{32}
-    \field{journaltitle}{Journal of Risk and Uncertainty}
-    \field{year}{2006}
-  \endentry
+\bibitem[Peters, 2019]{Peters2019b}
+Peters, O. (2019).
+\newblock The ergodicity problem in economics.
+\newblock {\em Nature Physics}, 15:1216--1221.
 
-  \entry{TverskyKahneman1992}{article}{}
-    \name{author}{2}{}{%
-      {{hash=TA}{%
-         family={Tversky},
-         familyi={T\bibinitperiod},
-         given={Amos},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=KD}{%
-         family={Kahneman},
-         familyi={K\bibinitperiod},
-         given={Daniel},
-         giveni={D\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{TAKD1}
-    \strng{fullhash}{TAKD1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1992}
-    \field{labeldatesource}{}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \verb{doi}
-    \verb 10.1007/BF00122574
-    \endverb
-    \field{issue}{4}
-    \field{pages}{297\bibrangedash 323}
-    \field{title}{{A}dvances in {P}rospect {T}heory: {C}umulative
-  {R}epresentation of {U}ncertainty}
-    \field{volume}{5}
-    \field{journaltitle}{Journal of Risk and Uncertainty}
-    \field{year}{1992}
-  \endentry
+\bibitem[Peters and Adamou, 2018]{PetersAdamou2015a}
+Peters, O. and Adamou, A. (2018).
+\newblock An evolutionary advantage of cooperation.
+\newblock {\em ar{X}iv:1506.03414}.
 
-  \entry{Wakker2010}{book}{}
-    \name{author}{1}{}{%
-      {{hash=WP}{%
-         family={Wakker},
-         familyi={W\bibinitperiod},
-         given={Peter},
-         giveni={P\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Cambridge University Press}%
-    }
-    \strng{namehash}{WP1}
-    \strng{fullhash}{WP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2010}
-    \field{labeldatesource}{}
-    \field{sortinit}{W}
-    \field{sortinithash}{W}
-    \field{subtitle}{For Risk and Ambiguitys}
-    \field{title}{Prospect Theory}
-    \verb{url}
-    \verb www.cambridge.org/9780521765015
-    \endverb
-    \field{year}{2010}
-  \endentry
+\bibitem[Prelec, 1998]{Prelec1998}
+Prelec, D. (1998).
+\newblock The probability weighting function.
+\newblock 66:497--527.
 
-  \entry{WuGonzalez1996}{article}{}
-    \name{author}{2}{}{%
-      {{hash=WG}{%
-         family={Wu},
-         familyi={W\bibinitperiod},
-         given={George},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=GR}{%
-         family={Gonzalez},
-         familyi={G\bibinitperiod},
-         given={Richard},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{WGGR1}
-    \strng{fullhash}{WGGR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1996}
-    \field{labeldatesource}{}
-    \field{sortinit}{W}
-    \field{sortinithash}{W}
-    \verb{doi}
-    \verb 10.1287/mnsc.42.12.1676
-    \endverb
-    \field{issue}{12}
-    \field{pages}{1676\bibrangedash 1690}
-    \field{title}{Curvature of the Probability Weighting Function}
-    \field{volume}{42}
-    \field{journaltitle}{Management Science}
-    \field{year}{1996}
-  \endentry
-\enddatalist
-\endinput
+\bibitem[Stott, 2006]{Stott2006}
+Stott, H.~P. (2006).
+\newblock Cumulative prospect theory's functional menagerie.
+\newblock 32:101--130.
+
+\bibitem[Tversky and Fox, 1995]{TverskyFox1995}
+Tversky, A. and Fox, C.~R. (1995).
+\newblock Weighing risk and uncertainty.
+\newblock {\em Psychological Review}, 102(2):269--283.
+
+\bibitem[Tversky and Kahneman, 1992]{TverskyKahneman1992}
+Tversky, A. and Kahneman, D. (1992).
+\newblock {A}dvances in {P}rospect {T}heory: {C}umulative {R}epresentation of
+  {U}ncertainty.
+\newblock 5:297--323.
+
+\bibitem[Tversky and Wakker, 1995]{tversky1995risk}
+Tversky, A. and Wakker, P. (1995).
+\newblock Risk attitudes and decision weights.
+\newblock {\em Econometrica}, 63(6):1255--1280.
+
+\bibitem[Wakker, 2010]{Wakker2010}
+Wakker, P. (2010).
+\newblock {\em Prospect Theory}.
+\newblock Cambridge University Press.
+
+\bibitem[Wu and Gonzalez, 1996]{WuGonzalez1996}
+Wu, G. and Gonzalez, R. (1996).
+\newblock Curvature of the probability weighting function.
+\newblock {\em Management Science}, 42:1676--1690.
+
+\end{thebibliography}

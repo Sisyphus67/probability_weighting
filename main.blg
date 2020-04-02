@@ -1,7 +1,52 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
-The style file: biblatex.bst
-Database file #1: main-blx.bib
-Database file #2: ../LML_bibliography/bibliography.bib
-Warning--I didn't find a database entry for "AbdellouiETAL2011"
-Biblatex version: 3.13
-(There was 1 warning)
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: apalike.bst
+Database file #1: ./../LML_bibliography/bibliography.bib
+Warning--empty journal in AbdellaouiETAL2011
+Warning--empty journal in DeGiorgi2006
+Warning--empty journal in Prelec1998
+Warning--empty journal in Stott2006
+Warning--empty journal in TverskyKahneman1992
+You've used 15 entries,
+            1935 wiz_defined-function locations,
+            581 strings with 5752 characters,
+and the built_in function-call counts, 5761 in all, are:
+= -- 581
+> -- 180
+< -- 13
++ -- 66
+- -- 56
+* -- 482
+:= -- 992
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 102
+chr.to.int$ -- 15
+cite$ -- 20
+duplicate$ -- 209
+empty$ -- 430
+format.name$ -- 87
+if$ -- 1117
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 16
+newline$ -- 78
+num.names$ -- 45
+pop$ -- 77
+preamble$ -- 1
+purify$ -- 103
+quote$ -- 0
+skip$ -- 163
+stack$ -- 0
+substring$ -- 521
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 88
+warning$ -- 5
+while$ -- 53
+width$ -- 0
+write$ -- 190
+(There were 5 warnings)
