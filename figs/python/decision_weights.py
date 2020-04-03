@@ -87,13 +87,13 @@ prosp=re(p)
 #plt.legend()
 
 #plotting reweighting
-plt.plot(prob,prob,'--k', label=r'')
-plt.plot(p,prosp,'b', label=r'decision weight density $w(p)$')
+plt.plot(prob,prob,'r', label=r'p',linewidth=2)
+plt.plot(p,prosp,'b', label=r'$w(p)$',linewidth=2)
 #plt.plot(prob,reweighted,'r', lineWidth='3',label=r'directly from dists')
 
 plt.legend(loc='upper left',fontsize='x-small')
 plt.xlabel(r'PDF $p$')
-plt.ylabel(r'decision weight PDF $w(p)$')
+plt.ylabel(r'PDFs $p$ and $w(p)$')
 
 plt.savefig("./../decision_weights.pdf", bbox_inches='tight')
 plt.show()

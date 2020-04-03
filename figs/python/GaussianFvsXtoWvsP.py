@@ -26,8 +26,8 @@ axes[0].axvline(x=0, LineStyle='--')
 #axes[0].axvline(x=1, LineStyle='--')
 #axes[0].axhline(y=0.5, LineStyle='--')
 axes[0].set_xlim((-4.5, 4.5))
-axes[0].plot(x, DO, 'r', lineWidth='3', label=r'$F_{p}(x)$')
-axes[0].plot(x, DM, 'b', lineWidth='3', label=r'$F_{w}(x)$')
+axes[0].plot(x, DO, 'r', lineWidth='2', label=r'$F_{p}(x)$')
+axes[0].plot(x, DM, 'b', lineWidth='2', label=r'$F_{w}(x)$')
 
 #plot arrows
 xs=[-2,-1.5,-1,-.5,.5,1,1.5,2]
@@ -49,8 +49,8 @@ axes[0].legend(loc='upper left', fontsize='x-small')
 
 #w(p) plot
 axes[1].axvline(x=0.5, LineStyle='--')
-axes[1].plot(xx, xx, 'r', lineWidth='3', label=r'$F_p$')
-axes[1].plot(DO, DM, 'b', lineWidth='3', label=r'$F_w$')
+axes[1].plot(xx, xx, 'r', lineWidth='2', label=r'$F_p$')
+axes[1].plot(DO, DM, 'b', lineWidth='2', label=r'$F_w$')
 
 # plot arrows
 #nx = len(x)
@@ -69,7 +69,7 @@ axes[1].set_xticks(np.arange(0, 1.1, step=0.2))
 axes[1].set_yticks(np.arange(0, 1.1, step=0.2))
 axes[1].legend(loc='upper left', fontsize='x-small')
 
-plt.savefig("./GaussianFvsXtoWvsP.pdf", bbox_inches='tight')
+plt.savefig("./../GaussianFvsXtoWvsP.pdf", bbox_inches='tight')
 plt.show()
 plt.clf()
 
