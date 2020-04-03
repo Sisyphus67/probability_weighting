@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1585849280 "main.aux" "main.bbl" "main" 1585849281
+["bibtex main"] 1585912468 "main.aux" "main.bbl" "main" 1585912469
   "./../LML_bibliography/bibliography.bib" 1584711085 270737 76fe8b9fedf9df24e434e3f1439c8234 ""
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/base/apalike.bst" 1480098433 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "main.aux" 1585849281 16892 549346dc42476a9bb9e492b12251dedd "pdflatex"
+  "main.aux" 1585912469 17689 f040e0143571f439b65965c47b5e51d5 "pdflatex"
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1585849280 "main.tex" "main.pdf" "main" 1585849281
+["pdflatex"] 1585912468 "main.tex" "main.pdf" "main" 1585912469
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -139,20 +139,20 @@
   "figs/Gauss_location.pdf" 1585835096 14064 413254b5f244e9003e8ae5a29bde719f ""
   "figs/Gauss_location_and_scale.pdf" 1585835096 14508 3455821eabbadba3d3d08d55e23b465a ""
   "figs/Gauss_scale.pdf" 1585835096 14780 56f69911fb8c4e1329108c76636a0181 ""
+  "figs/GaussianFvsXtoWvsP.pdf" 1585910255 14199 35a4e19baaa36d43dcb378936b168ace ""
   "figs/KT1992.pdf" 1585835096 17566 395ba4d7a820d3f9abf904efc7f03641 ""
   "figs/Student-t.pdf" 1585835096 16829 7f37c683f0c995d7a446f2d427f62bfc ""
   "figs/TK1992.PNG" 1585835096 120635 98d47abdf904426df5ea612b7e38355a ""
   "figs/TK_TF_fit.pdf" 1585835096 361639 6701f7beb67202a2900a5c2712bdd361 ""
-  "figs/TwoCDFs.pdf" 1585835096 12412 1cbbe79553c8d590002ba6d205467c71 ""
   "figs/decision_weights.pdf" 1585835096 14744 ad687bf075e672618a9ab34fc8dee595 ""
   "figs/probability_dists.pdf" 1585835096 13987 dc68abfb4461a10b7b1596945d8cfd8c ""
-  "main.aux" 1585849281 16892 549346dc42476a9bb9e492b12251dedd "pdflatex"
-  "main.bbl" 1585849280 2801 2406494d311c283086b5541e34e7c538 "bibtex main"
-  "main.out" 1585849281 725 4e57e4f93e3cdaecd534baac2055511b "pdflatex"
-  "main.tex" 1585849278 42448 e9337cc659aeb4f31f22b281d6fbb019 ""
+  "main.aux" 1585912469 17689 f040e0143571f439b65965c47b5e51d5 "pdflatex"
+  "main.bbl" 1585912468 2801 2406494d311c283086b5541e34e7c538 "bibtex main"
+  "main.out" 1585912469 725 4e57e4f93e3cdaecd534baac2055511b "pdflatex"
+  "main.tex" 1585912466 42892 cf5028b3ae710a012ffcb869ce67b3ce ""
   "resone-logo.png" 1575630466 20898 f06d4d36a65cf43ea02118ac22c48db2 ""
   (generated)
-  "main.out"
-  "main.aux"
-  "main.log"
   "main.pdf"
+  "main.aux"
+  "main.out"
+  "main.log"
