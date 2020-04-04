@@ -25,7 +25,7 @@ pos_x=np.linspace(0.01,10,1000)
 all_x=np.linspace(-10,10,1000)
 
 def gauss_p(x):
-    p=1/(np.sqrt(2*np.pi*(g_scale_p)))*np.exp(-np.power((x-g_loc_p),2)/(2*(g_scale_p)))
+    p=1/(np.sqrt(2*np.pi*(g_scale_p**2)))*np.exp(-np.power((x-g_loc_p),2)/(2*(g_scale_p**2)))
     return p
 
 def cdf_gauss_p(x):
@@ -33,7 +33,7 @@ def cdf_gauss_p(x):
     return cdf
 
 def gauss_w(x):
-    w=1/(np.sqrt(2*np.pi*(g_scale_w)))*np.exp(-np.power((x-g_loc_w),2)/(2*(g_scale_w)))
+    w=1/(np.sqrt(2*np.pi*(g_scale_w**2)))*np.exp(-np.power((x-g_loc_w),2)/(2*(g_scale_w**2)))
     return w
 
 def cdf_gauss_w(x):
@@ -44,7 +44,7 @@ def cdf_gauss_w(x):
 g_loc_p=0
 g_loc_w=0
 g_scale_p=1
-g_scale_w=2.7
+g_scale_w=1.64
 
 #plotting CDFs
 #Gauss
@@ -62,17 +62,18 @@ for x in all_x:
     cw[1][i]=cdf_gauss_w(x)[0]
     i=i+1
 
-fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(13, 13))
+fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(9, 7))
 fig.tight_layout(pad=3.5)
 
-axes[0, 1].plot(cp[1],cp[1],'--k', label=r'')
+axes[0, 1].plot(cp[1],cp[1],'r', lineWidth='2', label=r'$F_p$')
 axes[0, 1].axvline(x=0.5,LineStyle='--')
-axes[0, 1].plot(cp[1],cw[1],'b', lineWidth='3',label=r'')
+axes[0, 1].plot(cp[1],cw[1],'b', lineWidth='2',label=r'$F_w$')
 axes[0, 1].set_title('Scale')
-axes[0, 1].set_xlabel(r'probability CDF $F_p$')
-axes[0, 1].set_ylabel(r'decision weight CDF $F_w$')
+axes[0, 1].set_xlabel(r'CDF $F_p$')
+axes[0, 1].set_ylabel(r'CDFs')
 axes[0, 1].set_xticks(np.arange(0, 1.1, step=0.2))
 axes[0, 1].set_yticks(np.arange(0, 1.1, step=0.2))
+axes[0, 1].legend(loc='upper left', fontsize='x-small')
 
 #Gaussian
 g_loc_p=0
@@ -96,20 +97,21 @@ for x in all_x:
     cw[1][i]=cdf_gauss_w(x)[0]
     i=i+1
 
-axes[0, 0].plot(cp[1],cp[1],'--k', label=r'')
+axes[0, 0].plot(cp[1],cp[1],'r',lineWidth='2', label=r'$F_p$')
 axes[0, 0].axvline(x=0.5,LineStyle='--')
-axes[0, 0].plot(cp[1],cw[1],'b', lineWidth='3',label=r'')
+axes[0, 0].plot(cp[1],cw[1],'b',lineWidth='2',label=r'$F_w$')
 axes[0, 0].set_title('Location')
-axes[0, 0].set_xlabel(r'probability CDF $F_p$')
-axes[0, 0].set_ylabel(r'decision weight CDF $F_w$')
+axes[0, 0].set_xlabel(r'CDF $F_p$')
+axes[0, 0].set_ylabel(r'CDFs')
 axes[0, 0].set_xticks(np.arange(0, 1.1, step=0.2))
 axes[0, 0].set_yticks(np.arange(0, 1.1, step=0.2))
+axes[0, 0].legend(loc='upper left', fontsize='x-small')
 
 #Gaussian
 g_loc_p=0
 g_loc_w=.23
 g_scale_p=1
-g_scale_w=2.7
+g_scale_w=1.64
 
 #plotting CDFs
 i=0
@@ -126,14 +128,15 @@ for x in all_x:
     cw[1][i]=cdf_gauss_w(x)[0]
     i=i+1
 
-axes[1, 0].plot(cp[1], cp[1], '--k', label=r'')
+axes[1, 0].plot(cp[1], cp[1], 'r', lineWidth='2', label=r'$F_p$')
 axes[1, 0].axvline(x=0.5, LineStyle='--')
-axes[1, 0].plot(cp[1], cw[1], 'b', lineWidth='3', label=r'')
+axes[1, 0].plot(cp[1], cw[1], 'b', lineWidth='2', label=r'$F_w$')
 axes[1, 0].set_title('Location and scale')
-axes[1, 0].set_xlabel(r'probability CDF $F_p$')
-axes[1, 0].set_ylabel(r'decision weight CDF $F_w$')
+axes[1, 0].set_xlabel(r'CDF $F_p$')
+axes[1, 0].set_ylabel(r'CDFs')
 axes[1, 0].set_xticks(np.arange(0, 1.1, step=0.2))
 axes[1, 0].set_yticks(np.arange(0, 1.1, step=0.2))
+axes[1, 0].legend(loc='upper left', fontsize='x-small')
 
 
 pos_x=np.linspace(0.0,1,100)
@@ -146,14 +149,15 @@ def s(x,beta):
 
 plt.plot(pos_x,pos_x,'--k', label=r'')
 plt.axvline(x=0.5,LineStyle='--')
-plt.plot(pos_x,s(pos_x,beta),'b', lineWidth='3',label=r'')
-axes[1, 1].plot(pos_x,pos_x,'--k', label=r'')
+plt.plot(pos_x,s(pos_x,beta),'b', lineWidth='2',label=r'')
+axes[1, 1].plot(pos_x,pos_x,'r',lineWidth='2', label=r'$F_p$')
 axes[1, 1].axvline(x=0.5,LineStyle='--')
-axes[1, 1].plot(pos_x,s(pos_x,beta),'b', lineWidth='3',label=r'')
+axes[1, 1].plot(pos_x,s(pos_x,beta),'b', lineWidth='2',label=r'$F_w$')
 axes[1, 1].set_title('Tversky and Kahneman (1992)')
-axes[1, 1].set_xlabel(r'probability CDF $F_p$')
-axes[1, 1].set_ylabel(r'decision weight CDF $F_w$')
+axes[1, 1].set_xlabel(r'CDF $F_p$')
+axes[1, 1].set_ylabel(r'CDFs')
 axes[1, 1].set_xticks(np.arange(0, 1.1, step=0.2))
 axes[1, 1].set_yticks(np.arange(0, 1.1, step=0.2))
+axes[1, 1].legend(loc='upper left', fontsize='x-small')
 
 fig.savefig("./../Gauss_scale_location_both_KT.pdf", bbox_inches='tight')

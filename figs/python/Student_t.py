@@ -142,14 +142,13 @@ for x in all_x:
     cw[1][i]=cdf_stu_w(x-s_loc)[0]
     i=i+1
 
-plt.plot(cp[1],cp[1],'--k', label=r'')
+plt.plot(cp[1],cp[1],'r',lineWidth='2',label=r'$F_p$')
 plt.axvline(x=0.5,LineStyle='--')
-plt.plot(cp[1],cw[1],'b', lineWidth='3',label=r'Student-t with larger scale')
-plt.title('General effect for heavy-tailed distributions')
+plt.plot(cp[1],cw[1],'b', lineWidth='2',label=r'$F_w$')
 
 plt.legend(loc='upper left',fontsize='x-small')
-plt.xlabel(r'CDF $p$')
-plt.ylabel(r'decision weights CDF $w(p)$')
+plt.xlabel(r'CDF $F_p$')
+plt.ylabel(r'CDFs')
 
 plt.savefig("./../Student-t.pdf", bbox_inches='tight')
 plt.show()
