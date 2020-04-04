@@ -211,12 +211,13 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 We begin by making explicit how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges from assuming that the DM uses a larger scale in his model of the world than the DO. This can have numerous reasons, to which we will return in \secref{Reasons_for}. For now, suffice it to say that precaution is an obvious one: any uncertainty the DM wishes to include in his model in addition to what the DO includes will translate into a greater scale for the DM's distribution and therefore into an inverse-S shape for any unimodal (peaked) distribution when cumulative densities are compared.
 
 We illustrate this with a Gaussian distribution.
-Let's assume that a DO models an observable $x$ -- which will often be a future change in wealth -- as a Gaussian with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM (for whatever reason, perhaps caution) models the same observable as a Gaussian with the same location, $\mu$, but with a greater scale, so that the variance is $\alpha^2\sigma^2$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, \fref{probability_dists}.
+Let's assume that a DO models an observable $x$ -- which will often be a future change in wealth -- as a Gaussian with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM (for whatever reason, perhaps caution) models the same observable as a Gaussian with the same location, $\mu$, but with a greater scale, so that the variance is $\alpha^2\sigma^2$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{probability_dists}.
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=0.7\textwidth]{./figs/probability_dists.pdf}
-\caption{{\bf Two PDFs.} Probability PDF (blue), estimated by a DO; and decision-weight PDF (red), estimated by a DM. The DO models $x$ with a best estimate for the variance and assumes the true frequency distribution is the blue line. The DM models $x$ with a greater variance (here 3 times greater, $\alpha=\sqrt{3}$), and assumes the true frequency distribution is the red line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events.}
+\includegraphics[width=\textwidth]{./figs/density_map.pdf}
+\caption{{\bf Mapping PDFs.} Left: probability PDF (blue), estimated by a DO; and decision-weight PDF (red), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the blue line. The DM models $x$ with a greater scale (here 2 times greater, $\alpha=2$), and assumes the true frequency distribution is the red line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
+Right: the difference between assigned probabilities can also be expressed by directly plotting, for any value of $x$, the two different PDFs against one another. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right. They therefore start and end at identical vertical positions as on the left. Because of the non-linear distortion of the horizontal axis, they are shifted to different locations horizontally.}
 \flabel{probability_dists}
 \end{figure}
 %\subsection{Repetition and location uncertainty}
@@ -233,14 +234,14 @@ Let's assume that a DO models an observable $x$ -- which will often be a future 
 %
 %Both DO models give $g_p\sim\ND(\mu,\sigma_1^2)$, whereas the DM will choose the model $g_w \sim \ND(\mu,\sigma_1^2+\sigma_2^2)$.
 
-Generically, if the DM is using a greater scale in his model, then he is using higher decision weights for low-probability events, and (because of normalisation), lower decision weights for high-probability events than the corresponding model of the DO. We can express this by plotting, for any value of $x$, the decision weight {\it vs.} the probability observed at $x$, \fref{probability_weights}.
+Generically, if the DM is using a greater scale in his model, then he is using higher decision weights for low-probability events, and (because of normalisation), lower decision weights for high-probability events than the corresponding model of the DO. We can express this by plotting, for any value of $x$, the decision weight {\it vs.} the probability observed at $x$, right panel of \fref{probability_dists}.
 
-\begin{figure}[htb]
-\centering
-\includegraphics[width=0.7\textwidth]{./figs/decision_weights.pdf}
-\caption{Decision weight density (used by a DM) vs. probability density (used by a DO) for the Gaussian model (blue), compared to the diagonal (black dashed) where DM and DO use the same parameters. For low probabilities, the decision weights are higher than the probabilities; for high probabilities they are lower.}
-\flabel{probability_weights}
-\end{figure}
+%\begin{figure}[htb]
+%\centering
+%\includegraphics[width=0.7\textwidth]{./figs/density_map.pdf}
+%\caption{Decision weight density (used by a DM) vs. probability density (used by a DO) for the Gaussian model (blue), compared to the diagonal (black dashed) where DM and DO use the same parameters. For low probabilities, the decision weights are higher than the probabilities; for high probabilities they are lower.}
+%\flabel{probability_weights}
+%\end{figure}
 
 In the Gaussian case we can write the distributions explicitly
 \be \elabel{DecisionW}
@@ -248,16 +249,16 @@ In the Gaussian case we can write the distributions explicitly
 \ee
 and
 \be
-	p(x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\left[\frac{-(x -\mu )^2}{2 \sigma^2}\right] ~.
+	p(x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\left[\frac{-(x -\mu )^2}{2 \sigma^2}\right] ~,
 \elabel{p}
 \ee
 % 
-Furthermore, we can solve \eref{p} for $(x -\mu)^2$ and substitute that in in \eref{DecisionW}. Thereby, we obtain the following expression for decision weights directly as a function of probabilities
+solve \eref{p} for $(x -\mu)^2$, substitute that in in \eref{DecisionW}, and obtain the following expression for decision weights directly as a function of probabilities
 \be
 w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma_1^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
 \elabel{w_of_p}
 \ee
-which is precisely what's plotted in \fref{probability_weights}. 
+which is precisely what's plotted in the right panel of \fref{probability_dists}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{probability_dists}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. $\alpha>1$ means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small arguments and below it for large arguments.
 
 %If we set the ratio of the DM's squared scale over the sum of the indivudal squared scales to $\alpha = \frac{\sigma_1^2}{\left(\sigma_1^2 + \sigma_2^2\right)}$, we can express \eref{w_of_p} as
 %\be
@@ -272,7 +273,7 @@ Alternatively, we can express the difference between models by plotting the CDFs
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{./figs/GaussianFvsXtoWvsP.pdf}
-\caption{{\bf Two Gaussian CDFs.} 
+\caption{{\bf Mapping CDFs.} 
 Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,3)$ depicted by $F_w$ (blue). 
 % 
 Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is larger than the DO's CDF, $F_p(x) < F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be lower than the DO's.
@@ -283,45 +284,45 @@ Right: the same CDFs as on the left but now plotted not against $x$ but against 
 
 \FloatBarrier
 \subsection{A mismatch between both scales and locations\seclabel{A_mismatch}}
-In \fref{subfig:GaussScale} we explore what happens if both the scales and the locations of the DO's and DM's models differ. This produces an excellent fit to empirical data.
-% \begin{figure}
-% \centering
-% \includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
-% \caption{Decision weight CDFs used by a DM vs. probability CDFs used by a DO.\\ 
-% Top left) Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\\ 
-% Top right) Gaussian distribution, difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.
-% Bottom left) Gaussian distribution, differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\\ 
-% Bottom right) Fit to observations reported by \cite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
-% The observations by \cite{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.}
-% \flabel{CDF_weights}
-% \end{figure}
+In \fref{CDF_weights} we explore what happens if both the scales and the locations of the DO's and DM's models differ. Visually, this produces an excellent fit to empirical data, to which we will return in \secref{Fitting_the}.
+ \begin{figure}
+ \centering
+ \includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
+ \caption{{\bf Decision weight CDFs used by a DM vs. probability CDFs used by a DO, Gaussian distribution}.\\ 
+ Top left) Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\\ 
+ Top right) Difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.
+ Bottom left) Differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\\ 
+ Bottom right) Fit to observations reported by \cite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
+ The observations by \cite{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.}
+ \flabel{CDF_weights}
+ \end{figure}
 
-% same figure using subfigure and reps. captions 
-\begin{figure}
-\begin{center}
-	\subcaptionbox{Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\flabel{subfig:GaussLocation}}
-	[.45\textwidth]{\includegraphics[width=.45\linewidth]{./figs/Gauss_location.pdf}}
-	\subcaptionbox{Gaussian distribution, difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.\flabel{subfig:GaussScale}}
-	[.45\textwidth]{\includegraphics[width=.45\linewidth]{./figs/Gauss_scale.pdf}}
-	\\
-	\subcaptionbox{Gaussian distribution, differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\flabel{subfig:GaussLocScale}}
-	[.45\textwidth]{\includegraphics[width=.45\linewidth]{./figs/Gauss_location_and_scale.pdf}}
-%
-	\subcaptionbox{The observations by \cite{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.\flabel{subfig:PW_TK}}
-	[.45\textwidth]{\includegraphics[width=.45\linewidth]{./figs/KT1992.pdf}}
-% 	\vspace{1em}
-\caption{{\bf Effects of differences in location and scale for the decision weight CDFs used by a DM vs. probability CDFs used by a DO.}\\
-\MK{Some more summarising text?}
-% Top left) Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\\ 
-% Top right) Gaussian distribution, difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.
-% Bottom left) Gaussian distribution, differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\\ 
-% Bottom right) Fit to observations reported by \cite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
-% The observations by \cite{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.
-\flabel{CDF_weights}
+%% same figure using subfigure and reps. captions 
+%\begin{figure}
+%\begin{center}
+%	\subcaptionbox{Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\flabel{subfig:GaussLocation}}
+%	[.45\textwidth]{\includegraphics[width=.45\linewidth]{./figs/Gauss_location.pdf}}
+%	\subcaptionbox{Gaussian distribution, difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.\flabel{subfig:GaussScale}}
+%	[.45\textwidth]{\includegraphics[width=.45\linewidth]{./figs/Gauss_scale.pdf}}
+%	\\
+%	\subcaptionbox{Gaussian distribution, differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\flabel{subfig:GaussLocScale}}
+%	[.45\textwidth]{\includegraphics[width=.45\linewidth]{./figs/Gauss_location_and_scale.pdf}}
+%%
+%	\subcaptionbox{The observations by \cite{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.\flabel{subfig:PW_TK}}
+%	[.45\textwidth]{\includegraphics[width=.45\linewidth]{./figs/KT1992.pdf}}
+%% 	\vspace{1em}
+%\caption{{\bf Effects of differences in location and scale for the decision weight CDFs used by a DM vs. probability CDFs used by a DO.}\\
+%\MK{Some more summarising text?}
+%% Top left) Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\\ 
+%% Top right) Gaussian distribution, difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.
+%% Bottom left) Gaussian distribution, differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\\ 
+%% Bottom right) Fit to observations reported by \cite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
+%% The observations by \cite{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.
+%\flabel{CDF_weights}
 \MK{Double check parameter values with py source code}
-}
-\end{center}
-\end{figure}
+%}
+%\end{center}
+%\end{figure}
 
 \FloatBarrier
 \subsection{Different shapes, and fat-tailed distributions\seclabel{Different_shapes}}
@@ -334,7 +335,7 @@ construct a list of values for the CDF assumed by the DM, $F_w(x)$.
 \item
 plot $F_w(x)$ vs $F_p(x)$.
 \end{enumerate}
-Of course, the DM could even assume a distribution whose shape differs from the DO's. An infinity of combinations of assumed distributions can be explored. The inverse S arises whenever a DM assumes a greater scale for a unimodal distribution. To illustrate the generality of the procedure, in \fref{fat_tailed_CDF} we carry it out for a (power-law tailed) Student's-t distribution, where DO and DM use different shape parameters and different locations. The result is qualitatively similar to \fref{subfig:PW_TK}, corresponding to \eref{correspondence}. 
+Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution. An infinity of combinations of assumed distributions can be explored. The inverse S arises whenever a DM assumes a greater scale for a unimodal distribution. To illustrate the generality of the procedure, in \fref{fat_tailed_CDF} we carry it out for a (power-law tailed) Student's-t distribution, where DO and DM use different shape parameters and different locations. The result is qualitatively similar to the bottom right panel of \fref{TwoCDFs}, corresponding to \eref{correspondence}. 
 
 It is telling that assuming only a difference in scale and location (for the simplest Gaussian case) is already sufficient to reproduce the observations that are characterised an irrational bias and are labelled as ``probability weighting.''
 
@@ -432,7 +433,7 @@ has only one free parameter, $\gamma$. For $\gamma=1$ both functions collapse $F
 
 
 
-\section{Fitting the model to experimental results}
+\section{Fitting the model to experimental results \seclabel{Fitting_the}}
 To test whether our model is in line with existing evidence on probability weighting, we fit the Gaussian and Student's-t distributions to experimental data. Specifically, we fit the location ($\mu$) and scale ($\sigma$) parameters in the Gaussian case and the shape parameters ($\nu$ and $\delta$) in the Student's-t case to experimental results from \cite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \cite{TverskyFox1995}. In addition, we fit the function
 %
 \be
