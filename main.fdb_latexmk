@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1586017289 "main.aux" "main.bbl" "main" 1586017290
+["bibtex main"] 1586031222 "main.aux" "main.bbl" "main" 1586031224
   "./../LML_bibliography/bibliography.bib" 1586015817 271123 ae798ff5d691fc56d2aafaedb2cfaf35 ""
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/base/apalike.bst" 1480098433 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "main.aux" 1586017290 17498 1f2671e252d999b246338b435e48b550 "pdflatex"
+  "main.aux" 1586031224 17498 1f2671e252d999b246338b435e48b550 "pdflatex"
   (generated)
-  "main.bbl"
   "main.blg"
-["pdflatex"] 1586017289 "main.tex" "main.pdf" "main" 1586017290
+  "main.bbl"
+["pdflatex"] 1586031223 "main.tex" "main.pdf" "main" 1586031224
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -144,13 +144,13 @@
   "figs/TK1992.PNG" 1585835096 120635 98d47abdf904426df5ea612b7e38355a ""
   "figs/TK_TF_fit.pdf" 1585835096 361639 6701f7beb67202a2900a5c2712bdd361 ""
   "figs/density_map.pdf" 1585995319 13865 8af23eeb8df8960ac706cc27edbf2bc2 ""
-  "main.aux" 1586017290 17498 1f2671e252d999b246338b435e48b550 "pdflatex"
-  "main.bbl" 1586017289 2933 319afeab654f5ae02aab4c508d0c3ef6 "bibtex main"
-  "main.out" 1586017290 776 3f6bbd2de12571ae4aa06d3401318d96 "pdflatex"
-  "main.tex" 1586017287 43542 6bf25510478ef613773a66a477007a51 ""
+  "main.aux" 1586031224 17498 1f2671e252d999b246338b435e48b550 "pdflatex"
+  "main.bbl" 1586031223 2933 319afeab654f5ae02aab4c508d0c3ef6 "bibtex main"
+  "main.out" 1586031224 776 3f6bbd2de12571ae4aa06d3401318d96 "pdflatex"
+  "main.tex" 1586031219 43526 62988a41bd39fa2d257b9c71dde2d532 ""
   "resone-logo.png" 1575630466 20898 f06d4d36a65cf43ea02118ac22c48db2 ""
   (generated)
-  "main.log"
-  "main.out"
   "main.pdf"
   "main.aux"
+  "main.log"
+  "main.out"
