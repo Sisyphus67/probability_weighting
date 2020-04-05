@@ -1,7 +1,7 @@
 \documentclass[a4paper, 12pt]{article}
 
 \usepackage[sort&compress]{natbib}
-%\bibpunct{(}{)}{;}{a}{}{,} 
+\bibpunct{(}{)}{;}{a}{}{,} 
 
 \usepackage{amsthm, amsmath, amssymb, mathrsfs, multirow, url}
 \usepackage{caption}
@@ -84,6 +84,8 @@
 \newcommand{\sigmat}{\tilde{\sigma}}
 %\newcommand{\var}[1]{\text{var}(#1)}
 \newcommand{\MK}[1]{{\it ***MK: #1 MK***}}
+\newcommand{\OP}[1]{{\it ***OP: #1 OP***}}
+\newcommand{\YB}[1]{{\it ***YB: #1 YB***}}
 
 
 \title{What are we weighting for? A mechanistic model for probability weighting}
@@ -208,7 +210,21 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 %\MK{Reference to EE falls from heaven, maybe refer to it in the intro. See TL \& discounting}
 
 \subsection{The inverse-S curve\seclabel{The_inverse}}
-We begin by making explicit how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges from assuming that the DM uses a larger scale in his model of the world than the DO. This can have numerous reasons, to which we will return in \secref{Reasons_for}. For now, suffice it to say that precaution is an obvious one: any uncertainty the DM wishes to include in his model in addition to what the DO includes will translate into a greater scale for the DM's distribution and therefore into an inverse-S shape for any unimodal (peaked) distribution when cumulative densities are compared.
+\subsubsection{Tversky and Kahneman}
+\citet{TverskyKahneman1992} chose to fit the empirical data in \fref{TK1992} with the following function\footnote{\Eref{correspondence} is the consensus functional form in the community \cite{Barberis2013}.}
+% Whereas we provide a mechanistic explanation, psychological explanations prevail in the behavioural economics and finance literature, see \cite{WuGonzalez1996,Prelec1998,GonzalezWu1999,Stott2006,DeGiorgi2006,Wakker2010,AbdellaouiETAL2011} and references especially in the latter. It remains doubtful how a psychological explanation shall compensate for a missing and/or not yet understood mechanism, generating a particular phenomenon like probability weighting.
+%\OP{I think I see the point, but I don't know what a ``psychological explanation'' is; it may also be unclear what we mean by ``mechanistic.''}
+% 
+\be
+\elabel{correspondence}
+F_w^*\left(F_p\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(F_p\right)^\gamma+\left(1-F_p\right)^\gamma\right]^{1/\gamma}} ~.
+\ee
+We note that no mechanistic motivation was given for the specific functional form. It simply ``looks a bit like the data.''
+% 
+The function $F_w^*\left(F_p\right)$ has only one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $F_w^*\left(F_p\right)=F_p$. The function $F_w^*$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S, the fitting procedure itself introduces a shift of the intersection to the right. Because of this, we consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. We will see below that the curvature and shift correspond to different parts of a mechanistic explanation of the phenomenon.
+
+\subsubsection{Mechanistic explanation of the inverse S}
+Specifically, we now make explicit how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges from assuming that the DM uses a larger scale in his model of the world than the DO. This can have numerous reasons, to which we will return in \secref{Reasons_for}. For now, suffice it to say that precaution is an obvious one: any uncertainty the DM wishes to include in his model in addition to what the DO includes will translate into a greater scale for the DM's distribution and therefore into an inverse-S shape for any unimodal (peaked) distribution when cumulative densities are compared.
 
 We illustrate this with a Gaussian distribution.
 Let's assume that a DO models an observable $x$ -- which will often be a future change in wealth -- as a Gaussian with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM (for whatever reason, perhaps caution) models the same observable as a Gaussian with the same location, $\mu$, but with a greater scale, so that the variance is $\alpha^2\sigma^2$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{probability_dists}.
@@ -389,9 +405,7 @@ For our purpose it suffices to say that there's no guarantee that a probabilisti
 \subsection{Consistent differences between DO and DM \seclabel{condition2}}
 
 \subsubsection*{Estimation errors for probabilities}
-Let's imagine the DO and DM have agreed explicitly on an interpretation of the word ``probability.'' Say they agree that they mean the relative frequency in a long time series. Real time series are, of course, of finite length. In order to estimate the probability of some event in a time series, we count: if the event $i$ occurred in $n_i$ out of $T$ time intervals, then our best estimate for the probability of $i$ is $\frac{n_i}{T}$. In the simplest case (and we rarely consider anything more complicated), we model the arrival of events as a Poisson process, where the standard error in the count of an event famously goes as $\sqrt{n_i}$. The standard error in the probability of an event is therefore $\frac{\sqrt{n_i}}{T}$, and the relative error is $\frac{1}{\sqrt{n_i}}$. Low probabilities therefore come with larger relative errors, see \tref{errors}. We note that behaviourally, it will make little difference whether a DM assigns a 0.49 probability to an event or a 0.51 probability. It will make a large difference, however, whether a DM assigns a 0.002 probability or a 0.0002 probability.
-
-The most important message from this example is that errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for low probabilities, but relative errors are larger for lower probabilities.
+Let's imagine the DO and DM have agreed explicitly on an interpretation of the word ``probability.'' Say they agree that they mean the relative frequency in an infintely long time series. Real time series are, of course, of finite length. In order to estimatea probability so defined, we count: if the event $i$ occurred in $n_i$ out of $T$ time intervals, then our best estimate for the probability of $i$ is $\frac{n_i}{T}$. In the simplest case (and we rarely consider anything more complicated), we model the arrival of events as a Poisson process, where the standard error in the count of an event famously goes as $\sqrt{n_i}$. The standard error in the probability of an event is therefore $\frac{\sqrt{n_i}}{T}$, and the relative error is $\frac{1}{\sqrt{n_i}}$. Low probabilities therefore come with larger relative errors, see \tref{errors}. We note that behaviourally, it will make little difference whether a DM assigns a 0.49 probability to an event or a 0.51 probability. It will make a large difference, however, whether a DM assigns a 0.0001 probability or a 0 probability.
 
 \begin{table}[!htb]
 %\ra{1.25}
@@ -411,38 +425,46 @@ The most important message from this example is that errors in probability estim
 \caption{This table assumes $T = 10000$ observed time intervals. To be read as follows (first line): for an event of true probability 0.5, the most likely count in 10000 trials is 5000. Assuming Poisson statistics, this comes with an estimation error of $\sqrt{5000}/5000=0.01$, which is 2\% of the true probability.}\tlabel{errors}
 \end{table}
 
-The observations that led to the concept of probability weighting in prospect theory can be expressed as follows: DOs assign systematically lower weights to low-probability events than DMs.
-Which of the two is wrong is unclear so long as it is unclear who means what by the word ``probability.'' Because the two types of modellers (DO and DM) pursue different goals, it may be the case that neither is wrong about the probabilities, just wrong about the goals of the other modeller.
+The most important message from this example is that errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for low probabilities, but relative errors are larger for lower probabilities. 
 
-Being a good neutral scientist, a DO has no particular interest in the success or failure of a DM. Being a good DM, the DM has every interest in his own success or failure. Throughout the history of economics, it has been a common mistake, by DOs, to assume that DMs optimise what happens to them on average in an ensemble. To the DM what happens to the ensemble is usually not a primary concern -- instead, the concern of the DM is what happens to him over time. Not distinguishing between these two perspectives is only permissible if they lead to identical predictions, and that is only the case in ergodic situations \citep{Peters2019b}. 
+Let's make one more assumption: DMs don't like surprises. In order to avoid surprises, the DM will incorporate the uncertainty in any probability estimates by assuming that the actual long-time relative frequency of an event is the best estimate plus two standard errors, so that
+\be
+w(x)=\frac{p(x)+2 \sqrt{p(x)}}{\int_{-\infty}^{\infty}[p(s)+2 \sqrt{p(s)}] ds},
+\elabel{Poisson}
+\ee
+where the denominator ensures normalization, so that $w(x)$ is a proper probability density. \Fref{square_root_error} shows the resulting PDFs and the CDF mappings, for a Gaussian distribution and for a fat-tailed Student-t distribution. As one might expect, the effect is more pronounced for the fat-tailed distribution.
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.9\textwidth]{./figs/square_root_error.pdf}
+\caption{PDFs and inverse-S curves arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a Student-t distribution (shape 2, location 0, bottom line), and the DM uses decision weights in accordance with \eref{Poisson}. For the fat-tailed Student-t distribution the difference between $p$ and $w$ is more pronounced.}
+\flabel{square_root_error}
+\end{figure}
+
+\FloatBarrier
+\subsubsection{Typical situations of DO and DM: ergodicity}
+To recap: behavioral economics observes that DOs tend to assign lower weights to low-probability events than DMs.
+While behavioral economics commonly assumes that the DM is wrong, we make no such judgement. In any decision problem, the aim of the decision must be taken into account, and that crucially depends on the situation of the individual. 
+
+The two types of modellers (DO and DM) pursue different goals. Broadly, the DO tends to be a behavioral scientist without personal exposure to the success or failure of the DM (who tends to be a test subject or someone whose behavior is being observed in the wild). The DM, of course, has such exposure. Throughout the history of economics, it has been a common mistake, by DOs, to assume that DMs optimise what happens to them on average in an ensemble. To the DM what happens to the ensemble is usually not a primary concern -- instead, the concern of the DM is what happens to him over time. Not distinguishing between these two perspectives is only permissible if they lead to identical predictions, and that is only the case in ergodic situations \citep{Peters2019b}. 
 
 It is now well known that the situation usually studied in decision theory is not ergodic in the following sense: DMs are usually observed making choices that affect their wealth, and wealth is usually modelled as a stochastic process that is not ergodic. The ensemble average of wealth does not behave like the time average of wealth.
 
-The most striking example is the universally important case of noisy multiplicative growth -- universal because it is the fundamental process that drives evolution: noise generates the diversity (of phenotypes \ie their wealths) necessary for evolution \MK{noise generates mutations in the genotype, the noise in the world is a different animal IMO} and multiplicative growth (self-reproduction) is how successful phenotypes spread their traits in a population \MK{Covid-19 reference tempting}. This process operates on amoeba, as it does on forms of institutions, and on investment strategies.\citep{PetersAdamou2015a}
+The most striking example is the universally important case of noisy multiplicative growth -- universal because it is the fundamental process that drives evolution: noise generates the diversity of phenotypes necessary for evolution and multiplicative growth (self-reproduction) is how successful phenotypes spread their traits in a population. This process operates on amoeba, as it does on forms of institutions, and on investment strategies.
+%\citep{PetersAdamou2015a}
 
 The simplest model of noisy multiplicative growth is geometric Brownian motion, $dx=x(\mu dt+\sigma dW)$. The average over the full statistical ensemble (often studied by the DO) of geometric Brownian motion grows as $\exp(\mu t)$. The individual trajectory of geometric Brownian motion, on the other hand, grows in the long run as $\exp[(\mu-\frac{\sigma^2}{2})t]$.
 
-In the DO's ensemble perspective, noise does not affect growth and is often deemed irrelevant. In the DM's time perspective, noise reduces growth, and underestimating it would have catastrophic consequences, whereas overestimating it may lead the DM to miss out on some opportunities.
+In the DO's ensemble perspective, noise does not affect growth and is often deemed irrelevant. In the DM's time perspective, noise reduces growth. While a DO interested in the ensemble may get away with disregarding low-probability events, for the DM's success hedging against them is of crucial importance.
 
 The difference between how these two perspectives evaluate the effects of noise (\ie of the probabilistic events) is qualitatively in line with the observed phenomena we set out to explain. The DM typically has large uncertainties, especially for low-probability events, and has an evolutionary incentive to err on the side of caution, \ie to behave as though low-probability (extreme) events had a higher probability than in the DO's model.
 
-In \fref{CDF_weights} we show maps that result from the procedure illustrated in \fref{TwoCDFs}. We show separately maps that arise when the DM models the scale of the distribution differently (see \fref{subfig:GaussScale}), and when the DM models the location differently (see \fref{subfig:GaussLocation}). We then put the two together (see \fref{subfig:GaussLocScale}) and compare the result to the functional shape of $F^*_w$ which \cite{TverskyKahneman1992} chose to fit to their observations (see \fref{subfig:PW_TK}).
-
-Without any derivation from a physical mechanism which would motivate the specific functional form, \cite{TverskyKahneman1992} chose to fit the following function to resemble their data\footnote{\Eref{correspondence} is the consensus functional form in the community \cite{Barberis2013}. Whereas we provide a mechanistic explanation, psychological explanations prevail in the behavioural economics and finance literature, see \cite{WuGonzalez1996,Prelec1998,GonzalezWu1999,Stott2006,DeGiorgi2006,Wakker2010,AbdellaouiETAL2011} and references especially in the latter. It remains doubtful how a psychological explanation shall compensate for a missing and/or not yet understood mechanism, generating a particular phenomenon like probability weighting.}
-% 
-\be
-\elabel{correspondence}
-F_w^*\left(F_p^*\right) = \left(F_p^*\right)^\gamma \frac{1}{\left[\left(F_p^*\right)^\gamma+\left(1-F_p^*\right)^\gamma\right]^{1/\gamma}} ~.
-\ee
-% 
-The function 
-%resembles the analytical result in that it is essentially a power law in $p_{TK}$, especially if we use $\gamma=\frac{\sigma_1^2}{\sigma_1^2+\sigma_2^2}$. It 
-has only one free parameter, $\gamma$. For $\gamma=1$ both functions collapse $F_w^*\left(F_p^*\right)=F_p^*$. The function $F_w^*$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. For this asymmetry to be reproduced in the Gaussian case, it is necessary to introduce a difference between the both the locations used by DO and DM in addition to the difference between scales (see \fref{subfig:GaussLocScale}). If we allow the possibility that the DM uses different estimates for scale and location, we can reproduce the observations in \cite{TverskyKahneman1992} accurately, see \fref{CDF_weights}.
-
-
 
 \section{Fitting the model to experimental results \seclabel{Fitting_the}}
-To test whether our model is in line with existing evidence on probability weighting, we fit the Gaussian and Student's-t distributions to experimental data. Specifically, we fit the location ($\mu$) and scale ($\sigma$) parameters in the Gaussian case and the shape parameters ($\nu$ and $\delta$) in the Student's-t case to experimental results from \cite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \cite{TverskyFox1995}. In addition, we fit the function
+
+Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's physically unmotivated fit of  $F^*_w$, \eref{correspondence}, resembles the data no better than our mechanistically constrained model.
+This is particularly evident in the bottom two panels of \fref{CDF_weights}, which show that a Gaussian $w(x)$ whose scale and location differ from those of $p(x)$ reproduces the fitted functional shape of $F^*_w$.
+
+For completeness and scientific hygiene, in the present section we fit Gaussian location ($\mu$) and scale ($\sigma$) parameters and Student-t shape parameters ($\nu$ and $\delta$) for $w(x)$ to experimental data from \cite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \cite{TverskyFox1995}. In addition, we fit the function
 %
 \be
 w(p)=\frac{\delta p^{\gamma}}{\delta p^{\gamma} + (1-p)^{\gamma}}\,,
@@ -451,7 +473,7 @@ w(p)=\frac{\delta p^{\gamma}}{\delta p^{\gamma} + (1-p)^{\gamma}}\,,
 %
 suggested by \cite{LattimoreBakerWitte1992} to parametrically describe probability weighting, and was commonly used since (see, \eg \cite{tversky1995risk}).
 
-\Fref{TK_TF_fit} presents these results. We obtain very good fit to data for both Gaussian and student's-t distributions, as well as for \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the three fitted functions within standard errors. We conclude that our model fit the data well, and unlike \eref{LattimoreFunction}, the fitted functions are directly derived from a mechanistic model, and are not simply phenomenological.
+\Fref{TK_TF_fit} presents these results. We obtain very good fits to data for both Gaussian and Student-t distributions, as well as for \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the three fitted functions within standard errors. We conclude that our model fit the data well, and unlike \eref{LattimoreFunction}, the fitted functions are directly derived from a mechanistic model, and are not simply phenomenological.
 
 \begin{figure}[htb]
 \centering
@@ -461,12 +483,12 @@ Left) Gaussian model: $\mu=0.4\,\left(SE = 0.13\right)$, $\sigma=1.5\,\left(\pm0
 \flabel{TK_TF_fit}
 \end{figure}
 
-
+\FloatBarrier
 \section{Conclusion/Summary}
+\OP{We could move some discussion bits here -- like the incredible Sunstein story.}
 \MK{Discuss the general action of change of measure in relation to Girsanov and risk-neutral prob measure $\mathbb{Q}$ in Math Finance?}
-
-\MK{It has almost become custom to end with a Kacelnik quote}
-
+\OP{Let's keep this paper focused on one point only.}
+%\MK{It has almost become custom to end with a Kacelnik quote}
 
 
 

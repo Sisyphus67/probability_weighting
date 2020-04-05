@@ -1,26 +1,10 @@
 \begin{thebibliography}{}
 
-\bibitem[Abdellaoui et~al., 2011]{AbdellaouiETAL2011}
-Abdellaoui, M., Baillon, A., Placido, L., and Wakker, P.~P. (2011).
-\newblock The rich domain of uncertainty: Source functions and their
-  experimental implementation.
-\newblock 101:695--723.
-
 \bibitem[Barberis, 2013]{Barberis2013}
 Barberis, N.~C. (2013).
 \newblock Thirty years of prospect theory in economics: A review and
   assessment.
 \newblock {\em Journal of Economic Perspectives}, 27:173--196.
-
-\bibitem[De~Giorgi and Hens, 2006]{DeGiorgi2006}
-De~Giorgi, E. and Hens, T. (2006).
-\newblock Making prospect theory fit for finance.
-\newblock 20:339--360.
-
-\bibitem[Gonzalez and Wu, 1999]{GonzalezWu1999}
-Gonzalez, R. and Wu, G. (1999).
-\newblock On the shape of the probability weighting function.
-\newblock {\em Cognitive Psychology}, 38:129--166.
 
 \bibitem[Lattimore et~al., 1992]{LattimoreBakerWitte1992}
 Lattimore, P.~K., Baker, J.~R., and Witte, A.~D. (1992).
@@ -36,21 +20,6 @@ Nelder, J.~A. and Mead, R. (1965).
 Peters, O. (2019).
 \newblock The ergodicity problem in economics.
 \newblock {\em Nature Physics}, 15:1216--1221.
-
-\bibitem[Peters and Adamou, 2018]{PetersAdamou2015a}
-Peters, O. and Adamou, A. (2018).
-\newblock An evolutionary advantage of cooperation.
-\newblock {\em ar{X}iv:1506.03414}.
-
-\bibitem[Prelec, 1998]{Prelec1998}
-Prelec, D. (1998).
-\newblock The probability weighting function.
-\newblock 66:497--527.
-
-\bibitem[Stott, 2006]{Stott2006}
-Stott, H.~P. (2006).
-\newblock Cumulative prospect theory's functional menagerie.
-\newblock 32:101--130.
 
 \bibitem[Sunstein, 2020]{Sunstein2020}
 Sunstein, C.~R. (2020).
@@ -71,15 +40,5 @@ Tversky, A. and Kahneman, D. (1992).
 Tversky, A. and Wakker, P. (1995).
 \newblock Risk attitudes and decision weights.
 \newblock {\em Econometrica}, 63(6):1255--1280.
-
-\bibitem[Wakker, 2010]{Wakker2010}
-Wakker, P. (2010).
-\newblock {\em Prospect Theory}.
-\newblock Cambridge University Press.
-
-\bibitem[Wu and Gonzalez, 1996]{WuGonzalez1996}
-Wu, G. and Gonzalez, R. (1996).
-\newblock Curvature of the probability weighting function.
-\newblock {\em Management Science}, 42:1676--1690.
 
 \end{thebibliography}

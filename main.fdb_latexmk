@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1586031222 "main.aux" "main.bbl" "main" 1586031224
+["bibtex main"] 1586088300 "main.aux" "main.bbl" "main" 1586088302
   "./../LML_bibliography/bibliography.bib" 1586015817 271123 ae798ff5d691fc56d2aafaedb2cfaf35 ""
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/base/apalike.bst" 1480098433 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "main.aux" 1586031224 17498 1f2671e252d999b246338b435e48b550 "pdflatex"
+  "main.aux" 1586088302 18152 a3beb140f8e3f1f454a92f4a4ef887f5 "pdflatex"
   (generated)
-  "main.blg"
   "main.bbl"
-["pdflatex"] 1586031223 "main.tex" "main.pdf" "main" 1586031224
+  "main.blg"
+["pdflatex"] 1586088301 "main.tex" "main.pdf" "main" 1586088302
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -143,14 +143,15 @@
   "figs/Student-t.pdf" 1585997435 10318 ddb8d7c819cb2514855921988b55d93c ""
   "figs/TK1992.PNG" 1585835096 120635 98d47abdf904426df5ea612b7e38355a ""
   "figs/TK_TF_fit.pdf" 1585835096 361639 6701f7beb67202a2900a5c2712bdd361 ""
-  "figs/density_map.pdf" 1585995319 13865 8af23eeb8df8960ac706cc27edbf2bc2 ""
-  "main.aux" 1586031224 17498 1f2671e252d999b246338b435e48b550 "pdflatex"
-  "main.bbl" 1586031223 2933 319afeab654f5ae02aab4c508d0c3ef6 "bibtex main"
-  "main.out" 1586031224 776 3f6bbd2de12571ae4aa06d3401318d96 "pdflatex"
-  "main.tex" 1586031219 43526 62988a41bd39fa2d257b9c71dde2d532 ""
+  "figs/density_map.pdf" 1586082068 13867 eaa4069823755cff614a9c1948e15395 ""
+  "figs/square_root_error.pdf" 1586082090 20200 4ab18689a653df9ab46fa6b277ffc08b ""
+  "main.aux" 1586088302 18152 a3beb140f8e3f1f454a92f4a4ef887f5 "pdflatex"
+  "main.bbl" 1586088300 1578 b9e078429417fa41f3242accef1b3eaf "bibtex main"
+  "main.out" 1586088302 1059 9ed33ce85c0248484964b555b586fc87 "pdflatex"
+  "main.tex" 1586088284 44866 0fa4e879f78642c7da928ca69a3b4011 ""
   "resone-logo.png" 1575630466 20898 f06d4d36a65cf43ea02118ac22c48db2 ""
   (generated)
-  "main.pdf"
   "main.aux"
-  "main.log"
   "main.out"
+  "main.log"
+  "main.pdf"

@@ -245,6 +245,8 @@ INPUT ./resone-logo.png
 INPUT ./figs/GaussianFvsXtoWvsP.pdf
 INPUT ./figs/GaussianFvsXtoWvsP.pdf
 INPUT ./figs/GaussianFvsXtoWvsP.pdf
+INPUT resone-logo.png
+INPUT ./resone-logo.png
 INPUT ./figs/Gauss_scale_location_both_KT.pdf
 INPUT ./figs/Gauss_scale_location_both_KT.pdf
 INPUT ./figs/Gauss_scale_location_both_KT.pdf
@@ -259,6 +261,11 @@ INPUT resone-logo.png
 INPUT ./resone-logo.png
 INPUT resone-logo.png
 INPUT ./resone-logo.png
+INPUT resone-logo.png
+INPUT ./resone-logo.png
+INPUT ./figs/square_root_error.pdf
+INPUT ./figs/square_root_error.pdf
+INPUT ./figs/square_root_error.pdf
 INPUT resone-logo.png
 INPUT ./resone-logo.png
 INPUT resone-logo.png
