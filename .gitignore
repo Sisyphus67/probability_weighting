@@ -134,3 +134,5 @@ dmypy.json
 *.bbl
 *.blg
 *.gz
+*.bbl
+*.out

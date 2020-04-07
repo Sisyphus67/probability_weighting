@@ -193,7 +193,8 @@ In \fref{TK1992} we reproduce the first such visual summary from \cite[p.~310]{T
 As a final piece of nomenclature, we will use the terms \textit{location}, \textit{scale}, and {\it shape} when discussing probability distributions. Consider a standard normal distribution $\ND(0,1)$ -- here, the parameters indicate location 0 and squared scale 1 (for a Gaussian the location is the mean and scale is the standard deviation). For a general random variable $X$, with arbitrary parameters for location $\mu_X$ and scale $\sigma_X$, the transformation in \eref{SN} obtains the identically-shaped location-0 and scale-1 distribution for the so standardised random variable
 \be \elabel{SN}
 	Z = \frac{X-\overbrace{\mu_X \mathstrut}^{\text{location}}}{\underbrace{\sigma_X\mathstrut}_{\text{scale}}}
-%		~, \qquad \qquad Z \sim \ND(0,1)	~.
+%		~, \qquad \qquad Z \sim \ND(0,1
+~.
 \ee
 Thus the PDF of $Z$, $p(z)$ is a density with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the {\it shape} of the distribution.
 
@@ -232,7 +233,7 @@ Let's assume that a DO models an observable $x$ -- which will often be a future 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=\textwidth]{./figs/density_map.pdf}
-\caption{{\bf Mapping PDFs.} Left: probability PDF (blue), estimated by a DO; and decision-weight PDF (red), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the blue line. The DM models $x$ with a greater scale (here 2 times greater, $\alpha=2$), and assumes the true frequency distribution is the red line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
+\caption{{\bf Mapping PDFs.} Left: probability PDF (red), estimated by a DO; and decision-weight PDF (blue), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the red line. The DM models $x$ with a greater scale (here 2 times greater, $\alpha=2$), and assumes the true frequency distribution is the blue line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
 Right: the difference between assigned probabilities can also be expressed by directly plotting, for any value of $x$, the two different PDFs against one another. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right. They therefore start and end at identical vertical positions as on the left. Because of the non-linear distortion of the horizontal axis, they are shifted to different locations horizontally.}
 \flabel{probability_dists}
 \end{figure}
@@ -494,6 +495,6 @@ Left) Gaussian model: $\mu=0.4\,\left(SE = 0.13\right)$, $\sigma=1.5\,\left(\pm0
 
 % BibTeX users please use one of
 \bibliographystyle{apalike}
-\bibliography{./../LML_bibliography/bibliography}   % name your BibTeX data base
+\bibliography{../LML_bibliography/bibliography}   % name your BibTeX data base
 \end{document}
 
