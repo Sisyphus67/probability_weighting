@@ -462,25 +462,34 @@ The difference between how these two perspectives evaluate the effects of noise 
 
 \section{Fitting the model to experimental results \seclabel{Fitting_the}}
 
-Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's physically unmotivated fit of  $F^*_w$, \eref{correspondence}, resembles the data no better than our mechanistically constrained model.
-This is particularly evident in the bottom two panels of \fref{CDF_weights}, which show that a Gaussian $w(x)$ whose scale and location differ from those of $p(x)$ reproduces the fitted functional shape of $F^*_w$.
+Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's physically unmotivated fit of $F^*_w$, \eref{correspondence}, resembles the data no better than our mechanistically constrained model. This is particularly evident in the bottom two panels of \fref{CDF_weights}, which show that a Gaussian $w(x)$ whose scale and location differ from those of $p(x)$ reproduces the fitted functional shape of $F^*_w$.
 
-For completeness and scientific hygiene, in the present section we fit Gaussian location ($\mu$) and scale ($\sigma$) parameters and Student-t shape parameters ($\nu$ and $\delta$) for $w(x)$ to experimental data from \cite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \cite{TverskyFox1995}. In addition, we fit the function
+For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and Student's-t models for $F_w$ to experimental data from \cite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \cite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF
 %
 \be
-w(p)=\frac{\delta p^{\gamma}}{\delta p^{\gamma} + (1-p)^{\gamma}}\,,
+F_w\left(F_p\right) = \Phi\left(\frac{\Phi^{-1}\left(F_p\right) - \mu}{\sigma}\right)\,,
+\ee
+%
+where $\Phi$ is the CDF of the standard normal distribution. In the Student's-t model we fit the location and scale parameters $\mu$ and $\nu$ in the CDF $F_w\left(x\right)$ of a non-central Student's t-distributed random variable, assuming that the variable $x$ is given by the Student's t inverse CDF with $\mu=0$ and $\nu=1$ of $F_p$.
+
+In addition, we fit the function
+%
+\be
+F^*_w =\frac{\delta F_p^{\gamma}}{\delta F_p^{\gamma} + \left(1-F_p\right)^{\gamma}}\,,
 \elabel{LattimoreFunction}
 \ee
 %
-suggested by \cite{LattimoreBakerWitte1992} to parametrically describe probability weighting, and was commonly used since (see, \eg \cite{tversky1995risk}).
+suggested by \cite{LattimoreBakerWitte1992} to parametrically describe probability weighting, and was commonly used since (see, \eg \cite{tversky1995risk}). We fit \eref{LattimoreFunction} and not \eref{correspondence}, used by Tversky and Kahneman, to allow a fair comparison between the Gaussian and Student's-t models, characterized by two parameters, and a phenomenological model that has two parameters rather than one.
 
-\Fref{TK_TF_fit} presents these results. We obtain very good fits to data for both Gaussian and Student-t distributions, as well as for \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the three fitted functions within standard errors. We conclude that our model fit the data well, and unlike \eref{LattimoreFunction}, the fitted functions are directly derived from a mechanistic model, and are not simply phenomenological.
+\Fref{TK_TF_fit} presents the fit results. We obtain very good fits to data for both Gaussian and Student's-t distributions, as well as for \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the three fitted functions within standard errors. We conclude that our model fit the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a mechanistic model, and are not simply phenomenological.
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/TK_TF_fit.pdf}
+\includegraphics[width=1.0\textwidth]{./figs/TK_TF_curvefit.pdf}
 \caption{Model fitting to experimental data from \cite{TverskyKahneman1992} (left) and \cite{TverskyFox1995} (right).
-Left) Gaussian model: $\mu=0.4\,\left(SE = 0.13\right)$, $\sigma=1.5\,\left(\pm0.2\right)$; Student's-t model: $\nu=0.39\,\left(\pm0.06\right)$, $\delta=0.29\,\left(\pm0.08\right)$; \cite{LattimoreBakerWitte1992}: $\delta=0.67\,\left(\pm0.07\right)$, $\gamma=0.59\,\left(\pm0.06\right)$. Right) Gaussian model: $\mu=0.23\,\left(\pm0.03\right)$, $\sigma=1.4\,\left(\pm0.06\right)$; Student's-t model: $\nu=0.47\,\left(\pm0.05\right)$, $\delta=0.17\,\left(\pm0.03\right)$; \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.02\right)$, $\gamma=0.69\,\left(\pm0.02\right)$. Shaded areas (noticeable only in the case of \cite{TverskyKahneman1992}) indicate one standard error in the fitted parameter values. The fit was done by implementing the method of least squares with the Nelder-Mead algorithm \cite{NelderMead1965}, and the standard errors were obtained by bootstrapping.}
+Left) Gaussian model: $\mu=0.38\,\left(SE = 0.06\right)$, $\sigma=1.6\,\left(\pm0.1\right)$; Student's-t model: $\nu=0.39\,\left(\pm0.04\right)$, $\mu=0.29\,\left(\pm0.05\right)$; \cite{LattimoreBakerWitte1992}: $\delta=0.67\,\left(\pm0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$. Right) Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.4\,\left(\pm0.03\right)$; Student's-t model: $\nu=0.47\,\left(\pm0.03\right)$, $\delta=0.17\,\left(\pm0.02\right)$; \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \cite{Levenberg1944} for non-linear least squares curve fitting.
+%The fit was done by implementing the method of least squares with the Nelder-Mead algorithm \cite{NelderMead1965}, and the standard errors were obtained by bootstrapping.
+}
 \flabel{TK_TF_fit}
 \end{figure}
 
