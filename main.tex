@@ -107,8 +107,7 @@ Yonatan Berman\footnote{London Mathematical Laboratory, 8 Margravine Gardens, Lo
 Behavioural economics collects observations of human economic behaviour and provides labels for those observations. 
 Probability weighting is one such label. It expresses a mismatch between probabilities used in a formal model of a decision problem (\ie model parameters) and probabilities inferred from real people's behaviour faced with the modelled decision problem (the same parameters estimated empirically). The inferred probabilities are called ``decision weights.'' 
 It is considered a robust observation that decision weights are higher than probabilities for extreme events, and (necessarily, because of normalisation) lower than probabilities for common events.
-The observed behaviour thus amounts to the refusal by real decision-makers totally to rely on a formal model, and instead to exercise extra caution. In this paper we explore quantitatively how such caution generically reproduces existing empirical findings. We list quantitatively  
-well-specified reasons for such caution and find the resulting probability weighting, as a benchmark for reasonable behaviour.
+The observed behaviour thus amounts to the refusal by real decision-makers totally to rely on a formal model, and instead to exercise extra caution. In this paper we explore quantitatively how such caution generically reproduces existing empirical findings. We list quantitatively well-specified reasons for such caution and find the resulting probability weighting, as a benchmark for reasonable behaviour.
 
 \vspace{1em}
 
@@ -156,7 +155,7 @@ D81 	% Criteria for Decision-Making under Risk and Uncertainty
 \section{Nomenclature}
 {\it Probability weighting} is a concept that originated in prospect theory. It is one way to conceptualize a pattern in human behavior, of caution with respect to formal models.
 %The key result of this paper is that probability weighting is a reasonable act of caution of a decision maker with respect to the additional fundamental uncertainty with regard to formal models of the random processes in the real world. 
-%The results of this paper are best explained using the following example:  
+%The results of this paper are best explained using the following example:
 This is best explained with an example:
 \bi
 	\item a \textit{disinterested observer} (DO), such as an experimenter, tells
@@ -279,7 +278,7 @@ which is precisely what's plotted in the right panel of \fref{probability_dists}
 
 %If we set the ratio of the DM's squared scale over the sum of the indivudal squared scales to $\alpha = \frac{\sigma_1^2}{\left(\sigma_1^2 + \sigma_2^2\right)}$, we can express \eref{w_of_p} as
 %\be
-%	w(p) =  \frac{p^{\frac{1}{\alpha^2}}}{\alpha} \sqrt{2\pi \sigma_1^2}^{\frac{1-\alpha^2}{\alpha^2}} . 
+%	w(p) = \frac{p^{\frac{1}{\alpha^2}}}{\alpha} \sqrt{2\pi \sigma_1^2}^{\frac{1-\alpha^2}{\alpha^2}} . 
 %\ee 
 %
 %\MK{Is there an interpretation to $\alpha$ or is it just a ratio? It's not the ratio of variances \ldots $\frac{\sigma^2}{(\sigma_1+\sigma_2)}^2$, maybe simply the ratio of the variance and the sum of the individual variances}
@@ -352,7 +351,25 @@ construct a list of values for the CDF assumed by the DM, $F_w(x)$.
 \item
 plot $F_w(x)$ vs $F_p(x)$.
 \end{enumerate}
-Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution. An infinity of combinations of assumed distributions can be explored. The inverse S arises whenever a DM assumes a greater scale for a unimodal distribution. To illustrate the generality of the procedure, in \fref{fat_tailed_CDF} we carry it out for a (power-law tailed) Student's-t distribution, where DO and DM use different shape parameters and different locations. The result is qualitatively similar to the bottom right panel of \fref{TwoCDFs}, corresponding to \eref{correspondence}. 
+Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution. An infinity of combinations of assumed distributions can be explored. The inverse S arises whenever a DM assumes a greater scale for a unimodal distribution. To illustrate the generality of the procedure, in \fref{fat_tailed_CDF} we carry it out for a (power-law tailed) Student's t-distribution, where DO and DM use different shape parameters and different locations.\footnote{The pdf of the Student's t-distribution is
+%
+\be
+f\left(x\right) = \frac{\Gamma\left(\frac{\nu+1}{2}\right)} {\sqrt{\nu\pi}\,\Gamma\left(\frac{\nu}{2}\right)} \left(1+\frac{\left(x-\mu\right)^2}{\nu} \right)^{-\frac{\nu+1}{2}}\,,
+\ee
+%
+where $\nu$ is the shape parameter and $\mu$ is the location parameter. The corresponding cdf is
+%
+\be
+F\left(x\right) = 
+\begin{cases}
+1 - \frac{1}{2} I_{\frac{\nu}{\left(x-\mu\right)^2 + \nu}}\left(\frac{\nu}{2},\frac{1}{2}\right) &\text{ if } x-\mu \geq 0\,;\\
+\frac{1}{2} I_{\frac{\nu}{\left(x-\mu\right)^2 + \nu}}\left(\frac{\nu}{2},\frac{1}{2}\right) &\text{ if } x-\mu < 0\,,
+\end{cases}
+\ee
+where $I_x\left(a,b\right)$ is the incomplete beta function.
+%
+}
+The result is qualitatively similar to the bottom right panel of \fref{TwoCDFs}, corresponding to \eref{correspondence}. 
 
 A difference in assumed scales and locations is sufficient to reproduce the observations. This suggests a different nomenclature and a conceptual clarification. The inverse-S curve does not mean that ``probabilities are re-weighted'' -- it just means that experimenters and their subjects have different views about what might be an appropriate response to a situation. 
 
@@ -470,28 +487,26 @@ For completeness and scientific hygiene, in the present section we fit location 
 F_w\left(F_p\right) = \Phi\left(\frac{\Phi^{-1}\left(F_p\right) - \mu}{\sigma}\right)\,,
 \ee
 %
-where $\Phi$ is the CDF of the standard normal distribution. In the Student's-t model we fit the location parameter $\mu$ and the shape parameter $\nu$ in the CDF $F_w\left(x\right)$ of a non-central Student's t-distributed random variable with scale parameter 1. We assume that the variable $x$ is given by the Student's t inverse CDF with $\mu=0$ and $\nu=1$ of $F_p$.
+where $\Phi$ is the CDF of the standard normal distribution. In the Student's-t model we fit the location parameter $\mu$ and the shape parameter $\nu$ in the CDF $F_w\left(x\right)$ of a Student's t-distributed random variable (see \secref{Different_shapes}), assuming $p$ follows a standard normal distribution.
 
-\OP{Better: fix $p$ as a standard normal, and assume $w$ is Student-t. For $\nu\to\infty$, the Student-t converges to the Gaussian, whereas $\nu=1$ is a very heavy-tailed Student-t (diverging variance). The Student-t arises in sampling when the variance is estimated from a sample of Gaussian random variates. So there's a reasonable motivation for comparing specifically Gaussian and Student-t.}
+%For $\nu\to\infty$, the Student-t converges to the Gaussian, whereas $\nu=1$ is a very heavy-tailed Student-t (diverging variance). The Student-t arises in sampling when the variance is estimated from a sample of Gaussian random variates. So there's a reasonable motivation for comparing specifically Gaussian and Student-t.
 
-In addition, we fit the function
+In addition, we fit \eref{correspondence}, used by Tversky and Kahneman, and the function
 %
 \be
 F^*_w =\frac{\delta F_p^{\gamma}}{\delta F_p^{\gamma} + \left(1-F_p\right)^{\gamma}}\,,
 \elabel{LattimoreFunction}
 \ee
 %
-suggested by \cite{LattimoreBakerWitte1992} to parametrically describe probability weighting, and was commonly used since (see, \eg \cite{tversky1995risk}). We fit \eref{LattimoreFunction} and not \eref{correspondence}, used by Tversky and Kahneman, to allow a fair comparison between the Gaussian and Student's-t models, characterized by two parameters, and a phenomenological model that has two parameters rather than one.
+suggested by \cite{LattimoreBakerWitte1992} to parametrically describe probability weighting, and was commonly used since (see, \eg \cite{tversky1995risk}). We fit \eref{LattimoreFunction} and not only \eref{correspondence}, to allow a fair comparison between the Gaussian and Student's-t models, characterised by two parameters.
 
-\OP{A statement like ``fitting \eref{correspondence} yields indistinguishable results'' would be nice, even if we don't show it.}
-
-\Fref{TK_TF_fit} presents the fit results. We obtain very good fits to data for both Gaussian and Student's-t distributions, as well as for \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the three fitted functions within standard errors. We conclude that our model fits the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a physically plausible mechanism, and are not simply phenomenological.
+\Fref{TK_TF_fit} presents the fit results. We obtain very good fits to data for both Gaussian and Student's-t distributions, as well as for \eref{correspondence} and \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the fitted functions within standard errors. We conclude that our model fits the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a physically plausible mechanism, and are not simply phenomenological.
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/TK_TF_curvefit.pdf}
+\includegraphics[width=1.0\textwidth]{./figs/TK_TF_curvefit_withEq4.pdf}
 \caption{Model fitting to experimental data from \cite{TverskyKahneman1992} (left) and \cite{TverskyFox1995} (right).
-Left) Gaussian model: $\mu=0.38\,\left(SE = 0.06\right)$, $\sigma=1.6\,\left(\pm0.1\right)$; Student's-t model: $\nu=0.39\,\left(\pm0.04\right)$, $\mu=0.29\,\left(\pm0.05\right)$; \cite{LattimoreBakerWitte1992}: $\delta=0.67\,\left(\pm0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$. Right) Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.4\,\left(\pm0.03\right)$; Student's-t model: $\nu=0.47\,\left(\pm0.03\right)$, $\delta=0.17\,\left(\pm0.02\right)$; \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \cite{Levenberg1944} for non-linear least squares curve fitting.
+Left) \cite{LattimoreBakerWitte1992}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; Student's-t model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \cite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right) \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; Student's-t model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \cite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \cite{Levenberg1944} for non-linear least squares curve fitting.
 %The fit was done by implementing the method of least squares with the Nelder-Mead algorithm \cite{NelderMead1965}, and the standard errors were obtained by bootstrapping.
 }
 \flabel{TK_TF_fit}
@@ -540,6 +555,6 @@ From a normative point of view there remains the desideratum to provide a mechan
 
 % BibTeX users please use one of
 \bibliographystyle{apalike}
-\bibliography{../LML_bibliography/bibliography}   % name your BibTeX data base
+\bibliography{../LML_bibliography/bibliography} % name your BibTeX data base
 \end{document}
 
