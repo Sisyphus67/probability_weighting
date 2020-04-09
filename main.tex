@@ -498,13 +498,45 @@ Left) Gaussian model: $\mu=0.38\,\left(SE = 0.06\right)$, $\sigma=1.6\,\left(\pm
 \end{figure}
 
 \FloatBarrier
+
 \section{Conclusion/Summary}
-\OP{We could move some discussion bits here -- like the incredible Sunstein story.}
-\MK{Discuss the general action of change of measure in relation to Girsanov and risk-neutral prob measure $\mathbb{Q}$ in Math Finance?}
-\OP{Let's keep this paper focused on one point only.}
+% \OP{We could move some discussion bits here -- like the incredible Sunstein story.}
+% \MK{Discuss the general action of change of measure in relation to Girsanov and risk-neutral prob measure $\mathbb{Q}$ in Math Finance?}
+% \OP{Let's keep this paper focused on one point only.}
+
+\paragraph{Related literature}
+
+\cite{WuGonzalez1996,Prelec1998}: derive PW from preference axioms, goal is to generate concavity and then convexity
+
+\cite{Stott2006}: test several functional forms, corroborate \cite{Prelec1998} and \eref{correspondence} and \eref{LattimoreFunction}, respectively. None of the tested functional forms corresponds to the function we derived mechanistically in \eref{w_of_p}. 
+
+\cite{Wakker2010}: the whole book contains only parameter calibrations of \eref{correspondence} but provides no mechanistic explanation.
+
+\cite{AbdellaouiETAL2011}: maybe closest to what we do in terms of their Fig. 2., however they distinguish between source functions for ambigious probabilities and known probabilities. They interpret the shifts and shape of the inverse-S curve using two additional idiosyncratic psychological parameters encoding optimism(pessimism) and likelihood (in)sensitivity. 
+
+% Whereas we provide a mechanistic explanation, psychological explanations prevail in the behavioural economics and finance literature, see \cite{WuGonzalez1996,Prelec1998,GonzalezWu1999,Stott2006,DeGiorgi2006,Wakker2010,AbdellaouiETAL2011} and references especially in the latter. It remains doubtful how a psychological explanation shall compensate for a missing and/or not yet understood mechanism, generating a particular phenomenon like probability weighting.
+% \OP{I think I see the point, but I don't know what a ``psychological explanation'' is; it may also be unclear what we mean by ``mechanistic.''}
+
+
+\paragraph{Results set in perspective}
+The consensus view hold in behavioural economics is that a descriptive decision model needs to feature 
+the so-called fourfold pattern of risk attitudes:
+\begin{enumerate}
+	\item gain/loss asymmetry (kink at the reference point),
+	\item nonlinearity in probability weighting (inverse-S curve),
+	\item risk aversion for most gains \& low probability losses (concavity) and
+	\item risk seeking for most losses \& low probability gains (convexity).
+\end{enumerate}
+All of these empirical patterns are usually (mis)interpreted as a deviation from \textit{the one and only} ``correct'' model and perceived as detrimental cognitive biases \citep{Lopes1991,Gigerenzer2018}. 
+% 
+Thus the mode of explanation in behavioural economics is to utilise psychological biases and cognitive processes in the brain which cause certain empirical regularities, \eg inverse-S curve labelled as probability weighting.
+%
+From a normative point of view there remains the desideratum to provide a mechanistic explanation for each of these patterns. Our contribution is that we provide a mechanistic explanation for probability weighting and show that it may even be adaptive in the likely case of cautiously using a model with more uncertainty relative to another model.
+
+\citet{Sunstein2020} is only the latest paradigmatic example of this (mis)interpretation and points to the potential misguidance of this stream of literature, let alone design policy measures derived from this view.
+
+\MK{End on a positive note}
 %\MK{It has almost become custom to end with a Kacelnik quote}
-
-
 
 % BibTeX users please use one of
 \bibliographystyle{apalike}

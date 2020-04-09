@@ -1,10 +1,21 @@
 \begin{thebibliography}{}
 
+\bibitem[Abdellaoui et~al., 2011]{AbdellaouiETAL2011}
+Abdellaoui, M., Baillon, A., Placido, L., and Wakker, P.~P. (2011).
+\newblock The rich domain of uncertainty: Source functions and their
+  experimental implementation.
+\newblock 101:695--723.
+
 \bibitem[Barberis, 2013]{Barberis2013}
 Barberis, N.~C. (2013).
 \newblock Thirty years of prospect theory in economics: A review and
   assessment.
 \newblock {\em Journal of Economic Perspectives}, 27:173--196.
+
+\bibitem[Gigerenzer, 2018]{Gigerenzer2018}
+Gigerenzer, G. (2018).
+\newblock The bias bias in behavioral economics.
+\newblock {\em Review of Behavioral Economics}, 5:303--336.
 
 \bibitem[Lattimore et~al., 1992]{LattimoreBakerWitte1992}
 Lattimore, P.~K., Baker, J.~R., and Witte, A.~D. (1992).
@@ -17,10 +28,25 @@ Levenberg, K. (1944).
   squares.
 \newblock {\em Quarterly of Applied Mathematics}, 2(2):164--168.
 
+\bibitem[Lopes, 1991]{Lopes1991}
+Lopes, L.~L. (1991).
+\newblock The rhetoric of irrationality.
+\newblock 1:65--82.
+
 \bibitem[Peters, 2019]{Peters2019b}
 Peters, O. (2019).
 \newblock The ergodicity problem in economics.
 \newblock {\em Nature Physics}, 15:1216--1221.
+
+\bibitem[Prelec, 1998]{Prelec1998}
+Prelec, D. (1998).
+\newblock The probability weighting function.
+\newblock 66:497--527.
+
+\bibitem[Stott, 2006]{Stott2006}
+Stott, H.~P. (2006).
+\newblock Cumulative prospect theory's functional menagerie.
+\newblock 32:101--130.
 
 \bibitem[Sunstein, 2020]{Sunstein2020}
 Sunstein, C.~R. (2020).
@@ -41,5 +67,15 @@ Tversky, A. and Kahneman, D. (1992).
 Tversky, A. and Wakker, P. (1995).
 \newblock Risk attitudes and decision weights.
 \newblock {\em Econometrica}, 63(6):1255--1280.
+
+\bibitem[Wakker, 2010]{Wakker2010}
+Wakker, P. (2010).
+\newblock {\em Prospect Theory}.
+\newblock Cambridge University Press.
+
+\bibitem[Wu and Gonzalez, 1996]{WuGonzalez1996}
+Wu, G. and Gonzalez, R. (1996).
+\newblock Curvature of the probability weighting function.
+\newblock {\em Management Science}, 42:1676--1690.
 
 \end{thebibliography}
