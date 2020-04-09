@@ -406,21 +406,34 @@ For our purpose it suffices to say that there's no guarantee that a probabilisti
 \subsection{Consistent differences between DO and DM \seclabel{condition2}}
 
 \subsubsection*{Estimation errors for probabilities}
-Let's imagine the DO and DM have agreed explicitly on an interpretation of the word ``probability.'' Say they agree that they mean the relative frequency in an infintely long time series. Real time series are, of course, of finite length. In order to estimatea probability so defined, we count: if the event $i$ occurred in $n_i$ out of $T$ time intervals, then our best estimate for the probability of $i$ is $\frac{n_i}{T}$. In the simplest case (and we rarely consider anything more complicated), we model the arrival of events as a Poisson process, where the standard error in the count of an event famously goes as $\sqrt{n_i}$. The standard error in the probability of an event is therefore $\frac{\sqrt{n_i}}{T}$, and the relative error is $\frac{1}{\sqrt{n_i}}$. Low probabilities therefore come with larger relative errors, see \tref{errors}. We note that behaviourally, it will make little difference whether a DM assigns a 0.49 probability to an event or a 0.51 probability. It will make a large difference, however, whether a DM assigns a 0.0001 probability or a 0 probability.
+Let's imagine the DO and DM have agreed explicitly on an interpretation of the word ``probability.'' Say they agree on the relative frequency of an event in an infinitely long sequence of observations. Suppose this has a value $p$. In reality the number of observations made is finite so, to estimate the probability so defined, we count: if the event occurred in $n$ out of $T$ observations, then we estimate $p$ as $\hat{p} \equiv \frac{n}{T}$.
+
+Statistical inference -- the business of estimating parameter values, like $p$, and their uncertainties from samples -- is not the focus of this paper. Therefore, we will stick to a very simple example. At each of the observations, the event occurs with fixed probability $p$, independently of all other observations. The relative frequency, $\hat{p}$, is a binomial random variable with mean $p$ and standard deviation $\sqrt{\frac{p(1-p)}{T}}$. Of course, we don't know $p$ -- we are trying to estimate it -- but we can substitute the observed $\hat{p}$ to estimate the standard error, $\sqrt{\frac{\hat{p}(1-\hat{p})}{T}}$, in a measurement of $\hat{p}$. The relative error is $\sqrt{\frac{1-\hat{p}}{\hat{p}T}}$
+
+
+%In the simplest case (and we rarely consider anything more complicated), we model the arrival of events as a Poisson process, where the standard error in the count of an event famously goes as $\sqrt{n_i}$. The standard error in the probability of an event is therefore $\frac{\sqrt{n_i}}{T}$, and the relative error is $\frac{1}{\sqrt{n_i}}$.
+
+Note the $\frac{1}{\sqrt{\hat{p}}}$ dependence in the relative error: smaller probabilities have larger relative uncertainties, see \tref{errors}. We note that behaviourally, it will make little difference whether a DM assigns a 0.49 probability to an event or a 0.51 probability. It will make a large difference, however, whether a DM assigns a 0.0001 probability or a 0 probability.
 
 \begin{table}[!htb]
 %\ra{1.25}
 %\small
 \centering
-\begin{tabular}{@{}lrlr@{}}
+\begin{tabular}{@{}lllll@{}}
 \toprule[2pt]
-\makecell{Asymptotic\\(true) probability} & \makecell{Most likely\\count} & \makecell{Absolute\\estimation error} & \makecell{Relative\\estimation error}\\
+\makecell{Asymptotic\\(true) probability} & \makecell{Most likely\\count} & \makecell{Standard error\\ in count} & \makecell{Standard error\\ in probability} &  \makecell{Relative error\\ in probability}\\
 \midrule[2pt]
-.5 & 5000 & .01 & 2\%\\
-.1 & 1000& .003 & 3\%\\
-.01 & 100& .001 & 10\%\\
-.001 & 10& .0003& 30\%\\
-.0001 & 1& .0001 &100\%\\
+%.5 & 5000 & .01 & 2\%\\
+%.1 & 1000& .003 & 3\%\\
+%.01 & 100& .001 & 10\%\\
+%.001 & 10& .0003& 30\%\\
+%.0001 & 1& .0001 &100\%\\
+
+0.5 & 5000 & 50.0 & 0.0050 & 0.0100\\
+0.1 & 1000 & 30.0 & 0.0030 & 0.0300\\
+0.01 & 100 & 9.9 & 0.0010 & 0.0995\\
+0.001 & 10 & 3.2 & 0.0003 & 0.3161\\
+0.0001 & 1 & 1.0 & 0.0001 & 0.9999\\
 \bottomrule[2pt]
 \end{tabular}
 \caption{This table assumes $T = 10000$ observed time intervals. To be read as follows (first line): for an event of true probability 0.5, the most likely count in 10000 trials is 5000. Assuming Poisson statistics, this comes with an estimation error of $\sqrt{5000}/5000=0.01$, which is 2\% of the true probability.}\tlabel{errors}
@@ -430,7 +443,7 @@ The most important message from this example is that errors in probability estim
 
 Let's make one more assumption: DMs don't like surprises. In order to avoid surprises, the DM will incorporate the uncertainty in any probability estimates by assuming that the actual long-time relative frequency of an event is the best estimate plus two standard errors, so that
 \be
-w(x)=\frac{p(x)+2 \sqrt{p(x)}}{\int_{-\infty}^{\infty}[p(s)+2 \sqrt{p(s)}] ds},
+w(x)=\frac{p(x)+2 \sqrt{\frac{p(x)(1-p(x))}{T}}}{\int_{-\infty}^{\infty}\left[p(s)+2 \sqrt{\frac{p(s)(1-p(s))}{T}}\right] ds},
 \elabel{Poisson}
 \ee
 where the denominator ensures normalization, so that $w(x)$ is a proper probability density. \Fref{square_root_error} shows the resulting PDFs and the CDF mappings, for a Gaussian distribution and for a fat-tailed Student-t distribution. As one might expect, the effect is more pronounced for the fat-tailed distribution.
