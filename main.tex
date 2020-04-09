@@ -212,17 +212,17 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 
 \subsection{The inverse-S curve\seclabel{The_inverse}}
 \subsubsection{Tversky and Kahneman}
-\citet{TverskyKahneman1992} chose to fit the empirical data in \fref{TK1992} with the following function\footnote{\Eref{correspondence} is the consensus functional form in the community \cite{Barberis2013}.}
+\citet{TverskyKahneman1992} chose to fit the empirical data in \fref{TK1992} with the following function\footnote{\Eref{correspondence} is the consensus functional form in the community \cite{Barberis2013}. \OP{Maybe not quite, given that we fit another function later. We could introduce Latimore's function hiere.}}
 % Whereas we provide a mechanistic explanation, psychological explanations prevail in the behavioural economics and finance literature, see \cite{WuGonzalez1996,Prelec1998,GonzalezWu1999,Stott2006,DeGiorgi2006,Wakker2010,AbdellaouiETAL2011} and references especially in the latter. It remains doubtful how a psychological explanation shall compensate for a missing and/or not yet understood mechanism, generating a particular phenomenon like probability weighting.
 %\OP{I think I see the point, but I don't know what a ``psychological explanation'' is; it may also be unclear what we mean by ``mechanistic.''}
 % 
 \be
 \elabel{correspondence}
-F_w^*\left(F_p\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(F_p\right)^\gamma+\left(1-F_p\right)^\gamma\right]^{1/\gamma}} ~.
+F_w^*\left(F_p; \gamma\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(F_p\right)^\gamma+\left(1-F_p\right)^\gamma\right]^{1/\gamma}} ~.
 \ee
-We note that no mechanistic motivation was given for the specific functional form. It simply ``looks a bit like the data.''
+We note that no mechanistic motivation was given for fitting this specific family of CDFs (parameterised by $\gamma$). The motivation is purely phenomenological: with $\gamma<1$, this family ``looks a bit like the data.''
 % 
-The function $F_w^*\left(F_p\right)$ has only one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $F_w^*\left(F_p\right)=F_p$. The function $F_w^*$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse S, the fitting procedure itself introduces a shift of the intersection to the left. Because of this, we consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. We will see below that the curvature and shift correspond to different parts of a mechanistic explanation of the phenomenon.
+The function $F_w^*\left(F_p; \gamma \right)$ has only one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $F_w^*\left(F_p\right)=F_p$. The function $F_w^*$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. Because of this, we consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. We will see below that the curvature and shift correspond to different parts of a mechanistic explanation of the phenomenon.
 
 \subsubsection{Mechanistic explanation of the inverse S}
 Specifically, we now make explicit how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges from assuming that the DM uses a larger scale in his model of the world than the DO. This can have numerous reasons, to which we will return in \secref{Reasons_for}. For now, suffice it to say that precaution is an obvious one: any uncertainty the DM wishes to include in his model in addition to what the DO includes will translate into a greater scale for the DM's distribution and therefore into an inverse-S shape for any unimodal (peaked) distribution when cumulative densities are compared.
@@ -470,7 +470,9 @@ For completeness and scientific hygiene, in the present section we fit location 
 F_w\left(F_p\right) = \Phi\left(\frac{\Phi^{-1}\left(F_p\right) - \mu}{\sigma}\right)\,,
 \ee
 %
-where $\Phi$ is the CDF of the standard normal distribution. In the Student's-t model we fit the location and scale parameters $\mu$ and $\nu$ in the CDF $F_w\left(x\right)$ of a non-central Student's t-distributed random variable, assuming that the variable $x$ is given by the Student's t inverse CDF with $\mu=0$ and $\nu=1$ of $F_p$.
+where $\Phi$ is the CDF of the standard normal distribution. In the Student's-t model we fit the location parameter $\mu$ and the shape parameter $\nu$ in the CDF $F_w\left(x\right)$ of a non-central Student's t-distributed random variable with scale parameter 1. We assume that the variable $x$ is given by the Student's t inverse CDF with $\mu=0$ and $\nu=1$ of $F_p$.
+
+\OP{Better: fix $p$ as a standard normal, and assume $w$ is Student-t. For $\nu\to\infty$, the Student-t converges to the Gaussian, whereas $\nu=1$ is a very heavy-tailed Student-t (diverging variance). The Student-t arises in sampling when the variance is estimated from a sample of Gaussian random variates. So there's a reasonable motivation for comparing specifically Gaussian and Student-t.}
 
 In addition, we fit the function
 %
@@ -481,7 +483,9 @@ F^*_w =\frac{\delta F_p^{\gamma}}{\delta F_p^{\gamma} + \left(1-F_p\right)^{\gam
 %
 suggested by \cite{LattimoreBakerWitte1992} to parametrically describe probability weighting, and was commonly used since (see, \eg \cite{tversky1995risk}). We fit \eref{LattimoreFunction} and not \eref{correspondence}, used by Tversky and Kahneman, to allow a fair comparison between the Gaussian and Student's-t models, characterized by two parameters, and a phenomenological model that has two parameters rather than one.
 
-\Fref{TK_TF_fit} presents the fit results. We obtain very good fits to data for both Gaussian and Student's-t distributions, as well as for \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the three fitted functions within standard errors. We conclude that our model fit the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a mechanistic model, and are not simply phenomenological.
+\OP{A statement like ``fitting \eref{correspondence} yields indistinguishable results'' would be nice, even if we don't show it.}
+
+\Fref{TK_TF_fit} presents the fit results. We obtain very good fits to data for both Gaussian and Student's-t distributions, as well as for \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the three fitted functions within standard errors. We conclude that our model fits the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a physically plausible mechanism, and are not simply phenomenological.
 
 \begin{figure}[htb]
 \centering
