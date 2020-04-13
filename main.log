@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  13 APR 2020 12:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  13 APR 2020 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -907,74 +907,69 @@ Package pdftex.def Info: resone-logo.png  used on input line 408.
 [8 <./figs/Student-t.pdf>]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 436.
+Package pdftex.def Info: resone-logo.png  used on input line 431.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [9]
-<./figs/square_root_error.pdf, id=342, 584.70949pt x 463.31845pt>
+<./figs/square_root_error.pdf, id=343, 584.70949pt x 463.31845pt>
 File: ./figs/square_root_error.pdf Graphic file (type pdf)
 <use ./figs/square_root_error.pdf>
-Package pdftex.def Info: ./figs/square_root_error.pdf  used on input line 474.
+Package pdftex.def Info: ./figs/square_root_error.pdf  used on input line 464.
 (pdftex.def)             Requested size: 407.66833pt x 323.04109pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 478.
+Package pdftex.def Info: resone-logo.png  used on input line 468.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [10]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 479.
+Package pdftex.def Info: resone-logo.png  used on input line 476.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
- [11]
+ [11 <./figs/square_root_error.pdf>]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 490.
-(pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
- [12 <./figs/square_root_error.pdf>]
-File: resone-logo.png Graphic file (type png)
-<use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 522.
+Package pdftex.def Info: resone-logo.png  used on input line 507.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
 
-[13]
-<./figs/TK_TF_curvefit_withEq4.pdf, id=446, 615.34518pt x 234.03122pt>
+[12]
+<./figs/TK_TF_curvefit_withEq4.pdf, id=438, 615.34518pt x 234.03122pt>
 File: ./figs/TK_TF_curvefit_withEq4.pdf Graphic file (type pdf)
 <use ./figs/TK_TF_curvefit_withEq4.pdf>
 Package pdftex.def Info: ./figs/TK_TF_curvefit_withEq4.pdf  used on input line 
-525.
+515.
 (pdftex.def)             Requested size: 452.9679pt x 172.28049pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 557.
+Package pdftex.def Info: resone-logo.png  used on input line 539.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
- [14 <./figs/TK_TF_curvefit_withEq4.pdf>] (./main.bbl
+ [13 <./figs/TK_TF_curvefit_withEq4.pdf>] (./main.bbl
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 60.
+Package pdftex.def Info: resone-logo.png  used on input line 36.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
- [15])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 577.
+ [14])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 567.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 577.
+Package pdftex.def Info: resone-logo.png  used on input line 567.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
- [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 577.
+ [15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 567.
 
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 577.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 577.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 567.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 567.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9ED33CE85C0248484964B555B586FC87;1059.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 577.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 567.
  ) 
 Here is how much of TeX's memory you used:
- 20501 strings out of 492616
- 379463 string characters out of 6132769
- 442264 words of memory out of 5000000
+ 20500 strings out of 492616
+ 379456 string characters out of 6132769
+ 441264 words of memory out of 5000000
  24153 multiletter control sequences out of 15000+600000
  550024 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,17n,63p,1765b,843s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,17n,63p,1765b,833s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2018/texmf-di
@@ -997,10 +992,10 @@ ype1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (17 pages, 644387 bytes).
+Output written on main.pdf (16 pages, 640889 bytes).
 PDF statistics:
- 696 PDF objects out of 1000 (max. 8388607)
- 439 compressed objects within 5 object streams
- 82 named destinations out of 1000 (max. 500000)
+ 691 PDF objects out of 1000 (max. 8388607)
+ 435 compressed objects within 5 object streams
+ 81 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
