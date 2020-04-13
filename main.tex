@@ -458,18 +458,18 @@ Let's make one more assumption: DMs don't like surprises. To avoid surprises, a 
 w(x)\delta x = \hat{p}(x)\delta x + 2\sqrt{\frac{\hat{p}(x)\delta x}{T}}
 \simeq \left(\hat{p}(x) + \sqrt{\frac{\hat{p}(x)}{T}}\right)\delta x
 \ee
-for small bin width, $\delta x \ll 1$. Repeating this procedure across the domain of the density function, i.e. for all possible events, gives a decision weight density of
+for small bin width, $\delta x \ll 1$, and assuming $T$ observations in each bin. Repeating this procedure across the domain of the density function, i.e. for all possible events, gives a decision weight density of
 \be
 w(x)=\frac{\hat{p}(x)+\sqrt{\hat{p}(x)/T}}{\int_{-\infty}^{\infty}[\hat{p}(s)+\sqrt{\hat{p}(s)/T}] ds},
 \elabel{Poisson}
 \ee
 where the denominator ensures normalization. Note the role of $T$ here: as $T$ grows large, \ie as the DM collects more information, the cautionary correction term vanishes, and both $w(x)$ and $\hat{p}(x)$ converge to the asymptotic density, $p(x)$. With perfect information, a DM does not need to adjust decisions to account for uncertainty.
 
-\Fref{square_root_error} shows the resulting PDFs and the CDF mappings, for a Gaussian distribution and for a fat-tailed Student-t distribution for $T=100$ observations. As one might expect, the effect is more pronounced for the fat-tailed distribution.
+\Fref{square_root_error} shows the resulting PDFs and the CDF mappings, for a Gaussian distribution and for a fat-tailed Student-t distribution. As one might expect, the effect is more pronounced for the fat-tailed distribution.
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.9\textwidth]{./figs/square_root_error.pdf}
-\caption{PDFs and inverse-S curves arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a Student-t distribution (shape 2, location 0, bottom line), and the DM uses decision weights in accordance with \eref{Poisson}. For the fat-tailed Student-t distribution the difference between $p$ and $w$ is more pronounced.}
+\caption{PDFs and inverse-S curves arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a Student-t distribution (shape 2, location 0, bottom line), and the DM uses decision weights accoding to \eref{Poisson} with an observation density of $T=1$. For the fat-tailed Student-t distribution the difference between $p$ and $w$ is more pronounced.}
 \flabel{square_root_error}
 \end{figure}
 
