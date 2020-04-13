@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  13 APR 2020 14:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  13 APR 2020 14:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -912,7 +912,7 @@ Package pdftex.def Info: resone-logo.png  used on input line 431.
  [9]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 462.
+Package pdftex.def Info: resone-logo.png  used on input line 465.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [10]
 <./figs/square_root_error.pdf, id=350, 583.43796pt x 463.31845pt>
@@ -922,7 +922,7 @@ Package pdftex.def Info: ./figs/square_root_error.pdf  used on input line 471.
 (pdftex.def)             Requested size: 407.66833pt x 323.74805pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 481.
+Package pdftex.def Info: resone-logo.png  used on input line 482.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [11 <./figs/square_root_error.pdf>]
 File: resone-logo.png Graphic file (type png)
@@ -965,7 +965,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 574.
 Here is how much of TeX's memory you used:
  20501 strings out of 492616
  379469 string characters out of 6132769
- 441368 words of memory out of 5000000
+ 441358 words of memory out of 5000000
  24153 multiletter control sequences out of 15000+600000
  550024 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -992,7 +992,7 @@ ype1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (16 pages, 642441 bytes).
+Output written on main.pdf (16 pages, 642141 bytes).
 PDF statistics:
  692 PDF objects out of 1000 (max. 8388607)
  436 compressed objects within 5 object streams
