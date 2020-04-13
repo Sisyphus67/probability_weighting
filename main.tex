@@ -453,12 +453,19 @@ The standard error grows in an estimated probability shrinks as the probability 
 
 The most important message from this example is that errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for low probabilities, but relative errors are larger for lower probabilities. 
 
-Let's make one more assumption: DMs don't like surprises. In order to avoid surprises, the DM will incorporate the uncertainty in any probability estimates by assuming that the actual long-time relative frequency of an event is the best estimate plus two standard errors, so that
+Let's make one more assumption: DMs don't like surprises. To avoid surprises, a DM will incorporate the uncertainty in any probability estimates by assuming that the actual long-time relative frequency of an event is his best estimate plus two standard errors. In the notation of density functions, suppose he estimates the probability of an event, $x \leq X \leq x+\delta x$, as $\hat{p}(x)\delta x$. To this he adds two standard errors to get his decision weight for the event,
 \be
-w(x)=\frac{p(x)+2 \sqrt{p(x)/T}}{\int_{-\infty}^{\infty}[p(s)+2 \sqrt{p(s)/T}] ds},
+w(x)\delta x = \hat{p}(x)\delta x + 2\sqrt{\frac{\hat{p}(x)\delta x}{T}}
+\simeq \left(\hat{p}(x) + \sqrt{\frac{\hat{p}(x)}{T}}\right)\delta x
+\ee
+for small bin width, $\delta x \ll 1$. Repeating this procedure across the domain of the density function, i.e. for all possible events, gives a decision weight density of
+\be
+w(x)=\frac{\hat{p}(x)+\sqrt{\hat{p}(x)/T}}{\int_{-\infty}^{\infty}[\hat{p}(s)+\sqrt{\hat{p}(s)/T}] ds},
 \elabel{Poisson}
 \ee
-where the denominator ensures normalization, so that $w(x)$ is a proper probability density. \Fref{square_root_error} shows the resulting PDFs and the CDF mappings, for a Gaussian distribution and for a fat-tailed Student-t distribution. As one might expect, the effect is more pronounced for the fat-tailed distribution.
+where the denominator ensures normalization. Note the role of $T$ here: as $T$ grows large, \ie as the DM collects more information, the cautionary correction term vanishes, and both $w(x)$ and $\hat{p}(x)$ converge to the asymptotic density, $p(x)$. With perfect information, a DM does not need to adjust decisions to account for uncertainty.
+
+\Fref{square_root_error} shows the resulting PDFs and the CDF mappings, for a Gaussian distribution and for a fat-tailed Student-t distribution for $T=100$ observations. As one might expect, the effect is more pronounced for the fat-tailed distribution.
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.9\textwidth]{./figs/square_root_error.pdf}
