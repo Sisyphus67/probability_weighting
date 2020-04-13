@@ -14,12 +14,12 @@ import numpy as np
 import scipy
 from scipy.integrate import quad
 
-SCfigure=True
-if SCfigure:
-    font = {'family' : 'normal',
-        'weight' : 'normal',
-        'size'   : 15}
-    plt.rc('font', **font)
+# SCfigure=True
+# if SCfigure:
+#     font = {'family' : 'normal',
+#         'weight' : 'normal',
+#         'size'   : 15}
+#     plt.rc('font', **font)
     
 pos_x=np.linspace(0.01,10,1000)
 all_x=np.linspace(-10,10,1000)
@@ -63,7 +63,7 @@ for x in all_x:
     i=i+1
 
 fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(9, 7))
-fig.tight_layout(pad=3.5)
+fig.tight_layout(pad=3)
 
 axes[0, 1].plot(cp[1],cp[1],'r', lineWidth='2', label=r'$F_p$')
 axes[0, 1].axvline(x=0.5,LineStyle='--')
@@ -147,9 +147,6 @@ def s(x,beta):
     s=np.power(x,beta)/np.power((np.power(x,beta)+np.power(1-x,beta)),1./beta)
     return s
 
-plt.plot(pos_x,pos_x,'--k', label=r'')
-plt.axvline(x=0.5,LineStyle='--')
-plt.plot(pos_x,s(pos_x,beta),'b', lineWidth='2',label=r'')
 axes[1, 1].plot(pos_x,pos_x,'r',lineWidth='2', label=r'$F_p$')
 axes[1, 1].axvline(x=0.5,LineStyle='--')
 axes[1, 1].plot(pos_x,s(pos_x,beta),'b', lineWidth='2',label=r'$F_w$')

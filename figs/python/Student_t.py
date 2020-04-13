@@ -15,18 +15,15 @@ import scipy
 from scipy.integrate import quad
 
 
-SCfigure=True
-if SCfigure:
-    font = {'family' : 'normal',
-        'weight' : 'normal',
-        'size'   : 15}
-    plt.rc('font', **font)
-    
+# SCfigure=True
+# if SCfigure:
+#     font = {'family' : 'normal',
+#         'weight' : 'normal',
+#         'size'   : 15}
+#     plt.rc('font', **font)
 
-
-pos_x=np.linspace(0.01,10,1000)
-all_x=np.linspace(-1000,1000,1000)
-
+pos_x=np.linspace(0.01, 10, 5000)
+all_x=np.linspace(-10000, 10000, 5000)
 
 #Gaussian
 g_loc_p=0
@@ -141,6 +138,9 @@ for x in all_x:
     cw[0][i]=x
     cw[1][i]=cdf_stu_w(x-s_loc)[0]
     i=i+1
+
+plt.figure(figsize=(4.5, 3.5))
+plt.tight_layout(pad=3)
 
 plt.plot(cp[1],cp[1],'r',lineWidth='2',label=r'$F_p$')
 plt.axvline(x=0.5,LineStyle='--')
