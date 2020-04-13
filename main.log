@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  13 APR 2020 13:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  13 APR 2020 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -922,16 +922,16 @@ Package pdftex.def Info: resone-logo.png  used on input line 468.
  [10]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 476.
+Package pdftex.def Info: resone-logo.png  used on input line 477.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [11 <./figs/square_root_error.pdf>]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 507.
+Package pdftex.def Info: resone-logo.png  used on input line 510.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
 
 [12]
-<./figs/TK_TF_curvefit_withEq4.pdf, id=438, 615.34518pt x 234.03122pt>
+<./figs/TK_TF_curvefit_withEq4.pdf, id=439, 615.34518pt x 234.03122pt>
 File: ./figs/TK_TF_curvefit_withEq4.pdf Graphic file (type pdf)
 <use ./figs/TK_TF_curvefit_withEq4.pdf>
 Package pdftex.def Info: ./figs/TK_TF_curvefit_withEq4.pdf  used on input line 
@@ -939,12 +939,12 @@ Package pdftex.def Info: ./figs/TK_TF_curvefit_withEq4.pdf  used on input line
 (pdftex.def)             Requested size: 452.9679pt x 172.28049pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 539.
+Package pdftex.def Info: resone-logo.png  used on input line 544.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [13 <./figs/TK_TF_curvefit_withEq4.pdf>] (./main.bbl
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 36.
+Package pdftex.def Info: resone-logo.png  used on input line 55.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [14])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 567.
@@ -965,11 +965,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 567.
 Here is how much of TeX's memory you used:
  20500 strings out of 492616
  379456 string characters out of 6132769
- 441264 words of memory out of 5000000
+ 441338 words of memory out of 5000000
  24153 multiletter control sequences out of 15000+600000
  550024 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,17n,63p,1765b,833s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,17n,63p,1765b,841s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2018/texmf-di
@@ -992,7 +992,7 @@ ype1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (16 pages, 640889 bytes).
+Output written on main.pdf (16 pages, 640766 bytes).
 PDF statistics:
  691 PDF objects out of 1000 (max. 8388607)
  435 compressed objects within 5 object streams
