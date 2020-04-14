@@ -6,3 +6,8 @@ main.synctex.gz
 .texlipse
 .project
 *.gz
+main.aux
+main.log
+main.synctex.gz
+*.bbl
+*.out
