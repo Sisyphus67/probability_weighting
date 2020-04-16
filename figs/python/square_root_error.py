@@ -11,7 +11,7 @@ import scipy.stats as stat
 #         'size'   : 15}
 #     plt.rc('font', **font)
 
-T = 10 # arbitrary number of observations
+Tdx = 10 # observations per bin
 
 xx = np.linspace(0.0, 1.0, num=1000)
 x = np.linspace(-100, 100, num=5000)
@@ -20,7 +20,7 @@ l = 0
 s = 1
 # PDFs
 DO = stat.norm.pdf(x, l, s)
-DM = DO+np.sqrt(DO/T)
+DM = DO+np.sqrt(DO/Tdx)
 # CDFs
 DM_normalization=scipy.integrate.trapz(DM,x)
 DM=DM/DM_normalization
@@ -60,7 +60,7 @@ axes[0,1].set_yticks(np.arange(0, 1.1, step=0.2))
 s = 2
 # PDFs
 DO = stat.t.pdf(x, s)
-DM = DO+np.sqrt(DO/T)
+DM = DO+np.sqrt(DO/Tdx)
 # CDFs
 DM_normalization=scipy.integrate.trapz(DM,x)
 DM=DM/DM_normalization
