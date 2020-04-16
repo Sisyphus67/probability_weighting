@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  16 APR 2020 12:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.1)  16 APR 2020 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -588,20 +588,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -752,7 +752,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring ON on input line 101.
+Package hyperref Info: Link coloring ON on input line 102.
 (c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -761,53 +761,53 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count303
 )
-LaTeX Info: Redefining \ref on input line 101.
-LaTeX Info: Redefining \pageref on input line 101.
-LaTeX Info: Redefining \nameref on input line 101.
+LaTeX Info: Redefining \ref on input line 102.
+LaTeX Info: Redefining \pageref on input line 102.
+LaTeX Info: Redefining \nameref on input line 102.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 101.
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
 
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 101.
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
 
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 101.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 102.
 
 (c:/texlive/2018/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 104.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 105.
 
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
 
-Underfull \hbox (badness 1838) in paragraph at lines 104--104
+Underfull \hbox (badness 1838) in paragraph at lines 105--105
 [][]\OT1/cmr/m/n/10 London Math-e-mat-i-cal Lab-o-ra-tory, 8 Mar-gravine Gar-de
 ns, Lon-don W6 8RH, UK. Email:
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 104--104
+Underfull \hbox (badness 1838) in paragraph at lines 105--105
 [][]\OT1/cmr/m/n/10 London Math-e-mat-i-cal Lab-o-ra-tory, 8 Mar-gravine Gar-de
 ns, Lon-don W6 8RH, UK. Email:
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 104--104
+Underfull \hbox (badness 1838) in paragraph at lines 105--105
 [][]\OT1/cmr/m/n/10 London Math-e-mat-i-cal Lab-o-ra-tory, 8 Mar-gravine Gar-de
 ns, Lon-don W6 8RH, UK. Email:
  []
@@ -815,7 +815,7 @@ ns, Lon-don W6 8RH, UK. Email:
 <resone-logo.png, id=58, 400.49625pt x 60.225pt>
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 135.
+Package pdftex.def Info: resone-logo.png  used on input line 136.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -827,132 +827,132 @@ This may cause the page layout to be inconsistent, however.
 
  <./resone-logo.png>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 162.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 163.
 <./figs/TK1992.PNG, id=80, 596.2275pt x 598.235pt>
 File: ./figs/TK1992.PNG Graphic file (type png)
 <use ./figs/TK1992.PNG>
-Package pdftex.def Info: ./figs/TK1992.PNG  used on input line 189.
+Package pdftex.def Info: ./figs/TK1992.PNG  used on input line 190.
 (pdftex.def)             Requested size: 226.48395pt x 227.24037pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 199.
+Package pdftex.def Info: resone-logo.png  used on input line 200.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [2]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 217.
+Package pdftex.def Info: resone-logo.png  used on input line 218.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [3 <./figs/TK1992.png>]
 <./figs/density_map.pdf, id=118, 610.44627pt x 217.8859pt>
 File: ./figs/density_map.pdf Graphic file (type pdf)
 <use ./figs/density_map.pdf>
-Package pdftex.def Info: ./figs/density_map.pdf  used on input line 235.
+Package pdftex.def Info: ./figs/density_map.pdf  used on input line 236.
 (pdftex.def)             Requested size: 452.9679pt x 161.67853pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 281.
+Package pdftex.def Info: resone-logo.png  used on input line 282.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [4]
 <./figs/GaussianFvsXtoWvsP.pdf, id=138, 610.44627pt x 218.88963pt>
 File: ./figs/GaussianFvsXtoWvsP.pdf Graphic file (type pdf)
 <use ./figs/GaussianFvsXtoWvsP.pdf>
-Package pdftex.def Info: ./figs/GaussianFvsXtoWvsP.pdf  used on input line 284.
+Package pdftex.def Info: ./figs/GaussianFvsXtoWvsP.pdf  used on input line 285.
 
 (pdftex.def)             Requested size: 452.9679pt x 162.42334pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 294.
+Package pdftex.def Info: resone-logo.png  used on input line 295.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [5 <./figs/density_map.pdf>]
 <./figs/Gauss_scale_location_both_KT.pdf, id=174, 614.01208pt x 486.9762pt>
 File: ./figs/Gauss_scale_location_both_KT.pdf Graphic file (type pdf)
 <use ./figs/Gauss_scale_location_both_KT.pdf>
 Package pdftex.def Info: ./figs/Gauss_scale_location_both_KT.pdf  used on input
- line 299.
+ line 300.
 (pdftex.def)             Requested size: 452.9679pt x 359.25699pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 337.
+Package pdftex.def Info: resone-logo.png  used on input line 338.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [6 <./figs/GaussianFvsXtoWvsP.pdf>]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 337.
+Package pdftex.def Info: resone-logo.png  used on input line 338.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [7 <./figs/Gauss_scale_location_both_KT.pdf>]
 <./figs/Student-t.pdf, id=274, 306.72404pt x 245.52917pt>
 File: ./figs/Student-t.pdf Graphic file (type pdf)
 <use ./figs/Student-t.pdf>
-Package pdftex.def Info: ./figs/Student-t.pdf  used on input line 377.
+Package pdftex.def Info: ./figs/Student-t.pdf  used on input line 378.
 (pdftex.def)             Requested size: 226.48395pt x 181.2991pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 390.
+Package pdftex.def Info: resone-logo.png  used on input line 391.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [8 <./figs/Student-t.pdf>]
-Overfull \hbox (7.33342pt too wide) in paragraph at lines 407--408
+Overfull \hbox (7.33342pt too wide) in paragraph at lines 408--409
  []\OT1/cmr/bx/n/12 Frequency-in-an-ensemble in-ter-pre-ta-tion of prob-a-bil-i
 ty[] \OT1/cmr/m/n/12 Con-sider the sim-ple prob-
  []
 
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 421.
+Package pdftex.def Info: resone-logo.png  used on input line 422.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
 [9]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 465.
+Package pdftex.def Info: resone-logo.png  used on input line 438.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [10]
-<./figs/square_root_error.pdf, id=335, 610.44627pt x 487.01636pt>
+File: resone-logo.png Graphic file (type png)
+<use resone-logo.png>
+Package pdftex.def Info: resone-logo.png  used on input line 477.
+(pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
+ [11]
+<./figs/square_root_error.pdf, id=344, 610.44627pt x 487.01636pt>
 File: ./figs/square_root_error.pdf Graphic file (type pdf)
 <use ./figs/square_root_error.pdf>
-Package pdftex.def Info: ./figs/square_root_error.pdf  used on input line 484.
+Package pdftex.def Info: ./figs/square_root_error.pdf  used on input line 483.
 (pdftex.def)             Requested size: 452.9679pt x 361.38223pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 489.
-(pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
- [11]
-File: resone-logo.png Graphic file (type png)
-<use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 497.
+Package pdftex.def Info: resone-logo.png  used on input line 494.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [12 <./figs/square_root_error.pdf>]
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 530.
+Package pdftex.def Info: resone-logo.png  used on input line 515.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [13]
-<./figs/TK_TF_curvefit.pdf, id=436, 615.34518pt x 234.03122pt>
+<./figs/TK_TF_curvefit.pdf, id=433, 615.34518pt x 234.03122pt>
 File: ./figs/TK_TF_curvefit.pdf Graphic file (type pdf)
 <use ./figs/TK_TF_curvefit.pdf>
-Package pdftex.def Info: ./figs/TK_TF_curvefit.pdf  used on input line 535.
+Package pdftex.def Info: ./figs/TK_TF_curvefit.pdf  used on input line 534.
 (pdftex.def)             Requested size: 452.9679pt x 172.28049pt.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 545.
+Package pdftex.def Info: resone-logo.png  used on input line 544.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [14 <./figs/TK_TF_curvefit.pdf>] (./main.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 602.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 601.
 File: resone-logo.png Graphic file (type png)
 <use resone-logo.png>
-Package pdftex.def Info: resone-logo.png  used on input line 602.
+Package pdftex.def Info: resone-logo.png  used on input line 601.
 (pdftex.def)             Requested size: 400.49527pt x 60.22484pt.
  [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 602.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 601.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 602.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 602.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 601.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 601.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 26B8552DEBACB4820AB1F30C93117DBD;995.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 602.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 601.
  ) 
 Here is how much of TeX's memory you used:
- 20467 strings out of 492616
- 378847 string characters out of 6132769
- 440408 words of memory out of 5000000
+ 20468 strings out of 492616
+ 378858 string characters out of 6132769
+ 440424 words of memory out of 5000000
  24133 multiletter control sequences out of 15000+600000
  549678 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -979,10 +979,10 @@ ype1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (15 pages, 632383 bytes).
+Output written on main.pdf (15 pages, 635611 bytes).
 PDF statistics:
- 647 PDF objects out of 1000 (max. 8388607)
- 393 compressed objects within 4 object streams
- 68 named destinations out of 1000 (max. 500000)
+ 649 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 69 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
