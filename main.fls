@@ -263,11 +263,11 @@ INPUT resone-logo.png
 INPUT ./resone-logo.png
 INPUT resone-logo.png
 INPUT ./resone-logo.png
+INPUT ./figs/square_root_error.pdf
+INPUT ./figs/square_root_error.pdf
+INPUT ./figs/square_root_error.pdf
 INPUT resone-logo.png
 INPUT ./resone-logo.png
-INPUT ./figs/square_root_error.pdf
-INPUT ./figs/square_root_error.pdf
-INPUT ./figs/square_root_error.pdf
 INPUT resone-logo.png
 INPUT ./resone-logo.png
 INPUT resone-logo.png
@@ -279,8 +279,6 @@ INPUT resone-logo.png
 INPUT ./resone-logo.png
 INPUT main.bbl
 INPUT main.bbl
-INPUT resone-logo.png
-INPUT ./resone-logo.png
 INPUT resone-logo.png
 INPUT ./resone-logo.png
 INPUT main.aux

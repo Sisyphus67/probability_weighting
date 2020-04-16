@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1587046666 "main.aux" "main.bbl" "main" 1587046668
+["bibtex main"] 1587054993 "main.aux" "main.bbl" "main" 1587055544
   "../LML_bibliography/bibliography.bib" 1586426510 271094 e0d4df218d663ffba6fcc82d08a0352b ""
   "/usr/local/texlive/2017/texmf-dist/bibtex/bst/base/apalike.bst" 1480098433 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "main.aux" 1587046667 18627 3b8b19394c0601e67b153fc167ba7f2b "pdflatex"
+  "main.aux" 1587055543 18641 a6a0743b45953a837762dff220b3d7d4 "pdflatex"
   (generated)
-  "main.bbl"
   "main.blg"
-["pdflatex"] 1587046666 "main.tex" "main.pdf" "main" 1587046668
+  "main.bbl"
+["pdflatex"] 1587055542 "main.tex" "main.pdf" "main" 1587055544
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -146,16 +146,16 @@
   "figs/GaussianFvsXtoWvsP.pdf" 1586355640 14429 67813437b4cdeabfc44eb6d85c4aa924 ""
   "figs/Student-t.pdf" 1587037337 10216 dc47ef88e824f448aff3e1159d11f7a5 ""
   "figs/TK1992.PNG" 1585835096 120635 98d47abdf904426df5ea612b7e38355a ""
-  "figs/TK_TF_curvefit.pdf" 1587037337 172080 cb45845f45644de89281bfe45a28a328 ""
+  "figs/TK_TF_curvefit.pdf" 1587053762 172740 af6e2bd06ff04c92616ba368928d26d6 ""
   "figs/density_map.pdf" 1586355640 13838 aa9f98e4f29d493e447ffea019944681 ""
   "figs/square_root_error.pdf" 1587037337 21110 be68f7f22bb23f2dc7c3bc555118f351 ""
-  "main.aux" 1587046667 18627 3b8b19394c0601e67b153fc167ba7f2b "pdflatex"
-  "main.bbl" 1587046666 1517 ca25d07f1d9278d7436c76603228be96 "bibtex main"
-  "main.out" 1587046667 995 26b8552debacb4820ab1f30c93117dbd "pdflatex"
-  "main.tex" 1587046649 56529 37cd76832f85134af1ea647bbba6cf24 ""
+  "main.aux" 1587055543 18641 a6a0743b45953a837762dff220b3d7d4 "pdflatex"
+  "main.bbl" 1587054994 1517 ca25d07f1d9278d7436c76603228be96 "bibtex main"
+  "main.out" 1587055543 995 6807b7116611b8cadf23c8820497477d "pdflatex"
+  "main.tex" 1587055542 56635 070bd61b2268875465b1d4060cb250a1 ""
   "resone-logo.png" 1586355640 20898 f06d4d36a65cf43ea02118ac22c48db2 ""
   (generated)
-  "main.out"
   "main.aux"
-  "main.pdf"
   "main.log"
+  "main.pdf"
+  "main.out"
