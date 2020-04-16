@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: apalike.bst
+Database file #1: ../LML_bibliography/bibliography.bib
+Warning--entry type for "Sunstein2020" isn't style-file defined
+--line 14 of file ../LML_bibliography/bibliography.bib
+Warning--empty journal in Prelec1998
+Warning--empty journal in TverskyKahneman1992
+You've used 8 entries,
+            1935 wiz_defined-function locations,
+            529 strings with 4799 characters,
+and the built_in function-call counts, 3003 in all, are:
+= -- 306
+> -- 85
+< -- 7
++ -- 34
+- -- 26
+* -- 251
+:= -- 519
+add.period$ -- 23
+call.type$ -- 8
+change.case$ -- 53
+chr.to.int$ -- 8
+cite$ -- 10
+duplicate$ -- 108
+empty$ -- 226
+format.name$ -- 40
+if$ -- 578
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 7
+newline$ -- 42
+num.names$ -- 24
+pop$ -- 35
+preamble$ -- 1
+purify$ -- 53
+quote$ -- 0
+skip$ -- 86
+stack$ -- 0
+substring$ -- 287
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 48
+warning$ -- 2
+while$ -- 29
+width$ -- 0
+write$ -- 101
+(There were 3 warnings)
