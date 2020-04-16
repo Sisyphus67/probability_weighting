@@ -109,8 +109,8 @@ Yonatan Berman\footnote{London Mathematical Laboratory, 8 Margravine Gardens, Lo
 Behavioural economics provides labels for patterns in human economic behaviour. 
 Probability weighting is one such label. It expresses a mismatch between probabilities used in a formal model of a decision problem (\ie model parameters) and probabilities inferred from real people's behaviour faced with the modelled decision problem (the same parameters estimated empirically). The inferred probabilities are called ``decision weights.'' 
 It is considered a robust observation that decision weights are higher than probabilities for extreme events, and (necessarily, because of normalisation) lower than probabilities for common events. 
-We formalize this observation as an observer and a decision maker using different probability distributions to model the outcome of an experiment.
-We show how the specific disagreement arises from the decision maker having to estimate probabilities as frequencies in a time series, whereas the observer may know them a-priori. 
+We formalise this observation as an observer and a decision maker using different probability distributions to model the outcome of an experiment.
+We show how the specific disagreement arises from the decision maker having to estimate probabilities as frequencies in a time series, whereas the observer may know them a priori. 
 \vspace{1em}
 
 \noindent\textsf{\textbf{Keywords}} ~ Decision Theory, Prospect Theory, Probability Weighting, Ergodicity Economics
@@ -156,12 +156,12 @@ D81 	% Criteria for Decision-Making under Risk and Uncertainty
 %\cite{Peters2019b} where decision makers are modelled as behaving optimally over time (as opposed to optimally in a statistical-ensemble sense).
 
 
-\section{Nomenclature}
+\section{Introduction}
 {\it Probability weighting} is a concept that originated in prospect theory. It is one way to conceptualise a pattern in human behaviour, of caution with respect to formal models.
 This is best explained by a thought experiment, in which  
 \bi
 	\item a \textit{disinterested observer} (DO), such as an experimenter, tells
-	\item a \textit{decision maker} (DM) 
+	\item a \textit{decision maker} (DM)
 \ei
 that an event occurs with some probability. The DO observes DM's behaviour (\eg gambling on the event), and finds it consistent with a behavioural model (\eg expected-utility optimization) in which the DM uses a probability that differs systematically from what the DO has declared. The apparent probabilities, inferred from the DM's decisions, are called ``{\it decision weights}.'' We will adopt this nomenclature here: 
 % 
@@ -473,7 +473,7 @@ Repeating this procedure across the domain of the density function, \ie for all 
 w(x) = \frac{\hat{p}(x)+\sqrt{\frac{\hat{p}(x)}{T\delta x}}}{\int_{-\infty}^{\infty}\left(\hat{p}(s)+\sqrt{\frac{\hat{p}(s)}{T\delta x}}\right) ds},
 \elabel{poisson_weight_density}
 \ee
-where the denominator is introduced to normalize $w(x)$. 
+where the denominator is introduced to normalise $w(x)$. 
 %Note that the DM must choose a small enough bin width that all event probabilities, of the form $p(x)\delta x$, are so small that multiple events do not occur in one observation.
 
 %\AA{added last sentence to prevent binning from taking us out of the rare event regime.}
@@ -528,7 +528,7 @@ where $\Phi$ is the CDF of the standard normal distribution. In the $t$-model we
 In addition to \eref{correspondence} used by Tversky and Kahneman, we fit the function
 %
 \be
-\tilde{F}_{L}\left(F_p; \delta,\gamma\right) =\frac{\delta F_p^{\gamma}}{\delta F_p^{\gamma} + \left(1-F_p\right)^{\gamma}}\,,
+\tilde{F}^{L}_w\left(F_p; \delta,\gamma\right) =\frac{\delta F_p^{\gamma}}{\delta F_p^{\gamma} + \left(1-F_p\right)^{\gamma}}\,,
 \elabel{LattimoreFunction}
 \ee
 %
@@ -540,7 +540,7 @@ suggested by \cite{LattimoreBakerWitte1992} to parametrically describe probabili
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/TK_TF_curvefit.pdf}
 \caption{Model fitting to experimental data from \cite{TverskyKahneman1992} (left) and \cite{TverskyFox1995} (right).
-Left) \cite{LattimoreBakerWitte1992}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; t model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \cite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right) \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; t model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \cite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \cite{Levenberg1944} for non-linear least squares curve fitting.
+Left) \cite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \cite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right) \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \cite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \cite{Levenberg1944} for non-linear least squares curve fitting.
 %The fit was done by implementing the method of least squares with the Nelder-Mead algorithm \cite{NelderMead1965}, and the standard errors were obtained by bootstrapping.
 }
 \flabel{TK_TF_fit}
