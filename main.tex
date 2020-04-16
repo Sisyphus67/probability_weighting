@@ -67,6 +67,7 @@
 \newcommand{\eg}{{\it e.g.}\ }
 \newcommand{\cf}{{\it c.f.}\ }
 \newcommand{\vv}{{\it v.v.}\ }
+\newcommand{\err}{\epsilon}
 \newcommand{\gensst}{g_{\text{est}}}
 \newcommand{\be}{\begin{equation}}
 \newcommand{\ee}{\end{equation}}
@@ -423,17 +424,29 @@ For our purpose it suffices to say that there's no guarantee that a probabilisti
 \subsection{Consistent differences between DO and DM \seclabel{condition2}}
 
 \subsubsection*{Estimation errors for probabilities}
-Let's assume that both the DO and the DM mean by ``probability'' the relative frequency of an event in an infinitely long time series of observations. Of course, real time series have finite length, so probabilities defined this way are model parameters. But they can be estimated from a real time series, by counting. If an event occurs in $n$ out of $T$ observations, then our best estimate for its probability is $n/T$.
+Let's assume that both the DO and the DM mean by ``probability'' the relative frequency of an event in an infinitely long time series of observations. Of course, real time series have finite length, so probabilities defined this way are model parameters. But they can be estimated from a real time series, by counting. 
+%If an event $i$ occurs $n_i$ times in a time series of length $T$, then our best estimate for its probability to occur in one observation is $\hat{p}_i=n_i/T$.
 
 % changed fluctuations to variations below
-As the probability of an event gets smaller, so does the number of times we see it in a finite time series. Moreover, the variations in this number and, therefore, the uncertainty in our estimate of the probability become relatively larger as the event becomes rarer. Take an extreme example of an event which occurs in 0.1\% observations asymptotically, of which we have a time series of 100 observations. Almost all such series (around 99.5\% of them) will contain 0 or 1 events, meaning that our best estimate of the probability will be either 0 or 1\%. In other words, we estimate the event as either impossible or occurring ten times more frequently than it really would in a long series. If, however, the event occurs 50\% of the time asymptotically, then a probability estimate from 100 observations would likely (in around 95\% of series) be in the range 40--60\%, a much smaller relative error.
+As the probability of an event gets smaller, so does the number of times we see it in a finite time series. 
+If we want to say something about the uncertainty we have about this number, we can (sometimes) measure it in several time series and see how much it varies. 
+These variations across several time series also get smaller for rarer events. 
+However, the relative variations get larger, and so does the relative uncertainty in our estimate of probabilities for rare events. 
+Take an extreme simplified example: asymptotically an event occurs in 0.1\% of observations, and we have a time series of 100 observations. 
+Almost all such series (around 99.5\% of them) will contain 0 or 1 events, and we will be led to estimate the probability as either 0 or 1\%. In other words, we estimate the event as either impossible or occurring ten times more frequently than it really would in a long series. 
+If, however, the event occurs 50\% of the time asymptotically, then a probability estimate from 100 observations would likely (in around 95\% of series) be in the range 40--60\%, a much smaller relative error.
 
-A DM who must estimate probabilities from observations is well advised to account for this in his decision-making. Specifically, the DM should acknowledge that, due to his lack of information, {\it prima facie} rare events may be rather more common than his data imply, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.
+A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision-making. Specifically, the DM should acknowledge that, due to his lack of information, {\it prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.
 
 % changed p to p_i below to avoid conflation with density p(x)
-Let's build a simple model to see if it matches the stylised facts of probability weighting, including the inverse-S curve. We model the arrival of events as a Poisson process, whose rate parameter is the asymptotic probability, $p_i$, of event $i$. Put simply, this means that the count per unit time converges to $p_i$ over long time. The count, $n_i(T)$, over the finite observation time, $T$, is a Poisson-distributed random variable with intensity, $p_i T$. It has mean value, $p_i T$, and standard deviation, $\sqrt{p_i T}$. If the DM makes one observation per time unit, then the measured relative frequency, $\hat{p}_i = n_i(T)/T$, is an unbiased estimator of the asymptotic probability, $p_i$, with standard error, $\sqrt{\hat{p}_i/T}$.
+Let's build a simple model to see if it matches the stylised facts of probability weighting, including the inverse-S curve. 
+We model the arrival of events as a Poisson process whose rate parameter is the asymptotic probability, $p_i$, of event $i$. 
+This implies that the count per unit time converges to $p_i$ over long time. 
+The count, $n_i(T)$, over the finite observation time, $T$, is a Poisson-distributed random variable with intensity, $p_i T$. 
+Its mean value is $\ave{n_i(T)}=p_i T$, and its standard deviation, which we interpret as its uncertainty is $\err(n_i(T))=\sqrt{p_i T}$. 
+If the DM makes one observation per time unit, then the measured relative frequency, $\hat{p}_i = n_i(T)/T$, is an unbiased estimator of the asymptotic probability, $p_i$, with standard error, $\err(\hat{p}_i)=\sqrt{\hat{p}_i/T}$.
 
-The standard error in an estimated probability shrinks as the probability decreases. However, the relative error in the estimate is $1/\sqrt{\hat{p}_i T}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, further exemplified in \tref{errors}. The constitutes the most important message: errors in probability estimates behave differently for low probabilities than for high probabilities. Absolute errors are smaller for lower probabilities, but relative errors are larger. 
+The standard error in an estimated probability shrinks as the probability decreases. However, the relative error in the estimate is $\err(\hat{p_i})/\hat{p}_i=1/\sqrt{\hat{p}_i T}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, further exemplified in \tref{errors}. This constitutes the most important message: errors in probability estimates behave differently for low probabilities than for high probabilities. Absolute errors are smaller for lower probabilities, but relative errors are larger. 
 \begin{table}[!htb]
 %\ra{1.25}
 %\small
@@ -451,7 +464,8 @@ The standard error in an estimated probability shrinks as the probability decrea
 \caption{This table assumes 10000 observed time intervals. To be read as follows (first line): for an event of asymptotic probability 0.1, the most likely count in 10000 trials is 1000. Assuming Poisson statistics, this comes with an estimation error of $\sqrt{1000} = 32$ in the count and $32/10000 = 0.003$ in the probability, which is $0.003/0.1=3\%$ of the asymptotic probability.}\tlabel{errors}
 \end{table}
 
-Let's make one more assumption: DMs don't like surprises. To avoid surprises, a DM will incorporate the uncertainty in probability estimates by assuming that the actual long-time relative frequency of an event is his best estimate plus the standard error. To relate this back to density functions, we suppose the DM partitions outcomes into bins of width $\delta x$. From a time series of length $T$, he estimates the probability of the event, $x_i \leq X \leq x_i+\delta x$, in terms of an estimated density function as $\hat{p}_i = \hat{p}(x_i)\delta x$. To this he adds the standard error to get his decision weight for the event,
+Let's make one more assumption: DMs don't like surprises. To avoid surprises, a DM will incorporate the uncertainty in probability estimates by assuming that the actual long-time relative frequency of an event is his best estimate plus the standard error. To relate this back to density functions, we suppose the DM partitions outcomes into bins of width $\delta x$. 
+From a time series of length $T$, he estimates the probability of the event, $x_i \leq X \leq x_i+\delta x$, in terms of an estimated density function as $\hat{p}_i = \hat{p}(x_i)\delta x$. To this he adds the standard error to get his decision weight for the event,
 \be
 w(x_i)\delta x = \hat{p}(x_i)\delta x + \sqrt{\frac{\hat{p}(x_i)\delta x}{T}}.
 \elabel{poisson_weight}
