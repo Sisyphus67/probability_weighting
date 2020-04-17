@@ -198,14 +198,14 @@ As a final piece of nomenclature, we will use the terms \textit{location}, \text
 %		~, \qquad \qquad Z \sim \ND(0,1
 ~.
 \ee
-Thus the PDF of $Z$, $p(z)$ is a density with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the {\it shape} of the distribution.
+Thus the PDF of $Z$, $p(z)$, is a density with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the {\it shape} of the distribution.
 
 % We will show below that these observations are predicted by considerations of uncertainty about probabilities, or more generally by uncertainty about model parameters.
 
 
 \section{Probability weighting as a difference between models} \seclabel{ModelDiff}
 
-Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias of the DM, an error of judgment. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a model of the world. Nor do we assume the DM to know ``the truth'' -- he has another model of the world. From our perspective \fref{TK1992} merely shows that the two models differ. It says nothing about who is right or wrong. This is true even in the context of a lab experiment, as we discuss in detail in \secref{Reasons_for}.
+Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a model of the world. Nor do we assume the DM to know ``the truth'' -- he has another model of the world. From our perspective \fref{TK1992} merely shows that the two models differ. It says nothing about who is right or wrong. This is true even in the context of a lab experiment, as we discuss in detail in \secref{Reasons_for}.
 
 \subsection{The inverse-S curve\seclabel{The_inverse}}
 \subsubsection{Tversky and Kahneman}
@@ -218,10 +218,10 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 \ee
 We note that no mechanistic motivation was given for fitting this specific family of CDFs (parameterised by $\gamma$). The motivation is purely phenomenological: with $\gamma<1$, this family ``looks a bit like the data.''
 % 
-The function $\tilde{F}^{TK}_w\left(F_p; \gamma \right)$ has only one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $\tilde{F}^{TK}_w\left(F_p\right)=F_p$. Further, $\tilde{F}^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. Because of this, we consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. 
+The function $\tilde{F}^{TK}_w\left(F_p; \gamma \right)$ has only one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $\tilde{F}^{TK}_w\left(F_p\right)=F_p$. Further, $\tilde{F}^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. Because of this, we consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. 
 %We will see below that the curvature and shift correspond to different parts of a mechanistic explanation of the phenomenon.
 
-\subsubsection{Scale, location, and the inverse S}
+\subsubsection{Scale, location, and the inverse-S}
 We now make explicit how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges when the DM uses a larger scale in his model of the world than the DO. 
 %This can have numerous reasons, to which we will return in \secref{Reasons_for}. 
 %For now, suffice it to say that precaution is an obvious one: any uncertainty the DM wishes to include in his model in addition to what the DO includes will translate into a greater scale for the DM's distribution and therefore into an inverse-S shape for any unimodal (peaked) distribution when cumulative densities are compared.
@@ -252,7 +252,7 @@ Right: the difference between decision weights and probabilities can also be exp
 %
 %Both DO models give $g_p\sim\ND(\mu,\sigma_1^2)$, whereas the DM will choose the model $g_w \sim \ND(\mu,\sigma_1^2+\sigma_2^2)$.
 
-Generically, if the DM uses a greater scale in his model, then decision weights are higher than probabilities for low-probability events, and (because of normalisation), lower than probabiltiies for high-probability events. We can express this by plotting, for any value of $x$, the decision weight {\it vs.} the probability observed at $x$, right panel of \fref{probability_dists}.
+Generically, if the DM uses a greater scale in his model, then decision weights are higher than probabilities for low-probability events, and (because of normalisation), lower than probabilities for high-probability events. We can express this by plotting, for any value of $x$, the decision weight {\it vs.} the probability observed at $x$, right panel of \fref{probability_dists}.
 
 %\begin{figure}[htb]
 %\centering
@@ -271,7 +271,7 @@ and
 \elabel{p}
 \ee
 % 
-and solve \eref{p} for $(x -\mu)^2$, substitute that in in \eref{DecisionW}, and obtain the following expression for decision weights directly as a function of probabilities
+and solve \eref{p} for $(x -\mu)^2$, substitute that in \eref{DecisionW}, and obtain the following expression for decision weights directly as a function of probabilities
 \be
 w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma_1^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
 \elabel{w_of_p}
@@ -284,7 +284,7 @@ Alternatively, we can express the difference between models by plotting the CDFs
 \centering
 \includegraphics[width=\textwidth]{./figs/GaussianFvsXtoWvsP.pdf}
 \caption{{\bf Mapping CDFs.} 
-Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,3)$ depicted by $F_w$ (blue). 
+Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,3)$ depicted by $F_w(x)$ (blue). 
 % 
 Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is larger than the DO's CDF, $F_p(x) < F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be lower than the DO's.
 Right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays the generic inverse-S shape known from prospect theory. The arrows start and end at the same vertical values as on the left. Because the horizontal axis is has been non-linearly stretched (as the argument changed from $x$ to $F_p$), their horizontal locations are shifted.
@@ -348,7 +348,7 @@ plot $F_w(x)$ vs $F_p(x)$.
 \end{enumerate}
 Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution. 
 %An infinity of combinations of assumed distributions can be explored. 
-The inverse S arises whenever a DM assumes a greater scale for a unimodal distribution. 
+The inverse-S arises whenever a DM assumes a greater scale for a unimodal distribution. 
 To illustrate the generality of the procedure, in \fref{fat_tailed_CDF} we carry it out for Student's (power-law tailed) $t$-distributions (which we refer to as $t$-distributions), where DO and DM use different shape parameters and different locations.\footnote{The PDF of the $t$-distribution is
 %
 \be
@@ -487,7 +487,7 @@ With perfect information, a DM need not adjust decisions to account for uncertai
 \begin{figure}[htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/square_root_error.pdf}
-\caption{PDFs and inverse-S curves arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a $t$-distribution (shape 2, location 0, bottom line), and the DM uses decision weights according to \eref{poisson_weight_density} with $T\delta x=10$. For the fat-tailed $t$-distribution (in the bottom line) the difference between $p$ and $w$ is more pronounced.}
+\caption{PDFs (left) and inverse-S curves (right) arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a $t$-distribution (shape 2, location 0, bottom line), and the DM uses decision weights according to \eref{poisson_weight_density} with $T\delta x=10$. For the fat-tailed $t$-distribution (in the bottom line) the difference between $p$ and $w$ is more pronounced.}
 \flabel{square_root_error}
 \end{figure}
 
@@ -512,7 +512,7 @@ The difference between how these two perspectives evaluate the effects of probab
 
 \section{Fitting the model to experimental results \seclabel{Fitting_the}}
 
-Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's fitting exercise of the inverse-S curve by way of the physically unmotivated function $\tilde{F}^{TK}_w$, \eref{correspondence}, resembles the data no better than our mechanistically constrained model. This is particularly evident in the bottom two panels of \fref{CDF_weights}, which show that a Gaussian $w(x)$ whose scale and location differ from those of $p(x)$ reproduces the fitted functional shape of $F_w$.
+Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's fitting exercise of the inverse-S curve by way of the physically unmotivated function $\tilde{F}^{TK}_w$, \eref{correspondence}, resembles the data no better than our mechanistically constrained model. This is particularly evident in the bottom two panels of \fref{CDF_weights}, which show that a Gaussian $w(x)$ whose scale and location differ from those of $p(x)$ reproduces the fitted functional shape of $\tilde{F}^{TK}_w$.
 
 For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \cite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \cite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF
 %
@@ -539,7 +539,7 @@ suggested by \cite{LattimoreBakerWitte1992} to parametrically describe probabili
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/TK_TF_curvefit.pdf}
 \caption{Model fitting to experimental data from \cite{TverskyKahneman1992} (left) and \cite{TverskyFox1995} (right).
-Left) \cite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \cite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right) \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \cite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \cite{Levenberg1944} for non-linear least squares curve fitting.
+Left: \cite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \cite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right: \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \cite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \cite{Levenberg1944} for non-linear least squares curve fitting.
 %The fit was done by implementing the method of least squares with the Nelder-Mead algorithm \cite{NelderMead1965}, and the standard errors were obtained by bootstrapping.
 }
 \flabel{TK_TF_fit}
