@@ -169,7 +169,7 @@ that an event occurs with some probability. The DO observes DM's behaviour (\eg 
 	\item By ``\textit{probabilities,}'' expressed as probability density functions (PDFs) and denoted $p(x)$, we will mean the numbers specified by a DO.
 	\item By ``\textit{decision weights,}'' also expressed as PDFs and denoted $w(x)$, we will mean the numbers that best describe the behaviour of a DM in the DO's behavioural model.\footnote{In the literature, decision weights are not always normalised, but for simplicity we will work with normalised decision weights. Mathematically speaking, they are therefore proper probabilities even though we don't call them that. Our results are unaffected because normalising just means dividing by a constant (the sum or integral of the non-normalised decision weights).}
 \ei
-Here, $x$, the realisation of a random variable, $X$, is an observable representing the outcome of the event about which the decision is being made. For example, $x$ might be the payout of a gamble, in some currency unit, which the DM is invited to accept or decline.
+Here, $x$ is a realisation of a random variable, $X$. For example, $X$ might be the payout of a gamble which the DM is invited to accept or decline.
 
 Specifically, it is consistently observed that decision weights, $w(x)>p(x)$ (used by DMs), are higher than probabilities,  $p$ (declared by DOs), for extreme events (with small $p$). 
 This observation is often summarised visually by comparing 
@@ -198,7 +198,7 @@ As a final piece of nomenclature, we will use the terms \textit{location}, \text
 %		~, \qquad \qquad Z \sim \ND(0,1
 ~.
 \ee
-Thus the PDF of $Z$, $p(z)$, is a density with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the {\it shape} of the distribution.
+Thus the PDF of $Z$, $p(z)$, is a density with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the {\it shape} of the distribution: two distributions have the same {\it shape} if they can be made to coincide through the linear transformation in \eref{SN}.
 
 % We will show below that these observations are predicted by considerations of uncertainty about probabilities, or more generally by uncertainty about model parameters.
 
@@ -263,7 +263,7 @@ Generically, if the DM uses a greater scale in his model, then decision weights 
 
 In the Gaussian case we can write the distributions explicitly
 \be \elabel{DecisionW}
-	w(x)=\frac{1}{\sqrt{2\pi \alpha^2 \sigma^2}}\exp\left[\frac{-(x -\mu )^2}{2 (\alpha^2 \sigma^2)}\right]
+	w(x)=\frac{1}{\sqrt{2\pi (\alpha \sigma)^2}}\exp\left[\frac{-(x -\mu )^2}{2 (\alpha \sigma)^2}\right]
 \ee
 and
 \be
@@ -336,7 +336,7 @@ Note the similarity to bottom left.}
 %\end{figure}
 
 \FloatBarrier
-\subsection{Different shapes and locations\seclabel{Different_shapes}}
+\subsection{Different shapes\seclabel{Different_shapes}}
 Numerically, our procedure can be applied to arbitrary distributions: 
 \begin{enumerate}
 \item
@@ -399,7 +399,7 @@ The second observation may be explained as follows. A DO often has control over,
 
 \subsection{Some meanings of ``probability'' \seclabel{tricky}}
 
-Many thousands of pages have been written about the meaning of probability. We will not attempt a summary of the philosophical debate and instead focus on a few relevant points.
+Many thousands of pages have been written about the meaning of probability. We will not attempt a summary of the philosophical debate and instead highlight a few relevant points.
 %systematically different incentives from a real-world DM. The DO tends to have an incentive to estimate, or indeed state, probabilities as their most likely value or ``true'' value (if the DO can control the probabilities, \eg in an experiment); the DM simply strives to behave optimally under uncertainty, and that uncertainty often includes uncertainty about the probabilities or model parameters.
 
 %The conundrum surrounding the observed phenomenon of the characteristic inverse-S-shaped probability weighting vanishes if probability is understood as individual ignorance, \ie somebody's uncertainty about an observable.
@@ -412,7 +412,7 @@ It is thus a statement about a model. How exactly it is linked to physical reali
 %Sometimes ensembles are real, for instance, when we say the probability of having a car accident is 1\% per 10000 km driven -- that's a summary of statistics collected over a large ensemble of cars. In this case, it's a real ensemble that existed in the past, not an imagined one in the future. 
 
 \paragraph{Frequency-over-time interpretation of probability}
-In some situations, the statement ``70\% chance of rain here tomorrow'' refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare recent measurements (of wind and pressure today, say) to measurements further in the past -- weeks, months, years earlier, that were similar and where one had reason to believe that what had happened 1 day later back then would be similar to what will happen tomorrow.
+In some situations, the statement ``70\% probability of rain here tomorrow'' refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare recent measurements (of wind and pressure today, say) to measurements further in the past -- weeks, months, years earlier, that were similar and where one had reason to believe that what had happened 1 day later would be similar to what would happen tomorrow.
 
 Rather than a statement about outcomes of an in-silico model, the statement may thus be a summary of real-world observations over a long time.
 
@@ -424,7 +424,7 @@ For our purpose it suffices to say that there's no guarantee that a probabilisti
 \subsection{Consistent differences between DO and DM \seclabel{condition2}}
 
 \subsubsection*{Estimation errors for probabilities}
-Let's assume that both the DO and the DM mean by ``probability'' the relative frequency of an event in an infinitely long time series of observations. Of course, real time series have finite length, so probabilities defined this way are model parameters. But they can be estimated from a real time series, by counting how often we see an event. 
+Let's assume that both the DO and the DM mean by ``probability'' the relative frequency of an event in an infinitely long time series of observations. Of course, real time series have finite length, so probabilities defined this way are model parameters, meaning they cannot actually be observed. But, from a real time series, we can estimate the best values to put into a model, by counting how often we see an event. 
 %For instance, if an event $i$ occurs in $n_i$ time windows of size $\delta t$, in a time series of total length $T$, then we may estimate its relative frequency as $n_i \delta t/T$. 
 %\AA{put this last sentence back in. I think it's useful to start by telling the reader the basic calculation we want to make.}
 %\OP{the reason I'd removed it is that this relative frequency can be greater than 1 (we haven't restricted ourselves to the relevant regime yet).
@@ -435,12 +435,33 @@ As the probability of an event gets smaller, so does the number of times we see 
 
 A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision-making. Specifically, the DM should acknowledge that, due to his lack of information, {\it prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.
 
+%
+Let's make a simple scaling argument, and then check with a simulation that we're not fooling ourselves. For any probability density, $p(x)$, the number of events we see in the small interval $[x, x+ \delta x]$ in a time series of $T$ observations is proportional to $p(x)$, to $\delta x$, and to $T$. So we have
+$n(x)\sim p(x) \delta x T$, where we mean by $\sim$ ``scales like.''
+
+We also know that such counts, in the simplest Poissonian case, come with an uncertainty that's proportional to $\sqrt{n(x)}$. If we knew the probabilities, $p(x)$, we could estimate 
+\be
+\elabel{number}
+\hat{n}(x) = p(x) \delta x T \pm \sqrt{p(x) \delta x T}.
+\ee
+Conversely, if we've counted events, dividing \eref{number} by $T \delta x $, shows that we can obtain an estimate $\hat{p}(x)$ of $p(x)$ as 
+\be
+\elabel{prob_est}
+\frac{n(x)}{\delta x T} =\hat{p}(x) \pm \sqrt{\frac{\hat{p}(x)}{T \delta x}}
+\ee
+In other words, the standard error in a probability estimated by counting scales as $\err(\hat{p})\sim\sqrt{\frac{\hat{p}(x)}{T \delta x}}$. This,
+so our argument goes, is what the prudent DM will add to all his simple estimates of the probability density $p(x)$ in order to construct his decision weight density: DMs don't like surprises. Apart from that he just has to normalize the decision weights, which produces
+\be
+w(x)=\frac{\hat{p}(x)+\sqrt{\frac{\hat{p}(x)}{T \delta x}}}{\int_{-\infty}^{\infty}\left(\hat{p}(s)+\sqrt{\frac{\hat{p}(s)}{T \delta x}}\right)ds}.
+\elabel{poisson_weight_density}
+\ee
+
 % changed p to p_i below to avoid conflation with density p(x)
-Let's build a simple model to see if it matches the stylised facts of probability weighting, including the inverse-S curve. We model the arrival of events as a Poisson process whose rate parameter is the asymptotic probability, $p_i$, of event $i$. This implies that the count per unit time converges to $p_i$ over a long time. We assume the DM makes one observation per unit time and that $p_i$ is sufficiently small that no more than one event occurs at each observation.\footnote{In effect, we put ourselves in the rare event regime, where the Poisson distribution approximates well the binomial distribution for successes in discrete trials.} The count, $n_i(T)$, over the finite observation time, $T$, is a Poisson-distributed random variable with intensity, $p_i T$. Its mean value is $\ave{n_i(T)}=p_i T$, and its standard deviation, which we interpret as its uncertainty is $\err(n_i(T))=\sqrt{p_i T}$. Under these conditions, the measured relative frequency, $\hat{p}_i = n_i(T)/T$, is an unbiased estimator of the asymptotic probability, $p_i$, with standard error, $\err(\hat{p}_i)=\sqrt{\hat{p}_i/T}$.
+%Let's build a simple model to see if it matches the stylised facts of probability weighting, including the inverse-S curve. We model the arrival of events as a Poisson process whose rate parameter is the asymptotic probability, $p_i$, of event $i$. This implies that the count per unit time converges to $p_i$ over a long time. We assume the DM makes one observation per unit time and that $p_i$ is sufficiently small that no more than one event occurs at each observation.\footnote{In effect, we put ourselves in the rare event regime, where the Poisson distribution approximates well the binomial distribution for successes in discrete trials.} The count, $n_i(T)$, over the finite observation time, $T$, is a Poisson-distributed random variable with intensity, $p_i T$. Its mean value is $\ave{n_i(T)}=p_i T$, and its standard deviation, which we interpret as its uncertainty is $\err(n_i(T))=\sqrt{p_i T}$. Under these conditions, the measured relative frequency, $\hat{p}_i = n_i(T)/T$, is an unbiased estimator of the asymptotic probability, $p_i$, with standard error, $\err(\hat{p}_i)=\sqrt{\hat{p}_i/T}$.
 
-\AA{inserted the ``We assume...'' sentence and footnote. Also re-jigged a later sentence to avoid repetition. Is this enough, or do we want to be more formal?}
+%\AA{inserted the ``We assume...'' sentence and footnote. Also re-jigged a later sentence to avoid repetition. Is this enough, or do we want to be more formal?}
 
-The standard error in an estimated probability shrinks as the probability decreases. However, the relative error in the estimate is $\err(\hat{p_i})/\hat{p}_i=1/\sqrt{\hat{p}_i T}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, further exemplified in \tref{errors}. This constitutes the most important message: errors in probability estimates behave differently for low probabilities than for high probabilities. Absolute errors are smaller for lower probabilities, but relative errors are larger. 
+The standard error in an estimated probability shrinks as the probability decreases. However, the relative error in the estimate is $1/\sqrt{\hat{p} T\delta x}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, further exemplified in \tref{errors}. This constitutes the most important message: errors in probability estimates behave differently for low probabilities than for high probabilities. Absolute errors are smaller for lower probabilities, but relative errors are larger. 
 \begin{table}[!htb]
 %\ra{1.25}
 %\small
@@ -458,26 +479,26 @@ The standard error in an estimated probability shrinks as the probability decrea
 \caption{This table assumes 10000 observed time intervals. To be read as follows (first line): for an event of asymptotic probability 0.1, the most likely count in 10000 trials is 1000. Assuming Poisson statistics, this comes with an estimation error of $\sqrt{1000} = 32$ in the count and $32/10000 = 0.003$ in the probability, which is $0.003/0.1=3\%$ of the asymptotic probability.}\tlabel{errors}
 \end{table}
 
-Let's make one more assumption: DMs don't like surprises. To avoid surprises, a DM will incorporate the uncertainty in probability estimates by assuming that the actual long-time relative frequency of an event is his best estimate plus the standard error. 
-To relate this back to density functions, we suppose each event $i$ corresponds to the observable $X$ taking a value in interval $i$, of width $\delta x$, so that $x_i< X \leq x_i+\delta x$.\\
+%Let's make one more assumption: DMs don't like surprises. To avoid surprises, a DM will incorporate the uncertainty in probability estimates by assuming that the actual long-time relative frequency of an event is his best estimate plus the standard error. 
+%To relate this back to density functions, we suppose each event $i$ corresponds to the observable $X$ taking a value in interval $i$, of width $\delta x$, so that $x_i< X \leq x_i+\delta x$.\\
 %the DM partitions outcomes into bins of width $\delta x$. 
-\OP{This could work: I'm taking the binning decision away from the DM. Instead, we just declare that the events (which we know are ok) correspond to bins.}\\
-From a time series of length $T$, the DM estimates the probability of the event, $x_i \leq X \leq x_i+\delta x$, in terms of an estimated density function as $\hat{p}_i = \hat{p}(x_i)\delta x$. To this he adds the standard error to get his decision weight for the event,
-\be
-w(x_i)\delta x = \hat{p}(x_i)\delta x + \sqrt{\frac{\hat{p}(x_i)\delta x}{T}}.
-\elabel{poisson_weight}
-\ee
-Repeating this procedure across the domain of the density function, \ie for all possible events, and dividing \eref{poisson_weight} by the bin width, $\delta x$, gives a decision weight density of
-\be
-w(x) = \frac{\hat{p}(x)+\sqrt{\frac{\hat{p}(x)}{T\delta x}}}{\int_{-\infty}^{\infty}\left(\hat{p}(s)+\sqrt{\frac{\hat{p}(s)}{T\delta x}}\right) ds},
-\elabel{poisson_weight_density}
-\ee
-where the denominator is introduced to normalise $w(x)$. 
+%\OP{This could work: I'm taking the binning decision away from the DM. Instead, we just declare that the events (which we know are ok) correspond to bins.}\\
+%From a time series of length $T$, the DM estimates the probability of the event, $x_i \leq X \leq x_i+\delta x$, in terms of an estimated density function as $\hat{p}_i = \hat{p}(x_i)\delta x$. To this he adds the standard error to get his decision weight for the event,
+%\be
+%w(x_i)\delta x = \hat{p}(x_i)\delta x + \sqrt{\frac{\hat{p}(x_i)\delta x}{T}}.
+%\elabel{poisson_weight}
+%\ee
+%Repeating this procedure across the domain of the density function, \ie for all possible events, and dividing \eref{poisson_weight} by the bin width, $\delta x$, gives a decision weight density of
+%\be
+%w(x) = \frac{\hat{p}(x)+\sqrt{\frac{\hat{p}(x)}{T\delta x}}}{\int_{-\infty}^{\infty}\left(\hat{p}(s)+\sqrt{\frac{\hat{p}(s)}{T\delta x}}\right) ds},
+%\elabel{poisson_weight_density}
+%\ee
+%where the denominator is introduced to normalise $w(x)$. 
 %Note that the DM must choose a small enough bin width that all event probabilities, of the form $p(x)\delta x$, are so small that multiple events do not occur in one observation.
 
 %\AA{added last sentence to prevent binning from taking us out of the rare event regime.}
 
-The cautionary correction term is parametrised by $T\delta x$, which scales like the number of observations per bin. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\hat{p}(x)$ become consistent with the asymptotic density, $p(x)$.
+The cautionary correction term is parametrised by $T\delta x$, which scales like the number of observations in $[x, x+\delta x]$. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\hat{p}(x)$ become consistent with the asymptotic density, $p(x)$.
 %The DM can achieve this in two ways: either by collecting more data in total (observing for longer); or by partitioning outcomes more coarsely to collect more data per event (at the cost of making his estimated density function more block-like).
 With perfect information, a DM need not adjust decisions to account for uncertainty.
 
