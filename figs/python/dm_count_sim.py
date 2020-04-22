@@ -97,9 +97,9 @@ for i in range(0, 2): # incremented for loop
     axes[i,0].set_xlabel('$x$')
     axes[i,0].set_ylabel('estimated density')
     if i==0:
-        axes[i,0].set_title('Gaussian')
+        axes[i,0].set_title('Gaussian data')
     else:
-        axes[i,0].set_title('Student $t$')
+        axes[i,0].set_title('$t$-distributed data')
     axes[i,0].legend(loc='upper left',fontsize='small')
     # axes[i, 0].legend(loc=2)
     # axes[1].hist(x_bins[:-1], x_bins, weights=uncertainty/count,color='r',label='relative uncertainty')
@@ -109,9 +109,9 @@ for i in range(0, 2): # incremented for loop
     axes[i,1].set_xlabel('$F_p$')
     axes[i,1].set_ylabel('CDF')
     if i==0:
-        axes[i,1].set_title('Gaussian')
+        axes[i,1].set_title('Gaussian data')
     else:
-        axes[i,1].set_title('Student $t$')
+        axes[i,1].set_title('$t$-distributed data')
     axes[i,1].legend(loc='upper left',fontsize='small')
     
 plt.savefig("./../dm_count_sim.pdf", bbox_inches='tight')
