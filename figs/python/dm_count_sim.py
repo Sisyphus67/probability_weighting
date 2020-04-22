@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 print("Matplotlib is:", matplotlib.__version__)
 
 import numpy as np
-print("numpy is:", np.__version__)
+print("Numpy is:", np.__version__)
 
 # import random
 from scipy.stats import norm
@@ -20,8 +20,8 @@ N=1000
 T=100
 
 # histogram parameters
-x_min=-5
-x_max=5
+x_min=-20
+x_max=20
 n_bins=100
 bin_width=(x_max-x_min)/n_bins
 
@@ -29,20 +29,21 @@ bin_width=(x_max-x_min)/n_bins
 fig, axes = plt.subplots(2, 2, figsize=(9, 7))
 fig.tight_layout(pad=3)
 
-
 # loop through normal and t distributions
 for i in range(0, 2): # incremented for loop
     if i==0:
         # normal distribution
         l = (x_max+x_min)/2 # location
-        s = (x_max-x_min)/10 # scale
+        # s = (x_max-x_min)/20 # scale
+        s = 2
         dist = norm(loc=l, scale=s)
     
     else:
         # t distribution
         df = 1.5 # shape
         l = (x_max+x_min)/2 # location
-        s = (x_max-x_min)/20 # scale
+        # s = (x_max-x_min)/20 # scale
+        s = 1
         dist = t(df, loc=l, scale=s)
         
         # triangular distribution
@@ -52,7 +53,8 @@ for i in range(0, 2): # incremented for loop
         # dist = triang(c, loc=l, scale=s)
         
     # generate random variables
-    X=dist.rvs(size=[N,T])
+    rs = np.random.RandomState(10000)
+    X=dist.rvs(size=[N,T], random_state=rs)
     
     # count
     n=np.empty((N,n_bins))
@@ -88,11 +90,28 @@ for i in range(0, 2): # incremented for loop
     #fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(9, 3.5))
     #fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(15, 5))
     #ax=fig.add_axes([0,0,1,1])
-    axes[i, 0].hist(x_bins[:-1], x_bins, weights=wraw, color='r', label='')
-    axes[i, 0].hist(x_bins[:-1], x_bins, weights=phat, color='b', label='')
+    axes[i,0].hist(x_bins[:-1], x_bins, weights=wraw, color='b', label='$\hat{p}(x)+\epsilon(\hat{p})$')
+    axes[i,0].hist(x_bins[:-1], x_bins, weights=phat, color='r', label='$\hat{p}(x)$')
+    axes[i,0].set_xlim((-5,5))
+    axes[i,0].set_ylim((0,0.5))
+    axes[i,0].set_xlabel('$x$')
+    axes[i,0].set_ylabel('estimated density')
+    if i==0:
+        axes[i,0].set_title('Gaussian data')
+    else:
+        axes[i,0].set_title('$t$-distributed data')
+    axes[i,0].legend(loc='upper left',fontsize='small')
     # axes[i, 0].legend(loc=2)
     # axes[1].hist(x_bins[:-1], x_bins, weights=uncertainty/count,color='r',label='relative uncertainty')
     # axes[1].legend(loc=2)
-    axes[i, 1].plot(Fp,Fw,'b',label='')
-    axes[i, 1].plot(Fp,Fp,'r',label='')
-    plt.savefig("./../dm_count_sim.pdf", bbox_inches='tight')
+    axes[i,1].plot(Fp,Fp,'r',label='$F_p$')
+    axes[i,1].plot(Fp,Fw,'b',label='$F_w$')
+    axes[i,1].set_xlabel('$F_p$')
+    axes[i,1].set_ylabel('CDF')
+    if i==0:
+        axes[i,1].set_title('Gaussian data')
+    else:
+        axes[i,1].set_title('$t$-distributed data')
+    axes[i,1].legend(loc='upper left',fontsize='small')
+    
+plt.savefig("./../dm_count_sim.pdf", bbox_inches='tight')
