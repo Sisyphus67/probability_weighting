@@ -163,7 +163,7 @@ This is best explained by a thought experiment, in which
 	\item a \textit{disinterested observer} (DO), such as an experimenter, tells
 	\item a \textit{decision maker} (DM)
 \ei
-that an event occurs with some probability. The DO observes DM's behaviour (\eg gambling on the event), and finds it consistent with a behavioural model (\eg expected-utility optimization) in which the DM uses a probability that differs systematically from what the DO has declared. The apparent probabilities, inferred from the DM's decisions, are called ``{\it decision weights}.'' We will adopt this nomenclature here: 
+that an event occurs with some probability. The DO observes the DM's behaviour (\eg gambling on the event), and finds it consistent with a behavioural model (\eg expected-utility optimization) in which the DM uses a probability that differs systematically from what the DO has declared. The apparent probabilities, inferred from the DM's decisions, are called ``{\it decision weights}.'' We will adopt this nomenclature here: 
 % 
 \bi
 	\item By ``\textit{probabilities,}'' expressed as probability density functions (PDFs) and denoted $p(x)$, we will mean the numbers specified by a DO.
@@ -205,7 +205,8 @@ Thus the PDF of $Z$, $p(z)$, is a density with location $\mu_Z=0$ and scale $\si
 
 \section{Probability weighting as a difference between models} \seclabel{ModelDiff}
 
-Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a model of the world. Nor do we assume the DM to know ``the truth'' -- he has another model of the world. From our perspective \fref{TK1992} merely shows that the two models differ. It says nothing about who is right or wrong. This is true even in the context of a lab experiment, as we discuss in detail in \secref{Reasons_for}.
+Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a model of the world. Nor do we assume the DM to know ``the truth'' -- he has another model of the world. From our perspective \fref{TK1992} merely shows that the two models differ. It says nothing about who is right or wrong.
+%This is true even in the context of a lab experiment, as we discuss in detail in \secref{Reasons_for}.
 
 \subsection{The inverse-S curve\seclabel{The_inverse}}
 \subsubsection{Tversky and Kahneman}
@@ -233,7 +234,7 @@ models the same observable as a Gaussian with the same location, $\mu$, but with
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=\textwidth]{./figs/density_map.pdf}
+\includegraphics[width=\textwidth]{./figs/mapping_pdfs.pdf}
 \caption{{\bf Mapping PDFs.} Left: probability PDF (red), estimated by a DO; and decision-weight PDF (blue), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the red line. The DM models $x$ with a greater scale (here 2 times greater, $\alpha=2$), and assumes the true frequency distribution is the blue line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
 Right: the difference between decision weights and probabilities can also be expressed by directly plotting, for any value of $x$, the decision weight {\it vs.} the probability observed at $x$. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right. They therefore start and end at identical vertical positions as on the left. Because of the non-linear distortion of the horizontal axis, they are shifted to different locations horizontally.}
 \flabel{probability_dists}
@@ -273,7 +274,7 @@ and
 % 
 and solve \eref{p} for $(x -\mu)^2$, substitute that in \eref{DecisionW}, and obtain the following expression for decision weights directly as a function of probabilities
 \be
-w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma_1^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
+w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
 \elabel{w_of_p}
 \ee
 which is precisely what's plotted in the right panel of \fref{probability_dists}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{probability_dists}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. If $\alpha>1$ it means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small arguments and below it for large arguments.
@@ -282,9 +283,9 @@ Alternatively, we can express the difference between models by plotting the CDFs
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\textwidth]{./figs/GaussianFvsXtoWvsP.pdf}
+\includegraphics[width=\textwidth]{./figs/mapping_cdfs.pdf}
 \caption{{\bf Mapping CDFs.} 
-Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,3)$ depicted by $F_w(x)$ (blue). 
+Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,4)$ depicted by $F_w(x)$ (blue). 
 % 
 Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is larger than the DO's CDF, $F_p(x) < F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be lower than the DO's.
 Right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays the generic inverse-S shape known from prospect theory. The arrows start and end at the same vertical values as on the left. Because the horizontal axis is has been non-linearly stretched (as the argument changed from $x$ to $F_p$), their horizontal locations are shifted.
@@ -376,7 +377,7 @@ The result is qualitatively similar to the bottom right panel of \fref{TwoCDFs},
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/Student-t.pdf}
-\caption{Probability weighting for $t$-distributions, where the DM uses a different shape parameter (1) and a different location parameter (0) from those of the DO (2 and 0.2, respectively).}
+\caption{Probability weighting for $t$-distributions, where the DM uses a different shape parameter (1) and a different location parameter (0.35) from those of the DO (3 and 0.2, respectively).}
 \flabel{fat_tailed_CDF}
 \end{figure}
 

@@ -1,7 +1,19 @@
+# Check python version
+import sys
+print("Python is:", sys.version)
+
+# Import matplotlib and numpy
+import matplotlib
 import matplotlib.pyplot as plt
+print("Matplotlib is:", matplotlib.__version__)
+
 import numpy as np
+print("Numpy is:", np.__version__)
+
+# import random
 from scipy.stats import norm
 from scipy.stats import t
+# from scipy.stats import triang
 
 # number and length of time series
 N=1000
@@ -74,30 +86,32 @@ for i in range(0, 2): # incremented for loop
     Fw=np.concatenate(([0],Fw)) # add left bin edge to Fw
     
     # plot
-    axes[i, 0].hist(x_bins[:-1], x_bins, weights=wraw, color='b', label='$\hat{p}(x)+\epsilon(\hat{p})$')
-    axes[i, 0].hist(x_bins[:-1], x_bins, weights=phat, color='r', label='$\hat{p}(x)$')
-    axes[i, 0].set_xlim((-5, 5))
-    axes[i, 0].set_ylim((0, 0.5))
-    axes[i, 0].set_xlabel('$x$')
-    axes[i, 0].set_ylabel('estimated density')
-    if i == 0:
-        axes[i, 0].set_title('Gaussian data')
+    #fig=plt.figure()
+    #fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(9, 3.5))
+    #fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(15, 5))
+    #ax=fig.add_axes([0,0,1,1])
+    axes[i,0].hist(x_bins[:-1], x_bins, weights=wraw, color='b', label='$\hat{p}(x)+\epsilon(\hat{p})$')
+    axes[i,0].hist(x_bins[:-1], x_bins, weights=phat, color='r', label='$\hat{p}(x)$')
+    axes[i,0].set_xlim((-5,5))
+    axes[i,0].set_ylim((0,0.5))
+    axes[i,0].set_xlabel('$x$')
+    axes[i,0].set_ylabel('estimated density')
+    if i==0:
+        axes[i,0].set_title('Gaussian data')
     else:
-        axes[i, 0].set_title('$t$-distributed data')
-    axes[i, 0].legend(loc='upper left',fontsize='x-small')
+        axes[i,0].set_title('$t$-distributed data')
+    axes[i,0].legend(loc='upper left',fontsize='small')
     # axes[i, 0].legend(loc=2)
     # axes[1].hist(x_bins[:-1], x_bins, weights=uncertainty/count,color='r',label='relative uncertainty')
     # axes[1].legend(loc=2)
-    axes[i, 1].plot(Fp, Fp, 'r', label='$F_p$')
-    axes[i, 1].axvline(x = 0.5, LineStyle='--')
-    axes[i, 1].plot(Fp, Fw, 'b', label='$F_w$')
-    axes[i, 1].set_xlabel(r'CDF $F_p$')
-    axes[i, 1].set_ylabel(r'CDFs')
-    if i == 0:
-        axes[i, 1].set_title('Gaussian data')
+    axes[i,1].plot(Fp,Fp,'r',label='$F_p$')
+    axes[i,1].plot(Fp,Fw,'b',label='$F_w$')
+    axes[i,1].set_xlabel('$F_p$')
+    axes[i,1].set_ylabel('CDF')
+    if i==0:
+        axes[i,1].set_title('Gaussian data')
     else:
-        axes[i, 1].set_title('$t$-distributed data')
-    axes[i, 1].legend(loc='upper left', fontsize='x-small')
+        axes[i,1].set_title('$t$-distributed data')
+    axes[i,1].legend(loc='upper left',fontsize='small')
     
 plt.savefig("./../dm_count_sim.pdf", bbox_inches='tight')
-plt.show()

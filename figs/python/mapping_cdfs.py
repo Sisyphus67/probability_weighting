@@ -1,0 +1,53 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.stats as stat
+
+xx = np.linspace(0.0, 1.0, num=1000)
+x = np.linspace(-10, 10, num=5000)
+
+# Gaussians location and scale parameters
+s1 = 1
+s2 = 2
+l1 = 0
+l2 = 0
+# CDFs
+DO = stat.norm.cdf(x, l1, s1)
+DM = stat.norm.cdf(x, l2, s2)
+
+fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(9, 3.5))
+fig.tight_layout(pad=3)
+
+#CDF plot
+axes[0].set_xlim((-4.5, 4.5))
+axes[0].plot(x, DO, 'r', lineWidth='2', label=r'$F_{p}(x)$')
+axes[0].axvline(x=0, LineStyle='--')
+axes[0].plot(x, DM, 'b', lineWidth='2', label=r'$F_{w}(x)$')
+
+#plot arrows
+xs=[-2,-1.5,-1,-.5,.5,1,1.5,2]
+for i in xs:
+    axes[0].arrow(i,stat.norm.cdf(i, l1, s1), 0, stat.norm.cdf(i, l2, s2) - stat.norm.cdf(i, l1, s1), head_width=0.15, head_length=0.045, length_includes_head=True, fc='k', ec='k', zorder=10)
+
+axes[0].set_xlabel(r'$x$')
+axes[0].set_ylabel(r'CDFs')
+axes[0].set_xticks(np.arange(-4, 5, step=2))
+axes[0].set_yticks(np.arange(0, 1.1, step=0.2))
+axes[0].legend(loc='upper left', fontsize='x-small')
+
+#w(p) plot
+axes[1].plot(DO, DO, 'r', lineWidth='2', label=r'$F_p$')
+axes[1].axvline(x=0.5, LineStyle='--')
+axes[1].plot(DO, DM, 'b', lineWidth='2', label=r'$F_w$')
+
+# plot arrows
+for i in xs:
+    axes[1].arrow(stat.norm.cdf(i, l1, s1),stat.norm.cdf(i, l1, s1), 0, stat.norm.cdf(i, l2, s2) - stat.norm.cdf(i, l1, s1), head_width=0.018, head_length=0.045, length_includes_head=True, fc='k', ec='k', zorder=10)
+
+axes[1].set_xlabel(r'CDF $F_p$')
+axes[1].set_ylabel(r'CDFs')
+axes[1].set_xticks(np.arange(0, 1.1, step=0.2))
+axes[1].set_yticks(np.arange(0, 1.1, step=0.2))
+axes[1].legend(loc='upper left', fontsize='x-small')
+
+plt.savefig("./../mapping_cdfs.pdf", bbox_inches='tight')
+plt.show()
