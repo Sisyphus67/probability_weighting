@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.stats as stat
 
-xx = np.linspace(0.0, 1.0, num=1000)
 x = np.linspace(-100, 100, num=5000)
 
 # CDFs

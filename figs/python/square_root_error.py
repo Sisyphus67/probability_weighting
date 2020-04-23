@@ -6,7 +6,6 @@ import scipy.stats as stat
 
 Tdx = 10 # observations per bin
 
-xx = np.linspace(0.0, 1.0, num=1000)
 x = np.linspace(-100, 100, num=5000)
 # Gaussians location and scale parameters
 l = 0
@@ -28,10 +27,10 @@ axes[0, 0].plot(x,DO,'r', label=r'$p(x)$', linewidth=2)
 axes[0, 0].plot(x,DM,'b', label=r'$w(x)$', linewidth=2)
 axes[0, 0].set_xlabel(r'$x$')
 axes[0, 0].set_ylabel(r'PDFs')
-axes[0, 0].set_xlim((-5, 5))
+axes[0, 0].set_xlim((-4.5, 4.5))
+axes[0, 0].set_xticks(np.arange(-4, 5, step=2))
 axes[0, 0].set_title('Gaussian PDF')
 axes[0, 0].legend(loc='upper left', fontsize='x-small')
-axes[0,0].set_xticks(np.arange(-5, 5, step=2))
 axes[0,0].set_yticks(np.arange(0, 0.6, step=0.1))
 
 #plot CDFs
@@ -61,7 +60,8 @@ axes[1, 0].plot(x,DO,'r', label=r'$p(x)$',linewidth=2)
 axes[1, 0].plot(x,DM,'b', label=r'$w(x)$',linewidth=2)
 axes[1, 0].set_xlabel(r'$x$')
 axes[1, 0].set_ylabel(r'PDFs')
-axes[1, 0].set_xlim((-5, 5))
+axes[1, 0].set_xlim((-4.5, 4.5))
+axes[1, 0].set_xticks(np.arange(-4, 5, step=2))
 axes[1, 0].set_title('$t$-distribution PDF')
 axes[1, 0].legend(loc='upper left', fontsize='x-small')
 axes[1, 0].set_yticks(np.arange(0, 0.6, step=0.1))

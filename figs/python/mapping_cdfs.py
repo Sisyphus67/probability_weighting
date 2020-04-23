@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as stat
 
-xx = np.linspace(0.0, 1.0, num=1000)
 x = np.linspace(-10, 10, num=5000)
 
 # Gaussians location and scale parameters

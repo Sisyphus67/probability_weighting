@@ -32,13 +32,7 @@ for i in range(0, 2): # incremented for loop
         l = (x_max+x_min)/2 # location
         # s = (x_max-x_min)/20 # scale
         s = 1
-        dist = t(df, loc=l, scale=s)
-        
-        # triangular distribution
-        # c = 0.5 # shape (centre)
-        # l = x_min # location
-        # s = x_max-x_min # scale
-        # dist = triang(c, loc=l, scale=s)
+        dist = t(df, loc=l, scale=s)        
         
     # generate random variables
     rs = np.random.RandomState(10000)
@@ -76,7 +70,8 @@ for i in range(0, 2): # incremented for loop
     # plot
     axes[i, 0].hist(x_bins[:-1], x_bins, weights=wraw, color='b', label='$\hat{p}(x)+\epsilon(\hat{p})$')
     axes[i, 0].hist(x_bins[:-1], x_bins, weights=phat, color='r', label='$\hat{p}(x)$')
-    axes[i, 0].set_xlim((-5, 5))
+    axes[i, 0].set_xlim((-4.5, 4.5))
+    axes[i, 0].set_xticks(np.arange(-4, 5, step=2))
     axes[i, 0].set_ylim((0, 0.5))
     axes[i, 0].set_xlabel('$x$')
     axes[i, 0].set_ylabel('estimated density')

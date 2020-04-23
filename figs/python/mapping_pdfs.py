@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as stat
 
-xx = np.linspace(0.0, 1.0, num=1000)
 x = np.linspace(-10, 10, num=5000)
 
 # Gaussians location and scale parameters
@@ -17,7 +16,7 @@ DM = stat.norm.pdf(x, l2, s2)
 fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(9, 3.5))
 fig.tight_layout(pad=3)
 
-#CDF plot
+#PDF plot
 axes[0].set_xlim((-4.5, 4.5))
 axes[0].plot(x, DO, 'r', lineWidth='2', label=r'$p(x)$')
 axes[0].plot(x, DM, 'b', lineWidth='2', label=r'$w(x)$')
