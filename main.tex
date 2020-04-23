@@ -66,6 +66,7 @@
 \newcommand{\etc}{{\it etc.}\xspace}
 \newcommand{\eg}{{\it e.g.}\ }
 \newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\vs}{{\it vs.}\ }
 \newcommand{\vv}{{\it v.v.}\ }
 \newcommand{\err}{\epsilon}
 \newcommand{\gensst}{g_{\text{est}}}
@@ -84,7 +85,7 @@
 \newcommand{\ND}{\mathcal{N}} % Normal Distribution
 \newcommand{\sigmat}{\tilde{\sigma}}
 %\newcommand{\var}[1]{\text{var}(#1)}
-\newcommand{\MK}[1]{{\it ***MK: #1 MK***}}
+\newcommand{\MK}[1]{\textcolor{red}{\textit{***MK: #1 MK***}}}
 \newcommand{\OP}[1]{{\it ***OP: #1 OP***}}
 \newcommand{\YB}[1]{{\it ***YB: #1 YB***}}
 \renewcommand{\AA}[1]{{\it ***AA: #1 AA***}}
@@ -219,6 +220,7 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 We note that no mechanistic motivation was given for fitting this specific family of CDFs (parameterised by $\gamma$). The motivation is purely phenomenological: with $\gamma<1$, this family ``looks a bit like the data.''
 % 
 The function $\tilde{F}^{TK}_w\left(F_p; \gamma \right)$ has only one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $\tilde{F}^{TK}_w\left(F_p\right)=F_p$. Further, $\tilde{F}^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. Because of this, we consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. 
+\MK{Why not include the parametrisation: $\tilde{F}^{TK}_w\left(F_p; \gamma =1 \right) = F_p$}
 %We will see below that the curvature and shift correspond to different parts of a mechanistic explanation of the phenomenon.
 
 \subsubsection{Scale, location, and the inverse-S}
@@ -298,9 +300,9 @@ In \fref{CDF_weights} we explore what happens if both the scales and the locatio
  \begin{figure}
  \centering
  \includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
- \caption{{\bf CDF maps, Gaussian distribution}.\\ 
- Top left: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO).\\ 
- Top right: Difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.\\
+ \caption{{\bf CDF maps for Gaussian distributions}.\\ 
+ Top left: Difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.\\
+ Top right: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO).\\ 
  Bottom left: Differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.64 (broader than DO).\\ 
  Bottom right: Fit to observations reported by \cite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
 Note the similarity to bottom left.}
@@ -344,7 +346,7 @@ construct a list of values for the CDF assumed by the DO, $F_p(x)$.
 \item
 construct a list of values for the CDF assumed by the DM, $F_w(x)$.
 \item
-plot $F_w(x)$ vs $F_p(x)$.
+plot $F_w(x)$ \vs $F_p(x)$.
 \end{enumerate}
 Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution. 
 %An infinity of combinations of assumed distributions can be explored. 
@@ -376,7 +378,9 @@ The result is qualitatively similar to the bottom right panel of \fref{TwoCDFs},
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/Student-t.pdf}
-\caption{Probability weighting for $t$-distributions, where the DM uses a different shape parameter (1) and a different location parameter (0) from those of the DO (2 and 0.2, respectively).}
+\caption{Probability weighting for $t$-distributions, where the DM uses a different shape parameter (1) and a different location parameter (0) from those of the DO (2 and 0.2, respectively).
+\MK{location=0.2, scale$_p$ = 1, Scale$_w$ = 2, shape = $\nu_w$ = 1/scale$_w = 1/2$}
+}
 \flabel{fat_tailed_CDF}
 \end{figure}
 
@@ -403,9 +407,9 @@ Many thousands of pages have been written about the meaning of probability. We w
 %systematically different incentives from a real-world DM. The DO tends to have an incentive to estimate, or indeed state, probabilities as their most likely value or ``true'' value (if the DO can control the probabilities, \eg in an experiment); the DM simply strives to behave optimally under uncertainty, and that uncertainty often includes uncertainty about the probabilities or model parameters.
 
 %The conundrum surrounding the observed phenomenon of the characteristic inverse-S-shaped probability weighting vanishes if probability is understood as individual ignorance, \ie somebody's uncertainty about an observable.
-
+\MK{}
 \paragraph{Frequency-in-an-ensemble interpretation of probability}
-Consider the simple probabilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.'' 
+Consider the simple pro\-babilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.'' 
 
 It is thus a statement about a model. How exactly it is linked to physical reality is not completely clear. 
 
@@ -436,14 +440,14 @@ Let's make a simple scaling argument and then check it with a simulation. For an
 
 If we knew the asymptotic probability density $p(x)$, we could make an estimate of the count as
 \be
-n(x) \approx p(x) \delta x T \pm \sqrt{p(x) \delta x T}.
+n(x) \approx p(x) \delta x T \pm \sqrt{p(x) \delta x T} ~.
 \elabel{count_est}
 \ee
 We would write $\hat{n}(x) \equiv p(x) \delta x T$ as the estimate of $n(x)$ and $\err(\hat{n}) \equiv \sqrt{p(x) \delta x T}$ as its uncertainty. Of course, this situation seldom applies, because usually we do not know $p(x)$.
 
 Conversely, and more realistically, if we observe a count $n(x)$, then we can use the scaling $ p(x) \sim n(x)/T\delta x$ to make an estimate of the asymptotic probability density as
 \be
-p(x) \approx \frac{n(x)}{T\delta x} \pm \frac{\sqrt{n(x)}}{T \delta x}.
+p(x) \approx \frac{n(x)}{T\delta x} \pm \frac{\sqrt{n(x)}}{T \delta x} ~.
 \elabel{prob_est}
 \ee
 We write $\hat{p}(x) \equiv n(x)/T\delta x$ as the estimate of $p(x)$, and
@@ -468,6 +472,7 @@ Simpler, more general, and more consistent with later text. Also, will make the 
 The cautionary correction term is parametrised by $T\delta x$, which scales like the number of observations in $[x, x+\delta x]$. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\hat{p}(x)$ become consistent with the asymptotic density, $p(x)$. With perfect information, a DM need not adjust decisions to account for uncertainty.
 
 Does our analysis, culminating in \eref{weight_density}, reproduce the stylised facts of probability weighting, in particular the inverse-S curve? We check in two ways. First, analytically, by applying the DM's cautionary correction in \eref{weight_density} directly to reference probability density functions. Second, by simulating the DM compiling counts of outcomes drawn from reference distributions, from which he estimates probability densities and their uncertainties. The simulation is meant to explore how noisy the effect is when a DM really only sees a single time series. The python code is available at \url{https://bit.ly/2zmJfuk}, and a jupyter notebook can be loaded to manipulate the code in an online environment at \url{https://bit.ly/2yvrwQV}. In both cases, we treat the DO as using the reference distribution to make his predictions of the DM's behaviour.
+\MK{Create customised bit.ly links}
 
 \Fref{square_root_error} shows the resulting PDFs and CDF mappings generated by setting $\hat{p}(x)$ in \eref{weight_density} to be the probability density functions for a Gaussian distribution and a fat-tailed $t$-distribution. Inverse-S curves are found for both distributions and the effect is more pronounced for the fat-tailed distribution.
 \begin{figure}[htb]

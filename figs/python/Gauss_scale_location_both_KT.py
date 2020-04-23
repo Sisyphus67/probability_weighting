@@ -40,7 +40,7 @@ def cdf_gauss_w(x):
     cdf=quad(gauss_w,-10,x)
     return cdf
 
-#Gaussian
+#Gaussian different scale
 g_loc_p=0
 g_loc_w=0
 g_scale_p=1
@@ -75,9 +75,9 @@ axes[0, 1].set_xticks(np.arange(0, 1.1, step=0.2))
 axes[0, 1].set_yticks(np.arange(0, 1.1, step=0.2))
 axes[0, 1].legend(loc='upper left', fontsize='x-small')
 
-#Gaussian
+#Gaussian different location
 g_loc_p=0
-g_loc_w=.23
+g_loc_w=.18
 g_scale_p=1
 g_scale_w=1
 
@@ -107,7 +107,7 @@ axes[0, 0].set_xticks(np.arange(0, 1.1, step=0.2))
 axes[0, 0].set_yticks(np.arange(0, 1.1, step=0.2))
 axes[0, 0].legend(loc='upper left', fontsize='x-small')
 
-#Gaussian
+#Gaussian different location & scale
 g_loc_p=0
 g_loc_w=.23
 g_scale_p=1

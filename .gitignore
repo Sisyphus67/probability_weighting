@@ -1,13 +1,11 @@
 
-main.bbl
-main.out
 main.run.xml
 main.synctex.gz
 .texlipse
 .project
-*.gz
 main.aux
-main.log
-main.synctex.gz
+*.log
 *.bbl
+*.out
+*.blg
 *.out
