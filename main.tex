@@ -459,9 +459,13 @@ Let's assume that the DM is aware of the uncertainties in his estimates and, fur
 w(x)=\frac{\hat{p}(x)+\sqrt{\frac{\hat{p}(x)}{T \delta x}}}{\int_{-\infty}^{\infty}\left(\hat{p}(s)+\sqrt{\frac{\hat{p}(s)}{T \delta x}}\right)ds}\,.
 \elabel{weight_density}
 \ee
+\AA{Change this to
+\be
+w(x)=\frac{\hat{p}(x)+\err(\hat{p})}{\int_{-\infty}^{\infty}\left[\hat{p}(s)+\err(\hat{p})\right]ds}\,.
+\ee
+Simpler, more general, and more consistent with later text. Also, will make the relative error analysis simpler, if we choose to offer it.}
 
 The cautionary correction term is parametrised by $T\delta x$, which scales like the number of observations in $[x, x+\delta x]$. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\hat{p}(x)$ become consistent with the asymptotic density, $p(x)$. With perfect information, a DM need not adjust decisions to account for uncertainty.
-
 
 Does our analysis, culminating in \eref{weight_density}, reproduce the stylised facts of probability weighting, in particular the inverse-S curve? We check in two ways. First, analytically, by applying the DM's cautionary correction in \eref{weight_density} directly to reference probability density functions. Second, by simulating the DM compiling counts of outcomes drawn from reference distributions, from which he estimates probability densities and their uncertainties. The simulation is meant to explore how noisy the effect is when a DM really only sees a single time series. The python code is available at \url{https://bit.ly/2zmJfuk}, and a jupyter notebook can be loaded to manipulate the code in an online environment at \url{https://bit.ly/2yvrwQV}. In both cases, we treat the DO as using the reference distribution to make his predictions of the DM's behaviour.
 
@@ -494,6 +498,8 @@ It is now well known that this is usually not the case in the following sense: D
 
 The most striking example is the universally important case of noisy multiplicative growth -- universal because it is the fundamental process that drives evolution: noise generates the diversity of phenotypes necessary for evolution and multiplicative growth (self-reproduction) is how successful phenotypes spread their traits in a population. This process operates on amoeba, as it does on forms of institutions, and on investment strategies.
 %\citep{PetersAdamou2015a}
+
+\AA{Para above, from ``universal'' onwards, seems weirdly off-topic and distracting. I don't think we need it. Suggest remove and merge first sentence with para below.}
 
 The simplest model of noisy multiplicative growth is geometric Brownian motion, $dx=x(\mu dt+\sigma dW)$. The average over the full statistical ensemble (often studied by the DO) of geometric Brownian motion grows as $\exp(\mu t)$. The individual trajectory of geometric Brownian motion, on the other hand, grows in the long run as $\exp[(\mu-\frac{\sigma^2}{2})t]$.
 
