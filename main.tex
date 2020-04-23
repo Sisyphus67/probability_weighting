@@ -66,6 +66,7 @@
 \newcommand{\etc}{{\it etc.}\xspace}
 \newcommand{\eg}{{\it e.g.}\ }
 \newcommand{\cf}{{\it c.f.}\ }
+\newcommand{\vs}{{\it vs.}\ }
 \newcommand{\vv}{{\it v.v.}\ }
 \newcommand{\err}{\epsilon}
 \newcommand{\gensst}{g_{\text{est}}}
@@ -84,7 +85,7 @@
 \newcommand{\ND}{\mathcal{N}} % Normal Distribution
 \newcommand{\sigmat}{\tilde{\sigma}}
 %\newcommand{\var}[1]{\text{var}(#1)}
-\newcommand{\MK}[1]{{\it ***MK: #1 MK***}}
+\newcommand{\MK}[1]{\textcolor{red}{\textit{***MK: #1 MK***}}}
 \newcommand{\OP}[1]{{\it ***OP: #1 OP***}}
 \newcommand{\YB}[1]{{\it ***YB: #1 YB***}}
 \renewcommand{\AA}[1]{{\it ***AA: #1 AA***}}
@@ -220,6 +221,7 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 We note that no mechanistic motivation was given for fitting this specific family of CDFs (parameterised by $\gamma$). The motivation is purely phenomenological: with $\gamma<1$, this family ``looks a bit like the data.''
 % 
 The function $\tilde{F}^{TK}_w\left(F_p; \gamma \right)$ has only one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $\tilde{F}^{TK}_w\left(F_p\right)=F_p$. Further, $\tilde{F}^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. Because of this, we consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. 
+\MK{Why not include the parametrisation: $\tilde{F}^{TK}_w\left(F_p; \gamma =1 \right) = F_p$}
 %We will see below that the curvature and shift correspond to different parts of a mechanistic explanation of the phenomenon.
 
 \subsubsection{Scale, location, and the inverse-S}
@@ -299,9 +301,9 @@ In \fref{CDF_weights} we explore what happens if both the scales and the locatio
  \begin{figure}
  \centering
  \includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
- \caption{{\bf CDF maps, Gaussian distribution}.\\ 
- Top left: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO).\\ 
- Top right: Difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.\\
+ \caption{{\bf CDF maps for Gaussian distributions}.\\ 
+ Top left: Difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.\\
+ Top right: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO).\\ 
  Bottom left: Differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.64 (broader than DO).\\ 
  Bottom right: Fit to observations reported by \cite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
 Note the similarity to bottom left.}
@@ -345,7 +347,7 @@ construct a list of values for the CDF assumed by the DO, $F_p(x)$.
 \item
 construct a list of values for the CDF assumed by the DM, $F_w(x)$.
 \item
-plot $F_w(x)$ vs $F_p(x)$.
+plot $F_w(x)$ \vs $F_p(x)$.
 \end{enumerate}
 Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution. 
 %An infinity of combinations of assumed distributions can be explored. 
@@ -404,9 +406,9 @@ Many thousands of pages have been written about the meaning of probability. We w
 %systematically different incentives from a real-world DM. The DO tends to have an incentive to estimate, or indeed state, probabilities as their most likely value or ``true'' value (if the DO can control the probabilities, \eg in an experiment); the DM simply strives to behave optimally under uncertainty, and that uncertainty often includes uncertainty about the probabilities or model parameters.
 
 %The conundrum surrounding the observed phenomenon of the characteristic inverse-S-shaped probability weighting vanishes if probability is understood as individual ignorance, \ie somebody's uncertainty about an observable.
-
+\MK{}
 \paragraph{Frequency-in-an-ensemble interpretation of probability}
-Consider the simple probabilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.'' 
+Consider the simple pro\-babilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.'' 
 
 It is thus a statement about a model. How exactly it is linked to physical reality is not completely clear. 
 
@@ -427,24 +429,41 @@ For our purpose it suffices to say that there's no guarantee that a probabilisti
 \subsubsection*{Estimation errors for probabilities}
 Let's assume that both the DO and the DM mean by ``probability'' the relative frequency of an event in an infinitely long time series of observations. Of course, real time series have finite length, so probabilities defined this way are model parameters and cannot actually be observed. But, from a real time series, we can estimate the best values to put into a model, by counting how often we see an event. 
 
-As the probability of an event gets smaller, so does the number of times we see it in a finite time series. If we want to say something about the uncertainty in this number, we can measure it -- or imagine measuring it -- in several time series to see how much it varies. The variations from one time series to another get smaller for rarer events, but the {\it relative} variations get larger, and so does the relative uncertainty in our estimate of probabilities. Take an extreme simplified example: asymptotically an event occurs in 0.1\% of observations, and we have a time series of 100 observations. %Almost all such series (around 99.5\% of them) will contain 0 or 1 events. Na\"{i}vely, then, we would estimate the probability as either 0 or 1\%. In other words, we would estimate the event as either impossible or occurring ten times more frequently than it really would in a long series. However, if the event occurs 50\% of the time asymptotically, then a probability estimate from 100 observations would likely (in around 95\% of series) be in the range 40--60\%, a much smaller relative error.
+As the probability of an event gets smaller, so does the number of times we see it in a finite time series. If we want to say something about the uncertainty in this number, we can measure it -- or imagine measuring it -- in several time series to see how much it varies. The variations from one time series to another get smaller for rarer events, but the {\it relative} variations get larger, and so does the relative uncertainty in our estimate of probabilities. Take an extreme simplified example: asymptotically an event occurs in 0.1\% of observations, and we have a time series of 100 observations. 
 Around 99.5\% of such time series will contain 0 or 1 events. Na\"{i}vely, then, we would estimate the probability as either 0 or 1\%. In other words, we would estimate the event as either impossible or occurring ten times more frequently than it really would in a long series. However, if the event occurs 50\% of the time asymptotically, then around 99.5\% of time series would contain between 35 and 65 events, leading to a much smaller relative error in probability estimates.
 
 A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision-making. Specifically, the DM should acknowledge that, due to his lack of information, {\it prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.
 
-Formalising these thoughts, we find that so long as relative uncertainties are larger for rare events than for common events (which, generically, they are), an inverse-S curve emerges. 
+Formalising these thoughts, we find that so long as relative uncertainties are larger for rare events than for common events (which, generically, they are), an inverse-S curve emerges\footnote{
+For an inverse-S curve to emerge, small probability densities have to be overestimated ($w>p$) and large ones underestimated ($w<p$), as is indeed the case, for example in \fref{square_root_error}. Let's connect this statement to one about relative uncertainties. The decision weight in \fref{square_root_error} is 
+arrived at by adding to the probability $p(x)$ the uncertainty $\err{(p)}$ and normalising the result, 
+\be
+w(x)=\frac{p(x)+\err[p(x)]}{\int_{-\infty}^{\infty} p(s)+\err[p(s)] ds}.
+\ee
+This can be expressed as
+\be
+w(x)=p(x) \left(\frac{1+\frac{\err[p(x)]}{p(x)}}{\int_{-\infty}^{\infty} p(s)\left\{1+\frac{\err[p(s)]}{p(s)}\right\} ds}\right),
+\elabel{rel_error}
+\ee
+where $\frac{\err(p(x))}{p(x)}$ is the relative error, and the denominator of  \eref{rel_error} is some normalisation constant. If the relative error is larger for small probabilities than for large probabilities, then small probabilities are enhanced more (the summand $\frac{\err[p(x)]}{p(x)}$ in the numerator is greater) than large probabilities. The normalisation constant scales down all probabilities equally, and where the enhancement was greater, $w(x)$ ends up above $p(x)$, and where it was lower $w(x)$ ends up below $p(x)$: if the relative error is larger for small probabilities, an inverse-S curve emerges.
+We can say one more thing about this procedure. Provided an inverse-S curve exists, $p(x)$ and $w(x)$ cross somewhere (see \fref{square_root_error}). This happens when the relative error reaches its expectation value. Re-writing \eref{rel_error} yields
+\be
+w(x)=p(x) \left(\frac{1+\frac{\err(p)}{p}}{1+\ave{\frac{\err(p)}{p}}}\right),
+\ee
+wherefore $w(x)=p(x)$ iff $\frac{\err(p)}{p}=\ave{\frac{\err(p)}{p}}.$
+}.
 Let's make a simple scaling argument and then check it with a simulation. For an asymptotic probability density $p(x)$, the number of events $n(x)$ we see in the small interval $[x, x+ \delta x]$ in a time series of $T$ observations is proportional to $p(x)$, to $\delta x$, and to $T$. So we have $n(x) \sim p(x) \delta x T$, where we mean by $\sim$ ``scales like.'' We also know that such counts, for example in the simple Poissonian case, are random variables whose uncertainties scale like $\sqrt{n(x)}$.
 
 If we knew the asymptotic probability density $p(x)$, we could make an estimate of the count as
 \be
-n(x) \approx p(x) \delta x T \pm \sqrt{p(x) \delta x T}.
+n(x) \approx p(x) \delta x T \pm \sqrt{p(x) \delta x T} ~.
 \elabel{count_est}
 \ee
 We would write $\hat{n}(x) \equiv p(x) \delta x T$ as the estimate of $n(x)$ and $\err(\hat{n}) \equiv \sqrt{p(x) \delta x T}$ as its uncertainty. Of course, this situation seldom applies, because usually we do not know $p(x)$.
 
 Conversely, and more realistically, if we observe a count $n(x)$, then we can use the scaling $ p(x) \sim n(x)/T\delta x$ to make an estimate of the asymptotic probability density as
 \be
-p(x) \approx \frac{n(x)}{T\delta x} \pm \frac{\sqrt{n(x)}}{T \delta x}.
+p(x) \approx \frac{n(x)}{T\delta x} \pm \frac{\sqrt{n(x)}}{T \delta x} ~.
 \elabel{prob_est}
 \ee
 We write $\hat{p}(x) \equiv n(x)/T\delta x$ as the estimate of $p(x)$, and
@@ -469,6 +488,7 @@ Simpler, more general, and more consistent with later text. Also, will make the 
 The cautionary correction term is parametrised by $T\delta x$, which scales like the number of observations in $[x, x+\delta x]$. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\hat{p}(x)$ become consistent with the asymptotic density, $p(x)$. With perfect information, a DM need not adjust decisions to account for uncertainty.
 
 Does our analysis, culminating in \eref{weight_density}, reproduce the stylised facts of probability weighting, in particular the inverse-S curve? We check in two ways. First, analytically, by applying the DM's cautionary correction in \eref{weight_density} directly to reference probability density functions. Second, by simulating the DM compiling counts of outcomes drawn from reference distributions, from which he estimates probability densities and their uncertainties. The simulation is meant to explore how noisy the effect is when a DM really only sees a single time series. The python code is available at \url{https://bit.ly/2zmJfuk}, and a jupyter notebook can be loaded to manipulate the code in an online environment at \url{https://bit.ly/2yvrwQV}. In both cases, we treat the DO as using the reference distribution to make his predictions of the DM's behaviour.
+\MK{Create customised bit.ly links}
 
 \Fref{square_root_error} shows the resulting PDFs and CDF mappings generated by setting $\hat{p}(x)$ in \eref{weight_density} to be the probability density functions for a Gaussian distribution and a fat-tailed $t$-distribution. Inverse-S curves are found for both distributions and the effect is more pronounced for the fat-tailed distribution.
 \begin{figure}[htb]
