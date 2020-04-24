@@ -157,13 +157,13 @@ D81 	% Criteria for decision making under Risk and Uncertainty
 
 
 \section{Introduction}
-{\it Probability weighting} is a concept that originated in prospect theory. It is one way to conceptualise a pattern in human behaviour, of caution with respect to formal models.
+{\it Probability weighting} is a concept that originated in prospect theory. It is one way to conceptualise a pattern in human behaviour of caution with respect to formal models.
 This is best explained by a thought experiment, in which  
 \bi
 	\item a \textit{disinterested observer} (DO), such as an experimenter, tells
 	\item a \textit{decision maker} (DM)
 \ei
-that an event occurs with some probability. The DO observes the DM's behaviour (\eg gambling on the event), and finds it consistent with a behavioural model (\eg expected-utility optimization) in which the DM uses a probability that differs systematically from what the DO has declared. The apparent probabilities, inferred from the DM's decisions, are called ``{\it decision weights}.'' We will adopt this nomenclature here: 
+that an event occurs with some probability. The DO observes the DM's behaviour (\eg gambling on the event) and finds it consistent with a behavioural model (\eg expected-utility optimization) in which the DM uses a probability that differs systematically from what the DO has declared. The apparent probabilities, inferred from the DM's decisions, are called ``{\it decision weights}.'' We will adopt this nomenclature here.
 % 
 \bi
 	\item By ``\textit{probabilities,}'' expressed as probability density functions (PDFs) and denoted $p(x)$, we will mean the numbers specified by a DO.
@@ -171,40 +171,38 @@ that an event occurs with some probability. The DO observes the DM's behaviour (
 \ei
 Here, $x$ is a realisation of a random variable, $X$. For example, $X$ might be the payout of a gamble which the DM is invited to accept or decline.
 
-Different behavioural models may result in different inferred decision weights. Our focus is not on how these weights are inferred, but on the robust observation that decision weights, $w(x)>p(x)$ (used by DMs), are higher than probabilities, $p$ (declared by DOs), for extreme events (with small $p$). Thus, we do not consider any specific behavioural model -- our aim is to find a general mechanistic explanation to probability weighting.
+Different behavioural models may result in different inferred decision weights. Our focus is not on how these weights are inferred, but on the robust observation that decision weights, $w(x)$ (used by DMs), are higher than probabilities, $p(x)$ (declared by DOs), for extreme events, \ie when $p(x)$ is small. Thus, we do not consider any specific behavioural model: our aim is to find a general mechanistic explanation to probability weighting.
 
 Probability weighting is often summarised visually by comparing 
 \bi
 \item cumulative density functions (CDFs) for probabilities, denoted 
 \be
-F_p(x)=\int_{-\infty}^x p(s) ds
+F_p(x)=\int_{-\infty}^x p(s) ds~,
 \ee
 \item and CDFs for decision weights, denoted
 \be
-F_w(x)=\int_{-\infty}^x w(s) ds ~.
+F_w(x)=\int_{-\infty}^x w(s) ds~.
 \ee
 \ei
 In \fref{TK1992} we reproduce the first such visual summary from \citet[p.~310]{TverskyKahneman1992}.
-
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
 \caption{{\bf Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \citet[p.~310, Fig. 1, relabelled axes]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
 \flabel{TK1992}
 \end{figure}
+% introduce ``inverse-S'' nomenclature here
+Plotting $F_w$ as a function of $F_p$ generates a curve, whose generic shape we shall call the ``inverse-S''. The inverse-S is the main observational finding in probability weighting: it sits above the line $F_w=F_p$ for events of low cumulative probability (such that $F_w>F_p$ for these events) and below the line for events of high cumulative probability (such that $F_w<F_p$).
 
-As a final piece of nomenclature, we will use the terms \textit{location}, \textit{scale}, and {\it shape} when discussing probability distributions. Consider a standard normal distribution $\ND(0,1)$ -- here, the parameters indicate location 0 and squared scale 1 (for a Gaussian the location is the mean and scale is the standard deviation). For a general random variable $X$, with arbitrary parameters for location $\mu_X$ and scale $\sigma_X$, the transformation in \eref{SN} obtains the identically-shaped location-0 and scale-1 distribution for the so standardised random variable
+As a final piece of nomenclature, we will use the terms \textit{location}, \textit{scale}, and {\it shape} when discussing probability distributions. Consider a standard normal distribution $\ND(0,1)$, whose parameters indicate location 0 and squared scale 1. (For a Gaussian, the location is the mean and scale is the standard deviation.) For a general random variable $X$, with arbitrary location parameter $\mu_X$ and scale parameter $\sigma_X$, the following transformation produces a standardised random variable with identically-shaped distribution, but with location 0 and scale 1:
 \be \elabel{SN}
-	Z = \frac{X-\overbrace{\mu_X \mathstrut}^{\text{location}}}{\underbrace{\sigma_X\mathstrut}_{\text{scale}}}
-%		~, \qquad \qquad Z \sim \ND(0,1
-~.
+	Z = \frac{X-\overbrace{\mu_X \mathstrut}^{\text{location}}}{\underbrace{\sigma_X\mathstrut}_{\text{scale}}}~.
 \ee
-Thus the PDF of $Z$, $p(z)$, is a density with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the {\it shape} of the distribution: two distributions have the same {\it shape} if they can be made to coincide through the linear transformation in \eref{SN}.
+Thus the PDF of $Z$, $p(z)$, is a density function with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the {\it shape} of the distribution: two distributions have the same {\it shape} if they can be made to coincide through a linear transformation of the form \eref{SN}.
 
 % We will show below that these observations are predicted by considerations of uncertainty about probabilities, or more generally by uncertainty about model parameters.
 
 \section{Probability weighting as a difference between models} \seclabel{ModelDiff}
-
 Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a model of the world. Nor do we assume the DM to know ``the truth'' -- he has another model of the world. From our perspective \fref{TK1992} merely shows that the two models differ. It says nothing about who is right or wrong.
 %This is true even in the context of a lab experiment, as we discuss in detail in \secref{Reasons_for}.
 
