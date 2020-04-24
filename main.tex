@@ -413,26 +413,25 @@ Deviations from a rationality norm which are formerly perceived by DOs as cognit
 % 2: greater range 
 A DO often has control over, and essentially perfect knowledge of, the decision problem he poses. A DM does not have such knowledge, and this ignorance will often translate into additional assumed uncertainty. For example, the DO may know the true probabilities of some gamble in an experiment; the DM may in addition have doubts about the DO's sincerity, or whether he (the DM himself) fully understands the rules of the game. We will return to this in \secref{condition2}, where we provide an analytical solution for the conceptual insight about ecological rational behaviour.
 \subsection{Some meanings of ``probability'' \seclabel{tricky}}
-
 Many thousands of pages have been written about the meaning of probability. We will not attempt a summary of the philosophical debate and instead highlight a few relevant points.
 %systematically different incentives from a real-world DM. The DO tends to have an incentive to estimate, or indeed state, probabilities as their most likely value or ``true'' value (if the DO can control the probabilities, \eg in an experiment); the DM simply strives to behave optimally under uncertainty, and that uncertainty often includes uncertainty about the probabilities or model parameters.
 
 %The conundrum surrounding the observed phenomenon of the characteristic inverse-S-shaped probability weighting vanishes if probability is understood as individual ignorance, \ie somebody's uncertainty about an observable.
 
-\paragraph{Frequency-in-an-ensemble interpretation of probability}
+\paragraph{Frequency-in-an-ensemble interpretation of probability\\}
 Consider the simple pro\-babilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.'' 
 
 It is thus a statement about a model. How exactly it is linked to physical reality is not completely clear. 
 
 %Sometimes ensembles are real, for instance, when we say the probability of having a car accident is 1\% per 10000 km driven -- that's a summary of statistics collected over a large ensemble of cars. In this case, it's a real ensemble that existed in the past, not an imagined one in the future. 
 
-\paragraph{Frequency-over-time interpretation of probability}
-In some situations, the statement ``70\% probability of rain here tomorrow'' refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare recent measurements (of wind and pressure today, say) to measurements further in the past -- weeks, months, years earlier, that were similar and where one had reason to believe that what had happened 1 day later would be similar to what would happen tomorrow.
+\paragraph{Frequency-over-time interpretation of probability\\}
+In some situations, the statement ``70\% probability of rain here tomorrow'' refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare today's measurements (of, say, wind and pressure) to those from the past -- weeks, months, or even years earlier. Forecasts were made on the assumption that the weather tomorrow would resemble the weather that had followed similar conditions in the historical record.
 
-Rather than a statement about outcomes of an in-silico model, the statement may thus be a summary of real-world observations over a long time.
+Rather than a statement about outcomes of an {\it in silico} model, the statement may thus be a summary of real-world observations over a long time.
 
-\paragraph{Degree-of-belief interpretation of probability}
-No matter how ``probability'' relates to a frequentist physical statement (whether with respect to an ensemble of simultaneously possible futures or to a sequence of actual past futures), it also corresponds to a mental state of believing something with a degree of conviction: ``I'm 90\% sure I left my wallet in that taxi.''
+\paragraph{Degree-of-belief interpretation of probability\\}
+No matter how ``probability'' relates to a frequentist physical statement, whether with respect to an ensemble of simultaneously possible futures or to a sequence of actual past futures, it also corresponds to a mental state of believing something with a degree of conviction: ``I'm 90\% sure I left my wallet in that taxi.''
 
 For our purpose it suffices to say that there's no guarantee that a probabilistic statement will be interpreted by the receiver (the DM) as it was intended by whoever made the statement (the DO).
 
@@ -446,25 +445,7 @@ Around 99.5\% of such time series will contain 0 or 1 events. Na\"{i}vely, then,
 
 A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision making. Specifically, the DM should acknowledge that, due to his lack of information, {\it prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.
 
-Formalising these thoughts, we find that so long as relative uncertainties are larger for rare events than for common events (which, generically, they are), an inverse-S curve emerges\footnote{
-For an inverse-S curve to emerge, small probability densities have to be overestimated ($w>p$) and large ones underestimated ($w<p$), as is indeed the case, for example in \fref{square_root_error}. Let's connect this statement to one about relative uncertainties. The decision weight in \fref{square_root_error} is 
-arrived at by adding to the probability $p(x)$ the uncertainty $\err{p(x)}$ and normalising the result, 
-\be
-w(x)=\frac{p(x)+\err{p(x)}}{\int_{-\infty}^{\infty} p(s)+\err{p(s)} ds}.
-\ee
-This can be expressed as
-\be
-w(x)=p(x) \left(\frac{1+\frac{\err{p(x)}}{p(x)}}{\int_{-\infty}^{\infty} p(s)\left\{1+\frac{\err{p(s)}}{p(s)}\right\} ds}\right),
-\elabel{rel_error}
-\ee
-where $\frac{\err{p(x)}}{p(x)}$ is the relative error, and the denominator of  \eref{rel_error} is some normalisation constant. If the relative error is larger for small probabilities than for large probabilities, then small probabilities are enhanced more (the summand $\frac{\err{p(x)}}{p(x)}$ in the numerator is greater) than large probabilities. The normalisation constant scales down all probabilities equally, and where the enhancement was greater, $w(x)$ ends up above $p(x)$, and where it was lower $w(x)$ ends up below $p(x)$: if the relative error is larger for small probabilities, an inverse-S curve emerges.
-We can say one more thing about this procedure. Provided an inverse-S curve exists, $p(x)$ and $w(x)$ cross somewhere (see \fref{square_root_error}). This happens when the relative error reaches its expectation value. Re-writing \eref{rel_error} yields
-\be
-w(x)=p(x) \left(\frac{1+\frac{\err{p}}{p}}{1+\ave{\frac{\err{p}}{p}}}\right),
-\ee
-wherefore $w(x)=p(x)$ iff $\frac{\err{p}}{p}=\ave{\frac{\err{p}}{p}}.$
-}.
-Let's make a simple scaling argument and then check it with a simulation. For an asymptotic probability density $p(x)$, the number of events $n(x)$ we see in the small interval $[x, x+ \delta x]$ in a time series of $T$ observations is proportional to $p(x)$, to $\delta x$, and to $T$. So we have $n(x) \sim p(x) \delta x T$, where we mean by $\sim$ ``scales like.'' We also know that such counts, for example in the simple Poissonian case, are random variables whose uncertainties scale like $\sqrt{n(x)}$.
+Formalising these thoughts, we find that so long as relative uncertainties are larger for rare events than for common events -- which, generically, they are -- then an inverse-S curve emerges. See \secref{relative_errors} for a detailed discussion. Here we make a simple scaling argument and then check it with a simulation. For an asymptotic probability density $p(x)$, the number of events $n(x)$ we see in the small interval $[x, x+ \delta x]$ in a time series of $T$ observations is proportional to $p(x)$, to $\delta x$, and to $T$. So we have $n(x) \sim p(x) \delta x T$, where we mean by $\sim$ ``scales like.'' We also know that such counts, for example in the simple Poissonian case, are random variables whose uncertainties scale like $\sqrt{n(x)}$.
 
 If we knew the asymptotic probability density $p(x)$, we could make an estimate of the count as
 \be
@@ -486,61 +467,53 @@ as its uncertainty, which we have expressed in terms of the estimate itself.
 
 The standard error, $ \sqrt{\phat(x)/T \delta x}$, in an estimated probability density shrinks as the probability decreases. However, the relative error in the estimate is $1/\sqrt{\phat(x)T\delta x}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, and constitutes the key message of this section. Errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for lower probabilities, but relative errors are larger. 
 
-Let's assume that the DM is aware of the uncertainties in his estimates and, furthermore, that he does not like surprises. To avoid surprises, he adds the standard error to his estimate of the probability density, $\phat(x)$, in order to construct his decision weight density, $w(x)$. In effect, he constructs a reasonable worst case for each of his estimates. After normalising, this conservative strategy yields
+Let's assume that the DM is aware of the uncertainties in his estimates and, furthermore, that he does not like surprises. To avoid surprises, he adds the standard error to his estimate of the probability density, $\phat(x)$, in order to construct his decision weight density, $w(x)$. In effect, he constructs a reasonable worst case for each of his estimates. After normalising, this conservative strategy yields generically,
 \be
-w(x)=\frac{\phat(x)+\sqrt{\frac{\phat(x)}{T \delta x}}}{\int_{-\infty}^{\infty}\left(\phat(s)+\sqrt{\frac{\phat(s)}{T \delta x}}\right)ds}\,.
-\elabel{weight_density}
+w(x) = \frac{\phat(x)+\err{\phat(x)}}{\int_{-\infty}^{\infty}\left(\phat(s)+\err{\phat(s)}\right)ds}~,
+\elabel{weight_density_gen}
 \ee
-\AA{Change this to
+and specifically, for the type of uncertainty we consider,
 \be
-w(x)=\frac{\phat(x)+\err{\phat(x)}}{\int_{-\infty}^{\infty}\left[\phat(s)+\err{\phat(s)}\right]ds}\,.
+w(x)= \frac{\phat(x)+\sqrt{\frac{\phat(x)}{T \delta x}}}{\int_{-\infty}^{\infty}\left(\phat(s)+\sqrt{\frac{\phat(s)}{T \delta x}}\right)ds}~.
+\elabel{weight_density_spec}
 \ee
-Simpler, more general, and more consistent with later text. Also, will make the relative error analysis simpler, if we choose to offer it.}
 
-The cautionary correction term is parametrised by $T\delta x$, which scales like the number of observations in $[x, x+\delta x]$. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\phat(x)$ become consistent with the asymptotic density, $p(x)$. With perfect information, a DM need not adjust decisions to account for uncertainty.
+Note that the cautionary correction term in \eref{weight_density_spec} is parametrised by $T\delta x$, which scales like the number of observations in $[x, x+\delta x]$. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\phat(x)$ become consistent with the asymptotic density, $p(x)$. With perfect information, a DM need not adjust decisions to account for uncertainty.
 
-Does our analysis, culminating in \eref{weight_density}, reproduce the stylised facts of probability weighting, in particular the inverse-S curve? We check in two ways. First, analytically, by applying the DM's cautionary correction in \eref{weight_density} directly to reference probability density functions. Second, by simulating the DM compiling counts of outcomes drawn from reference distributions, from which he estimates probability densities and their uncertainties. The simulation is meant to explore how noisy the effect is when a DM really only sees a single time series. The python code is available at \url{https://bit.ly/2zmJfuk}, and a jupyter notebook can be loaded to manipulate the code in an online environment at \url{https://bit.ly/2yvrwQV}. In both cases, we treat the DO as using the reference distribution to make his predictions of the DM's behaviour.
-\MK{Create customised bit.ly links}
+Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_density_spec}, reproduce the stylised facts of probability weighting, in particular the inverse-S curve? We check in two ways. First, analytically, by applying the DM's cautionary correction in \eref{weight_density_spec} directly to reference probability density functions. Second, by simulating the DM compiling counts of outcomes drawn from reference distributions, from which he estimates probability densities and their uncertainties. The simulation is meant to explore how noisy the effect is when a DM really only sees a single time series. The Python code is available at \url{https://bit.ly/2zmJfuk}, and a Jupyter notebook can be loaded to manipulate the code in an online environment at \url{https://bit.ly/2yvrwQV}. In both cases, we treat the DO as using the reference distribution to make his predictions of the DM's behaviour.
+%\MK{Create customised bit.ly links}
 
-\Fref{square_root_error} shows the resulting PDFs and CDF mappings generated by setting $\phat(x)$ in \eref{weight_density} to be the probability density functions for a Gaussian distribution and a fat-tailed $t$-distribution. Inverse-S curves are found for both distributions and the effect is more pronounced for the fat-tailed distribution.
+\Fref{square_root_error} shows the resulting PDFs and CDF mappings generated by setting $\phat(x)$ in \eref{weight_density_spec} to be the probability density functions for a Gaussian distribution and a fat-tailed $t$-distribution. Inverse-S curves are found for both distributions and the effect is more pronounced for the fat-tailed distribution.
 \begin{figure}[htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/square_root_error.pdf}
-\caption{{\bf Mapping PDFs and CDFs with estimation errors.} PDFs (left) and inverse-S curves (right) arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a $t$-distribution (shape 2, location 0, bottom line), and the DM uses decision weights according to \eref{weight_density} with $T\delta x=10$. For the fat-tailed $t$-distribution (in the bottom line) the difference between $p(x)$ and $w(x)$ is more pronounced.}
+\caption{{\bf Mapping PDFs and CDFs with estimation errors.} PDFs (left) and inverse-S curves (right) arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a $t$-distribution (shape 2, location 0, bottom line), and the DM uses decision weights according to \eref{weight_density_spec} with $T\delta x=10$. For the fat-tailed $t$-distribution (in the bottom line) the difference between $p(x)$ and $w(x)$ is more pronounced.}
 \flabel{square_root_error}
 \end{figure}
 
-\Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which he counts into bins. In the simulation, a probability density, $\phat(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err{\phat(x)}$, is obtained numerically as standard deviation in each $\phat(x)$ over 1000 parallel simulations. The DM's decision weights are then obtained according to \eref{weight_density}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
+\Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which he counts into bins. In the simulation, a probability density, $\phat(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err{\phat(x)}$, is obtained numerically as standard deviation in each $\phat(x)$ over 1000 parallel simulations. The DM's decision weights are then obtained according to \eref{weight_density_gen}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
 \begin{figure}[htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/dm_count_sim.pdf}
-\caption{{\bf Simulations of a DM estimating probability densities by counting events in a finite series of observations.} Left: estimated probability densities for $T=100$ Gaussian (top; location 0, scale 2) and $t$-distributed (bottom; location 0, scale 1, shape 1.5) variates counted in bins of width $\delta x=0.4$. Red bars show the estimates, $\phat(x)$, and blue bars show the estimates with one standard error added, $\phat(x)+\err{\phat(x)}$. Right: inverse-S curves for a DO who assumes $p(x)$ follows a Gaussian (top) and $t$-distribution (bottom), while the DM uses decision weight density, $w(x)$, derived by normalising his conservative estimates (blue bars on left) according to \eref{weight_density}.
+\caption{{\bf Simulations of a DM estimating probability densities by counting events in a finite series of observations.} Left: estimated probability densities for $T=100$ Gaussian (top; location 0, scale 2) and $t$-distributed (bottom; location 0, scale 1, shape 1.5) variates counted in bins of width $\delta x=0.4$. Red bars show the estimates, $\phat(x)$, and blue bars show the estimates with one standard error added, $\phat(x)+\err{\phat(x)}$. Right: inverse-S curves for a DO who assumes $p(x)$ follows a Gaussian (top) and $t$-distribution (bottom), while the DM uses decision weight density, $w(x)$, derived by normalising his conservative estimates (blue bars on left) according to \eref{weight_density_gen}.
 }
 \flabel{dm_count_sim}
 \end{figure}
 
 \FloatBarrier
 \subsubsection{Typical situations of DO and DM: ergodicity}
-To recap: behavioural economics observes that DOs tend to assign lower weights to low-probability events than DMs.
-While behavioural economics commonly assumes that the DM is wrong, we make no such judgement. In any decision problem, the aim of the decision must be taken into account, and that crucially depends on the situation of the individual. 
+To recap: behavioural economists observe that DOs tend to assign lower weights to low-probability events than DMs. While behavioural economists commonly assume that the DM is wrong, we make no such judgement. In any decision problem, the aim of the decision must be taken into account. Crucially, this aim depends on the situation of the individual. 
 
-The two types of modellers (DO and DM) pursue different goals. Broadly, the DO tends to be a behavioural scientist without personal exposure to the success or failure of the DM (who tends to be a test subject or someone whose behaviour is being observed in the wild). The DM, of course, has such exposure. Throughout the history of economics, it has been a common mistake, by DOs, to assume that DMs optimise what happens to them on average in an ensemble. To the DM what happens to the ensemble is usually not a primary concern -- instead, the concern of the DM is what happens to him over time. Not distinguishing between these two perspectives is only permissible if they lead to identical predictions, meaning only if the relevant observables are ergodic \citep{Peters2019b}. 
+The two types of modellers (DO and DM) pursue different goals. In our thought experiment, the DO is a behavioural scientist without personal exposure to the success or failure of the DM, whom we imagine as a test subject or someone whose behaviour is being observed in the wild. The DM, of course, has such exposure. Throughout the history of economics, it has been a common mistake, by DOs, to assume that DMs optimise what happens to them on average in an ensemble. To the DM, what happens to the ensemble is seldom a primary concern. Instead, he is concerned with what happens to him over time. Not distinguishing between these two perspectives is only permissible if they lead to identical predictions, meaning only if the relevant observables are ergodic \citep{Peters2019b}. 
 
 It is now well known that this is usually not the case in the following sense: DMs are usually observed making choices that affect their wealth, and wealth is usually modelled as a stochastic process that is not ergodic. The ensemble average of wealth does not behave like the time average of wealth.
 
-The most striking example is the universally important case of noisy multiplicative growth -- universal because it is the fundamental process that drives evolution: noise generates the diversity of phenotypes necessary for evolution and multiplicative growth (self-reproduction) is how successful phenotypes spread their traits in a population. This process operates on amoeba, as it does on forms of institutions, and on investment strategies.
-%\citep{PetersAdamou2015a}
+The most striking example is the universally important case of noisy multiplicative growth, the simplest model of which is geometric Brownian motion, $dx=x(\mu dt+\sigma dW)$. In the present context of human economic decisions, this is the most widely used model of the evolution of invested wealth. The average over the full statistical ensemble (often studied by the DO) of geometric Brownian motion grows as $\exp(\mu t)$. Each individual trajectory, on the other hand, grows in the long run as $\exp[(\mu-\frac{\sigma^2}{2})t]$. If the DO takes the ensemble perspective, he will deem the fluctuations irrelevant whereas, from the DM's time perspective, they reduce growth. So, while a DO curious about the ensemble may suffer no consequences from disregarding rare events, hedging against such events is central to the DM's success.
+% (not only but ultimately also for survival).
 
-\AA{Para above, from ``universal'' onwards, seems weirdly off-topic and distracting. I don't think we need it. Suggest remove and merge first sentence with para below.}
-
-The simplest model of noisy multiplicative growth is geometric Brownian motion, $dx=x(\mu dt+\sigma dW)$. The average over the full statistical ensemble (often studied by the DO) of geometric Brownian motion grows as $\exp(\mu t)$. The individual trajectory of geometric Brownian motion, on the other hand, grows in the long run as $\exp[(\mu-\frac{\sigma^2}{2})t]$.
-
-If the DO takes the ensemble perspective, he will deem the fluctuations irrelevant. But from the DM's time perspective, they reduce growth. While a DO interested in the ensemble may get away with disregarding low-probability events, for the DM's success hedging against rare events is of crucial importance (not only but ultimately also for survival).
-
-The difference between how these two perspectives evaluate the effects of probabilistic events is qualitatively in line with the observed phenomena we set out to explain. The DM typically has large uncertainties, especially for low-probability events, and has an evolutionary incentive to err on the side of caution, \ie to behave as though low-probability (extreme) events had a higher probability than in the DO's model.
+The difference between how these two perspectives evaluate the effects of probabilistic events is qualitatively in line with the observed phenomena we set out to explain. The DM typically has large uncertainties, especially for low-probability events, and has an evolutionary incentive to err on the side of caution, \ie to behave as though extreme events have a higher probability than in the DO's model.
 
 \section{Fitting the model to experimental results \seclabel{Fitting_the}}
-
 Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's fitting exercise of the inverse-S curve by way of the physically unmotivated function $\tilde{F}^{TK}_w$, \eref{correspondence}, resembles the data no better than our mechanistically constrained model. This is particularly evident in the bottom two panels of \fref{Gauss_scale_location_both_KT}, which show that a Gaussian $w(x)$ whose scale and location differ from those of $p(x)$ reproduces the fitted functional shape of $\tilde{F}^{TK}_w$.
 
 For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \cite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \cite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF
@@ -632,4 +605,24 @@ The model of estimating probabilities from real time series, which we discuss in
 % BibTeX users please use one of
 \bibliographystyle{apalike}
 \bibliography{../LML_bibliography/bibliography} % name your BibTeX data base
+
+\appendix
+\section{Inverse-S from relative errors in probabilities}
+\seclabel{relative_errors}
+For an inverse-S curve to emerge, small probability densities have to be overestimated ($w>p$) and large ones underestimated ($w<p$), as is indeed the case, for example in \fref{square_root_error}. Let's connect this statement to one about relative uncertainties. The decision weight is arrived at by adding the probability $p(x)$ to its uncertainty $\err{p(x)}$ and normalising, as we did in \eref{weight_density_gen}, \ie
+\be
+w(x)=\frac{p(x)+\err{p(x)}}{\int_{-\infty}^{\infty} \left( p(s)+\err{p(s)} \right) ds}~.
+\ee
+This can be expressed as
+\be
+w(x)=p(x) \left(\frac{1+\frac{\err{p(x)}}{p(x)}}{\int_{-\infty}^{\infty} p(s)\left\{1+\frac{\err{p(s)}}{p(s)}\right\} ds}\right)~,
+\elabel{rel_error}
+\ee
+where $\frac{\err{p(x)}}{p(x)}$ is the relative error, and the denominator of  \eref{rel_error} is a normalisation constant. If the relative error is larger for small probabilities than for large probabilities, then small probabilities are enhanced more (the summand $\frac{\err{p(x)}}{p(x)}$ in the numerator is greater) than large probabilities. The normalisation constant scales down all probabilities equally, and where the enhancement was greater, $w(x)$ ends up above $p(x)$, and where it was lower $w(x)$ ends up below $p(x)$. So, if the relative error is larger for small probabilities, an inverse-S curve emerges.
+
+We can say one more thing about this procedure. If an inverse-S curve exists, then $p(x)$ and $w(x)$ cross somewhere, see \fref{square_root_error}. This happens when the relative error attains its expectation value (with respect to the density $p$). Rewriting \eref{rel_error} as
+\be
+w(x)=p(x) \left(\frac{1+\frac{\err{p}}{p}}{1+\ave{\frac{\err{p}}{p}}}\right),
+\ee
+we see that $w(x)=p(x)$ when $\frac{\err{p}}{p}=\ave{\frac{\err{p}}{p}}.$
 \end{document}
