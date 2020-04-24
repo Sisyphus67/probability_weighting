@@ -69,7 +69,6 @@
 \newcommand{\cf}{{\it c.f.}\ }
 \newcommand{\vs}{{\it vs.}\ }
 \newcommand{\vv}{{\it v.v.}\ }
-\newcommand{\err}{\epsilon}
 \newcommand{\gensst}{g_{\text{est}}}
 \newcommand{\be}{\begin{equation}}
 \newcommand{\ee}{\end{equation}}
@@ -82,6 +81,9 @@
 \newcommand{\mun}[1]{{\mu^{(#1)}}}
 \newcommand{\sigman}[1]{{\sigma^{(#1)}}}
 \newcommand{\sigmac}{{\sigma_\rho}}
+\newcommand{\err}[1]{\varepsilon\left[#1\right]}
+\newcommand{\phat}{\hat{p}}
+\newcommand{\nhat}{\hat{n}}
 
 \newcommand{\ND}{\mathcal{N}} % Normal Distribution
 \newcommand{\sigmat}{\tilde{\sigma}}
@@ -446,21 +448,21 @@ A DM who must estimate probabilities from observations is well advised to accoun
 
 Formalising these thoughts, we find that so long as relative uncertainties are larger for rare events than for common events (which, generically, they are), an inverse-S curve emerges\footnote{
 For an inverse-S curve to emerge, small probability densities have to be overestimated ($w>p$) and large ones underestimated ($w<p$), as is indeed the case, for example in \fref{square_root_error}. Let's connect this statement to one about relative uncertainties. The decision weight in \fref{square_root_error} is 
-arrived at by adding to the probability $p(x)$ the uncertainty $\err{(p)}$ and normalising the result, 
+arrived at by adding to the probability $p(x)$ the uncertainty $\err{p(x)}$ and normalising the result, 
 \be
-w(x)=\frac{p(x)+\err[p(x)]}{\int_{-\infty}^{\infty} p(s)+\err[p(s)] ds}.
+w(x)=\frac{p(x)+\err{p(x)}}{\int_{-\infty}^{\infty} p(s)+\err{p(s)} ds}.
 \ee
 This can be expressed as
 \be
-w(x)=p(x) \left(\frac{1+\frac{\err[p(x)]}{p(x)}}{\int_{-\infty}^{\infty} p(s)\left\{1+\frac{\err[p(s)]}{p(s)}\right\} ds}\right),
+w(x)=p(x) \left(\frac{1+\frac{\err{p(x)}}{p(x)}}{\int_{-\infty}^{\infty} p(s)\left\{1+\frac{\err{p(s)}}{p(s)}\right\} ds}\right),
 \elabel{rel_error}
 \ee
-where $\frac{\err(p(x))}{p(x)}$ is the relative error, and the denominator of  \eref{rel_error} is some normalisation constant. If the relative error is larger for small probabilities than for large probabilities, then small probabilities are enhanced more (the summand $\frac{\err[p(x)]}{p(x)}$ in the numerator is greater) than large probabilities. The normalisation constant scales down all probabilities equally, and where the enhancement was greater, $w(x)$ ends up above $p(x)$, and where it was lower $w(x)$ ends up below $p(x)$: if the relative error is larger for small probabilities, an inverse-S curve emerges.
+where $\frac{\err{p(x)}}{p(x)}$ is the relative error, and the denominator of  \eref{rel_error} is some normalisation constant. If the relative error is larger for small probabilities than for large probabilities, then small probabilities are enhanced more (the summand $\frac{\err{p(x)}}{p(x)}$ in the numerator is greater) than large probabilities. The normalisation constant scales down all probabilities equally, and where the enhancement was greater, $w(x)$ ends up above $p(x)$, and where it was lower $w(x)$ ends up below $p(x)$: if the relative error is larger for small probabilities, an inverse-S curve emerges.
 We can say one more thing about this procedure. Provided an inverse-S curve exists, $p(x)$ and $w(x)$ cross somewhere (see \fref{square_root_error}). This happens when the relative error reaches its expectation value. Re-writing \eref{rel_error} yields
 \be
-w(x)=p(x) \left(\frac{1+\frac{\err(p)}{p}}{1+\ave{\frac{\err(p)}{p}}}\right),
+w(x)=p(x) \left(\frac{1+\frac{\err{p}}{p}}{1+\ave{\frac{\err{p}}{p}}}\right),
 \ee
-wherefore $w(x)=p(x)$ iff $\frac{\err(p)}{p}=\ave{\frac{\err(p)}{p}}.$
+wherefore $w(x)=p(x)$ iff $\frac{\err{p}}{p}=\ave{\frac{\err{p}}{p}}.$
 }.
 Let's make a simple scaling argument and then check it with a simulation. For an asymptotic probability density $p(x)$, the number of events $n(x)$ we see in the small interval $[x, x+ \delta x]$ in a time series of $T$ observations is proportional to $p(x)$, to $\delta x$, and to $T$. So we have $n(x) \sim p(x) \delta x T$, where we mean by $\sim$ ``scales like.'' We also know that such counts, for example in the simple Poissonian case, are random variables whose uncertainties scale like $\sqrt{n(x)}$.
 
@@ -469,38 +471,38 @@ If we knew the asymptotic probability density $p(x)$, we could make an estimate 
 n(x) \approx p(x) \delta x T \pm \sqrt{p(x) \delta x T} ~.
 \elabel{count_est}
 \ee
-We would write $\hat{n}(x) \equiv p(x) \delta x T$ as the estimate of $n(x)$ and $\err(\hat{n}) \equiv \sqrt{p(x) \delta x T}$ as its uncertainty. Of course, this situation seldom applies, because usually we do not know $p(x)$.
+We would write $\nhat(x) \equiv p(x) \delta x T$ as the estimate of $n(x)$ and $\err{\nhat(x)} \equiv \sqrt{p(x) \delta x T}$ as its uncertainty. Of course, this situation seldom applies, because usually we do not know $p(x)$.
 
 Conversely, and more realistically, if we observe a count $n(x)$, then we can use the scaling $ p(x) \sim n(x)/T\delta x$ to make an estimate of the asymptotic probability density as
 \be
 p(x) \approx \frac{n(x)}{T\delta x} \pm \frac{\sqrt{n(x)}}{T \delta x} ~.
 \elabel{prob_est}
 \ee
-We write $\hat{p}(x) \equiv n(x)/T\delta x$ as the estimate of $p(x)$, and
+We write $\phat(x) \equiv n(x)/T\delta x$ as the estimate of $p(x)$, and
 \be
-\err(\hat{p}) \equiv \frac{\sqrt{n(x)}}{T \delta x} = \sqrt{\frac{\hat{p}(x)}{T \delta x}}
+\err{\phat(x)} \equiv \frac{\sqrt{n(x)}}{T \delta x} = \sqrt{\frac{\phat(x)}{T \delta x}}
 \ee
 as its uncertainty, which we have expressed in terms of the estimate itself.
 
-The standard error, $ \sqrt{\hat{p}(x)/T \delta x}$, in an estimated probability density shrinks as the probability decreases. However, the relative error in the estimate is $1/\sqrt{\hat{p}(x)T\delta x}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, and constitutes the key message of this section. Errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for lower probabilities, but relative errors are larger. 
+The standard error, $ \sqrt{\phat(x)/T \delta x}$, in an estimated probability density shrinks as the probability decreases. However, the relative error in the estimate is $1/\sqrt{\phat(x)T\delta x}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, and constitutes the key message of this section. Errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for lower probabilities, but relative errors are larger. 
 
-Let's assume that the DM is aware of the uncertainties in his estimates and, furthermore, that he does not like surprises. To avoid surprises, he adds the standard error to his estimate of the probability density, $\hat{p}(x)$, in order to construct his decision weight density, $w(x)$. In effect, he constructs a reasonable worst case for each of his estimates. After normalising, this conservative strategy yields
+Let's assume that the DM is aware of the uncertainties in his estimates and, furthermore, that he does not like surprises. To avoid surprises, he adds the standard error to his estimate of the probability density, $\phat(x)$, in order to construct his decision weight density, $w(x)$. In effect, he constructs a reasonable worst case for each of his estimates. After normalising, this conservative strategy yields
 \be
-w(x)=\frac{\hat{p}(x)+\sqrt{\frac{\hat{p}(x)}{T \delta x}}}{\int_{-\infty}^{\infty}\left(\hat{p}(s)+\sqrt{\frac{\hat{p}(s)}{T \delta x}}\right)ds}\,.
+w(x)=\frac{\phat(x)+\sqrt{\frac{\phat(x)}{T \delta x}}}{\int_{-\infty}^{\infty}\left(\phat(s)+\sqrt{\frac{\phat(s)}{T \delta x}}\right)ds}\,.
 \elabel{weight_density}
 \ee
 \AA{Change this to
 \be
-w(x)=\frac{\hat{p}(x)+\err(\hat{p})}{\int_{-\infty}^{\infty}\left[\hat{p}(s)+\err(\hat{p})\right]ds}\,.
+w(x)=\frac{\phat(x)+\err{\phat(x)}}{\int_{-\infty}^{\infty}\left[\phat(s)+\err{\phat(s)}\right]ds}\,.
 \ee
 Simpler, more general, and more consistent with later text. Also, will make the relative error analysis simpler, if we choose to offer it.}
 
-The cautionary correction term is parametrised by $T\delta x$, which scales like the number of observations in $[x, x+\delta x]$. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\hat{p}(x)$ become consistent with the asymptotic density, $p(x)$. With perfect information, a DM need not adjust decisions to account for uncertainty.
+The cautionary correction term is parametrised by $T\delta x$, which scales like the number of observations in $[x, x+\delta x]$. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\phat(x)$ become consistent with the asymptotic density, $p(x)$. With perfect information, a DM need not adjust decisions to account for uncertainty.
 
 Does our analysis, culminating in \eref{weight_density}, reproduce the stylised facts of probability weighting, in particular the inverse-S curve? We check in two ways. First, analytically, by applying the DM's cautionary correction in \eref{weight_density} directly to reference probability density functions. Second, by simulating the DM compiling counts of outcomes drawn from reference distributions, from which he estimates probability densities and their uncertainties. The simulation is meant to explore how noisy the effect is when a DM really only sees a single time series. The python code is available at \url{https://bit.ly/2zmJfuk}, and a jupyter notebook can be loaded to manipulate the code in an online environment at \url{https://bit.ly/2yvrwQV}. In both cases, we treat the DO as using the reference distribution to make his predictions of the DM's behaviour.
 \MK{Create customised bit.ly links}
 
-\Fref{square_root_error} shows the resulting PDFs and CDF mappings generated by setting $\hat{p}(x)$ in \eref{weight_density} to be the probability density functions for a Gaussian distribution and a fat-tailed $t$-distribution. Inverse-S curves are found for both distributions and the effect is more pronounced for the fat-tailed distribution.
+\Fref{square_root_error} shows the resulting PDFs and CDF mappings generated by setting $\phat(x)$ in \eref{weight_density} to be the probability density functions for a Gaussian distribution and a fat-tailed $t$-distribution. Inverse-S curves are found for both distributions and the effect is more pronounced for the fat-tailed distribution.
 \begin{figure}[htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/square_root_error.pdf}
@@ -508,11 +510,11 @@ Does our analysis, culminating in \eref{weight_density}, reproduce the stylised 
 \flabel{square_root_error}
 \end{figure}
 
-\Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which he counts into bins. In the simulation, a probability density, $\hat{p}(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err(\hat{p})$, is obtained numerically as standard deviation in each $\hat{p}(x)$ over 1000 parallel simulations. The DM's decision weights are then obtained according to \eref{weight_density}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
+\Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which he counts into bins. In the simulation, a probability density, $\phat(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err{\phat(x)}$, is obtained numerically as standard deviation in each $\phat(x)$ over 1000 parallel simulations. The DM's decision weights are then obtained according to \eref{weight_density}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
 \begin{figure}[htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/dm_count_sim.pdf}
-\caption{{\bf Simulations of a DM estimating probability densities by counting events in a finite series of observations.} Left: estimated probability densities for $T=100$ Gaussian (top; location 0, scale 2) and $t$-distributed (bottom; location 0, scale 1, shape 1.5) variates counted in bins of width $\delta x=0.4$. Red bars show the estimates, $\hat{p}(x)$, and blue bars show the estimates with one standard error added, $\hat{p}(x)+\err({\hat{p}})$. Right: inverse-S curves for a DO who assumes $p(x)$ follows a Gaussian (top) and $t$-distribution (bottom), while the DM uses decision weight density, $w(x)$, derived by normalising his conservative estimates (blue bars on left) according to \eref{weight_density}.
+\caption{{\bf Simulations of a DM estimating probability densities by counting events in a finite series of observations.} Left: estimated probability densities for $T=100$ Gaussian (top; location 0, scale 2) and $t$-distributed (bottom; location 0, scale 1, shape 1.5) variates counted in bins of width $\delta x=0.4$. Red bars show the estimates, $\phat(x)$, and blue bars show the estimates with one standard error added, $\phat(x)+\err{\phat(x)}$. Right: inverse-S curves for a DO who assumes $p(x)$ follows a Gaussian (top) and $t$-distribution (bottom), while the DM uses decision weight density, $w(x)$, derived by normalising his conservative estimates (blue bars on left) according to \eref{weight_density}.
 }
 \flabel{dm_count_sim}
 \end{figure}
