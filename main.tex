@@ -192,11 +192,12 @@ In \fref{TK1992} we reproduce the first such visual summary from \citet[p.~310]{
 \flabel{TK1992}
 \end{figure}
 % introduce ``inverse-S'' nomenclature here
-Plotting $F_w$ as a function of $F_p$ generates a curve, whose generic shape we shall call the ``inverse-S''. The inverse-S is the main observational finding in probability weighting: it sits above the line $F_w=F_p$ for events of low cumulative probability (such that $F_w>F_p$ for these events) and below the line for events of high cumulative probability (such that $F_w<F_p$).
+Plotting $F_w$ as a function of $F_p$ generates a curve, whose generic shape we shall call the ``inverse-S''. The inverse-S is the main observational finding in probability weighting: it sits above the diagonal $F_w=F_p$ for events of low cumulative probability (such that $F_w>F_p$ for these events) and below the diagonal for events of high cumulative probability (such that $F_w<F_p$).
 
 As a final piece of nomenclature, we will use the terms \textit{location}, \textit{scale}, and {\it shape} when discussing probability distributions. Consider a standard normal distribution $\ND(0,1)$, whose parameters indicate location 0 and squared scale 1. (For a Gaussian, the location is the mean and scale is the standard deviation.) For a general random variable $X$, with arbitrary location parameter $\mu_X$ and scale parameter $\sigma_X$, the following transformation produces a standardised random variable with identically-shaped distribution, but with location 0 and scale 1:
-\be \elabel{SN}
-	Z = \frac{X-\overbrace{\mu_X \mathstrut}^{\text{location}}}{\underbrace{\sigma_X\mathstrut}_{\text{scale}}}~.
+\be
+Z = \frac{X-\overbrace{\mu_X \mathstrut}^{\text{location}}}{\underbrace{\sigma_X\mathstrut}_{\text{scale}}}~.
+\elabel{SN}
 \ee
 Thus the PDF of $Z$, $p(z)$, is a density function with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the {\it shape} of the distribution: two distributions have the same {\it shape} if they can be made to coincide through a linear transformation of the form \eref{SN}.
 
@@ -208,17 +209,19 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 
 \subsection{The inverse-S curve\seclabel{The_inverse}}
 \subsubsection{Tversky and Kahneman}
-\citet{TverskyKahneman1992} chose to fit the empirical data in \fref{TK1992} with the following function
+\citet{TverskyKahneman1992} chose to fit the empirical data in \fref{TK1992} with the following function,
 %\footnote{\Eref{correspondence} is the consensus functional form in the community \cite{Barberis2013}. \OP{Maybe not quite, given that we fit another function later. We could introduce Latimore's function hiere.}}
-% 
+%
 \be
 \elabel{correspondence}
-\tilde{F}^{TK}_w\left(F_p; \gamma\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(F_p\right)^\gamma+\left(1-F_p\right)^\gamma\right]^{1/\gamma}} ~.
+\tilde{F}^{TK}_w\left(F_p; \gamma\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(F_p\right)^\gamma+\left(1-F_p\right)^\gamma\right]^{1/\gamma}} ~,
 \ee
-We note that no mechanistic motivation was given for fitting this specific family of CDFs (parameterised by $\gamma$). The motivation is purely phenomenological: with $\gamma<1$, this family ``looks a bit like the data.''
-% 
-The function $\tilde{F}^{TK}_w\left(F_p; \gamma \right)$ has only one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $\tilde{F}^{TK}_w\left(F_p\right)=F_p$. Further, $\tilde{F}^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. Because of this, we consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. 
-\MK{Why not include the parametrisation: $\tilde{F}^{TK}_w\left(F_p; \gamma =1 \right) = F_p$}
+%
+which maps from one CDF, $F_p$, to another, $F_w$. We note that no mechanistic motivation was given for fitting this specific family of CDF mappings, parameterised by $\gamma$. The motivation is purely phenomenological: with $\gamma<1$, this function can be made to fit to the data reasonably well.
+% AA: removed ``looks a bit like the data'' which is not a quote and sounds pejorative
+
+The function $\tilde{F}^{TK}_w\left(F_p; \gamma \right)$ has one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $\tilde{F}^{TK}_w\left(F_p\right)=F_p$. Further, $\tilde{F}^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. We consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. 
+%\MK{Why not include the parametrisation: $\tilde{F}^{TK}_w\left(F_p; \gamma =1 \right) = F_p$}
 %We will see below that the curvature and shift correspond to different parts of a mechanistic explanation of the phenomenon.
 
 \subsubsection{Scale, location, and the inverse-S}
@@ -230,7 +233,6 @@ We illustrate this with a Gaussian distribution.
 Let's assume that a DO models an observable $x$ -- which will often be a future change in wealth -- as a Gaussian with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM 
 %(for whatever reason, perhaps caution) 
 models the same observable as a Gaussian with the same location, $\mu$, but with a greater scale, so that the variance is $(\alpha\sigma)^2$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{mapping_pdfs}.
-
 \begin{figure}[htb]
 \centering
 \includegraphics[width=\textwidth]{./figs/mapping_pdfs.pdf}
@@ -252,7 +254,7 @@ Right: the difference between decision weights and probabilities can also be exp
 %
 %Both DO models give $g_p\sim\ND(\mu,\sigma_1^2)$, whereas the DM will choose the model $g_w \sim \ND(\mu,\sigma_1^2+\sigma_2^2)$.
 
-Generically, if the DM uses a greater scale in his model, then decision weights are higher than probabilities for low-probability events, and (because of normalisation), lower than probabilities for high-probability events. We can express this by plotting, for any value of $x$, the decision weight {\it vs.} the probability observed at $x$, right panel of \fref{mapping_pdfs}.
+If the DM uses a greater scale in his model, then decision weights are higher than probabilities for low-probability events, and (because of normalisation) lower than probabilities for high-probability events. We can express this by plotting, for any value of $x$, the decision weight {\it vs.} the probability observed at $x$, right panel of \fref{mapping_pdfs}.
 
 %\begin{figure}[htb]
 %\centering
@@ -261,25 +263,24 @@ Generically, if the DM uses a greater scale in his model, then decision weights 
 %\flabel{probability_weights}
 %\end{figure}
 
-In the Gaussian case we can write the distributions explicitly
-\be \elabel{DecisionW}
-	w(x)=\frac{1}{\sqrt{2\pi (\alpha \sigma)^2}}\exp\left[\frac{-(x -\mu )^2}{2 (\alpha \sigma)^2}\right]
+In the Gaussian case we can write the distributions explicitly as
+\be
+w(x)=\frac{1}{\sqrt{2\pi (\alpha \sigma)^2}}\exp\left[\frac{-(x -\mu )^2}{2 (\alpha \sigma)^2}\right]~,
+\elabel{DecisionW}
 \ee
 and
 \be
-	p(x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\left[\frac{-(x -\mu )^2}{2 \sigma^2}\right] ~,
+p(x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\left[\frac{-(x -\mu )^2}{2 \sigma^2}\right] ~.
 \elabel{p}
 \ee
-% 
-and solve \eref{p} for $(x -\mu)^2$, substitute that in \eref{DecisionW}, and obtain the following expression for decision weights directly as a function of probabilities
+Eliminating $(x-\mu)^2$ from \eref{DecisionW} and \eref{p} yields the following expression for decision weight as a function of probability:
 \be
-w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
+w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~.
 \elabel{w_of_p}
 \ee
-which is precisely what's plotted in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. If $\alpha>1$ it means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small arguments and below it for large arguments.
+We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. If $\alpha>1$ it means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small densities and below it for large densities.
 
-Alternatively, we can express the difference between models by plotting the CDFs $F_w$ and $F_p$. We do this in \fref{mapping_cdfs}, where the inverted S emerges purely from the DM's greater assumed scale, $\alpha \sigma$.
-
+Alternatively, we can express the difference between models by plotting the CDFs $F_w$ and $F_p$. We do this in \fref{mapping_cdfs}, where the inverse-S emerges purely from the DM's greater assumed scale, $\alpha \sigma$.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{./figs/mapping_cdfs.pdf}
@@ -287,26 +288,27 @@ Alternatively, we can express the difference between models by plotting the CDFs
 Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,4)$ depicted by $F_w(x)$ (blue). 
 % 
 Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is larger than the DO's CDF, $F_p(x) < F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be lower than the DO's.
-Right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays the generic inverse-S shape known from prospect theory. The arrows start and end at the same vertical values as on the left. Because the horizontal axis is has been non-linearly stretched (as the argument changed from $x$ to $F_p$), their horizontal locations are shifted.
+Right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays the generic inverse-S shape known from prospect theory. The arrows start and end at the same vertical values as on the left.
+%Because the horizontal axis is has been non-linearly stretched (as the argument changed from $x$ to $F_p$), their horizontal locations are shifted.
 }
 \flabel{mapping_cdfs}
 \end{figure}
-
 \FloatBarrier
+
 \subsection{Different scales and locations\seclabel{A_mismatch}}
 In \fref{Gauss_scale_location_both_KT} we explore what happens if both the scales and the locations of the DO's and DM's models differ. Visually, this produces an excellent fit to empirical data, to which we will return in \secref{Fitting_the}.
- \begin{figure}
- \centering
- \includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
- \caption{{\bf CDF maps for Gaussian distributions}.\\ 
- Top left: Difference in location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.\\
- Top right: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO).\\ 
- Bottom left: Differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.64 (broader than DO).\\ 
- Bottom right: Fit to observations reported by \cite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
+\caption{{\bf CDF maps for Gaussian distributions}.\\ 
+Top left: Difference in location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.\\
+Top right: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO).\\ 
+Bottom left: Differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.64 (broader than DO).\\ 
+Bottom right: Fit to observations reported by \cite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
 Note the similarity to bottom left.}
- \flabel{Gauss_scale_location_both_KT}
- \end{figure}
- A difference in assumed scales and locations, for simple Gaussian distributions, is sufficient to reproduce the observations. This suggests a different nomenclature and a conceptual clarification. The inverse-S curve does not mean that ``probabilities are re-weighted'' -- it just means that experimenters and their subjects have different views about what might be an appropriate response to a situation. 
+\flabel{Gauss_scale_location_both_KT}
+\end{figure}
+A difference in assumed scales and locations, for simple Gaussian distributions, is sufficient to reproduce the observations. This suggests a different nomenclature and a conceptual clarification. The inverse-S curve does not mean that ``probabilities are re-weighted.'' It means only that experimenters and their subjects have different views about appropriate models of, and responses to, a situation. 
 
 %% same figure using subfigure and reps. captions 
 %\begin{figure}
@@ -334,8 +336,8 @@ Note the similarity to bottom left.}
 %}
 %\end{center}
 %\end{figure}
-
 \FloatBarrier
+
 \subsection{Different shapes\seclabel{Different_shapes}}
 Numerically, our procedure can be applied to arbitrary distributions: 
 \begin{enumerate}
@@ -349,10 +351,12 @@ plot $F_w(x)$ \vs $F_p(x)$.
 Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution. 
 %An infinity of combinations of assumed distributions can be explored. 
 The inverse-S arises whenever a DM assumes a greater scale for a unimodal distribution. 
-To illustrate the generality of the procedure, in \fref{Student-t} we carry it out for Student's (power-law tailed) $t$-distributions (which we refer to as $t$-distributions), where DO and DM use different shape parameters and different locations.\footnote{The PDF of the $t$-distribution is
+To illustrate the generality of the procedure, in \fref{Student-t} we carry it out for Student's (power-law tailed) $t$-distributions (which we refer to as $t$-distributions), where DO and DM use different shape parameters and different locations
+\footnote{
+The PDF of the $t$-distribution is
 %
 \be
-f\left(x\right) = \frac{\Gamma\left(\frac{\nu+1}{2}\right)} {\Gamma\left(\frac{\nu}{2}\right)\sqrt{\pi\nu}\sigma} \left(1+\frac{1}{\nu}\left(\frac{x-\mu}{\sigma}\right)^2 \right)^{-\frac{\nu+1}{2}}\,,
+p\left(x\right) = \frac{\Gamma\left(\frac{\nu+1}{2}\right)} {\Gamma\left(\frac{\nu}{2}\right)\sqrt{\pi\nu}\sigma} \left(1+\frac{1}{\nu}\left(\frac{x-\mu}{\sigma}\right)^2 \right)^{-\frac{\nu+1}{2}}\,,
 \ee
 %
 where $\nu$ is the shape parameter, $\sigma$ is the scale parameter, and $\mu$ is the location parameter. The corresponding CDF is
@@ -367,14 +371,13 @@ F\left(x\right) =
 %
 where $I_x\left(a,b\right)$ is the incomplete beta function.
 
-In the limit $\nu \rightarrow \infty$, the $t$-distribution converges to a Gaussian with location $\mu$ and scale $\sigma$. We assume by default that $\sigma = 1$, so the $t$-distribution is effectively characterised by two parameters -- shape ($\nu$) and location ($\mu$).
+In the limit $\nu \rightarrow \infty$, the $t$-distribution converges to a Gaussian with location $\mu$ and scale $\sigma$. We assume by default that $\sigma = 1$, so the $t$-distribution is effectively characterised by two parameters: shape ($\nu$) and location ($\mu$).
 }
 The result is qualitatively similar to the bottom right panel of \fref{mapping_cdfs}, corresponding to \eref{correspondence}. 
-
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/Student-t.pdf}
-\caption{{\bf Probability weighting for $t$-distributions.} The DM uses a different shape parameter (1) and a different location parameter (0.35) from those of the DO (3 and 0.2, respectively).}
+\caption{{\bf Probability weighting for $t$-distributions.} The DM uses different shape and location parameters (1 and 0.35 respectively) from those of the DO (3 and 0.2).}
 \flabel{Student-t}
 \end{figure}
 
