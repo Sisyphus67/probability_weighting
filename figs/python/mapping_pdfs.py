@@ -33,8 +33,6 @@ axes[0].set_yticks(np.arange(0, .5, step=0.1))
 axes[0].legend(loc='upper left', fontsize='x-small')
 
 #w(p) plot
-axes[1].set_xlim((0, 1.05*stat.norm.pdf(0, l1, s1)))
-axes[1].set_ylim((0, 1.05*stat.norm.pdf(0, l1, s1)))
 axes[1].plot(DO, DO, 'r', lineWidth='2', label=r'$p$')
 axes[1].plot(DO, DM, 'b', lineWidth='2', label=r'$w$')
 
