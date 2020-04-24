@@ -1,5 +1,38 @@
 \begin{thebibliography}{}
 
+\bibitem[Cohen, 1979]{Cohen1979a}
+Cohen, L.~J. (1979).
+\newblock On the psychology of prediction: Whose is the fallacy?
+\newblock {\em Cognition}, 7:385--407.
+
+\bibitem[Gigerenzer, 1991]{Gigerenzer1991}
+Gigerenzer, G. (1991).
+\newblock How to make cognitive illusions disappear: Beyond
+  {\textquotedblleft}heuristics and biases{\textquotedblright}.
+\newblock {\em European Review of Social Psychology}, 2:83--115.
+
+\bibitem[Gigerenzer, 2018]{Gigerenzer2018}
+Gigerenzer, G. (2018).
+\newblock The bias bias in behavioral economics.
+\newblock {\em Review of Behavioral Economics}, 5:303--336.
+
+\bibitem[Gigerenzer and Selten, 2002]{GigerenzerSelten2002b}
+Gigerenzer, G. and Selten, R. (2002).
+\newblock Rethinking rationality.
+\newblock In Gigerenzer, G. and Selten, R., editors, {\em {B}ounded
+  {R}ationality}, Report of the 84th Dahlem Workshop, pages 1--12. MIT Press.
+
+\bibitem[Hertwig and Gigerenzer, 1999]{HertwigGigerenzer1999}
+Hertwig, R. and Gigerenzer, G. (1999).
+\newblock The `conjunction fallacy' revisited: how intelligent inferences look
+  like reasoning errors.
+\newblock 12:275--305.
+
+\bibitem[Kahneman and Tversky, 1973]{KahnemanTversky1973}
+Kahneman, D. and Tversky, A. (1973).
+\newblock On the psychology of prediction.
+\newblock {\em Psychological Review}, 80:237--251.
+
 \bibitem[Lattimore et~al., 1992]{LattimoreBakerWitte1992}
 Lattimore, P.~K., Baker, J.~R., and Witte, A.~D. (1992).
 \newblock Influence of probability on risky choice: A parametric examination.
@@ -11,6 +44,11 @@ Levenberg, K. (1944).
   squares.
 \newblock {\em Quarterly of Applied Mathematics}, 2(2):164--168.
 
+\bibitem[Lopes, 1991]{Lopes1991}
+Lopes, L.~L. (1991).
+\newblock The rhetoric of irrationality.
+\newblock 1:65--82.
+
 \bibitem[Peters, 2019]{Peters2019b}
 Peters, O. (2019).
 \newblock The ergodicity problem in economics.
@@ -20,6 +58,11 @@ Peters, O. (2019).
 Prelec, D. (1998).
 \newblock The probability weighting function.
 \newblock 66:497--527.
+
+\bibitem[Smith, 2003]{Smith2003}
+Smith, E. (2003).
+\newblock Self-organization from structural refrigeration.
+\newblock {\em Phys. Rev. E}, 68:46114.
 
 \bibitem[Sunstein, 2020]{Sunstein2020}
 Sunstein, C.~R. (2020).

@@ -5,6 +5,7 @@
 
 \usepackage{amsthm, amsmath, amssymb, mathrsfs, multirow, url}
 \usepackage{caption}
+\usepackage{csquotes}
 \usepackage{subcaption}
 \usepackage{makecell,booktabs,siunitx}
 \usepackage{graphicx} 
@@ -387,24 +388,35 @@ The result is qualitatively similar to the bottom right panel of \fref{mapping_c
 %To clarify this nomenclature: starting with the standard form of a distribution $P(x)$ (of scale 1 and location 0), for example $P_{\text{standard}}(x)\sim \ND(0,1)$, the corresponding distributions of scale $\sigma$ and location $\mu$ are obtained by transforming $x$. With $y=\frac{x-\mu}{\sigma}$, we have $P_{\text{standard}}(y)=\ND(\mu, \sigma^2)$.
 
 \FloatBarrier
+
 \section{Reasons for different models\seclabel{Reasons_for}}
-``Probability weighting'' is a term that suggests a detrimental cognitive bias, and the empirical findings are often interpreted that way. We caution against this interpretation. At least we should keep in mind that it is unclear who suffers from the bias: experimenter or test subject? 
+Labelling \textit{probability weighting} as a cognitive bias comes with a connotation of erroneous behaviour,
+\blockquote[{\cite[p. 237]{KahnemanTversky1973}}]{In making predictions and judgments under uncertainty, people do not appear to follow the calculus of chance or the statistical theory of prediction. Instead, they rely on a limited number of heuristics which sometimes yield reasonable judgments and sometimes lead to severe and systematic errors.}
+%
+Thus behavioural economics gave rise to a rhetoric of irrationality, which invites views of the necessity to nudge people's \textit{irrational} behaviour in the \textit{right} direction \citep{Lopes1991,Gigerenzer2018}. We caution against this interpretation. At least we should keep in mind that it is unclear who suffers from the bias: experimenter or test subject? \citep{Cohen1979a}
 
 Whatever the answer, two observations are robust and interesting: first, disagreement is common; and, second, the disagreement tends to go in the same direction: DMs tend to assume a greater range of plausible outcomes than DOs. 
 
 %The first observation raises the question why disagreement about probabilities used in a model is common; the second, there must be a reason for such disagreement to be consistent: there must be a relevant systematic difference between the DO and the DM. 
+% 1: 'Probability' as a polysemous concept 
+An explanation for the first observation is that probability is a slippery concept, and the word is used to mean different things.
+%
+Dissenters of the ``heuristics and biases'' research programme repeatedly pointed to the apparent polysemy of the word ``probability''. Often cognitive illusions can be made to disappear if a probabilistic statement is presented in a less polysemous manner \citep{Gigerenzer1991,HertwigGigerenzer1999}.
+% 
+One way is to present probabilities as natural frequencies, which allows subjects to process information more easily, because it is assumed to be closer to their experience in the real-world environment.
 
-An explanation for the first observation is that probability is a slippery concept, and the word is used to mean different things. 
+Deviations from a rationality norm which are formerly perceived by DOs as cognitive biases, may thus become beneficial if measured against another rationality norm by the DO. Latter rationality norms where the deviations are adaptive are often referred to as ecological rationality \citep{GigerenzerSelten2002b,Smith2003}. This leads to an explanation of the second robust observation.
+% \secref{condition2} is an example of how to behave under ecological rationality
 %Even once one has settled on a definition, numerical values for probabilities are still difficult to estimate from real-world observations (see \secref{tricky}).
-The second observation may be explained as follows. A DO often has control over, and essentially perfect knowledge of, the decision problem he poses. A DM does not have such knowledge, and this ignorance will often translate into additional assumed uncertainty. For example, the DO may know the true probabilities of some gamble in an experiment; the DM may in addition have doubts about the DO's sincerity, or whether he (the DM himself) fully understands the rules of the game. We will return to this in \secref{condition2}.
-
+% 2: greater range 
+A DO often has control over, and essentially perfect knowledge of, the decision problem he poses. A DM does not have such knowledge, and this ignorance will often translate into additional assumed uncertainty. For example, the DO may know the true probabilities of some gamble in an experiment; the DM may in addition have doubts about the DO's sincerity, or whether he (the DM himself) fully understands the rules of the game. We will return to this in \secref{condition2}, where we provide an analytical solution for the conceptual insight about ecological rational behaviour.
 \subsection{Some meanings of ``probability'' \seclabel{tricky}}
 
 Many thousands of pages have been written about the meaning of probability. We will not attempt a summary of the philosophical debate and instead highlight a few relevant points.
 %systematically different incentives from a real-world DM. The DO tends to have an incentive to estimate, or indeed state, probabilities as their most likely value or ``true'' value (if the DO can control the probabilities, \eg in an experiment); the DM simply strives to behave optimally under uncertainty, and that uncertainty often includes uncertainty about the probabilities or model parameters.
 
 %The conundrum surrounding the observed phenomenon of the characteristic inverse-S-shaped probability weighting vanishes if probability is understood as individual ignorance, \ie somebody's uncertainty about an observable.
-\MK{}
+
 \paragraph{Frequency-in-an-ensemble interpretation of probability}
 Consider the simple pro\-babilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.'' 
 
