@@ -90,8 +90,8 @@
 \newcommand{\YB}[1]{{\it ***YB: #1 YB***}}
 \renewcommand{\AA}[1]{{\it ***AA: #1 AA***}}
 
-\title{Why are we weighting? \\
-{\small A mechanistic model for probability weighting}}
+\title{What are we weighting for? \\
+{\large A mechanistic model for probability weighting}}
 \author{
 Ole Peters\footnote{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK and Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, 87501 NM, USA. Email: \texttt{o.peters@lml.org.uk}} \;
 Alexander Adamou\footnote{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK. Email: \texttt{a.adamou@lml.org.uk}} \;
@@ -107,11 +107,7 @@ Yonatan Berman\footnote{London Mathematical Laboratory, 8 Margravine Gardens, Lo
 
 \begin{abstract}
 \noindent 
-Behavioural economics provides labels for patterns in human economic behaviour. 
-Probability weighting is one such label. It expresses a mismatch between probabilities used in a formal model of a decision problem (\ie model parameters) and probabilities inferred from real people's behaviour faced with the modelled decision problem (the same parameters estimated empirically). The inferred probabilities are called ``decision weights.'' 
-It is considered a robust observation that decision weights are higher than probabilities for extreme events, and (necessarily, because of normalisation) lower than probabilities for common events. 
-We formalise this observation as an observer and a decision maker using different probability distributions to model the outcome of an experiment.
-We show how the specific disagreement arises from the decision maker having to estimate probabilities as frequencies in a time series, whereas the observer may know them a priori. 
+Behavioural economics provides labels for patterns in human economic behaviour. Probability weighting is one such label. It expresses a mismatch between probabilities used in a formal model of a decision (\ie model parameters) and probabilities inferred from real people's decisions (the same parameters estimated empirically). The inferred probabilities are called ``decision weights.'' It is considered a robust experimental finding that decision weights are higher than probabilities for rare events, and (necessarily, through normalisation) lower than probabilities for common events. Typically this is presented as a cognitive bias, \ie an error of judgement by the person. Here we build a model of a behavioural economics experiment, in which a disinterested observer and a decision maker use different probability distributions to model an outcome, such as of a gamble. We show that probability weighting is predicted when the decision maker has, broadly speaking, greater uncertainty about the outcome than the observer. We offer a plausible example in which such differences in uncertainty arise naturally: when a decision maker must estimate probabilities as frequencies in a time series while the observer knows them {\it a priori}. This suggests an alternative presentation of probability weighting as a principled response by a decision maker to uncertainties unaccounted for in an observer's model, rather than a psychologically-induced error.
 \vspace{1em}
 
 \noindent\textsf{\textbf{Keywords}} ~ Decision Theory, Prospect Theory, Probability Weighting, Ergodicity Economics
@@ -129,7 +125,7 @@ $\cdot$
 \href{https://www.aeaweb.org/econlit/jelCodes.php?view=jel#D}{%
 D01 	% Microeconomic Behaviour: Underlying Principles
 $\cdot$
-D81 	% Criteria for Decision-Making under Risk and Uncertainty
+D81 	% Criteria for decision making under Risk and Uncertainty
 % $\cdot$
 % D9		% Micro-Based behavioural Economics 
 }
@@ -430,7 +426,7 @@ Let's assume that both the DO and the DM mean by ``probability'' the relative fr
 As the probability of an event gets smaller, so does the number of times we see it in a finite time series. If we want to say something about the uncertainty in this number, we can measure it -- or imagine measuring it -- in several time series to see how much it varies. The variations from one time series to another get smaller for rarer events, but the {\it relative} variations get larger, and so does the relative uncertainty in our estimate of probabilities. Take an extreme simplified example: asymptotically an event occurs in 0.1\% of observations, and we have a time series of 100 observations. 
 Around 99.5\% of such time series will contain 0 or 1 events. Na\"{i}vely, then, we would estimate the probability as either 0 or 1\%. In other words, we would estimate the event as either impossible or occurring ten times more frequently than it really would in a long series. However, if the event occurs 50\% of the time asymptotically, then around 99.5\% of time series would contain between 35 and 65 events, leading to a much smaller relative error in probability estimates.
 
-A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision-making. Specifically, the DM should acknowledge that, due to his lack of information, {\it prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.
+A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision making. Specifically, the DM should acknowledge that, due to his lack of information, {\it prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.
 
 Formalising these thoughts, we find that so long as relative uncertainties are larger for rare events than for common events (which, generically, they are), an inverse-S curve emerges\footnote{
 For an inverse-S curve to emerge, small probability densities have to be overestimated ($w>p$) and large ones underestimated ($w<p$), as is indeed the case, for example in \fref{square_root_error}. Let's connect this statement to one about relative uncertainties. The decision weight in \fref{square_root_error} is 
