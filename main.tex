@@ -514,15 +514,15 @@ The most striking example is the universally important case of noisy multiplicat
 The difference between how these two perspectives evaluate the effects of probabilistic events is qualitatively in line with the observed phenomena we set out to explain. The DM typically has large uncertainties, especially for low-probability events, and has an evolutionary incentive to err on the side of caution, \ie to behave as though extreme events have a higher probability than in the DO's model.
 
 \section{Fitting the model to experimental results \seclabel{Fitting_the}}
-Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's fitting exercise of the inverse-S curve by way of the physically unmotivated function $\tilde{F}^{TK}_w$, \eref{correspondence}, resembles the data no better than our mechanistically constrained model. This is particularly evident in the bottom two panels of \fref{Gauss_scale_location_both_KT}, which show that a Gaussian $w(x)$ whose scale and location differ from those of $p(x)$ reproduces the fitted functional shape of $\tilde{F}^{TK}_w$.
+Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's physically unmotivated function, $\tilde{F}^{TK}_w(F_p)$ in \eref{correspondence}, fits the data no more efficiently than the functions arising from our mechanistic model. This is particularly evident in the bottom panels of \fref{Gauss_scale_location_both_KT}, which show that a Gaussian, $w(x)$, whose scale and location differ from those of $p(x)$, reproduces the fitted functional shape of $\tilde{F}^{TK}_w(F_p)$.
 
-For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \cite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \cite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF
+For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \cite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \cite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
 %
 \be
-F_w\left(x\right) = \Phi\left(\frac{\Phi^{-1}\left(F_p\left(x\right)\right) - \mu}{\sigma}\right)\,,
+F_w\left(x\right) = \Phi\left(\frac{\Phi^{-1}\left(F_p\left(x\right)\right) - \mu}{\sigma}\right)~,
 \ee
 %
-where $\Phi$ is the CDF of the standard normal distribution. In the $t$-model we fit the location parameter $\mu$ and the shape parameter $\nu$ in the CDF $F_w\left(x\right)$ of a $t$-distributed random variable (see \secref{Different_shapes}), assuming $p$ follows a standard normal distribution.
+where $\Phi$ is the CDF of the standard normal distribution. In the $t$-model, we fit the location and shape parameters, $\mu$ and $\nu$, in the CDF, $F_w(x)$, of a $t$-distributed random variable (see \secref{Different_shapes}). In both cases, we assume that $F_p(x)$ is that of a standard normal distribution.
 
 %For $\nu\to\infty$, the Student-t converges to the Gaussian, whereas $\nu=1$ is a very heavy-tailed Student-t (diverging variance). The Student-t arises in sampling when the variance is estimated from a sample of Gaussian random variates. So there's a reasonable motivation for comparing specifically Gaussian and Student-t.
 
@@ -535,7 +535,7 @@ In addition to \eref{correspondence} used by Tversky and Kahneman, we fit the fu
 %
 suggested by \cite{LattimoreBakerWitte1992} to parametrically describe probability weighting (also used by \cite{tversky1995risk} and \cite{Prelec1998}). The reason for fitting \eref{LattimoreFunction} is to ensure a fair comparison: the Gaussian and $t$ models are characterised by two parameters, whereas \eref{correspondence} only has one free parameter. \Eref{LattimoreFunction} has two parameters.
 
-\Fref{curvefit} presents the fit results. We obtain very good fits to data for both Gaussian and $t$-distributions, as well as for \eref{correspondence} and \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the fitted functions within standard errors. We conclude that our model fits the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a physically plausible mechanism, and are not simply phenomenological.
+\Fref{curvefit} presents the fit results. We obtain very good fits to data for both Gaussian and $t$-distributions, as well as for \eref{correspondence} and \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the fitted functions within standard errors. We conclude that our model fits the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a physically plausible mechanism. They are not simply phenomenological.
 
 \begin{figure}[htb]
 \centering
