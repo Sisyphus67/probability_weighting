@@ -1,9 +1,19 @@
 \begin{thebibliography}{}
 
+\bibitem[Cohen, 1979]{Cohen1979a}
+Cohen, L.~J. (1979).
+\newblock On the psychology of prediction: Whose is the fallacy?
+\newblock {\em Cognition}, 7:385--407.
+
 \bibitem[Gigerenzer, 2018]{Gigerenzer2018}
 Gigerenzer, G. (2018).
 \newblock The bias bias in behavioral economics.
 \newblock {\em Review of Behavioral Economics}, 5:303--336.
+
+\bibitem[Kahneman and Tversky, 1979]{KahnemanTversky1979}
+Kahneman, D. and Tversky, A. (1979).
+\newblock Prospect theory: An analysis of decision under risk.
+\newblock {\em Econometrica}, 47:263--291.
 
 \bibitem[Lattimore et~al., 1992]{LattimoreBakerWitte1992}
 Lattimore, P.~K., Baker, J.~R., and Witte, A.~D. (1992).
@@ -34,6 +44,11 @@ Sunstein, C.~R. (2020).
 Tversky, A. and Fox, C.~R. (1995).
 \newblock Weighing risk and uncertainty.
 \newblock {\em Psychological Review}, 102(2):269--283.
+
+\bibitem[Tversky and Kahneman, 1986]{TverskyKahneman1986}
+Tversky, A. and Kahneman, D. (1986).
+\newblock Rational choice and the framing of decisions.
+\newblock {\em Journal of Business}, 59(4):S251--S278.
 
 \bibitem[Tversky and Kahneman, 1992]{TverskyKahneman1992}
 Tversky, A. and Kahneman, D. (1992).
