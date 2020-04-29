@@ -10,3 +10,4 @@ main.aux
 *.blg
 *.out
 *.bbl
+/main-blx.bib

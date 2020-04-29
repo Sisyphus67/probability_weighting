@@ -1,8 +1,12 @@
 % \documentclass[a4paper, 12pt]{article}
-\documentclass[a4paper,12pt,numbers=noenddot]{scrartcl}
-
-\usepackage[sort&compress]{natbib}
-\bibpunct{(}{)}{;}{a}{}{,} 
+\documentclass[%
+	a4paper,
+	abstract=true,	
+	12pt,
+	numbers=noenddot,
+% 	bibliography=totoc,
+% 	bibliography=oldstyle					% more compact
+]{scrartcl}
 
 \usepackage{amsthm, amsmath, amssymb, mathrsfs, multirow, url}
 \usepackage{amsfonts}
@@ -29,9 +33,69 @@
 }
 }
 
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=red,citecolor=blue]{hyperref}
+
+% \usepackage[sort&compress]{natbib}
+% \bibpunct{(}{)}{;}{a}{}{,} 
+% =====================================================================
+% ========================  BibLateX w/ BibTeX   =====================
+% =====================================================================
+\usepackage[
+arxiv=abs,																					% Link to arXiv abstract page
+autocite=inline,																		% structur of \autocite{key}
+autolang=hyphen,																		% active if langid is set
+% autopunct=false,																	%
+backend=bibtex,																		% Backend choice BibTeX8 case-sensitive sorting 
+backref=true,																				% page cited in the paper
+% bibencoding=latin1,
+bibstyle=authoryear,																% style in bibliography
+% bibstyle=draft,																		% style in bibliography
+% bibwarn=true,
+citestyle=authoryear-comp,													% style in the document
+dashed=false,																				% always repeat author names in bibliography
+% -- hyperref=true,																		%
+% language=autobib,																		% bibliography language same as language of origin
+% sortcites=true,																			% sort citations in the text
+sortcites=false,																		% do not sort citations in the text
+% sorting=nyt,																				% sorting in bibliography
+maxbibnames=11,																			% limit authors in bibliography to 11
+maxcitenames=2,																			% start to use et alii
+% minbibnames=10																			% Angabe wie vieler Autoren nach Schnitt
+mincitenames=1,																			% cut to X authors with et al.
+url=true,doi=true,eprint=true,											% print url,doi,eprint
+useprefix=true,																			% consider nobiliary particle von, van, de, etc.
+]{biblatex}
+
+\addbibresource{../LML_bibliography/bibliography}
+
+% =====================================================================
+% ===================   STYLE OF THE REFERENCES   =====================
+% =====================================================================
+
+% \newcommand*\person[1]{\textsc{#1}}									% prints author names as small caps
+\renewcommand{\mkbibnamegiven}[1]{\person{#1}}
+\renewcommand{\mkbibnamefamily}[1]{\person{#1}}
+\renewcommand{\mkbibnameprefix}[1]{\person{#1}}
+% \renewcommand{\mkbibnamesuffix}[1]{\textsc{#1}}
+
+\setlength{\bibitemsep}{1.5\itemsep}			% space between 2 bibitems
+
+\DeclareFieldFormat{pages}{#1}		% removes pagination (p./pp.) before page numbers
+
+% \renewbibmacro{etal}{\textsc{et al.}}  % find the name for this macro
+
+\renewbibmacro{in:}{}					% print no 'In:' before the <Journal Name>'
+
+% \DefineBibliographyStrings{english}{%
+%     backrefpage  = {cit. on p.}, 			% for single page number
+%     backrefpage  = {}, 								% for single page number
+%     backrefpages = {cit. on pp.} 			% for multiple page numbers
+%     backrefpages = {} 								% for multiple page numbers
+% }
+% =====================================================================
+
 \usepackage{xspace}
 %\usepackage{comment}
-\usepackage[colorlinks=true,urlcolor=blue,linkcolor=red,citecolor=blue]{hyperref}
 
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ei}{\end{itemize}}
@@ -106,10 +170,10 @@
 \title{What are we weighting for?}
 \subtitle{A mechanistic model for probability weighting\thanks{\href{https://bit.ly/LML-pw}{Latest version of the manuscript}. The \href{https://bit.ly/lml_pw_code}{code to generate the figures and simulations}.}}
 \author{
-	\person{Ole B. Peters}\footnote{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK and Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, 87501 NM, USA, \texttt{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}}} \and
-	\person{Alexander T. I. Adamou}\footnote{London Mathematical Laboratory, \texttt{\href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}}} \and
-	\person{Mark Kirstein}\footnote{London Mathematical Laboratory, Max-Planck-Institute for Mathematics in the Sciences and Institute of Mathematics, Leipzig University, \texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}} \and 
-	\person{Yonatan Berman}\footnote{London Mathematical Laboratory, The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York, \texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}
+	\person{Ole Peters}\footnote{\href{http://lml.org.uk/people/ole-peters-2}{London Mathematical Laboratory}, 8 Margravine Gardens, London W6 8RH, UK and Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, 87501 NM, USA, \texttt{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}}} \and
+	\person{Alexander Adamou}\footnote{\href{http://lml.org.uk/people/alex-adamou-2}{London Mathematical Laboratory}, \texttt{\href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}}} \and
+	\person{Mark Kirstein}\footnote{\href{https://bit.ly/LMLMK}{London Mathematical Laboratory}, \href{https://www.mis.mpg.de/jjost/research/economics.html}{Max-Planck-Institute for Mathematics in the Sciences} and Institute of Mathematics, Leipzig University, \texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}} \and 
+	\person{Yonatan Berman}\footnote{\href{http://lml.org.uk/people/yonatan-berman/}{London Mathematical Laboratory}, The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York, \texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}
 }
 
 \date{\today}
@@ -171,7 +235,7 @@ D81 	% Criteria for decision making under Risk and Uncertainty
 
 
 \section{Introduction}
-\textit{Probability weighting} is a concept that originated in prospect theory \citep{KahnemanTversky1979,TverskyKahneman1992}. It is one way to conceptualise a pattern in human behaviour of caution with respect to formal models.
+\textit{Probability weighting} is a concept that originated in prospect theory \parencite{KahnemanTversky1979,TverskyKahneman1992}. It is one way to conceptualise a pattern in human behaviour of caution with respect to formal models.
 This is best explained by a thought experiment, in which  
 \bi
 	\item a \textit{disinterested observer} (DO), such as an experimenter, tells
@@ -198,11 +262,11 @@ F_p(x)=\int_{-\infty}^x p(s) ds~,
 F_w(x)=\int_{-\infty}^x w(s) ds~.
 \ee
 \ei
-In \fref{TK1992} we reproduce the first such visual summary from \citet[p.~310]{TverskyKahneman1992}.
+In \fref{TK1992} we reproduce the first such visual summary from \textcite[p.~310]{TverskyKahneman1992}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
-\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \citet[p.~310, Fig. 1, relabelled axes]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
+\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p.~310, Fig. 1, relabelled axes]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
 \flabel{TK1992}
 \end{figure}
 % introduce ``inverse-S'' nomenclature here
@@ -222,7 +286,7 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 
 \subsection{The inverse-S curve\seclabel{The_inverse}}
 \subsubsection{Tversky and Kahneman}
-\citet{TverskyKahneman1992} chose to fit the empirical data in \fref{TK1992} with the following function,
+\textcite{TverskyKahneman1992} chose to fit the empirical data in \fref{TK1992} with the following function,
 %\footnote{\Eref{correspondence} is the consensus functional form in the community \cite{Barberis2013}. \OP{Maybe not quite, given that we fit another function later. We could introduce Latimore's function hiere.}}
 %
 \be
@@ -233,18 +297,18 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 which maps from one CDF, $F_p$, to another, $F_w$. We note that no mechanistic motivation was given for fitting this specific family of CDF mappings, parameterised by $\gamma$. The motivation is purely phenomenological: with $\gamma<1$, this function can be made to fit to the data reasonably well.
 % AA: removed ``looks a bit like the data'' which is not a quote and sounds pejorative
 
-The function $\tilde{F}^{TK}_w\left(F_p; \gamma \right)$ has one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $\tilde{F}^{TK}_w\left(F_p\right)=F_p$. Further, $\tilde{F}^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. We consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit. 
+The function $\tilde{F}^{TK}_w\left(F_p; \gamma \right)$ has one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $\tilde{F}^{TK}_w\left(F_p\right)=F_p$. Further, $\tilde{F}^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. We consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit.
 %\MK{Why not include the parametrisation: $\tilde{F}^{TK}_w\left(F_p; \gamma =1 \right) = F_p$}
 %We will see below that the curvature and shift correspond to different parts of a mechanistic explanation of the phenomenon.
 
 \subsubsection{Scale, location, and the inverse-S}
-We now make explicit how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges when the DM uses a larger scale in his model of the world than the DO. 
-%This can have numerous reasons, to which we will return in \secref{Reasons_for}. 
+We now make explicit how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges when the DM uses a larger scale in his model of the world than the DO.
+%This can have numerous reasons, to which we will return in \secref{Reasons_for}.
 %For now, suffice it to say that precaution is an obvious one: any uncertainty the DM wishes to include in his model in addition to what the DO includes will translate into a greater scale for the DM's distribution and therefore into an inverse-S shape for any unimodal (peaked) distribution when cumulative densities are compared.
 
 We illustrate this with a Gaussian distribution.
-Let's assume that a DO models an observable $x$ -- which will often be a future change in wealth -- as a Gaussian with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM 
-%(for whatever reason, perhaps caution) 
+Let's assume that a DO models an observable $x$ -- which will often be a future change in wealth -- as a Gaussian with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM
+%(for whatever reason, perhaps caution)
 models the same observable as a Gaussian with the same location, $\mu$, but with a greater scale, so that the variance is $(\alpha\sigma)^2$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{mapping_pdfs}.
 \begin{figure}[htb]
 \centering
@@ -297,9 +361,9 @@ Alternatively, we can express the difference between models by plotting the CDFs
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{./figs/mapping_cdfs.pdf}
-\caption{\textbf{Mapping CDFs.} 
-Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,4)$ depicted by $F_w(x)$ (blue). 
-% 
+\caption{\textbf{Mapping CDFs.}
+Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,4)$ depicted by $F_w(x)$ (blue).
+%
 Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is larger than the DO's CDF, $F_p(x) < F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be lower than the DO's.
 Right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays the generic inverse-S shape known from prospect theory. The arrows start and end at the same vertical values as on the left.
 %Because the horizontal axis is has been non-linearly stretched (as the argument changed from $x$ to $F_p$), their horizontal locations are shifted.
@@ -313,17 +377,17 @@ In \fref{Gauss_scale_location_both_KT} we explore what happens if both the scale
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
-\caption{\textbf{CDF maps for Gaussian distributions.}\\ 
+\caption{\textbf{CDF maps for Gaussian distributions.}\\
 Top left: Difference in location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.\\
-Top right: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO).\\ 
-Bottom left: Differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.64 (broader than DO).\\ 
-Bottom right: Fit to observations reported by \citet{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
+Top right: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO).\\
+Bottom left: Differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.64 (broader than DO).\\
+Bottom right: Fit to observations reported by \textcite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
 Note the similarity to bottom left.}
 \flabel{Gauss_scale_location_both_KT}
 \end{figure}
-A difference in assumed scales and locations, for simple Gaussian distributions, is sufficient to reproduce the observations. This suggests a different nomenclature and a conceptual clarification. The inverse-S curve does not mean that ``probabilities are re-weighted.'' It means only that experimenters and their subjects have different views about appropriate models of, and responses to, a situation. 
+A difference in assumed scales and locations, for simple Gaussian distributions, is sufficient to reproduce the observations. This suggests a different nomenclature and a conceptual clarification. The inverse-S curve does not mean that ``probabilities are re-weighted.'' It means only that experimenters and their subjects have different views about appropriate models of, and responses to, a situation.
 
-%% same figure using subfigure and reps. captions 
+%% same figure using subfigure and reps. captions
 %\begin{figure}
 %\begin{center}
 %	\subcaptionbox{Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\flabel{subfig:GaussLocation}}
@@ -339,9 +403,9 @@ A difference in assumed scales and locations, for simple Gaussian distributions,
 %% 	\vspace{1em}
 %\caption{{\bf Effects of differences in location and scale for the decision weight CDFs used by a DM vs. probability CDFs used by a DO.}\\
 %\MK{Some more summarising text?}
-%% Top left) Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\\ 
+%% Top left) Gaussian distribution, difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 2.7 (broader than DO).\\
 %% Top right) Gaussian distribution, difference in location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 1.
-%% Bottom left) Gaussian distribution, differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\\ 
+%% Bottom left) Gaussian distribution, differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.18 (bigger than DO), scale 2.7 (broader than DO).\\
 %% Bottom right) Fit to observations reported by \cite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$.
 %% The observations by \cite{TverskyKahneman1992} are consistent with a DM assuming a scale and location in real-world decisions that differ from those assumed by the DO.
 %\flabel{CDF_weights}
@@ -352,7 +416,7 @@ A difference in assumed scales and locations, for simple Gaussian distributions,
 \FloatBarrier
 
 \subsection{Different shapes\seclabel{Different_shapes}}
-Numerically, our procedure can be applied to arbitrary distributions: 
+Numerically, our procedure can be applied to arbitrary distributions:
 \begin{enumerate}
 \item
 construct a list of values for the CDF assumed by the DO, $F_p(x)$.
@@ -361,9 +425,9 @@ construct a list of values for the CDF assumed by the DM, $F_w(x)$.
 \item
 plot $F_w(x)$ \vs $F_p(x)$.
 \end{enumerate}
-Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution. 
-%An infinity of combinations of assumed distributions can be explored. 
-The inverse-S arises whenever a DM assumes a greater scale for a unimodal distribution. 
+Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution.
+%An infinity of combinations of assumed distributions can be explored.
+The inverse-S arises whenever a DM assumes a greater scale for a unimodal distribution.
 To illustrate the generality of the procedure, in \fref{Student-t} we carry it out for Student's (power-law tailed) $t$-distributions (which we refer to as $t$-distributions), where DO and DM use different shape parameters and different locations
 \footnote{
 The PDF of the $t$-distribution is
@@ -375,7 +439,7 @@ p\left(x\right) = \frac{\Gamma\left(\frac{\nu+1}{2}\right)} {\Gamma\left(\frac{\
 where $\nu$ is the shape parameter, $\sigma$ is the scale parameter, and $\mu$ is the location parameter. The corresponding CDF is
 %
 \be
-F\left(x\right) = 
+F\left(x\right) =
 \begin{cases}
 1 - \frac{1}{2} I_{\frac{\nu}{\left(\frac{x-\mu}{\sigma}\right)^2 + \nu}}\left(\frac{\nu}{2},\frac{1}{2}\right) &\text{ if } x-\mu \geq 0\,;\\
 \frac{1}{2} I_{\frac{\nu}{\left(\frac{x-\mu}{\sigma}\right)^2 + \nu}}\left(\frac{\nu}{2},\frac{1}{2}\right) &\text{ if } x-\mu < 0\,,
@@ -386,7 +450,7 @@ where $I_x\left(a,b\right)$ is the incomplete beta function.
 
 In the limit $\nu \rightarrow \infty$, the $t$-distribution converges to a Gaussian with location $\mu$ and scale $\sigma$. We assume by default that $\sigma = 1$, so the $t$-distribution is effectively characterised by two parameters: shape ($\nu$) and location ($\mu$).
 }
-The result is qualitatively similar to the bottom right panel of \fref{mapping_cdfs}, corresponding to \eref{correspondence}. 
+The result is qualitatively similar to the bottom right panel of \fref{mapping_cdfs}, corresponding to \eref{correspondence}.
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/Student-t.pdf}
@@ -394,8 +458,8 @@ The result is qualitatively similar to the bottom right panel of \fref{mapping_c
 \flabel{Student-t}
 \end{figure}
 
-%We denote these by $F_p=\int_{-\infty}^x p(s) ds$ (for the DO) and by $F_w=\int_{-\infty}^x w(s) ds$ (for the DM). 
-%We will use the terms scale and location, rather than mean and standard deviation, to emphasise the generality of our arguments: 
+%We denote these by $F_p=\int_{-\infty}^x p(s) ds$ (for the DO) and by $F_w=\int_{-\infty}^x w(s) ds$ (for the DM).
+%We will use the terms scale and location, rather than mean and standard deviation, to emphasise the generality of our arguments:
 
 %To clarify this nomenclature: starting with the standard form of a distribution $P(x)$ (of scale 1 and location 0), for example $P_{\text{standard}}(x)\sim \ND(0,1)$, the corresponding distributions of scale $\sigma$ and location $\mu$ are obtained by transforming $x$. With $y=\frac{x-\mu}{\sigma}$, we have $P_{\text{standard}}(y)=\ND(\mu, \sigma^2)$.
 
@@ -403,20 +467,20 @@ The result is qualitatively similar to the bottom right panel of \fref{mapping_c
 
 \section{Reasons for different models\seclabel{Reasons_for}}
 Probability weighting is usually interpreted as a cognitive bias that leads to errors of judgement and poor decisions by DMs.\footnote{Indeed, its originators presented it as such.
-Introducing prospect theory, \citet[p.~277]{KahnemanTversky1979} wrote ``we are compelled to assume [\dots] that decision weights do not coincide with stated probabilities. These departures from expected utility theory must lead to normatively unacceptable consequences''.
-They classified prospect theory as descriptive rather than normative, \ie as relating to actual rather than optimal behaviour \citep{TverskyKahneman1986}.
+Introducing prospect theory, \textcite[p.~277]{KahnemanTversky1979} wrote ``we are compelled to assume [\dots] that decision weights do not coincide with stated probabilities. These departures from expected utility theory must lead to normatively unacceptable consequences''.
+They classified prospect theory as descriptive rather than normative, \ie as relating to actual rather than optimal behaviour \parencite{TverskyKahneman1986}.
 Put simply, prospect theory aims to model systematic errors in human decision making, arising (in part) from inappropriate psychological adjustments of known probabilities.}
-We caution against this interpretation. 
+We caution against this interpretation.
 %of probability weighting as a cognitive bias leading to suboptimal decisions.
 At least we should keep in mind that it is unclear who suffers from the bias: experimenter or test subject (or neither or both)?
 We are by no means the first to raise this question.
-Commenting on another so-called cognitive bias regarding probabilities, the representativeness fallacy, \citet{Cohen1979a} asked: ``Whose is the fallacy?''
+Commenting on another so-called cognitive bias regarding probabilities, the representativeness fallacy, \textcite{Cohen1979a} asked: ``Whose is the fallacy?''
 
-Whatever the answer, two observations are robust and interesting: first, disagreement is common; and, second, the disagreement tends to go in the same direction, with DMs assuming a greater range of plausible outcomes than DOs. 
+Whatever the answer, two observations are robust and interesting: first, disagreement is common; and, second, the disagreement tends to go in the same direction, with DMs assuming a greater range of plausible outcomes than DOs.
 
 An explanation for the first observation is that probability is a slippery concept and the word is used to mean different things. This suggests that phrasing information about probabilities concretely should reduce disagreement between DO and DM. For example, the statement ``10 out of 100 people have this disease'' conveys more, and more precise, information than ``the probability of having this disease is 0.1.'' Specifically, it tells us that a sample of people has been observed and what the size of the sample is.
 
-Furthermore, \citet{Gigerenzer2018} argues that statements involving integer counts, or what he calls natural frequencies,  (``10 out of 100'') are more readily understood by people than statements involving fractional probabilities (``0.1'').
+Furthermore, \textcite{Gigerenzer2018} argues that statements involving integer counts, or what he calls natural frequencies,  (``10 out of 100'') are more readily understood by people than statements involving fractional probabilities (``0.1'').
 
 The second observation may be explained as follows. A DO often has control over, and essentially perfect knowledge of, the decision problem he poses. A DM does not have such knowledge, and this ignorance will often translate into additional assumed uncertainty. For example, the DO may know the true probabilities of some gamble in an experiment, while the DM may have doubts about the DO's sincerity and his own understanding of the rules of the game. We will return to this in \secref{condition2}.
 
@@ -427,11 +491,11 @@ Many thousands of pages have been written about the meaning of probability. We w
 %The conundrum surrounding the observed phenomenon of the characteristic inverse-S-shaped probability weighting vanishes if probability is understood as individual ignorance, \ie somebody's uncertainty about an observable.
 
 \subsubsection*{Frequency-in-an-ensemble interpretation of probability}
-Consider the simple probabilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.'' 
+Consider the simple probabilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.''
 
-It is thus a statement about a model. How exactly it is linked to physical reality is not completely clear. 
+It is thus a statement about a model. How exactly it is linked to physical reality is not completely clear.
 
-%Sometimes ensembles are real, for instance, when we say the probability of having a car accident is 1\% per 10000 km driven -- that's a summary of statistics collected over a large ensemble of cars. In this case, it's a real ensemble that existed in the past, not an imagined one in the future. 
+%Sometimes ensembles are real, for instance, when we say the probability of having a car accident is 1\% per 10000 km driven -- that's a summary of statistics collected over a large ensemble of cars. In this case, it's a real ensemble that existed in the past, not an imagined one in the future.
 
 \subsubsection*{Frequency-over-time interpretation of probability}
 In some situations, the statement ``70\% probability of rain here tomorrow'' refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare today's measurements (of, say, wind and pressure) to those from the past -- weeks, months, or even years earlier. Forecasts were made on the assumption that the weather tomorrow would resemble the weather that had followed similar conditions in the historical record.
@@ -446,12 +510,12 @@ For our purpose it suffices to say that there's no guarantee that a probabilisti
 \subsection{Consistent differences between DO and DM \seclabel{condition2}}
 
 \subsubsection*{Estimation errors for probabilities}
-Let's assume that both the DO and the DM mean by ``probability'' the relative frequency of an event in an infinitely long time series of observations. Of course, real time series have finite length, so probabilities defined this way are model parameters and cannot actually be observed. But, from a real time series, we can estimate the best values to put into a model, by counting how often we see an event. 
+Let's assume that both the DO and the DM mean by ``probability'' the relative frequency of an event in an infinitely long time series of observations. Of course, real time series have finite length, so probabilities defined this way are model parameters and cannot actually be observed. But, from a real time series, we can estimate the best values to put into a model, by counting how often we see an event.
 
-As the probability of an event gets smaller, so does the number of times we see it in a finite time series. If we want to say something about the uncertainty in this number, we can measure it -- or imagine measuring it -- in several time series to see how much it varies. The variations from one time series to another get smaller for rarer events, but the \textit{relative} variations get larger, and so does the relative uncertainty in our estimate of probabilities. Take an extreme simplified example: asymptotically an event occurs in 0.1\% of observations, and we have a time series of 100 observations. 
+As the probability of an event gets smaller, so does the number of times we see it in a finite time series. If we want to say something about the uncertainty in this number, we can measure it -- or imagine measuring it -- in several time series to see how much it varies. The variations from one time series to another get smaller for rarer events, but the \textit{relative} variations get larger, and so does the relative uncertainty in our estimate of probabilities. Take an extreme simplified example: asymptotically an event occurs in 0.1\% of observations, and we have a time series of 100 observations.
 Around 99.5\% of such time series will contain 0 or 1 events. Na\"{i}vely, then, we would estimate the probability as either 0 or 1\%. In other words, we would estimate the event as either impossible or occurring ten times more frequently than it really would in a long series. However, if the event occurs 50\% of the time asymptotically, then around 99.5\% of time series would contain between 35 and 65 events, leading to a much smaller relative error in probability estimates.
 
-A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision making. Specifically, the DM should acknowledge that, due to his lack of information, \textit{prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.\footnote{Interestingly, \citet[p.~281]{KahnemanTversky1979} made the same point, noting that ``overestimation that is commonly found in the assessment of the probability of rare events'' has the same effect on human decisions as probability weighting. Since they assumed that subjects in experiments adopt unquestioningly the stated probabilities, they argued that probability weighting was necessary to explain their observations. We make no such assumption here.}
+A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision making. Specifically, the DM should acknowledge that, due to his lack of information, \textit{prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.\footnote{Interestingly, \textcite[p.~281]{KahnemanTversky1979} made the same point, noting that ``overestimation that is commonly found in the assessment of the probability of rare events'' has the same effect on human decisions as probability weighting. Since they assumed that subjects in experiments adopt unquestioningly the stated probabilities, they argued that probability weighting was necessary to explain their observations. We make no such assumption here.}
 
 Formalising these thoughts, we find that so long as relative uncertainties are larger for rare events than for common events -- which, generically, they are -- then an inverse-S curve emerges. See \Appref{relative_errors} for a detailed discussion. Here we make a simple scaling argument and then check it with a simulation. For an asymptotic probability density $p(x)$, the number of events $n(x)$ we see in the small interval $[x, x+ \delta x]$ in a time series of $T$ observations is proportional to $p(x)$, to $\delta x$, and to $T$. So we have $n(x) \sim p(x) \delta x T$, where we mean by $\sim$ ``scales like.'' We also know that such counts, for example in the simple Poissonian case, are random variables whose uncertainties scale like $\sqrt{n(x)}$.
 
@@ -473,7 +537,7 @@ We write $\phat(x) \equiv n(x)/T\delta x$ as the estimate of $p(x)$, and
 \ee
 as its uncertainty, which we have expressed in terms of the estimate itself.
 
-The standard error, $ \sqrt{\phat(x)/T \delta x}$, in an estimated probability density shrinks as the probability decreases. However, the relative error in the estimate is $1/\sqrt{\phat(x)T\delta x}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, and constitutes the key message of this section. Errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for lower probabilities, but relative errors are larger. 
+The standard error, $ \sqrt{\phat(x)/T \delta x}$, in an estimated probability density shrinks as the probability decreases. However, the relative error in the estimate is $1/\sqrt{\phat(x)T\delta x}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, and constitutes the key message of this section. Errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for lower probabilities, but relative errors are larger.
 
 Let's assume that the DM is aware of the uncertainties in his estimates and, furthermore, that he does not like surprises. To avoid surprises, he adds the standard error to his estimate of the probability density, $\phat(x)$, in order to construct his decision weight density, $w(x)$. In effect, he constructs a reasonable worst case for each of his estimates. After normalising, this conservative strategy yields generically,
 \be
@@ -510,9 +574,9 @@ Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_den
 
 \FloatBarrier
 \subsubsection{Typical situations of DO and DM: ergodicity}
-To recap: behavioural economists observe that DOs tend to assign lower weights to low-probability events than DMs. While behavioural economists commonly assume that the DM is wrong, we make no such judgement. In any decision problem, the aim of the decision must be taken into account. Crucially, this aim depends on the situation of the individual. 
+To recap: behavioural economists observe that DOs tend to assign lower weights to low-probability events than DMs. While behavioural economists commonly assume that the DM is wrong, we make no such judgement. In any decision problem, the aim of the decision must be taken into account. Crucially, this aim depends on the situation of the individual.
 
-The two types of modellers (DO and DM) pursue different goals. In our thought experiment, the DO is a behavioural scientist without personal exposure to the success or failure of the DM, whom we imagine as a test subject or someone whose behaviour is being observed in the wild. The DM, of course, has such exposure. Throughout the history of economics, it has been a common mistake, by DOs, to assume that DMs optimise what happens to them on average in an ensemble. To the DM, what happens to the ensemble is seldom a primary concern. Instead, he is concerned with what happens to him over time. Not distinguishing between these two perspectives is only permissible if they lead to identical predictions, meaning only if the relevant observables are ergodic \citep{Peters2019b}. 
+The two types of modellers (DO and DM) pursue different goals. In our thought experiment, the DO is a behavioural scientist without personal exposure to the success or failure of the DM, whom we imagine as a test subject or someone whose behaviour is being observed in the wild. The DM, of course, has such exposure. Throughout the history of economics, it has been a common mistake, by DOs, to assume that DMs optimise what happens to them on average in an ensemble. To the DM, what happens to the ensemble is seldom a primary concern. Instead, he is concerned with what happens to him over time. Not distinguishing between these two perspectives is only permissible if they lead to identical predictions, meaning only if the relevant observables are ergodic \parencite{Peters2019b}.
 
 It is now well known that this is usually not the case in the following sense: DMs are usually observed making choices that affect their wealth, and wealth is usually modelled as a stochastic process that is not ergodic. The ensemble average of wealth does not behave like the time average of wealth.
 
@@ -524,7 +588,7 @@ The difference between how these two perspectives evaluate the effects of probab
 \section{Fitting the model to experimental results \seclabel{Fitting_the}}
 Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's physically unmotivated function, $\tilde{F}^{TK}_w(F_p)$ in \eref{correspondence}, fits the data no more efficiently than the functions arising from our mechanistic model. This is particularly evident in the bottom panels of \fref{Gauss_scale_location_both_KT}, which show that a Gaussian, $w(x)$, whose scale and location differ from those of $p(x)$, reproduces the fitted functional shape of $\tilde{F}^{TK}_w(F_p)$.
 
-For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \citet{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \citet{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
+For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \textcite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \textcite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
 %
 \be
 F_w\left(x\right) = \Phi\left(\frac{\Phi^{-1}\left(F_p\left(x\right)\right) - \mu}{\sigma}\right)~,
@@ -541,15 +605,15 @@ In addition to \eref{correspondence} used by Tversky and Kahneman, we fit the fu
 \elabel{LattimoreFunction}
 \ee
 %
-suggested by \citet{LattimoreBakerWitte1992} to parametrically describe probability weighting (also used by \citet{tversky1995risk} and \citet{Prelec1998}). The reason for fitting \eref{LattimoreFunction} is to ensure a fair comparison: the Gaussian and $t$ models are characterised by two parameters, whereas \eref{correspondence} only has one free parameter. \Eref{LattimoreFunction} has two parameters.
+suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe probability weighting (also used by \textcite{tversky1995risk} and \textcite{Prelec1998}). The reason for fitting \eref{LattimoreFunction} is to ensure a fair comparison: the Gaussian and $t$ models are characterised by two parameters, whereas \eref{correspondence} only has one free parameter. \Eref{LattimoreFunction} has two parameters.
 
 \Fref{curvefit} presents the fit results. We obtain very good fits to data for both Gaussian and $t$-distributions, as well as for \eref{correspondence} and \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the fitted functions within standard errors. We conclude that our model fits the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a physically plausible mechanism. They are not simply phenomenological.
 
 \begin{figure}[htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/curvefit.pdf}
-\caption{\textbf{Model fitting to experimental data from \citet{TverskyKahneman1992} (left) and \citet{TverskyFox1995} (right).}
-Left: \cite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \cite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right: \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \cite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \citep{Levenberg1944} for non-linear least squares curve fitting.
+\caption{\textbf{Model fitting to experimental data from \textcite{TverskyKahneman1992} (left) and \textcite{TverskyFox1995} (right).}
+Left: \cite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \cite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right: \cite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \cite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \parencite{Levenberg1944} for non-linear least squares curve fitting.
 }
 \flabel{curvefit}
 \end{figure}
@@ -561,7 +625,7 @@ Left: \cite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\le
 % \OP{We could move some discussion bits here -- like the incredible Sunstein story.}
 % \MK{Discuss the general action of change of measure in relation to Girsanov and risk-neutral prob measure $\mathbb{Q}$ in Math Finance?}
 % \OP{Let's keep this paper focused on one point only.}
-On 28 February 2020, \citet{Sunstein2020}, a behavioural economist, legal scholar, and former United States Administrator of the Office of Information and Regulatory Affairs, diagnosed that people's concern about a potential coronavirus outbreak in the US was attributable to an extreme case of probability weighting. Supposedly, according to Sunstein, people were neglecting the fact that such an event had a low probability. When the piece was published, many commented that it seemed quite reasonable to them to take precautions, and that Sunstein himself may have underestimated both the severity and likelihood of what lay ahead. One month later, the US suffered a major outbreak of coronavirus.
+On 28 February 2020, \textcite{Sunstein2020}, a behavioural economist, legal scholar, and former United States Administrator of the Office of Information and Regulatory Affairs, diagnosed that people's concern about a potential coronavirus outbreak in the US was attributable to an extreme case of probability weighting. Supposedly, according to Sunstein, people were neglecting the fact that such an event had a low probability. When the piece was published, many commented that it seemed quite reasonable to them to take precautions, and that Sunstein himself may have underestimated both the severity and likelihood of what lay ahead. One month later, the US suffered a major outbreak of coronavirus.
 
 This sad episode illustrates that an inverted S-curve is a neutral indicator of a difference in opinion. It says nothing about who is right and who is wrong.
 
@@ -571,27 +635,27 @@ The term ``probability weighting'' suggests an obscure mental process, where a D
 %In this article we contribute to a mechanistic understanding of this empirical phenomenon.
 
 %First, there are good reasons for the DM and the DO to use of different models or model parameters (see \secref{ModelDiff}) in reasoning about the same uncertain outcomes. It is no longer a question about who is right or wrong, rational or irrational.
- 
+
 %Second, accepting the difference in models, the valid question asks for the explanation of qualitative properties of the difference in models.
 %
 The model of estimating probabilities from real time series, which we discuss in \secref{Reasons_for}, has qualitative features that display a degree of universality. Relative errors in the DM's probability estimates are always greater for rarer events. A dislike of the unexpected, which explains the systematic overestimation of low probabilities, is similarly common. ``Probability weighting'' is purely descriptive and comes with the ill-conceived connotation of DMs suffering from a cognitive error. The phenomenon is better thought of as DMs making wise decisions given the information available to them. Such information is necessarily limited because, for example, DMs are constrained to collect such information in time.
 
 % \paragraph{Related literature}
-% 
+%
 % \cite{WuGonzalez1996,Prelec1998}: derive PW from preference axioms, goal is to generate concavity and then convexity
-% 
-% \cite{Stott2006}: test several functional forms, corroborate \cite{Prelec1998} and \eref{correspondence} and \eref{LattimoreFunction}, respectively. None of the tested functional forms corresponds to the function we derived mechanistically in \eref{w_of_p}. 
-% 
+%
+% \cite{Stott2006}: test several functional forms, corroborate \cite{Prelec1998} and \eref{correspondence} and \eref{LattimoreFunction}, respectively. None of the tested functional forms corresponds to the function we derived mechanistically in \eref{w_of_p}.
+%
 % \cite{Wakker2010}: the whole book contains only parameter calibrations of \eref{correspondence} but provides no mechanistic explanation.
-% 
-% \cite{AbdellaouiETAL2011}: maybe closest to what we do in terms of their Fig. 2., however they distinguish between source functions for ambigious probabilities and known probabilities. They interpret the shifts and shape of the inverse-S curve using two additional idiosyncratic psychological parameters encoding optimism(pessimism) and likelihood (in)sensitivity. 
+%
+% \cite{AbdellaouiETAL2011}: maybe closest to what we do in terms of their Fig. 2., however they distinguish between source functions for ambigious probabilities and known probabilities. They interpret the shifts and shape of the inverse-S curve using two additional idiosyncratic psychological parameters encoding optimism(pessimism) and likelihood (in)sensitivity.
 
 % Whereas we provide a mechanistic explanation, psychological explanations prevail in the behavioural economics and finance literature, see \cite{WuGonzalez1996,Prelec1998,GonzalezWu1999,Stott2006,DeGiorgi2006,Wakker2010,AbdellaouiETAL2011} and references especially in the latter. It remains doubtful how a psychological explanation shall compensate for a missing and/or not yet understood mechanism, generating a particular phenomenon like probability weighting.
 % \OP{I think I see the point, but I don't know what a ``psychological explanation'' is; it may also be unclear what we mean by ``mechanistic.''}
 
 
 % \paragraph{Results set in perspective}
-% The consensus view hold in behavioural economics is that a descriptive decision model needs to feature 
+% The consensus view hold in behavioural economics is that a descriptive decision model needs to feature
 % the so-called fourfold pattern of risk attitudes:
 % \begin{enumerate}
 % 	\item gain/loss asymmetry (kink at the reference point),
@@ -599,20 +663,22 @@ The model of estimating probabilities from real time series, which we discuss in
 % 	\item risk aversion for most gains \& low probability losses (concavity) and
 % 	\item risk seeking for most losses \& low probability gains (convexity).
 % \end{enumerate}
-% All of these empirical patterns are usually (mis)interpreted as a deviation from \textit{the one and only} ``correct'' model and perceived as detrimental cognitive biases \citep{Lopes1991,Gigerenzer2018}. 
-% % 
+% All of these empirical patterns are usually (mis)interpreted as a deviation from \textit{the one and only} ``correct'' model and perceived as detrimental cognitive biases \parencite{Lopes1991,Gigerenzer2018}.
+% %
 % Thus the mode of explanation in behavioural economics is to utilise psychological biases and cognitive processes in the brain which cause certain empirical regularities, \eg inverse-S curve labelled as probability weighting.
 % %
 % From a normative point of view there remains the desideratum to provide a mechanistic explanation for each of these patterns. Our contribution is that we provide a mechanistic explanation for probability weighting and show that it may even be adaptive in the likely case of cautiously using a model with more uncertainty relative to another model.
 
 
 
-%\MK{End on a positive note}
-%\MK{It has almost become custom to end with a Kacelnik quote}
 
-% BibTeX users please use one of
-\bibliographystyle{apalike}
-\bibliography{../LML_bibliography/bibliography} % name your BibTeX data base
+
+% % BibTeX users please use one of
+% % \bibliographystyle{apalike}
+% % \bibliography{../LML_bibliography/bibliography} % name your BibTeX data base
+
+% BibLaTeX
+\printbibliography
 
 % \newpage
 \appendix

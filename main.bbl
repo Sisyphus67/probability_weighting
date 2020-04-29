@@ -1,64 +1,420 @@
-\begin{thebibliography}{}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[Cohen, 1979]{Cohen1979a}
-Cohen, L.~J. (1979).
-\newblock On the psychology of prediction: Whose is the fallacy?
-\newblock {\em Cognition}, 7:385--407.
+\datalist[entry]{nyt/global//global/global}
+  \entry{Cohen1979a}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CLJ}{%
+         family={Cohen},
+         familyi={C\bibinitperiod},
+         given={L.\bibnamedelima Jonathan},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CLJ1}
+    \strng{fullhash}{CLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1979}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1016/0010-0277(79)90023-4
+    \endverb
+    \field{issue}{4}
+    \field{pages}{385\bibrangedash 407}
+    \field{title}{On the psychology of prediction: Whose is the fallacy?}
+    \field{volume}{7}
+    \field{journaltitle}{Cognition}
+    \field{year}{1979}
+  \endentry
 
-\bibitem[Gigerenzer, 2018]{Gigerenzer2018}
-Gigerenzer, G. (2018).
-\newblock The bias bias in behavioral economics.
-\newblock {\em Review of Behavioral Economics}, 5:303--336.
+  \entry{Gigerenzer2018}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GG}{%
+         family={Gigerenzer},
+         familyi={G\bibinitperiod},
+         given={Gerd},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GG1}
+    \strng{fullhash}{GG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1561/105.00000092
+    \endverb
+    \field{issue}{3-4}
+    \field{pages}{303\bibrangedash 336}
+    \field{title}{The Bias Bias in Behavioral Economics}
+    \field{volume}{5}
+    \field{journaltitle}{Review of Behavioral Economics}
+    \field{year}{2018}
+  \endentry
 
-\bibitem[Kahneman and Tversky, 1979]{KahnemanTversky1979}
-Kahneman, D. and Tversky, A. (1979).
-\newblock Prospect theory: An analysis of decision under risk.
-\newblock {\em Econometrica}, 47:263--291.
+  \entry{KahnemanTversky1979}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KD}{%
+         family={Kahneman},
+         familyi={K\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=TA}{%
+         family={Tversky},
+         familyi={T\bibinitperiod},
+         given={Amos},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KDTA1}
+    \strng{fullhash}{KDTA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1979}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.2307/1914185
+    \endverb
+    \field{issue}{2}
+    \field{pages}{263\bibrangedash 291}
+    \field{title}{Prospect Theory: An Analysis of Decision under Risk}
+    \field{volume}{47}
+    \field{journaltitle}{Econometrica}
+    \field{year}{1979}
+  \endentry
 
-\bibitem[Lattimore et~al., 1992]{LattimoreBakerWitte1992}
-Lattimore, P.~K., Baker, J.~R., and Witte, A.~D. (1992).
-\newblock Influence of probability on risky choice: A parametric examination.
-\newblock {\em Journal of Economic Behavior and Organization}, 17:377--400.
+  \entry{LattimoreBakerWitte1992}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LPK}{%
+         family={Lattimore},
+         familyi={L\bibinitperiod},
+         given={Pamela\bibnamedelima K.},
+         giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=BJR}{%
+         family={Baker},
+         familyi={B\bibinitperiod},
+         given={Joanna\bibnamedelima R.},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=WAD}{%
+         family={Witte},
+         familyi={W\bibinitperiod},
+         given={A.\bibnamedelima Dryden},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LPK+1}
+    \strng{fullhash}{LPKBJRWAD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1992}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{377\bibrangedash 400}
+    \field{title}{Influence of Probability on Risky Choice: A Parametric
+  Examination}
+    \field{volume}{17}
+    \field{journaltitle}{Journal of Economic Behavior and Organization}
+    \field{year}{1992}
+  \endentry
 
-\bibitem[Levenberg, 1944]{Levenberg1944}
-Levenberg, K. (1944).
-\newblock A method for the solution of certain non-linear problems in least
-  squares.
-\newblock {\em Quarterly of Applied Mathematics}, 2(2):164--168.
+  \entry{Levenberg1944}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LK}{%
+         family={Levenberg},
+         familyi={L\bibinitperiod},
+         given={Kenneth},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LK1}
+    \strng{fullhash}{LK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1944}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1090/qam/10666
+    \endverb
+    \field{number}{2}
+    \field{pages}{164\bibrangedash 168}
+    \field{title}{A Method for the Solution of Certain Non-Linear Problems in
+  Least Squares}
+    \field{volume}{2}
+    \field{journaltitle}{Quarterly of Applied Mathematics}
+    \field{year}{1944}
+  \endentry
 
-\bibitem[Peters, 2019]{Peters2019b}
-Peters, O. (2019).
-\newblock The ergodicity problem in economics.
-\newblock {\em Nature Physics}, 15:1216--1221.
+  \entry{Peters2019b}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PO}{%
+         family={Peters},
+         familyi={P\bibinitperiod},
+         given={Ole},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PO1}
+    \strng{fullhash}{PO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{abstract}{%
+    The ergodic hypothesis is a key analytical device of equilibrium
+  statistical mechanics. It underlies the assumption that the time average and
+  the expectation value of an observable are the same. Where it is valid,
+  dynamical descriptions can often be replaced with much simpler probabilistic
+  ones ---time is essentially eliminated from the models. The conditions for
+  validity are restrictive, even more so for non-equilibrium systems. Economics
+  typically deals with systems far from equilibrium ---specifically with models
+  of growth. It may therefore come as a surprise to learn that the prevailing
+  formulations of economic theory ---expected utility theory and its
+  descendants ---make an indiscriminate assumption of ergodicity. This is
+  largely because foundational concepts to do with risk and randomness
+  originated in seventeenth-century economics, predating by some 200 years the
+  concept of ergodicity, which arose in nineteenth-century physics. In this
+  Perspective, I argue that by carefully addressing the question of ergodicity,
+  many puzzles besetting the current economic formalism are resolved in a
+  natural and empirically testable way.%
+    }
+    \verb{doi}
+    \verb 10.1038/s41567-019-0732-0
+    \endverb
+    \field{isbn}{1745-2481}
+    \field{issue}{12}
+    \field{pages}{1216\bibrangedash 1221}
+    \field{title}{The Ergodicity Problem in Economics}
+    \verb{url}
+    \verb https://doi.org/10.1038/s41567-019-0732-0
+    \endverb
+    \field{volume}{15}
+    \field{journaltitle}{Nature Physics}
+    \field{year}{2019}
+  \endentry
 
-\bibitem[Prelec, 1998]{Prelec1998}
-Prelec, D. (1998).
-\newblock The probability weighting function.
-\newblock 66:497--527.
+  \entry{Prelec1998}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PD}{%
+         family={Prelec},
+         familyi={P\bibinitperiod},
+         given={Dra\u{z}en},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PD1}
+    \strng{fullhash}{PD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.2307/2998573
+    \endverb
+    \field{issue}{3}
+    \field{pages}{497\bibrangedash 527}
+    \field{title}{The Probability Weighting Function}
+    \field{volume}{66}
+    \field{journaltitle}{Econometrica}
+    \field{year}{1998}
+  \endentry
 
-\bibitem[Sunstein, 2020]{Sunstein2020}
-Sunstein, C.~R. (2020).
-\newblock The cognitive bias that makes us panic about coronavirus.
+  \entry{Sunstein2020}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SCR}{%
+         family={Sunstein},
+         familyi={S\bibinitperiod},
+         given={Cass\bibnamedelima R.},
+         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SCR1}
+    \strng{fullhash}{SCR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{The Cognitive Bias That Makes Us Panic About Coronavirus}
+    \verb{url}
+    \verb https://www.bloomberg.com/opinion/articles/2020-02-28/coronavirus-pan
+    \verb ic-caused-by-probability-neglect
+    \endverb
+    \field{year}{2020}
+    \field{urlday}{04}
+    \field{urlmonth}{04}
+    \field{urlyear}{2020}
+  \endentry
 
-\bibitem[Tversky and Fox, 1995]{TverskyFox1995}
-Tversky, A. and Fox, C.~R. (1995).
-\newblock Weighing risk and uncertainty.
-\newblock {\em Psychological Review}, 102(2):269--283.
+  \entry{TverskyFox1995}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TA}{%
+         family={Tversky},
+         familyi={T\bibinitperiod},
+         given={Amos},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FCR}{%
+         family={Fox},
+         familyi={F\bibinitperiod},
+         given={Craig\bibnamedelima R.},
+         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Psychological Association}%
+    }
+    \strng{namehash}{TAFCR1}
+    \strng{fullhash}{TAFCR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1995}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{number}{2}
+    \field{pages}{269\bibrangedash 283}
+    \field{title}{Weighing Risk and Uncertainty}
+    \field{volume}{102}
+    \field{journaltitle}{Psychological Review}
+    \field{year}{1995}
+  \endentry
 
-\bibitem[Tversky and Kahneman, 1986]{TverskyKahneman1986}
-Tversky, A. and Kahneman, D. (1986).
-\newblock Rational choice and the framing of decisions.
-\newblock {\em Journal of Business}, 59(4):S251--S278.
+  \entry{TverskyKahneman1986}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TA}{%
+         family={Tversky},
+         familyi={T\bibinitperiod},
+         given={Amos},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kahneman},
+         familyi={K\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TAKD1}
+    \strng{fullhash}{TAKD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1986}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{eprint}
+    \verb 2352759
+    \endverb
+    \field{number}{4}
+    \field{pages}{S251\bibrangedash S278}
+    \field{title}{Rational Choice and the Framing of Decisions}
+    \field{volume}{59}
+    \field{journaltitle}{Journal of Business}
+    \field{eprinttype}{JSTOR}
+    \field{year}{1986}
+  \endentry
 
-\bibitem[Tversky and Kahneman, 1992]{TverskyKahneman1992}
-Tversky, A. and Kahneman, D. (1992).
-\newblock {A}dvances in {P}rospect {T}heory: {C}umulative {R}epresentation of
-  {U}ncertainty.
-\newblock 5:297--323.
+  \entry{TverskyKahneman1992}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TA}{%
+         family={Tversky},
+         familyi={T\bibinitperiod},
+         given={Amos},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Kahneman},
+         familyi={K\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TAKD1}
+    \strng{fullhash}{TAKD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1992}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb 10.1007/BF00122574
+    \endverb
+    \field{issue}{4}
+    \field{pages}{297\bibrangedash 323}
+    \field{title}{{A}dvances in {P}rospect {T}heory: {C}umulative
+  {R}epresentation of {U}ncertainty}
+    \field{volume}{5}
+    \field{journaltitle}{Journal of Risk and Uncertainty}
+    \field{year}{1992}
+  \endentry
 
-\bibitem[Tversky and Wakker, 1995]{tversky1995risk}
-Tversky, A. and Wakker, P. (1995).
-\newblock Risk attitudes and decision weights.
-\newblock {\em Econometrica}, 63(6):1255--1280.
-
-\end{thebibliography}
+  \entry{tversky1995risk}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TA}{%
+         family={Tversky},
+         familyi={T\bibinitperiod},
+         given={Amos},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WP}{%
+         family={Wakker},
+         familyi={W\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {JSTOR}%
+    }
+    \strng{namehash}{TAWP1}
+    \strng{fullhash}{TAWP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1995}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{number}{6}
+    \field{pages}{1255\bibrangedash 1280}
+    \field{title}{Risk Attitudes and Decision Weights}
+    \field{volume}{63}
+    \field{journaltitle}{Econometrica}
+    \field{year}{1995}
+  \endentry
+\enddatalist
+\endinput
