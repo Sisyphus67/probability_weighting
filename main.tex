@@ -1,15 +1,17 @@
-% \documentclass[a4paper, 12pt]{article}
-\documentclass[%
-	a4paper,
-	abstract=true,	
-	12pt,
-	numbers=noenddot,
-% 	bibliography=totoc,
-% 	bibliography=oldstyle					% more compact
-]{scrartcl}
+\documentclass[a4paper, 12pt]{article}
+% \documentclass[%
+% 	a4paper,
+% 	abstract=true,	
+% 	12pt,
+% 	numbers=noenddot,
+% % 	bibliography=totoc,
+% % 	bibliography=oldstyle					% more compact
+% ]{scrartcl}
 
 \usepackage{amsthm, amsmath, amssymb, mathrsfs, multirow, url}
-\usepackage{amsfonts}
+\usepackage{amsfonts} 
+\usepackage[blocks,auth-sc-lg,affil-it]{authblk}
+\renewcommand\Affilfont{\itshape\small}
 \usepackage{caption}
 \usepackage{csquotes}
 \usepackage{subcaption}
@@ -66,6 +68,10 @@ url=true,doi=true,eprint=true,											% print url,doi,eprint
 useprefix=true,																			% consider nobiliary particle von, van, de, etc.
 ]{biblatex}
 
+\makeatletter
+\def\blx@maxline{77}
+\makeatother
+
 \addbibresource{../LML_bibliography/bibliography}
 
 % =====================================================================
@@ -87,9 +93,9 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 \renewbibmacro{in:}{}					% print no 'In:' before the <Journal Name>'
 
 % \DefineBibliographyStrings{english}{%
-%     backrefpage  = {cit. on p.}, 			% for single page number
+%     backrefpage  = {cit. on p.}, 			% default: for single page number
 %     backrefpage  = {}, 								% for single page number
-%     backrefpages = {cit. on pp.} 			% for multiple page numbers
+%     backrefpages = {cit. on pp.} 			% default: for multiple page numbers
 %     backrefpages = {} 								% for multiple page numbers
 % }
 % =====================================================================
@@ -158,8 +164,8 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 \newcommand{\YB}[1]{{\it ***YB: #1 YB***}}
 \renewcommand{\AA}[1]{{\it ***AA: #1 AA***}}
 
-% \title{What are we weighting for? \\
-% {\normalsize A mechanistic model for probability weighting}}
+\title{What are we weighting for? \\
+{\normalsize A mechanistic model for probability weighting\thanks{The latest version of the manuscript is available at \href{https://bit.ly/lml-pw}{bit.ly/lml-pw}. The code to generate the figures and simulations is available at \href{https://bit.ly/lml-pw-code}{bit.ly/lml-pw-code}.}}}
 % \author{
 % Ole Peters\footnote{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK and Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, 87501 NM, USA. Email: \texttt{o.peters@lml.org.uk}} \;
 % Alexander Adamou\footnote{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK. Email: \texttt{a.adamou@lml.org.uk}} \;
@@ -167,14 +173,45 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 % Yonatan Berman\footnote{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK. Email: \texttt{y.berman@lml.org.uk}}
 % }
 
-\title{What are we weighting for?}
-\subtitle{A mechanistic model for probability weighting\thanks{\href{https://bit.ly/LML-pw}{Latest version of the manuscript}. The \href{https://bit.ly/lml_pw_code}{code to generate the figures and simulations}.}}
-\author{
-	\person{Ole Peters}\footnote{\href{http://lml.org.uk/people/ole-peters-2}{London Mathematical Laboratory}, 8 Margravine Gardens, London W6 8RH, UK and Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, 87501 NM, USA, \texttt{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}}} \and
-	\person{Alexander Adamou}\footnote{\href{http://lml.org.uk/people/alex-adamou-2}{London Mathematical Laboratory}, \texttt{\href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}}} \and
-	\person{Mark Kirstein}\footnote{\href{https://bit.ly/LMLMK}{London Mathematical Laboratory}, \href{https://www.mis.mpg.de/jjost/research/economics.html}{Max-Planck-Institute for Mathematics in the Sciences} and Institute of Mathematics, Leipzig University, \texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}} \and 
-	\person{Yonatan Berman}\footnote{\href{http://lml.org.uk/people/yonatan-berman/}{London Mathematical Laboratory}, The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York, \texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}
-}
+% \title{What are we weighting for?}
+% \subtitle{A mechanistic model for probability weighting\thanks{The latest version of the manuscript is available at \href{https://bit.ly/lml-pw}{bit.ly/lml-pw}. The code to generate the figures and simulations is available at \href{https://bit.ly/lml-pw-code}{bit.ly/lml-pw-code}.}}
+% \author{
+% 	\person{Ole Peters}\footnote{\href{http://lml.org.uk/people/ole-peters-2}{London Mathematical Laboratory}, 8 Margravine Gardens, London W6 8RH, UK and Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, 87501 NM, USA, \texttt{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}}} \and
+% 	\person{Alexander Adamou}\footnote{\href{http://lml.org.uk/people/alex-adamou-2}{London Mathematical Laboratory}, \texttt{\href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}}} \and
+% 	\person{Mark Kirstein}\footnote{\href{https://bit.ly/LMLMK}{London Mathematical Laboratory}, \href{https://www.mis.mpg.de/jjost/research/economics.html}{Max-Planck-Institute for Mathematics in the Sciences} and Institute of Mathematics, Leipzig University, \texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}} \and 
+% 	\person{Yonatan Berman}\footnote{\href{http://lml.org.uk/people/yonatan-berman/}{London Mathematical Laboratory} and The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York, \texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}
+% }
+
+% plain authors
+% \author[1,2]{Ole Peters}
+% \author[1]{Alexander Adamou}
+% \author[1,3,4]{Mark Kirstein}
+% \author[1,5]{Yonatan Berman}
+% \affil[1]{London Mathematical Laboratory, \{\href{mailto:o.peters@lml.org.uk}{o.peters}, \href{mailto:a.adamou@lml.org.uk}{a.adamou}, \href{mailto:m.kirstein@lml.org.uk}{m.kirstein}, \href{mailto:y.berman@lml.org.uk}{y.berman}\}@lml.org.uk}
+
+
+% Authors with Email addresses as footnotes
+\author[1,2]{Ole Peters\thanks{\texttt{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}}}}
+\author[1]{Alexander Adamou\thanks{\texttt{\href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}}}}
+\author[1,3,4]{Mark Kirstein\thanks{\texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}}}
+\author[1,5]{Yonatan Berman\thanks{\texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}}
+% \affil[1]{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK}
+\affil[1]{London Mathematical Laboratory} % short version
+
+% \affil[2]{Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, 87501 NM, USA}
+\affil[2]{Santa Fe Institute, NM, USA} % short version
+% \affil[3]{Max-Planck-Institute for Mathematics in the Sciences, Inselstraße 22, D-04103 Leipzig, Germany}
+\affil[3]{Max-Planck-Institute for Mathematics in the Sciences, Leipzig, Germany} % short version
+% \affil[4]{Institute of Mathematics, Augustusplatz 10, D-04109 Leipzig University}
+\affil[4]{Institute of Mathematics, Leipzig University} % short version
+% \affil[5]{The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York}
+\affil[5]{The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York}
+
+% \affil[]{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}, \href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}, \href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}, \href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}
+
+% \affil[]{\href{mailto:o.peters@lml.org.uk}{o.peters@lml.org.uk}, \href{mailto:a.adamou@lml.org.uk}{a.adamou@lml.org.uk}, \href{mailto:m.kirstein@lml.org.uk}{m.kirstein@lml.org.uk}, \href{mailto:y.berman@lml.org.uk}{y.berman@lml.org.uk}}
+
+% \affil[]{\{\href{mailto:o.peters@lml.org.uk}{o.peters}, \href{mailto:a.adamou@lml.org.uk}{a.adamou}, \href{mailto:m.kirstein@lml.org.uk}{m.kirstein}, \href{mailto:y.berman@lml.org.uk}{y.berman}\}@lml.org.uk}
 
 \date{\today}
 
@@ -262,7 +299,7 @@ F_p(x)=\int_{-\infty}^x p(s) ds~,
 F_w(x)=\int_{-\infty}^x w(s) ds~.
 \ee
 \ei
-In \fref{TK1992} we reproduce the first such visual summary from \textcite[p.~310]{TverskyKahneman1992}.
+In \fref{TK1992} we reproduce the first such visual summary from \textcite[310]{TverskyKahneman1992}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
@@ -467,8 +504,8 @@ The result is qualitatively similar to the bottom right panel of \fref{mapping_c
 
 \section{Reasons for different models\seclabel{Reasons_for}}
 Probability weighting is usually interpreted as a cognitive bias that leads to errors of judgement and poor decisions by DMs.\footnote{Indeed, its originators presented it as such.
-Introducing prospect theory, \textcite[p.~277]{KahnemanTversky1979} wrote ``we are compelled to assume [\dots] that decision weights do not coincide with stated probabilities. These departures from expected utility theory must lead to normatively unacceptable consequences''.
-They classified prospect theory as descriptive rather than normative, \ie as relating to actual rather than optimal behaviour \parencite{TverskyKahneman1986}.
+Introducing prospect theory, \textcite[277]{KahnemanTversky1979} wrote ``we are compelled to assume [\dots] that decision weights do not coincide with stated probabilities. These departures from expected utility theory must lead to normatively unacceptable consequences''.
+They classified prospect theory as descriptive rather than normative, \ie as relating to actual rather than optimal behaviour \parencite[p. S252]{TverskyKahneman1986}.
 Put simply, prospect theory aims to model systematic errors in human decision making, arising (in part) from inappropriate psychological adjustments of known probabilities.}
 We caution against this interpretation.
 %of probability weighting as a cognitive bias leading to suboptimal decisions.
@@ -515,7 +552,7 @@ Let's assume that both the DO and the DM mean by ``probability'' the relative fr
 As the probability of an event gets smaller, so does the number of times we see it in a finite time series. If we want to say something about the uncertainty in this number, we can measure it -- or imagine measuring it -- in several time series to see how much it varies. The variations from one time series to another get smaller for rarer events, but the \textit{relative} variations get larger, and so does the relative uncertainty in our estimate of probabilities. Take an extreme simplified example: asymptotically an event occurs in 0.1\% of observations, and we have a time series of 100 observations.
 Around 99.5\% of such time series will contain 0 or 1 events. Na\"{i}vely, then, we would estimate the probability as either 0 or 1\%. In other words, we would estimate the event as either impossible or occurring ten times more frequently than it really would in a long series. However, if the event occurs 50\% of the time asymptotically, then around 99.5\% of time series would contain between 35 and 65 events, leading to a much smaller relative error in probability estimates.
 
-A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision making. Specifically, the DM should acknowledge that, due to his lack of information, \textit{prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.\footnote{Interestingly, \textcite[p.~281]{KahnemanTversky1979} made the same point, noting that ``overestimation that is commonly found in the assessment of the probability of rare events'' has the same effect on human decisions as probability weighting. Since they assumed that subjects in experiments adopt unquestioningly the stated probabilities, they argued that probability weighting was necessary to explain their observations. We make no such assumption here.}
+A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision making. Specifically, the DM should acknowledge that, due to his lack of information, \textit{prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.\footnote{Interestingly, \textcite[281]{KahnemanTversky1979} made the same point, noting that ``overestimation that is commonly found in the assessment of the probability of rare events'' has the same effect on human decisions as probability weighting. Since they assumed that subjects in experiments adopt unquestioningly the stated probabilities, they argued that probability weighting was necessary to explain their observations. We make no such assumption here.}
 
 Formalising these thoughts, we find that so long as relative uncertainties are larger for rare events than for common events -- which, generically, they are -- then an inverse-S curve emerges. See \Appref{relative_errors} for a detailed discussion. Here we make a simple scaling argument and then check it with a simulation. For an asymptotic probability density $p(x)$, the number of events $n(x)$ we see in the small interval $[x, x+ \delta x]$ in a time series of $T$ observations is proportional to $p(x)$, to $\delta x$, and to $T$. So we have $n(x) \sim p(x) \delta x T$, where we mean by $\sim$ ``scales like.'' We also know that such counts, for example in the simple Poissonian case, are random variables whose uncertainties scale like $\sqrt{n(x)}$.
 
@@ -552,8 +589,7 @@ w(x)= \frac{\phat(x)+\sqrt{\frac{\phat(x)}{T \delta x}}}{\int_{-\infty}^{\infty}
 
 Note that the cautionary correction term in \eref{weight_density_spec} is parametrised by $T\delta x$, which scales like the number of observations in $[x, x+\delta x]$. As $T\delta x$ grows large, the correction vanishes and both $w(x)$ and $\phat(x)$ become consistent with the asymptotic density, $p(x)$. With perfect information, a DM need not adjust decisions to account for uncertainty.
 
-Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_density_spec}, reproduce the stylised facts of probability weighting, in particular the inverse-S curve? We check in two ways. First, analytically, by applying the DM's cautionary correction in \eref{weight_density_spec} directly to reference probability density functions. Second, by simulating the DM compiling counts of outcomes drawn from reference distributions, from which he estimates probability densities and their uncertainties. The simulation is meant to explore how noisy the effect is when a DM really only sees a single time series. The Python code is available at \url{https://bit.ly/2zmJfuk}, and a Jupyter notebook can be loaded to manipulate the code in an online environment at \url{https://bit.ly/2yvrwQV}. In both cases, we treat the DO as using the reference distribution to make his predictions of the DM's behaviour.
-%\MK{Create customised bit.ly links}
+Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_density_spec}, reproduce the stylised facts of probability weighting, in particular the inverse-S curve? We check in two ways. First, analytically, by applying the DM's cautionary correction in \eref{weight_density_spec} directly to reference probability density functions. Second, by simulating the DM compiling counts of outcomes drawn from reference distributions, from which he estimates probability densities and their uncertainties. The simulation is meant to explore how noisy the effect is when a DM really only sees a single time series. The Python code is available at \href{https://bit.ly/lml-pw-code-dm-count}{\texttt{bit.ly/lml-pw-code-dm-count}}, and a Jupyter notebook can be loaded to manipulate the code in an online environment at \href{https://bit.ly/lml-pw-dm-count-b}{\texttt{bit.ly/lml-pw-dm-count-b}}. In both cases, we treat the DO as using the reference distribution to make his predictions of the DM's behaviour.
 
 \Fref{square_root_error} shows the resulting PDFs and CDF mappings generated by setting $\phat(x)$ in \eref{weight_density_spec} to be the probability density functions for a Gaussian distribution and a fat-tailed $t$-distribution. Inverse-S curves are found for both distributions and the effect is more pronounced for the fat-tailed distribution.
 \begin{figure}[htb]
@@ -605,7 +641,7 @@ In addition to \eref{correspondence} used by Tversky and Kahneman, we fit the fu
 \elabel{LattimoreFunction}
 \ee
 %
-suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe probability weighting (also used by \textcite{tversky1995risk} and \textcite{Prelec1998}). The reason for fitting \eref{LattimoreFunction} is to ensure a fair comparison: the Gaussian and $t$ models are characterised by two parameters, whereas \eref{correspondence} only has one free parameter. \Eref{LattimoreFunction} has two parameters.
+suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe probability weighting (also used by \textcite{TverskyWakker1995} and \textcite{Prelec1998}). The reason for fitting \eref{LattimoreFunction} is to ensure a fair comparison: the Gaussian and $t$ models are characterised by two parameters, whereas \eref{correspondence} only has one free parameter. \Eref{LattimoreFunction} has two parameters.
 
 \Fref{curvefit} presents the fit results. We obtain very good fits to data for both Gaussian and $t$-distributions, as well as for \eref{correspondence} and \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the fitted functions within standard errors. We conclude that our model fits the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a physically plausible mechanism. They are not simply phenomenological.
 

@@ -136,6 +136,10 @@
     \field{labeldatesource}{}
     \field{sortinit}{L}
     \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1016/S0167-2681(95)90015-2
+    \endverb
+    \field{issue}{3}
     \field{pages}{377\bibrangedash 400}
     \field{title}{Influence of Probability on Risky Choice: A Parametric
   Examination}
@@ -164,7 +168,7 @@
     \verb{doi}
     \verb 10.1090/qam/10666
     \endverb
-    \field{number}{2}
+    \field{issue}{2}
     \field{pages}{164\bibrangedash 168}
     \field{title}{A Method for the Solution of Certain Non-Linear Problems in
   Least Squares}
@@ -211,13 +215,9 @@
     \verb{doi}
     \verb 10.1038/s41567-019-0732-0
     \endverb
-    \field{isbn}{1745-2481}
     \field{issue}{12}
     \field{pages}{1216\bibrangedash 1221}
     \field{title}{The Ergodicity Problem in Economics}
-    \verb{url}
-    \verb https://doi.org/10.1038/s41567-019-0732-0
-    \endverb
     \field{volume}{15}
     \field{journaltitle}{Nature Physics}
     \field{year}{2019}
@@ -270,8 +270,8 @@
     \field{sortinithash}{S}
     \field{title}{The Cognitive Bias That Makes Us Panic About Coronavirus}
     \verb{url}
-    \verb https://www.bloomberg.com/opinion/articles/2020-02-28/coronavirus-pan
-    \verb ic-caused-by-probability-neglect
+    \verb https://www.bloomberg.com/opinion/articles/2020-02-28/coronavirus-p
+    \verb anic-caused-by-probability-neglect
     \endverb
     \field{year}{2020}
     \field{urlday}{04}
@@ -294,9 +294,6 @@
          giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {American Psychological Association}%
-    }
     \strng{namehash}{TAFCR1}
     \strng{fullhash}{TAFCR1}
     \field{labelnamesource}{author}
@@ -305,7 +302,10 @@
     \field{labeldatesource}{}
     \field{sortinit}{T}
     \field{sortinithash}{T}
-    \field{number}{2}
+    \verb{doi}
+    \verb 10.1037/0033-295X.102.2.269
+    \endverb
+    \field{issue}{2}
     \field{pages}{269\bibrangedash 283}
     \field{title}{Weighing Risk and Uncertainty}
     \field{volume}{102}
@@ -383,7 +383,7 @@
     \field{year}{1992}
   \endentry
 
-  \entry{tversky1995risk}{article}{}
+  \entry{TverskyWakker1995}{article}{}
     \name{author}{2}{}{%
       {{hash=TA}{%
          family={Tversky},
@@ -398,9 +398,6 @@
          giveni={P\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {JSTOR}%
-    }
     \strng{namehash}{TAWP1}
     \strng{fullhash}{TAWP1}
     \field{labelnamesource}{author}
@@ -409,7 +406,10 @@
     \field{labeldatesource}{}
     \field{sortinit}{T}
     \field{sortinithash}{T}
-    \field{number}{6}
+    \verb{doi}
+    \verb 10.2307/2171769
+    \endverb
+    \field{issue}{6}
     \field{pages}{1255\bibrangedash 1280}
     \field{title}{Risk Attitudes and Decision Weights}
     \field{volume}{63}
