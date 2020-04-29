@@ -21,7 +21,7 @@
 \includegraphics{resone-logo.png}}
 \rhead{
 {\small 
-\url{https://www.researchers.one/article/2020-04-14}}
+ARXIV \url{https://www.researchers.one/article/2020-04-14}}
 % \url{https://bit.ly/LML-pw}} % fill in URL here
 }
 }
@@ -32,11 +32,11 @@
 % =========================  BibLateX w/ BibTeX   =====================
 % =====================================================================
 \usepackage[
-arxiv=abs,																					% Link to arXiv abstract page
+arxiv=abs,							% Link to arXiv abstract page
 autocite=inline,																		% structur of \autocite{key}
 autolang=hyphen,																		% active if langid is set
 % autopunct=false,																	%
-backend=bibtex,																		% Backend choice BibTeX8 case-sensitive sorting 
+backend=bibtex,																		% Backend choice BibTeX8 case-sensitive sorting
 backref=true,																				% page cited in the paper
 % bibencoding=latin1,
 bibstyle=authoryear,																% style in bibliography
@@ -53,6 +53,7 @@ maxbibnames=11,																			% limit authors in bibliography to 11
 maxcitenames=2,																			% start to use et alii
 % minbibnames=10																			% Angabe wie vieler Autoren nach Schnitt
 mincitenames=1,																			% cut to X authors with et al.
+% natbib=true,																				% old \citet \citep available
 url=true,doi=true,eprint=true,											% print url,doi,eprint
 useprefix=true,																			% consider nobiliary particle von, van, de, etc.
 ]{biblatex}
@@ -235,7 +236,8 @@ F_w(x)=\int_{-\infty}^x w(s) ds~.
 In \fref{TK1992} we reproduce the first such visual summary from \textcite[310]{TverskyKahneman1992}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
+%\includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
+\includegraphics[width=0.5\textwidth]{TK1992.pdf}
 \caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p.~310, Fig. 1, relabelled axes]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
 \flabel{TK1992}
 \end{figure}
@@ -272,7 +274,8 @@ We illustrate this with a Gaussian distribution.
 Let's assume that a DO models an observable $x$ -- which will often be a future change in wealth -- as a Gaussian with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM models the same observable as a Gaussian with the same location, $\mu$, but with a greater scale, so that the variance is $(\alpha\sigma)^2$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{mapping_pdfs}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\textwidth]{./figs/mapping_pdfs.pdf}
+%\includegraphics[width=\textwidth]{./figs/mapping_pdfs.pdf}
+\includegraphics[width=\textwidth]{mapping_pdfs.pdf}
 \caption{\textbf{Mapping PDFs.} Left: probability PDF (red), estimated by a DO; and decision-weight PDF (blue), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the red line. The DM models $x$ with a greater scale (here 2 times greater, $\alpha=2$), and assumes the true frequency distribution is the blue line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
 Right: the difference between decision weights and probabilities can also be expressed by directly plotting, for any value of $x$, the decision weight \vs the probability observed at $x$. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right. They therefore start and end at identical vertical positions as on the left. Because of the non-linear distortion of the horizontal axis, they are shifted to different locations horizontally.}
 \flabel{mapping_pdfs}
@@ -300,7 +303,8 @@ We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consi
 Alternatively, we can express the difference between models by plotting the CDFs $F_w$ and $F_p$. We do this in \fref{mapping_cdfs}, where the inverse-S emerges purely from the DM's greater assumed scale, $\alpha \sigma$.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\textwidth]{./figs/mapping_cdfs.pdf}
+%\includegraphics[width=\textwidth]{./figs/mapping_cdfs.pdf}
+\includegraphics[width=\textwidth]{mapping_cdfs.pdf}
 \caption{\textbf{Mapping CDFs.}
 Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,4)$ depicted by $F_w(x)$ (blue).
 %
@@ -317,7 +321,8 @@ Right: the same CDFs as on the left but now plotted not against $x$ but against 
 In \fref{Gauss_scale_location_both_KT} we explore what happens if both the scales and the locations of the DO's and DM's models differ. Visually, this produces an excellent fit to empirical data, to which we will return in \secref{Fitting_the}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
+%\includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
+\includegraphics[width=1.0\textwidth]{Gauss_scale_location_both_KT.pdf}
 \caption{\textbf{CDF maps for Gaussian distributions.} Top left: Difference in location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1. Top right: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO). Bottom left: Differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.64 (broader than DO). Bottom right: Fit to observations reported by \textcite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$. Note the similarity to bottom left.}
 \flabel{Gauss_scale_location_both_KT}
 \end{figure}
@@ -362,7 +367,8 @@ In the limit $\nu \rightarrow \infty$, the $t$-distribution converges to a Gauss
 The result is qualitatively similar to the bottom right panel of \fref{mapping_cdfs}, corresponding to \eref{correspondence}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.5\textwidth]{./figs/Student-t.pdf}
+%\includegraphics[width=0.5\textwidth]{./figs/Student-t.pdf}
+\includegraphics[width=0.5\textwidth]{Student-t.pdf}
 \caption{\textbf{Probability weighting for $t$-distributions.} The DM uses different shape and location parameters (1 and 0.35 respectively) from those of the DO (3 and 0.2).}
 \flabel{Student-t}
 \end{figure}
@@ -453,7 +459,8 @@ Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_den
 \Fref{square_root_error} shows the resulting PDFs and CDF mappings generated by setting $\phat(x)$ in \eref{weight_density_spec} to be the probability density functions for a Gaussian distribution and a fat-tailed $t$-distribution. Inverse-S curves are found for both distributions and the effect is more pronounced for the fat-tailed distribution.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/square_root_error.pdf}
+%\includegraphics[width=1.0\textwidth]{./figs/square_root_error.pdf}
+\includegraphics[width=1.0\textwidth]{square_root_error.pdf}
 \caption{\textbf{Mapping PDFs and CDFs with estimation errors.} PDFs (left) and inverse-S curves (right) arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a $t$-distribution (shape 2, location 0, bottom line), and the DM uses decision weights according to \eref{weight_density_spec} with $T\delta x=10$. For the fat-tailed $t$-distribution (in the bottom line) the difference between $p(x)$ and $w(x)$ is more pronounced.}
 \flabel{square_root_error}
 \end{figure}
@@ -461,7 +468,8 @@ Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_den
 \Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which he counts into bins. In the simulation, a probability density, $\phat(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err{\phat(x)}$, is obtained numerically as standard deviation in each $\phat(x)$ over 1000 parallel simulations. The DM's decision weights are then obtained according to \eref{weight_density_gen}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/dm_count_sim.pdf}
+%\includegraphics[width=1.0\textwidth]{./figs/dm_count_sim.pdf}
+\includegraphics[width=1.0\textwidth]{dm_count_sim.pdf}
 \caption{\textbf{Simulations of a DM estimating probability densities by counting events in a finite series of observations.} Left: estimated probability densities for $T=100$ Gaussian (top; location 0, scale 2) and $t$-distributed (bottom; location 0, scale 1, shape 1.5) variates counted in bins of width $\delta x=0.4$. Red bars show the estimates, $\phat(x)$, and blue bars show the estimates with one standard error added, $\phat(x)+\err{\phat(x)}$. Right: inverse-S curves for a DO who assumes $p(x)$ follows a Gaussian (top) and $t$-distribution (bottom), while the DM uses decision weight density, $w(x)$, derived by normalising his conservative estimates (blue bars on left) according to \eref{weight_density_gen}.
 }
 \flabel{dm_count_sim}
@@ -502,7 +510,8 @@ suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe proba
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/curvefit.pdf}
+%\includegraphics[width=1.0\textwidth]{./figs/curvefit.pdf}
+\includegraphics[width=1.0\textwidth]{curvefit.pdf}
 \caption{\textbf{Model fitting to experimental data from \textcite{TverskyKahneman1992} (left) and \textcite{TverskyFox1995} (right).}
 Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \textcite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right: \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \textcite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \parencite{Levenberg1944} for non-linear least squares curve fitting.
 }
