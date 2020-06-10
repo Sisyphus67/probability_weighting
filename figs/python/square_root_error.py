@@ -31,7 +31,7 @@ axes[0, 0].set_xlim((-4.5, 4.5))
 axes[0, 0].set_xticks(np.arange(-4, 5, step=2))
 axes[0, 0].set_title('Gaussian PDF')
 axes[0, 0].legend(loc='upper left', fontsize='x-small')
-axes[0,0].set_yticks(np.arange(0, 0.6, step=0.1))
+axes[0, 0].set_yticks(np.arange(0, 0.6, step=0.1))
 
 #plot CDFs
 axes[0, 1].plot(DO_CDF, DO_CDF,'r', label=r'$F_p$', linewidth=2)
