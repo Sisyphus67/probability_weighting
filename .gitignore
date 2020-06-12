@@ -1,14 +1,18 @@
 
-main.run.xml
-main.synctex.gz
+*synctex.gz
 .texlipse
 .project
-main.aux
 *.log
 *.bbl
 *.out
 *.blg
 *.out
-*.bbl
-/main-blx.bib
-/main.bcf
+*bcf
+/tmp/
+*-blx.bib
+*.aux
+*.nav
+*.run.xml
+*.snm
+*.gz
+*.toc
