@@ -76,8 +76,8 @@ Task: model payout, $x$, of a gamble as a random variable.
 	\red{probabilities $p(x)$} \\
   \red{CDF $F_p(x)$}\\
 \column{0.2\textwidth}
-\centering
-	\includegraphics[height=3cm]{img/coinflip}
+% \centering
+% 	\includegraphics[height=3cm]{img/coinflip}
 \column{0.4\textwidth}
 	\vspace{0.5em}
 % 	\centering
@@ -91,12 +91,10 @@ Task: model payout, $x$, of a gamble as a random variable.
 % \hyperlink{t-distribution}{\beamergotobutton{HTD}}
 % Transmission of different uncertainties from PDFs into CDFs}
 
-\begin{frame}{Possible model differences}
-
-Locations, Scales, Shapes.
+\begin{frame}{Possible model differences}{Locations, Scales, Shapes}
 \centering
-	\includegraphics[width=0.8\textwidth]{../../figs/2GaussianPDFs2Scales2Locations.pdf}
-	\includegraphics[width=0.4\textwidth]{../../figs/pdfs_diff_scale_and_loc.pdf}
+	\includegraphics[width=0.75\textwidth]{../../figs/2GaussianPDFs2Scales2Locations.pdf}
+	\includegraphics[width=0.38\textwidth]{../../figs/pdfs_diff_scale_and_loc.pdf}
 \end{frame}
 
 % \begin{frame}{The Simplest Case : Different Scales}
@@ -110,41 +108,77 @@ Locations, Scales, Shapes.
 % \end{frame}
 
 \begin{frame}{Thought experiment: DM assumes greater scale}
-
-Add figures.\\
-1. Two PDFs\\
-2. Corresponding CDFs\\
-3. Add arrows to CDFs\\
-4. Explain how to transform to get to inverse S (add label to red line)\\
-
 \centering
-\vspace{1em}
-%\pause
-	\includegraphics[width=.9\textwidth]{../../figs/mapping_cdfs.pdf}
-\end{frame}
-
-%\begin{frame}{Applying the Procedure to the Uncertainty Types}
-%\centering
-%	\includegraphics[width=0.75\textwidth]{../../figs/Gauss_scale_location_both_KT.pdf}
-%	\label{LocationScale}
-%\end{frame}
-
-\begin{frame}
-\begin{columns}[T]
-\column{0.24\textwidth}
-\centering
-	\includegraphics[width=1.1\textwidth]{../../figs/2GaussianPDFs2Scales.pdf}
-\column{0.76\textwidth}
+\begin{columns}%[T]
+\column{0.35\textwidth}
+% Add figures.\\
+% 1. Two PDFs\\
+	\includegraphics[width=\textwidth]{../../figs/2GaussianPDFs2Scales.pdf} \\
+\column{0.65\textwidth}
+% \vfill \\
 Numerically easy for any pair of distributions (models):
 \begin{enumerate}
 	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
 	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
 	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
 \end{enumerate}
+% \vfill
 \end{columns}
 
-Add graphic here to illustrate. For example dynamically: pick ten values of $x$, evaluate CDFs there (one by one), fill a list, plot CDFs against each other.
+% 2. Corresponding CDFs\\
+\only<2>{
+	\includegraphics[width=.8\textwidth]{../../figs/mapping_cdfs_noarrows.pdf} \\
+	}
+% 3. Add arrows to CDFs\\
+\only<3>{
+	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_1arrow.pdf} \\
+	}
+% 4. Explain how to transform to get to inverse S (add label to red line)\\
+\only<4>{
+	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_2arrows.pdf} \\
+	}
+\only<5>{
+	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_3arrows.pdf} \\
+	}
+\only<6>{
+	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_4arrows.pdf} \\
+	}
+\only<7>{
+	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_5arrows.pdf} \\
+	}
+\only<8>{
+	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_6arrows.pdf} \\
+	}
+\only<9>{
+	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_7arrows.pdf} \\
+	}
+\only<10>{
+	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs.pdf} \\
+	}
 \end{frame}
+
+\begin{frame}{Applying the Procedure to the Uncertainty Types}
+\centering
+	\includegraphics[width=0.75\textwidth]{../../figs/Gauss_scale_location_both_KT.pdf}
+	\label{LocationScale}
+\end{frame}
+
+% \begin{frame}
+% \begin{columns}[T]
+% \column{0.35\textwidth}
+% \centering
+% 	\includegraphics[width=\textwidth]{../../figs/2GaussianPDFs2Scales.pdf}
+% \column{0.65\textwidth}
+% Numerically easy for any pair of distributions (models):
+% \begin{enumerate}
+% 	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
+% 	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
+% 	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
+% \end{enumerate}
+% \end{columns}
+% 
+% Add graphic here to illustrate. For example dynamically: pick ten values of $x$, evaluate CDFs there (one by one), fill a list, plot CDFs against each other.
+% \end{frame}
 
 \begin{frame}{Interim conclusion}
 \bi
@@ -175,10 +209,6 @@ Add graphic here to illustrate. For example dynamically: pick ten values of $x$,
 	\bc \textbf{Typical DM concern} \ec
 	What happens to me \\
 	\blue{on average over time}?
-% 	\begin{itemize}
-% 	  \item DM's adaptive/ecological rationality $\equiv$ survival, \ie evolutionary incentive to err on the side of caution
-% 	  \item[$\rightarrow$] add more uncertainty to his model
-% 	\end{itemize}
 \end{columns}
 \end{frame}
 
@@ -188,7 +218,7 @@ Add graphic here to illustrate. For example dynamically: pick ten values of $x$,
 
 %DM's adaptive rationality: err on the side of caution:
 \begin{itemize}
-  \item DM has no control over experiment,
+  \item DM has no control over experiment
   \item experiment may be unclear to DM
   \item DM may not trust DO
 %	\item uncertain outcome is consequential only to the DM,
@@ -216,7 +246,7 @@ Add graphic here to illustrate. For example dynamically: pick ten values of $x$,
 \textbf{Rare Event} %\hfill \includegraphics[height=1.5cm]{img/BlackSwan} \hfill
 \begin{itemize}
   \item $p(x) = 0.0001$
-  \item 10000 observations
+  \item \num{10000} observations
   \item $\sim 99.5\%$ of such time series will contain 0 or 1 events
   \item Na\"ive estimation: $\phat(x) = 0$ or $\phat(x)=0.0001$
   \item[$\hookrightarrow$] either impossible or 1000\% (over)estimation
@@ -225,11 +255,11 @@ Add graphic here to illustrate. For example dynamically: pick ten values of $x$,
 \textbf{Common Event} %\hfill \includegraphics[height=1.5cm]{img/WhiteSwan}  \hfill
 \begin{itemize}
   \item $p(x)=0.1$
-  \item 10000 observations
+  \item \num{10000} observations
   \item $\sim 99.5\%$ of time series would contain between 50 and 150 events,
   \item Na\"ive estimation: $0.05< \phat(x) <0.15$
   \item[]
-  \item[$\hookrightarrow$] only $\approx$50\% error in $\phat(x)$
+  \item[$\hookrightarrow$] only $\approx 50\%$ error in $\phat(x)$
 \end{itemize}
 \end{columns}
 \vspace{2em}
