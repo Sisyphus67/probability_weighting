@@ -34,9 +34,10 @@ fig.tight_layout(pad=3)
 axes.set_xlim((-4.5, 4.5))
 axes.plot(x, DO, 'r', lineWidth='2', label=r'$p(x)$')
 axes.plot(x, DM, 'b', lineWidth='2', label=r'$w(x)$')
-axes.set_xlabel(r'$x$')
-axes.set_ylabel(r'PDFs')
-axes.set_title('Different Scales')
+axes.set_xlabel(r'$x$', fontsize='x-large')
+axes.set_ylabel(r'PDFs', fontsize='x-large')
+axes.legend(loc='upper left', fontsize='x-large')
+axes.set_title('Different Scales', fontsize='x-large')
 
 
 plt.savefig("./../2GaussianPDFs2Scales.pdf", bbox_inches='tight')

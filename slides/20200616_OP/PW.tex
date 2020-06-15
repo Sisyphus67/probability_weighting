@@ -1,30 +1,32 @@
 % \section[Probability Weighting]{What are weighting for? A mechanistic explanation of probability weighting}
-\section{Main Result}
+\section{Main Results}
 
 \begin{frame}{Main results}
 \begin{center}
-	\includegraphics[width=.9\textwidth]{../../figs/Our_result_LocScale_vs_KT.pdf}
+\uncover<2>{
+\includegraphics[width=.45\textwidth]{../../figs/Our_result_nolegend.pdf}
+	}
+\only<1->{
+	\includegraphics[width=.45\textwidth]{../../figs/KT_result_nolegend.pdf}
+	}
 \end{center}
 
-\begin{enumerate}
-	\item	inverse-S shape can be explained by difference in uncertainty
-	\item cautious estimation of probabilities generates such differences
-% 	\item	relative estimation error in $p(x)$ is greater for rarer events 	
-\end{enumerate}
+% \begin{enumerate}
+% 	\item	inverse-S shape can be explained by difference in uncertainty
+% 	\item cautious estimation of probabilities generates such differences
+% % 	\item	relative estimation error in $p(x)$ is greater for rarer events 	
+% \end{enumerate}
 \label{MainResults}
-\hyperlink{weight_vs_estimate}{\beamergotobutton{PW K\&T 1979}}
+% \hyperlink{weight_vs_estimate}{\beamergotobutton{PW K\&T 1979}}
 \end{frame}
 
 \section{Probability Weighting}
 
 \begin{frame}{Definition of Probability Weighting (PW)}
 
-\begin{columns}[T]
+\begin{columns}%[T]
 \column{0.5\textwidth}
-% \begin{center}
-	\includegraphics[width=.9\textwidth]{../../figs/TK1992.pdf}
-% \end{center}
-
+{\centering	\includegraphics[width=.9\textwidth]{../../figs/TK1992.pdf} }
 \parencite[p. 310, Fig. 1,relabelled axes]{TverskyKahneman1992}
 
 \column{0.5\textwidth}
@@ -32,13 +34,14 @@
   \item low probabilities treated as higher;\\ 
   high probabilities treated as lower
   \item stable empirical pattern: inverse-S shape
+  \item Cumulative Prospect Theory (CPT) \nocite{}
 \end{itemize}
-
-\red{Received wisdom:}
+\vspace{1em}
+\red{Classical interpretation of PW:}
 \bi
-	\item	\red{PW = maladaptive irrational cognitive bias}
+	\item	\red{maladaptive irrational cognitive bias}
 \ei
-
+\vspace{1em}
 \begin{block}{In search of a mechanism}
 	\begin{itemize}
 	  \item[$\hookrightarrow$] How does this pattern emerge?
@@ -75,7 +78,7 @@ Task: model payout, $x$, of a gamble as a random variable.
 	\vspace{0.5em}
 % 	\centering
 	DO assigns\\
-	\red{probabilities $p(x)$} \\
+	\red{PDF $p(x)$} \\
   \red{CDF $F_p(x)$}\\
 \column{0.2\textwidth}
 % \centering
@@ -84,7 +87,7 @@ Task: model payout, $x$, of a gamble as a random variable.
 	\vspace{0.5em}
 % 	\centering
   DM assigns different\\
-  \blue{probabilities $w(x)$ (decision weights)}\\
+  \blue{PDF $w(x)$}\\
    \blue{CDF $F_w(x)$}\\
 \end{columns}
 \end{frame}
@@ -93,80 +96,103 @@ Task: model payout, $x$, of a gamble as a random variable.
 % \hyperlink{t-distribution}{\beamergotobutton{HTD}}
 % Transmission of different uncertainties from PDFs into CDFs}
 
-\begin{frame}{Possible model differences}%{Locations, Scales, Shapes}
+\begin{frame}{Scales, Locations, Shapes}
 \centering
 	\includegraphics[width=0.78\textwidth]{../../figs/2GaussianPDFs2Scales2Locations.pdf}
 % 	\includegraphics[width=0.35\textwidth]{../../figs/pdfs_diff_scale_and_loc.pdf}
-	\includegraphics[width=0.39\textwidth]{../../figs/diff_shapes_Gauss_t.pdf}
+	\includegraphics[width=0.42\textwidth]{../../figs/diff_shapes_Gauss_t.pdf}
 \end{frame}
 
 \begin{frame}{Thought experiment: DM assumes greater scale}
 \centering
 	\includegraphics[width=.35\textwidth]{../../figs/2GaussianPDFs2Scales.pdf} \\
 % 2. Corresponding CDFs\\
-\only<2>{
+% \only<2>{
 	\includegraphics[width=.8\textwidth]{../../figs/mapping_cdfs_noarrows.pdf} \\
-	}
+% 	}
 % 3. Add arrows to CDFs\\
-\only<3>{
-	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_1arrow.pdf} \\
-	}
+% \only<3>{
+% 	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_1arrow.pdf} \\
+% 	}
 % 4. Explain how to transform to get to inverse S (add label to red line)\\
-\only<4>{
-	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_2arrows.pdf} \\
-	}
-\only<5>{
-	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_3arrows.pdf} \\
-	}
-\only<6>{
-	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_4arrows.pdf} \\
-	}
-\only<7>{
-	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_5arrows.pdf} \\
-	}
-\only<8>{
-	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_6arrows.pdf} \\
-	}
-\only<9>{
-	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_7arrows.pdf} \\
-	}
-\only<10>{
-	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs.pdf} \\
-	}
+% \only<4>{
+% 	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_2arrows.pdf} \\
+% 	}
+% \only<5>{
+% 	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_3arrows.pdf} \\
+% 	}
+% \only<6>{
+% 	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_4arrows.pdf} \\
+% 	}
+% \only<7>{
+% 	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_5arrows.pdf} \\
+% 	}
+% \only<8>{
+% 	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_6arrows.pdf} \\
+% 	}
+% \only<9>{
+% 	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs_7arrows.pdf} \\
+% 	}
+% \only<10>{
+% 	\includegraphics[width=0.8\textwidth]{../../figs/mapping_cdfs.pdf} \\
+% 	}
 \end{frame}
 
 \begin{frame}
-Numerically easy for any pair of distributions (models):
-\begin{enumerate}
-	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
-	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
-	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
-% 	\item map DM's CDF onto DO's CDF, \ie \blue{$F_w(F_p)$}
-\end{enumerate}
-% XXX illustrate with corresponding lists and figure
+For the case of two Gaussians with different scale we derive a functional form
+\begin{equation}
+	w(p) =
+% 	\underbrace{
+	p^{\frac{1}{\alpha^2}}
+% 	\vphantom{\frac{\left(\sigma^2\right)^{\frac{\alpha^2}{\alpha^2}}}{\alpha}
+% 	}
+% 	}_{\text{power law}}
+	\underbrace{
+	\frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha\strut}
+	}_{\text{normalisation factor}}
+	~,
+\end{equation}
+where
+\begin{itemize}
+  \item DO's scale is $\sigma$
+  \item DM's scale is $\alpha\sigma$
+  \item $\alpha < 1 \to$ S shape
+  \item $\alpha > 1 \to	$ inverse-S shape
+\end{itemize}
 \end{frame}
 
-\begin{frame}{Asymmetry from different locations}
-\centering
-	\includegraphics[width=0.75\textwidth]{../../figs/Gauss_scale_location_both_KT.pdf}
-	\label{LocationScale}
-\end{frame}
+% \begin{frame}
+% Numerically easy for any pair of distributions (models):
+% \begin{enumerate}
+% 	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
+% 	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
+% 	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
+% % 	\item map DM's CDF onto DO's CDF, \ie \blue{$F_w(F_p)$}
+% \end{enumerate}
+% % XXX illustrate with corresponding lists and figure
+% \end{frame}
+
+% \begin{frame}{Asymmetry from different locations}
+% \centering
+% 	\includegraphics[width=0.75\textwidth]{../../figs/Gauss_scale_location_both_KT.pdf}
+% 	\label{LocationScale}
+% \end{frame}
 
 
 \begin{frame}{Interim conclusion}
+\label{InterimConclusion}
+\centering \includegraphics[width=0.8\textwidth]{../../figs/Our_result_LocScale_vs_KT.pdf}
+
+% \vspace{2em}
 \bi
 	\item DM's greater scale gives inverse-S shape (unimodal distributions)
 	\item difference in locations gives asymmetry
 	\item reproduces observations of probability weighting
 	\item[]
 	\item[] \textit{Job done. Thank you for your attention ;)}
-	\hfill
-	\hyperlink{FunctionalForms}{\beamergotobutton{Functional Forms}}
-	\label{InterimConclusion}
+% 	\hfill
+% 	\hyperlink{FunctionalForms}{\beamergotobutton{Functional Forms}}
 \ei
-	\vspace{2em}
-	\centering
-	\includegraphics[width=0.8\textwidth]{../../figs/Our_result_LocScale_vs_KT.pdf}
 \end{frame}
 
 \section{Ergodicity Question}
@@ -224,19 +250,18 @@ Numerically easy for any pair of distributions (models):
 \begin{itemize}
   \item $p(x) = 0.001$
   \item \num{100} observations
-  \item $\sim 99.5\%$ of such time series will contain 0 or 1 events
-  \item Na\"ive estimation: $\phat(x) = 0$ or $\phat(x)=0.01$
-  \item[$\hookrightarrow$] $\num{1000}\%$ error in $\phat(x)$ 
+  \item $\sim 99.5\%$ get 0 or 1 events
+  \item $\phat(x) = 0$ or $\phat(x)=0.01$
+  \item[$\hookrightarrow$] $\num{1000}\%$ uncertainty in $\phat(x)$ 
 \end{itemize}
 \column{0.5\textwidth}
 \textbf{Common Event} %\hfill \includegraphics[height=1.5cm]{img/WhiteSwan}  \hfill
 \begin{itemize}
   \item $p(x)=0.5$
   \item \num{100} observations
-  \item $\sim 99.5\%$ of time series would contain between 35 and 65 events,
-  \item Na\"ive estimation: $0.35< \phat(x) <0.65$
-  \item[]
-  \item[$\hookrightarrow$] $< 50\%$ error in $\phat(x)$
+  \item $\sim 99.5\%$ get between 35 and 65 events,
+  \item $0.35< \phat(x) <0.65$
+  \item[$\hookrightarrow$] $\pm 15\%$ uncertainty in $\phat(x)$
 \end{itemize}
 \end{columns}
 \vspace{2em}
@@ -246,53 +271,40 @@ $\hookrightarrow$ small count, big uncertainty
 \end{frame}
 
 
-\begin{frame}{Relative estimation error is large for rare events}
-
-\begin{center}
-\begin{table}[!htb]
-  \begin{tabular}{@{}ccccc@{}}
-\toprule[2pt]
-\makecell{Asymptotic\\probability} & \makecell{Most likely\\count} & \makecell{Standard error\\in count} & \makecell{Standard error\\in probability} & \makecell{Relative error\\in probability}\\
-\midrule[2pt]
-% .5 &	5000 & 71	& 0.01 & 0.71\%\\
-0.1 & 1000 & 32 & 0.003 & 3\%\\
-0.01 & 100 & 10 & 0.001 & 10\%\\
-0.001 & 10 & 3 & 0.0003& 30\%\\
-0.0001 & 1 & 1 & 0.0001 &100\%\\
-\bottomrule[2pt]
-\end{tabular}
-\caption{$T = \num{10000}$, assuming Poisson statistics, relative estimation errors $\sim \nicefrac{1}{\sqrt{\text{count}}}$}
-\label{errors}
-\end{table}
-\vspace{2em}
-$\hookrightarrow$ small $p(x)$, small count \\
-$\hookrightarrow$ small count, big uncertainty
-\end{center}
-\end{frame}
+% \begin{frame}{Relative estimation error is large for rare events}
+% \begin{center}
+% \begin{table}[!htb]
+%   \begin{tabular}{@{}ccccc@{}}
+% \toprule[2pt]
+% \makecell{Asymptotic\\probability} & \makecell{Most likely\\count} & \makecell{Standard error\\in count} & \makecell{Standard error\\in probability} & \makecell{Relative error\\in probability}\\
+% \midrule[2pt]
+% % .5 &	5000 & 71	& 0.01 & 0.71\%\\
+% 0.1 & 1000 & 32 & 0.003 & 3\%\\
+% 0.01 & 100 & 10 & 0.001 & 10\%\\
+% 0.001 & 10 & 3 & 0.0003& 30\%\\
+% 0.0001 & 1 & 1 & 0.0001 &100\%\\
+% \bottomrule[2pt]
+% \end{tabular}
+% \caption{$T = \num{10000}$, assuming Poisson statistics, relative estimation errors $\sim \nicefrac{1}{\sqrt{\text{count}}}$}
+% \label{errors}
+% \end{table}
+% \vspace{2em}
+% $\hookrightarrow$ small $p(x)$, small count \\
+% $\hookrightarrow$ small count, big uncertainty
+% \end{center}
+% \end{frame}
 
 \begin{frame}{DMs don't like surprises}
 
-To avoid surprises, let's say DMs \blue{add estimation uncertainty $\err{p(x)}$} to every estimated probability, then normalize, s.t.
+To avoid surprises, DMs \blue{add estimation uncertainty $\err{p(x)}$} to every estimated probability, then normalize, s.t.
 
 $$w(x)=\frac{p(x)\blue{+\err{p(x)}}}{\int \left(p(s) \blue{+\err{p(s)}} \right)ds}$$
-
-This allows us to derive a functional form, \eg for the Gaussian case
-$$ w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,$$
-where DM's scale is $\alpha\sigma$
-\begin{itemize}
-  \item $\alpha < 1 \to$ S shape
-  \item $\alpha > 1 \to$ inverse-S shape
-\end{itemize}
+\pause
 % \ldots visually similar to function chosen by Kahneman and Tversky.
-\end{frame}
-
-\begin{frame}{Estimating probabilities for two Gaussians}
-% XXXNot sure we need much more. I'd just have one figure that gives a nice inverse S, for a Gaussian, say, based on estimation error.
 \centering
-	\includegraphics[width=\textwidth]{../../figs/square_root_error_2Gaussians.pdf} \\
-
-\red{ToDo: Make inverse-S more pronounced}
+	\includegraphics[width=.9\textwidth]{../../figs/square_root_error_1Gaussian.pdf} \\
 \end{frame}
+
 
 %\begin{frame}{Estimation of the decision weights}
 %
@@ -348,13 +360,17 @@ where DM's scale is $\alpha\sigma$
 \section{Conclusion}
 
 \begin{frame}{Conclusion}
-\lmlblue{Ergodicity Economics and probability weighting}
+\red{Classical interpretation of PW:}
+\bi
+	\item	\red{maladaptive irrational cognitive bias}
+\ei
+\blue{Ergodicity Economics and probability weighting}
 \begin{itemize}
-  \item inverse-S shape appears as neutral indicator of a difference in opinion
+  \item inverse-S shape: neutral indicator of different models of the world
 %   \item relative probability estimation errors are greater for rarer events
 	\item reported observations consistent with DM's extra uncertainty
 	\item may arise from DM estimating probabilities over time
-  \item[$\hookrightarrow$] Probability weighting is rational cautious behaviour under uncertainty over time
+  \item[$\hookrightarrow$] \blue{Probability weighting is rational cautious behaviour under uncertainty over time}
   \item[]
   \item Manuscript at \url{https://www.researchers.one/article/2020-04-14}
   \item Interactive code at \url{https://bit.ly/lml-pw-count-b}    

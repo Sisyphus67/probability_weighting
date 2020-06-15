@@ -27,9 +27,10 @@ fig.tight_layout(pad=3)
 axes[0].set_xlim((-4.5, 4.5))
 axes[0].plot(x, DO, 'r', lineWidth='2', label=r'$p(x)$')
 axes[0].plot(x, DM, 'b', lineWidth='2', label=r'$w(x)$')
-axes[0].set_xlabel(r'$x$')
-axes[0].set_ylabel(r'PDFs')
-axes[0].set_title('Different Scales')
+axes[0].set_xlabel(r'$x$', fontsize='x-large')
+axes[0].set_ylabel(r'PDFs', fontsize='x-large')
+axes[0].legend(loc='upper left', fontsize='x-large')
+axes[0].set_title('Different Scales', fontsize='x-large')
 
 #plot arrows
 #xs=[-2.5,-2,-1.5,-1,-.5,0]
@@ -39,8 +40,8 @@ axes[0].set_title('Different Scales')
 # Gaussians location and scale parameters
 s1 = 1
 s2 = 1
-l1 = 1
-l2 = 0
+l1 = 0
+l2 = 1
 # CDFs
 DO = stat.norm.pdf(x, l1, s1)
 DM = stat.norm.pdf(x, l2, s2)
@@ -49,9 +50,10 @@ DM = stat.norm.pdf(x, l2, s2)
 axes[1].set_xlim((-4.5, 4.5))
 axes[1].plot(x, DO, 'r', lineWidth='2', label=r'$p(x)$')
 axes[1].plot(x, DM, 'b', lineWidth='2', label=r'$w(x)$')
-axes[1].set_xlabel(r'$x$')
-axes[1].set_ylabel(r'PDFs')
-axes[1].set_title('Different Locations')
+axes[1].set_xlabel(r'$x$', fontsize='x-large')
+axes[1].set_ylabel(r'PDFs', fontsize='x-large')
+axes[1].legend(loc='upper left', fontsize='x-large')
+axes[1].set_title('Different Locations', fontsize='x-large')
 
 plt.savefig("./../2GaussianPDFs2Scales2Locations.pdf", bbox_inches='tight')
 plt.show()

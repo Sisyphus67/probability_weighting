@@ -35,15 +35,15 @@ xs=[-2,-1.5,-1,-.5,.5,1,1.5,2]
 #for i in xs:
 #    axes[0].arrow(i,stat.norm.cdf(i, l1, s1), 0, stat.norm.cdf(i, l2, s2) - stat.norm.cdf(i, l1, s1), head_width=0.15, head_length=0.045, length_includes_head=True, fc='k', ec='k', zorder=10)
 
-axes[0].set_xlabel(r'$x$')
-axes[0].set_ylabel(r'CDFs')
+axes[0].set_xlabel(r'$x$', fontsize='x-large')
+axes[0].set_ylabel(r'CDFs', fontsize='x-large')
 axes[0].set_xticks(np.arange(-4, 5, step=2))
 axes[0].set_yticks(np.arange(0, 1.1, step=0.2))
-axes[0].legend(loc='upper left', fontsize='x-small')
+axes[0].legend(loc='upper left', fontsize='x-large')
 
 #w(p) plot
 axes[1].plot(DO, DO, 'r', lineWidth='2', label=r'$F_p(F_p)$')
-axes[1].annotate('$F_p(F_p)$', fontsize=14, xy=(0.2,0.2), xytext=(0.6, 0.2), arrowprops=dict(facecolor='black', shrink=0.1), color='red')
+#axes[1].annotate('$F_p(F_p)$', fontsize=14, xy=(0.2,0.2), xytext=(0.6, 0.2), arrowprops=dict(facecolor='black', shrink=0.1), color='red')
 axes[1].axvline(x=0.5, LineStyle='--')
 axes[1].plot(DO, DM, 'b', lineWidth='2', label=r'$F_w(F_p)$')
 
@@ -51,11 +51,11 @@ axes[1].plot(DO, DM, 'b', lineWidth='2', label=r'$F_w(F_p)$')
 #for i in xs:
 #    axes[1].arrow(stat.norm.cdf(i, l1, s1),stat.norm.cdf(i, l1, s1), 0, stat.norm.cdf(i, l2, s2) - stat.norm.cdf(i, l1, s1), head_width=0.018, head_length=0.045, length_includes_head=True, fc='k', ec='k', zorder=10)
 
-axes[1].set_xlabel(r'CDF $F_p$')
-axes[1].set_ylabel(r'CDFs')
+axes[1].set_xlabel(r'CDF $F_p$', fontsize='x-large')
+axes[1].set_ylabel(r'CDFs', fontsize='x-large')
 axes[1].set_xticks(np.arange(0, 1.1, step=0.2))
 axes[1].set_yticks(np.arange(0, 1.1, step=0.2))
-axes[1].legend(loc='upper left', fontsize='x-small')
+axes[1].legend(loc='upper left', fontsize='x-large')
 
 plt.savefig("./../mapping_cdfs_noarrows.pdf", bbox_inches='tight')
 #plt.savefig("./../mapping_cdfs.pdf", bbox_inches='tight')
