@@ -5,6 +5,8 @@
 \begin{center}
 	\includegraphics[width=.9\textwidth]{../../figs/Our_result_LocScale_vs_KT.pdf}
 \end{center}
+
+XXX label on left figure: change to ``Ergodicity economics'' to mirror K\&T?
 \begin{enumerate}
 	\item	inverse-S shape can be explained by difference in uncertainty
 	\item cautious estimation of probabilities generates such differences
@@ -28,7 +30,8 @@
 
 \column{0.5\textwidth}
 \begin{itemize}
-  \item low probabilities treated as higher $\rightarrow$ high probabilities treated as lower
+  \item low probabilities treated as higher;\\ 
+  high probabilities treated as lower
   \item stable empirical pattern: inverse-S shape
 \end{itemize}
 
@@ -95,6 +98,8 @@ Task: model payout, $x$, of a gamble as a random variable.
 \centering
 	\includegraphics[width=0.75\textwidth]{../../figs/2GaussianPDFs2Scales2Locations.pdf}
 	\includegraphics[width=0.38\textwidth]{../../figs/pdfs_diff_scale_and_loc.pdf}
+
+XXX produce figure with Gaussian and Student-t with heavy tails to illustrate shape difference
 \end{frame}
 
 % \begin{frame}{The Simplest Case : Different Scales}
@@ -116,12 +121,6 @@ Task: model payout, $x$, of a gamble as a random variable.
 	\includegraphics[width=\textwidth]{../../figs/2GaussianPDFs2Scales.pdf} \\
 \column{0.65\textwidth}
 % \vfill \\
-Numerically easy for any pair of distributions (models):
-\begin{enumerate}
-	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
-	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
-	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
-\end{enumerate}
 % \vfill
 \end{columns}
 
@@ -157,10 +156,20 @@ Numerically easy for any pair of distributions (models):
 	}
 \end{frame}
 
-\begin{frame}{Applying the Procedure to the Uncertainty Types}
+\begin{frame}{Asymmetry from different locations}
 \centering
 	\includegraphics[width=0.75\textwidth]{../../figs/Gauss_scale_location_both_KT.pdf}
 	\label{LocationScale}
+\end{frame}
+
+\begin{frame}
+Numerically easy for any pair of distributions (models):
+\begin{enumerate}
+	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
+	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
+	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
+\end{enumerate}
+XXX illustrate with corresponding lists and figure
 \end{frame}
 
 % \begin{frame}
@@ -232,10 +241,13 @@ Numerically easy for any pair of distributions (models):
 \begin{itemize}
 %  \item ``probability'' is polysemous \quelle{\parencite{Gigerenzer1991,Gigerenzer2018,HertwigGigerenzer1999}}
   \item probabilities are not observable
-  \item DO encounters probabilities as known frequency in ensemble of experiments
-  \item DM encounters probabilities as frequencies estimated over time
-  \item[$\hookrightarrow$] \textbf{estimates have uncertainties -- a cautious DM will account for these}
-  \item typical situation: rarer event $\longrightarrow$ larger relative error estimated probability
+  \item probabilities encountered as
+  	\begin{itemize}
+  		\item known frequency in ensemble of experiments (DO)
+  		\item frequencies estimated over time (DM)
+  	\end{itemize}
+  \item[$\hookrightarrow$] \textbf{estimates have uncertainties -- cautious DM accounts for these}
+%  \item typical situation: rarer event $\longrightarrow$ larger relative error estimated probability
 
 \end{itemize}
 \end{frame}
@@ -293,7 +305,7 @@ $\hookrightarrow$ small count, big uncertainty
 
 \begin{frame}{DMs don't like surprises}
 
-To avoid surprises, let's say DMs add estimation uncertainty $err$ to every estimated probability, then normalize, s.t.
+To avoid surprises, let's say DMs add estimation uncertainty $\err{p(x)}$ to every estimated probability, then normalize, s.t.
 
 $w(x)=\frac{p(x)+\err{p(x)}}{\int \left(p(s)+\err{p(s)} \right)ds}$
 
@@ -301,7 +313,7 @@ This allows us to derive a functional form, \eg for the Gaussian case ... (find 
 
 ...visually similar to function chosen by Kahneman and Tversky.
 
-Not sure we need much more. I'd just have one figure that gives a nice inverse S, for a Gaussian, say, based on estimation error.
+XXXNot sure we need much more. I'd just have one figure that gives a nice inverse S, for a Gaussian, say, based on estimation error.
 
 \end{frame}
 
@@ -371,8 +383,13 @@ Not sure we need much more. I'd just have one figure that gives a nice inverse S
 	\item may arise from DM estimating probabilities over time
   \item[$\hookrightarrow$] Probability weighting is rational cautious behaviour under uncertainty over time
   \item[]
-  \item See full paper at \url{bit.ly/lml-pw-r1}
-  \item links to play with the code are inside
+  \item Manuscript at \url{https://www.researchers.one/article/2020-04-14}
+  \item Interactive code at \url{https://bit.ly/lml-pw-code}
+  
+  XXX researchers.one link is better: an opportunity to advertise R1 and explain it's open for public review.
+  
+  XXX code link (from manuscript) goes to wrong place -- link to binder for interactive notebook.
+  
 %   \\ \fullcite{PetersETAL2020R1}
 % 	\item See blog post for the basic reasoning \fullcite{Peters2020}
 % 	\item See blog post for the basic reasoning \fullcite{Buchanan2020}
