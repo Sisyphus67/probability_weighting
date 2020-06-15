@@ -27,6 +27,8 @@ fig.tight_layout(pad=3)
 axes[0].set_xlim((-4.5, 4.5))
 axes[0].plot(x, DO, 'r', lineWidth='2', label=r'$p(x)$')
 axes[0].plot(x, DM, 'b', lineWidth='2', label=r'$w(x)$')
+axes[0].set_xlabel(r'$x$')
+axes[0].set_ylabel(r'PDFs')
 axes[0].set_title('Different Scales')
 
 #plot arrows
@@ -47,6 +49,8 @@ DM = stat.norm.pdf(x, l2, s2)
 axes[1].set_xlim((-4.5, 4.5))
 axes[1].plot(x, DO, 'r', lineWidth='2', label=r'$p(x)$')
 axes[1].plot(x, DM, 'b', lineWidth='2', label=r'$w(x)$')
+axes[1].set_xlabel(r'$x$')
+axes[1].set_ylabel(r'PDFs')
 axes[1].set_title('Different Locations')
 
 plt.savefig("./../2GaussianPDFs2Scales2Locations.pdf", bbox_inches='tight')

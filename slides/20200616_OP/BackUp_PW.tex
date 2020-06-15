@@ -63,18 +63,18 @@ which is a power law in $p$ with a pre-factor to ensure normalisation
 \end{frame}
 
 
-\begin{frame}{Linking Probability Weighting to Relative Uncertainties}
-Decision weight $w$ is the normalised sum of the probability $p(x)$ and its uncertainty $\err{p(x)}$
-\be
-	w(x)=\frac{p(x)+\err{p(x)}}{\int_{-\infty}^{\infty} \left( p(s)+\err{p(s)} \right) ds}	~.
-\ee
-This can be expressed as
-\be
-w(x)=p(x) \left(\frac{1+\frac{\err{p(x)}}{p(x)}}{\int_{-\infty}^{\infty} p(s)\left\{1+\frac{\err{p(s)}}{p(s)}\right\} ds}\right)~,
-\label{rel_error}
-\ee
-where $\frac{\err{p(x)}}{p(x)}$ is the relative error, which is large (small) for small (large) probabilities
-
-In the long-time limit $w(x) \to p(x)$
-\end{frame}
- 
+% \begin{frame}{Linking Probability Weighting to Relative Uncertainties}
+% Decision weight $w$ is the normalised sum of the probability $p(x)$ and its uncertainty $\err{p(x)}$
+% \be
+% 	w(x)=\frac{p(x)+\err{p(x)}}{\int_{-\infty}^{\infty} \left( p(s)+\err{p(s)} \right) ds}	~.
+% \ee
+% This can be expressed as
+% \be
+% w(x)=p(x) \left(\frac{1+\frac{\err{p(x)}}{p(x)}}{\int_{-\infty}^{\infty} p(s)\left\{1+\frac{\err{p(s)}}{p(s)}\right\} ds}\right)~,
+% \label{rel_error}
+% \ee
+% where $\frac{\err{p(x)}}{p(x)}$ is the relative error, which is large (small) for small (large) probabilities
+% 
+% In the long-time limit $w(x) \to p(x)$
+% \end{frame}
+%  

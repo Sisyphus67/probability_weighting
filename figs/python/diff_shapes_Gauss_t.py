@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jun 11 00:28:24 2020
-
-@author: MK-PC-LML
-"""
-
-# -*- coding: utf-8 -*-
-"""
 Created on Thu Jun 11 00:25:09 2020
 
 @author: MK-PC-LML
@@ -20,24 +13,25 @@ x = np.linspace(-10, 10, num=5000)
 
 # Gaussians location and scale parameters
 s1 = 1
-s2 = 2
 l1 = 0
-l2 = 0
+df = 1
 # CDFs
 DO = stat.norm.pdf(x, l1, s1)
-DM = stat.norm.pdf(x, l2, s2)
+DM = stat.t.pdf(x, df)
 
 fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(4.5, 3.5))
 fig.tight_layout(pad=3)
+#fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(9, 3.5))
+#fig.tight_layout(pad=3)
 
-#PDF plot
+#t-distribution PDF plot
 axes.set_xlim((-4.5, 4.5))
 axes.plot(x, DO, 'r', lineWidth='2', label=r'$p(x)$')
 axes.plot(x, DM, 'b', lineWidth='2', label=r'$w(x)$')
 axes.set_xlabel(r'$x$')
 axes.set_ylabel(r'PDFs')
-axes.set_title('Different Scales')
+axes.set_title('Different Shapes: Gaussian and $t$-distribution')
 
 
-plt.savefig("./../2GaussianPDFs2Scales.pdf", bbox_inches='tight')
+plt.savefig("./../diff_shapes_Gauss_t.pdf", bbox_inches='tight')
 plt.show()

@@ -6,7 +6,6 @@
 	\includegraphics[width=.9\textwidth]{../../figs/Our_result_LocScale_vs_KT.pdf}
 \end{center}
 
-XXX label on left figure: change to ``Ergodicity economics'' to mirror K\&T?
 \begin{enumerate}
 	\item	inverse-S shape can be explained by difference in uncertainty
 	\item cautious estimation of probabilities generates such differences
@@ -94,36 +93,16 @@ Task: model payout, $x$, of a gamble as a random variable.
 % \hyperlink{t-distribution}{\beamergotobutton{HTD}}
 % Transmission of different uncertainties from PDFs into CDFs}
 
-\begin{frame}{Possible model differences}{Locations, Scales, Shapes}
+\begin{frame}{Possible model differences}%{Locations, Scales, Shapes}
 \centering
-	\includegraphics[width=0.75\textwidth]{../../figs/2GaussianPDFs2Scales2Locations.pdf}
-	\includegraphics[width=0.38\textwidth]{../../figs/pdfs_diff_scale_and_loc.pdf}
-
-XXX produce figure with Gaussian and Student-t with heavy tails to illustrate shape difference
+	\includegraphics[width=0.78\textwidth]{../../figs/2GaussianPDFs2Scales2Locations.pdf}
+% 	\includegraphics[width=0.35\textwidth]{../../figs/pdfs_diff_scale_and_loc.pdf}
+	\includegraphics[width=0.39\textwidth]{../../figs/diff_shapes_Gauss_t.pdf}
 \end{frame}
-
-% \begin{frame}{The Simplest Case : Different Scales}
-% Numerically, our procedure can be applied to arbitrary distributions:
-% \begin{enumerate}
-% 	\item construct a list of values for the CDF assumed by the DO, \red{$F_p(x)$}
-% 	\item construct a list of values for the CDF assumed by the DM, \blue{$F_w(x)$}
-% 	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
-% \end{enumerate}
-% \vspace{2em}
-% \end{frame}
 
 \begin{frame}{Thought experiment: DM assumes greater scale}
 \centering
-\begin{columns}%[T]
-\column{0.35\textwidth}
-% Add figures.\\
-% 1. Two PDFs\\
-	\includegraphics[width=\textwidth]{../../figs/2GaussianPDFs2Scales.pdf} \\
-\column{0.65\textwidth}
-% \vfill \\
-% \vfill
-\end{columns}
-
+	\includegraphics[width=.35\textwidth]{../../figs/2GaussianPDFs2Scales.pdf} \\
 % 2. Corresponding CDFs\\
 \only<2>{
 	\includegraphics[width=.8\textwidth]{../../figs/mapping_cdfs_noarrows.pdf} \\
@@ -156,38 +135,23 @@ XXX produce figure with Gaussian and Student-t with heavy tails to illustrate sh
 	}
 \end{frame}
 
-\begin{frame}{Asymmetry from different locations}
-\centering
-	\includegraphics[width=0.75\textwidth]{../../figs/Gauss_scale_location_both_KT.pdf}
-	\label{LocationScale}
-\end{frame}
-
 \begin{frame}
 Numerically easy for any pair of distributions (models):
 \begin{enumerate}
 	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
 	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
 	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
+% 	\item map DM's CDF onto DO's CDF, \ie \blue{$F_w(F_p)$}
 \end{enumerate}
-XXX illustrate with corresponding lists and figure
+% XXX illustrate with corresponding lists and figure
 \end{frame}
 
-% \begin{frame}
-% \begin{columns}[T]
-% \column{0.35\textwidth}
-% \centering
-% 	\includegraphics[width=\textwidth]{../../figs/2GaussianPDFs2Scales.pdf}
-% \column{0.65\textwidth}
-% Numerically easy for any pair of distributions (models):
-% \begin{enumerate}
-% 	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
-% 	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
-% 	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
-% \end{enumerate}
-% \end{columns}
-% 
-% Add graphic here to illustrate. For example dynamically: pick ten values of $x$, evaluate CDFs there (one by one), fill a list, plot CDFs against each other.
-% \end{frame}
+\begin{frame}{Asymmetry from different locations}
+\centering
+	\includegraphics[width=0.75\textwidth]{../../figs/Gauss_scale_location_both_KT.pdf}
+	\label{LocationScale}
+\end{frame}
+
 
 \begin{frame}{Interim conclusion}
 \bi
@@ -258,21 +222,21 @@ XXX illustrate with corresponding lists and figure
 \column{0.5\textwidth}
 \textbf{Rare Event} %\hfill \includegraphics[height=1.5cm]{img/BlackSwan} \hfill
 \begin{itemize}
-  \item $p(x) = 0.0001$
-  \item \num{10000} observations
+  \item $p(x) = 0.001$
+  \item \num{100} observations
   \item $\sim 99.5\%$ of such time series will contain 0 or 1 events
-  \item Na\"ive estimation: $\phat(x) = 0$ or $\phat(x)=0.0001$
-  \item[$\hookrightarrow$] either impossible or 1000\% (over)estimation
+  \item Na\"ive estimation: $\phat(x) = 0$ or $\phat(x)=0.01$
+  \item[$\hookrightarrow$] either impossible or ten times (over)estimation
 \end{itemize}
 \column{0.5\textwidth}
 \textbf{Common Event} %\hfill \includegraphics[height=1.5cm]{img/WhiteSwan}  \hfill
 \begin{itemize}
-  \item $p(x)=0.1$
-  \item \num{10000} observations
-  \item $\sim 99.5\%$ of time series would contain between 50 and 150 events,
-  \item Na\"ive estimation: $0.05< \phat(x) <0.15$
+  \item $p(x)=0.5$
+  \item \num{100} observations
+  \item $\sim 99.5\%$ of time series would contain between 35 and 65 events,
+  \item Na\"ive estimation: $0.35< \phat(x) <0.65$
   \item[]
-  \item[$\hookrightarrow$] only $\approx 50\%$ error in $\phat(x)$
+  \item[$\hookrightarrow$] $< 50\%$ error in $\phat(x)$
 \end{itemize}
 \end{columns}
 \vspace{2em}
@@ -300,21 +264,28 @@ $\hookrightarrow$ small count, big uncertainty
 \caption{$T = \num{10000}$, assuming Poisson statistics, relative estimation errors $\sim \nicefrac{1}{\sqrt{\text{count}}}$}
 \label{errors}
 \end{table}
+\vspace{2em}
+$\hookrightarrow$ small $p(x)$, small count \\
+$\hookrightarrow$ small count, big uncertainty
 \end{center}
 \end{frame}
 
 \begin{frame}{DMs don't like surprises}
 
-To avoid surprises, let's say DMs add estimation uncertainty $\err{p(x)}$ to every estimated probability, then normalize, s.t.
+To avoid surprises, let's say DMs \blue{add estimation uncertainty $\err{p(x)}$} to every estimated probability, then normalize, s.t.
 
-$w(x)=\frac{p(x)+\err{p(x)}}{\int \left(p(s)+\err{p(s)} \right)ds}$
+$$w(x)=\frac{p(x)\blue{+\err{p(x)}}}{\int \left(p(s) \blue{+\err{p(s)}} \right)ds}$$
 
-This allows us to derive a functional form, \eg for the Gaussian case ... (find in manuscript)
+This allows us to derive a functional form, \eg for the Gaussian case
+$$ w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,$$
+where DM's greater scale is $(\alpha\sigma)^2$
+% \ldots visually similar to function chosen by Kahneman and Tversky.
+\end{frame}
 
-...visually similar to function chosen by Kahneman and Tversky.
-
-XXXNot sure we need much more. I'd just have one figure that gives a nice inverse S, for a Gaussian, say, based on estimation error.
-
+\begin{frame}{Estimating probabilities for two Gaussians}
+% XXXNot sure we need much more. I'd just have one figure that gives a nice inverse S, for a Gaussian, say, based on estimation error.
+\centering
+	\includegraphics[width=\textwidth]{../../figs/square_root_error_2Gaussians.pdf}
 \end{frame}
 
 %\begin{frame}{Estimation of the decision weights}
@@ -338,10 +309,6 @@ XXXNot sure we need much more. I'd just have one figure that gives a nice invers
 %\end{center}
 %\end{frame}
 %
-%\begin{frame}
-%\begin{center}
-%	\includegraphics[width=.8\textwidth]{../../figs/square_root_error}
-%\end{center}
 %
 %\end{frame}
 
@@ -384,15 +351,19 @@ XXXNot sure we need much more. I'd just have one figure that gives a nice invers
   \item[$\hookrightarrow$] Probability weighting is rational cautious behaviour under uncertainty over time
   \item[]
   \item Manuscript at \url{https://www.researchers.one/article/2020-04-14}
-  \item Interactive code at \url{https://bit.ly/lml-pw-code}
-  
-  XXX researchers.one link is better: an opportunity to advertise R1 and explain it's open for public review.
-  
-  XXX code link (from manuscript) goes to wrong place -- link to binder for interactive notebook.
-  
+  \item Interactive code at \url{https://bit.ly/lml-pw-count-b}    
 %   \\ \fullcite{PetersETAL2020R1}
 % 	\item See blog post for the basic reasoning \fullcite{Peters2020}
 % 	\item See blog post for the basic reasoning \fullcite{Buchanan2020}
 \end{itemize}
+
+% \begin{center}
+% 	\includegraphics[width=.8\textwidth]{../../figs/Our_result_LocScale_vs_KT.pdf}
+% \end{center}
+
+\pause
+\centering
+\vfill
+{\Large \textsc{\textbf{Thank you for your attention!}}}
 
 \end{frame}
