@@ -187,8 +187,8 @@ Numerically easy for any pair of distributions (models):
 
 
 \section{Estimation}
-\begin{frame}{Why DM's greater scale?}
 
+\begin{frame}{Why DM's greater scale?}
 %DM's adaptive rationality: err on the side of caution:
 \begin{itemize}
   \item DM has no control over experiment
@@ -226,7 +226,7 @@ Numerically easy for any pair of distributions (models):
   \item \num{100} observations
   \item $\sim 99.5\%$ of such time series will contain 0 or 1 events
   \item Na\"ive estimation: $\phat(x) = 0$ or $\phat(x)=0.01$
-  \item[$\hookrightarrow$] either impossible or ten times (over)estimation
+  \item[$\hookrightarrow$] $\num{1000}\%$ error in $\phat(x)$ 
 \end{itemize}
 \column{0.5\textwidth}
 \textbf{Common Event} %\hfill \includegraphics[height=1.5cm]{img/WhiteSwan}  \hfill
@@ -278,14 +278,20 @@ $$w(x)=\frac{p(x)\blue{+\err{p(x)}}}{\int \left(p(s) \blue{+\err{p(s)}} \right)d
 
 This allows us to derive a functional form, \eg for the Gaussian case
 $$ w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,$$
-where DM's greater scale is $(\alpha\sigma)^2$
+where DM's scale is $\alpha\sigma$
+\begin{itemize}
+  \item $\alpha < 1 \to$ S shape
+  \item $\alpha > 1 \to$ inverse-S shape
+\end{itemize}
 % \ldots visually similar to function chosen by Kahneman and Tversky.
 \end{frame}
 
 \begin{frame}{Estimating probabilities for two Gaussians}
 % XXXNot sure we need much more. I'd just have one figure that gives a nice inverse S, for a Gaussian, say, based on estimation error.
 \centering
-	\includegraphics[width=\textwidth]{../../figs/square_root_error_2Gaussians.pdf}
+	\includegraphics[width=\textwidth]{../../figs/square_root_error_2Gaussians.pdf} \\
+
+\red{ToDo: Make inverse-S more pronounced}
 \end{frame}
 
 %\begin{frame}{Estimation of the decision weights}

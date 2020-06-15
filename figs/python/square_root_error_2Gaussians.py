@@ -11,7 +11,7 @@ import scipy
 from scipy.integrate import quad
 import scipy.stats as stat
 
-Tdx = 1 # observations per bin
+Tdx = 0.0001 # observations per bin
 
 x = np.linspace(-100, 100, num=5000)
 # Gaussians location and scale parameters
