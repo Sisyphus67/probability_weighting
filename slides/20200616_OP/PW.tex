@@ -3,11 +3,11 @@
 
 \begin{frame}{Main results}
 \begin{center}
-\uncover<2>{
-\includegraphics[width=.45\textwidth]{../../figs/Our_result_nolegend.pdf}
-	}
 \only<1->{
 	\includegraphics[width=.45\textwidth]{../../figs/KT_result_nolegend.pdf}
+	}
+\uncover<2>{
+\includegraphics[width=.45\textwidth]{../../figs/Our_result_nolegend.pdf}
 	}
 \end{center}
 
@@ -31,9 +31,9 @@
 
 \column{0.5\textwidth}
 \begin{itemize}
-  \item low probabilities treated as higher;\\ 
-  high probabilities treated as lower
-  \item stable empirical pattern: inverse-S shape
+%   \item low probabilities treated as higher;\\ 
+%   high probabilities treated as lower
+  \item empirical pattern: inverse-S shape
   \item Cumulative Prospect Theory (CPT) \nocite{}
 \end{itemize}
 \vspace{1em}
@@ -53,6 +53,7 @@
 \end{columns}
 \end{frame}
 
+\section{Setup}
 \begin{frame}{Setup}
 \begin{center}
 Task: model payout, $x$, of a gamble as a random variable.
@@ -75,20 +76,18 @@ Task: model payout, $x$, of a gamble as a random variable.
 \begin{columns}[T]
 \column{0.05\textwidth}
 \column{0.35\textwidth}
-	\vspace{0.5em}
+	\vspace{1em}
 % 	\centering
-	DO assigns\\
-	\red{PDF $p(x)$} \\
-  \red{CDF $F_p(x)$}\\
+	DO assigns \red{PDF $p(x)$} \\
+  $\hookrightarrow$ \red{CDF $F_p(x)$}\\
 \column{0.2\textwidth}
 % \centering
 % 	\includegraphics[height=3cm]{img/coinflip}
 \column{0.4\textwidth}
-	\vspace{0.5em}
+	\vspace{1em}
 % 	\centering
-  DM assigns different\\
-  \blue{PDF $w(x)$}\\
-   \blue{CDF $F_w(x)$}\\
+  DM assigns different \blue{PDF $w(x)$}\\
+  $\hookrightarrow$ \blue{CDF $F_w(x)$}\\
 \end{columns}
 \end{frame}
 
@@ -103,7 +102,7 @@ Task: model payout, $x$, of a gamble as a random variable.
 	\includegraphics[width=0.42\textwidth]{../../figs/diff_shapes_Gauss_t.pdf}
 \end{frame}
 
-\begin{frame}{Thought experiment: DM assumes greater scale}
+\begin{frame}{Thought Experiment: DM assumes greater scale}
 \centering
 	\includegraphics[width=.35\textwidth]{../../figs/2GaussianPDFs2Scales.pdf} \\
 % 2. Corresponding CDFs\\
@@ -138,8 +137,9 @@ Task: model payout, $x$, of a gamble as a random variable.
 % 	}
 \end{frame}
 
-\begin{frame}
-For the case of two Gaussians with different scale we derive a functional form
+\section{Functional Form}
+\begin{frame}{Functional form of the weighting function}
+Gaussian case with different scale:
 \begin{equation}
 	w(p) =
 % 	\underbrace{
@@ -156,8 +156,8 @@ where
 \begin{itemize}
   \item DO's scale is $\sigma$
   \item DM's scale is $\alpha\sigma$
-  \item $\alpha < 1 \to$ S shape
-  \item $\alpha > 1 \to	$ inverse-S shape
+%   \item $\alpha < 1 \to$ S shape
+%   \item $\alpha > 1 \to	$ inverse-S shape
 \end{itemize}
 \end{frame}
 
@@ -181,7 +181,7 @@ where
 
 \begin{frame}{Interim conclusion}
 \label{InterimConclusion}
-\centering \includegraphics[width=0.8\textwidth]{../../figs/Our_result_LocScale_vs_KT.pdf}
+\centering \includegraphics[width=0.9\textwidth]{../../figs/KT_vs_Our_result_LocScale.pdf}
 
 % \vspace{2em}
 \bi
@@ -233,7 +233,7 @@ where
   \item probabilities are not observable
   \item probabilities encountered as
   	\begin{itemize}
-  		\item known frequency in ensemble of experiments (DO)
+  		\item known frequencies in ensemble of experiments (DO)
   		\item frequencies estimated over time (DM)
   	\end{itemize}
   \item[$\hookrightarrow$] \textbf{estimates have uncertainties -- cautious DM accounts for these}
@@ -252,7 +252,7 @@ where
   \item \num{100} observations
   \item $\sim 99.5\%$ get 0 or 1 events
   \item $\phat(x) = 0$ or $\phat(x)=0.01$
-  \item[$\hookrightarrow$] $\num{1000}\%$ uncertainty in $\phat(x)$ 
+  \item[$\hookrightarrow$] $\phat(x)$ off by \num{1000}\% 
 \end{itemize}
 \column{0.5\textwidth}
 \textbf{Common Event} %\hfill \includegraphics[height=1.5cm]{img/WhiteSwan}  \hfill
@@ -261,13 +261,12 @@ where
   \item \num{100} observations
   \item $\sim 99.5\%$ get between 35 and 65 events,
   \item $0.35< \phat(x) <0.65$
-  \item[$\hookrightarrow$] $\pm 15\%$ uncertainty in $\phat(x)$
+  \item[$\hookrightarrow$] $\phat(x)$ off by 30\%
 \end{itemize}
 \end{columns}
 \vspace{2em}
  \centering
-$\hookrightarrow$ small $p(x)$, small count \\
-$\hookrightarrow$ small count, big uncertainty
+$\hookrightarrow$ small $p(x)$, small count $\rightarrow$ big uncertainty
 \end{frame}
 
 
@@ -297,8 +296,9 @@ $\hookrightarrow$ small count, big uncertainty
 \begin{frame}{DMs don't like surprises}
 
 To avoid surprises, DMs \blue{add estimation uncertainty $\err{p(x)}$} to every estimated probability, then normalize, s.t.
-
-$$w(x)=\frac{p(x)\blue{+\err{p(x)}}}{\int \left(p(s) \blue{+\err{p(s)}} \right)ds}$$
+\begin{equation}
+	w(x)=\frac{p(x)\blue{+\err{p(x)}}}{\int \left(p(s) \blue{+\err{p(s)}} \right)ds}
+\end{equation}
 \pause
 % \ldots visually similar to function chosen by Kahneman and Tversky.
 \centering
@@ -360,25 +360,35 @@ $$w(x)=\frac{p(x)\blue{+\err{p(x)}}}{\int \left(p(s) \blue{+\err{p(s)}} \right)d
 \section{Conclusion}
 
 \begin{frame}{Conclusion}
-\red{Classical interpretation of PW:}
+\begin{columns}[T]
+\column{.5\textwidth}
+Classical interpretation of PW
 \bi
-	\item	\red{maladaptive irrational cognitive bias}
+  \item overestimation of low probability events
+  \item underestimation of high probability events
+	\item[$\hookrightarrow$]	maladaptive irrational cognitive bias
 \ei
-\blue{Ergodicity Economics and probability weighting}
+\column{.5\textwidth}
+Ergodicity Economics and PW
 \begin{itemize}
   \item inverse-S shape: neutral indicator of different models of the world
 %   \item relative probability estimation errors are greater for rarer events
 	\item reported observations consistent with DM's extra uncertainty
 	\item may arise from DM estimating probabilities over time
-  \item[$\hookrightarrow$] \blue{Probability weighting is rational cautious behaviour under uncertainty over time}
-  \item[]
-  \item Manuscript at \url{https://www.researchers.one/article/2020-04-14}
-  \item Interactive code at \url{https://bit.ly/lml-pw-count-b}    
+  \item[$\hookrightarrow$] Probability weighting is rational cautious behaviour under uncertainty over time
+%   \item $\uparrow$ DM's uncertainty $\to$ inverse-S $\uparrow$
 %   \\ \fullcite{PetersETAL2020R1}
 % 	\item See blog post for the basic reasoning \fullcite{Peters2020}
 % 	\item See blog post for the basic reasoning \fullcite{Buchanan2020}
 \end{itemize}
-
+\end{columns}
+\vfill
+\begin{itemize}
+  \item testable prediction $\to$ Let's run an experiment!
+  \item Manuscript at \url{https://www.researchers.one/article/2020-04-14}
+  \item Interactive code at \url{https://bit.ly/lml-pw-count-b}    
+\end{itemize}
+% \vspace{1em}
 % \begin{center}
 % 	\includegraphics[width=.8\textwidth]{../../figs/Our_result_LocScale_vs_KT.pdf}
 % \end{center}
