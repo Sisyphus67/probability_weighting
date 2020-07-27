@@ -45,6 +45,159 @@
     \field{year}{1979}
   \endentry
 
+  \entry{ErevETAL2010}{article}{}
+    \name{author}{10}{}{%
+      {{hash=EI}{%
+         family={Erev},
+         familyi={E\bibinitperiod},
+         given={Ido},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=EE}{%
+         family={Ert},
+         familyi={E\bibinitperiod},
+         given={Eyal},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=RAE}{%
+         family={Roth},
+         familyi={R\bibinitperiod},
+         given={Alvin\bibnamedelima E.},
+         giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=HE}{%
+         family={Haruvy},
+         familyi={H\bibinitperiod},
+         given={Ernan},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HSM}{%
+         family={Herzog},
+         familyi={H\bibinitperiod},
+         given={Stefan\bibnamedelima M.},
+         giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=HR}{%
+         family={Hau},
+         familyi={H\bibinitperiod},
+         given={Robin},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HR}{%
+         family={Hertwig},
+         familyi={H\bibinitperiod},
+         given={Ralph},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Stewart},
+         familyi={S\bibinitperiod},
+         given={Terrence},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=WR}{%
+         family={West},
+         familyi={W\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=LC}{%
+         family={Lebiere},
+         familyi={L\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EI+1}
+    \strng{fullhash}{EIEERAEHEHSMHRHRSTWRLC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{doi}
+    \verb 10.1002/bdm.683
+    \endverb
+    \field{issue}{1}
+    \field{pages}{15\bibrangedash 47}
+    \field{title}{A choice prediction competition: Choices from experience and
+  from description}
+    \field{volume}{23}
+    \field{journaltitle}{Journal of Behavioral Decision Making}
+    \field{year}{2010}
+  \endentry
+
+  \entry{GalesicETAL2012}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GM}{%
+         family={Galesic},
+         familyi={G\bibinitperiod},
+         given={Mirta},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=OH}{%
+         family={Olsson},
+         familyi={O\bibinitperiod},
+         given={Henrik},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rieskamp},
+         familyi={R\bibinitperiod},
+         given={Jörg},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GM+1}
+    \strng{fullhash}{GMOHRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1177/0956797612445313
+    \endverb
+    \field{issue}{12}
+    \field{pages}{1515\bibrangedash 1523}
+    \field{title}{Social Sampling Explains Apparent Biases in Judgments of
+  Social Environments}
+    \field{volume}{23}
+    \field{journaltitle}{Psychological Science}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Gigerenzer1991}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GG}{%
+         family={Gigerenzer},
+         familyi={G\bibinitperiod},
+         given={Gerd},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GG1}
+    \strng{fullhash}{GG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1991}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.1080/14792779143000033
+    \endverb
+    \field{issue}{1}
+    \field{pages}{83\bibrangedash 115}
+    \field{title}{How to Make Cognitive Illusions Disappear: Beyond
+  {\textquotedblleft}Heuristics and Biases{\textquotedblright}}
+    \field{volume}{2}
+    \field{journaltitle}{European Review of Social Psychology}
+    \field{year}{1991}
+  \endentry
+
   \entry{Gigerenzer2018}{article}{}
     \name{author}{1}{}{%
       {{hash=GG}{%
@@ -71,6 +224,135 @@
     \field{volume}{5}
     \field{journaltitle}{Review of Behavioral Economics}
     \field{year}{2018}
+  \endentry
+
+  \entry{GigerenzerSelten2002b}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=GG}{%
+         family={Gigerenzer},
+         familyi={G\bibinitperiod},
+         given={Gerd},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Selten},
+         familyi={S\bibinitperiod},
+         given={Reinhard},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=GG}{%
+         family={Gigerenzer},
+         familyi={G\bibinitperiod},
+         given={Gerd},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Selten},
+         familyi={S\bibinitperiod},
+         given={Reinhard},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MIT Press}%
+    }
+    \strng{namehash}{GGSR1}
+    \strng{fullhash}{GGSR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2002}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{booksubtitle}{The Adaptive Toolbox}
+    \field{booktitle}{{B}ounded {R}ationality}
+    \field{pages}{1\bibrangedash 12}
+    \field{series}{Report of the 84th Dahlem Workshop}
+    \field{title}{Rethinking Rationality}
+    \field{year}{2002}
+  \endentry
+
+  \entry{HertwigETAL2004}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HR}{%
+         family={Hertwig},
+         familyi={H\bibinitperiod},
+         given={Ralph},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Barron},
+         familyi={B\bibinitperiod},
+         given={Greg},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=WEU}{%
+         family={Weber},
+         familyi={W\bibinitperiod},
+         given={Elke\bibnamedelima U.},
+         giveni={E\bibinitperiod\bibinitdelim U\bibinitperiod},
+      }}%
+      {{hash=EI}{%
+         family={Erev},
+         familyi={E\bibinitperiod},
+         given={Ido},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HR+1}
+    \strng{fullhash}{HRBGWEUEI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{labeldatesource}{}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1111/j.0956-7976.2004.00715.x
+    \endverb
+    \field{issue}{8}
+    \field{pages}{534\bibrangedash 539}
+    \field{title}{Decisions from Experience and the Effect of Rare Events in
+  Risky Choice}
+    \field{volume}{15}
+    \field{journaltitle}{Psychological Science}
+    \field{year}{2004}
+  \endentry
+
+  \entry{HertwigErev2009}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HR}{%
+         family={Hertwig},
+         familyi={H\bibinitperiod},
+         given={Ralph},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=EI}{%
+         family={Erev},
+         familyi={E\bibinitperiod},
+         given={Ido},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HREI1}
+    \strng{fullhash}{HREI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1016/j.tics.2009.09.004
+    \endverb
+    \field{issue}{12}
+    \field{pages}{517\bibrangedash 523}
+    \field{title}{The description{\textendash}experience gap in risky choice}
+    \field{volume}{13}
+    \field{journaltitle}{Trends in Cognitive Sciences}
+    \field{year}{2009}
   \endentry
 
   \entry{KahnemanTversky1979}{article}{}
@@ -177,6 +459,76 @@
     \field{year}{1944}
   \endentry
 
+  \entry{LiederETAL2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LF}{%
+         family={Lieder},
+         familyi={L\bibinitperiod},
+         given={Falk},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GTL}{%
+         family={Griffiths},
+         familyi={G\bibinitperiod},
+         given={Thomas\bibnamedelima L.},
+         giveni={T\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hsu},
+         familyi={H\bibinitperiod},
+         given={Ming},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LF+1}
+    \strng{fullhash}{LFGTLHM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1037/rev0000074
+    \endverb
+    \field{issue}{1}
+    \field{pages}{1\bibrangedash 32}
+    \field{title}{Overrepresentation of extreme events in decision making
+  reflects rational use of cognitive resources}
+    \field{volume}{125}
+    \field{journaltitle}{Psychological Review}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Martins2006}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MACR}{%
+         family={Martins},
+         familyi={M\bibinitperiod},
+         given={André C.\bibnamedelima R.},
+         giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MACR1}
+    \strng{fullhash}{MACR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{issue}{2}
+    \field{pages}{108\bibrangedash 117}
+    \field{title}{Probability biases as Bayesian inference}
+    \verb{url}
+    \verb http://journal.sjdm.org/vol1.2.htm
+    \endverb
+    \field{volume}{1}
+    \field{journaltitle}{Judgement and Decision Making}
+    \field{year}{2006}
+  \endentry
+
   \entry{Peters2019b}{article}{}
     \name{author}{1}{}{%
       {{hash=PO}{%
@@ -251,6 +603,218 @@
     \field{year}{1998}
   \endentry
 
+  \entry{RobattoSzentes2017}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RR}{%
+         family={Robatto},
+         familyi={R\bibinitperiod},
+         given={Roberto},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Szentes},
+         familyi={S\bibinitperiod},
+         given={Balázs},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RRSB1}
+    \strng{fullhash}{RRSB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1016/j.jet.2017.10.002
+    \endverb
+    \field{pages}{410\bibrangedash 422}
+    \field{title}{On the biological foundation of risk preferences}
+    \field{volume}{172}
+    \field{journaltitle}{Journal of Economic Theory}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Robson1996}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RAJ}{%
+         family={Robson},
+         familyi={R\bibinitperiod},
+         given={Arthur\bibnamedelima J.},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RAJ1}
+    \strng{fullhash}{RAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1006/jeth.1996.0023
+    \endverb
+    \field{issue}{2}
+    \field{pages}{397\bibrangedash 424}
+    \field{title}{A Biological Basis for Expected and Non-expected Utility}
+    \field{volume}{68}
+    \field{journaltitle}{Journal of Economic Theory}
+    \field{year}{1996}
+  \endentry
+
+  \entry{SarverSadowski2019}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ST}{%
+         family={Sarver},
+         familyi={S\bibinitperiod},
+         given={Todd},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Sadowski},
+         familyi={S\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{STSP1}
+    \strng{fullhash}{STSP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.2139/ssrn.3501170
+    \endverb
+    \field{title}{An Evolutionary Perspective on Updating Risk and Ambiguity
+  Preferences}
+    \field{year}{2019}
+  \endentry
+
+  \entry{SeoETAL2019}{article}{}
+    \name{author}{5}{}{%
+      {{hash=SD}{%
+         family={Seo},
+         familyi={S\bibinitperiod},
+         given={Daewon},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=RRK}{%
+         family={Raman},
+         familyi={R\bibinitperiod},
+         given={Ravi\bibnamedelima Kiran},
+         giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=RJB}{%
+         family={Rhim},
+         familyi={R\bibinitperiod},
+         given={Joong\bibnamedelima Bum},
+         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=GVK}{%
+         family={Goyal},
+         familyi={G\bibinitperiod},
+         given={Vivek\bibnamedelima K},
+         giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=VLR}{%
+         family={Varshney},
+         familyi={V\bibinitperiod},
+         given={Lav\bibnamedelima R.},
+         giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SD+1}
+    \strng{fullhash}{SDRRKRJBGVKVLR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1109/tsp.2019.2935865
+    \endverb
+    \field{issue}{19}
+    \field{pages}{5103\bibrangedash 5117}
+    \field{title}{Beliefs in Decision-Making Cascades}
+    \field{volume}{67}
+    \field{journaltitle}{{IEEE} Transactions on Signal Processing}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Smith2003a}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SVL}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Vernon\bibnamedelima L.},
+         giveni={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SVL1}
+    \strng{fullhash}{SVL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1257/000282803322156954
+    \endverb
+    \field{number}{3}
+    \field{pages}{465\bibrangedash 508}
+    \field{title}{Constructivist and Ecological Rationality in Economics}
+    \field{volume}{93}
+    \field{journaltitle}{American Economic Review}
+    \field{year}{2003}
+  \endentry
+
+  \entry{Stewart2006}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SN}{%
+         family={Stewart},
+         familyi={S\bibinitperiod},
+         given={Neil},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=CN}{%
+         family={Chater},
+         familyi={C\bibinitperiod},
+         given={Nick},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=BGD}{%
+         family={Brown},
+         familyi={B\bibinitperiod},
+         given={Gordon\bibnamedelima D.A.},
+         giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SN+1}
+    \strng{fullhash}{SNCNBGD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1016/j.cogpsych.2005.10.003
+    \endverb
+    \field{issue}{1}
+    \field{pages}{1\bibrangedash 26}
+    \field{title}{Decision by sampling}
+    \field{volume}{53}
+    \field{journaltitle}{Cognitive Psychology}
+    \field{year}{2006}
+  \endentry
+
   \entry{Sunstein2020}{article}{}
     \name{author}{1}{}{%
       {{hash=SCR}{%
@@ -277,6 +841,37 @@
     \field{urlday}{04}
     \field{urlmonth}{04}
     \field{urlyear}{2020}
+  \endentry
+
+  \entry{Todd2012}{collection}{}
+    \name{editor}{2}{}{%
+      {{hash=TPM}{%
+         family={Todd},
+         familyi={T\bibinitperiod},
+         given={Peter\bibnamedelima M.},
+         giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Gigerenzer},
+         familyi={G\bibinitperiod},
+         given={Gerd},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{TPMGG1}
+    \strng{fullhash}{TPMGG1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{subtitle}{Intelligence in the world}
+    \field{title}{Ecological rationality}
+    \field{year}{2012}
   \endentry
 
   \entry{TverskyFox1995}{article}{}
@@ -415,6 +1010,47 @@
     \field{volume}{63}
     \field{journaltitle}{Econometrica}
     \field{year}{1995}
+  \endentry
+
+  \entry{WulffETAL2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WDU}{%
+         family={Wulff},
+         familyi={W\bibinitperiod},
+         given={Dirk\bibnamedelima U.},
+         giveni={D\bibinitperiod\bibinitdelim U\bibinitperiod},
+      }}%
+      {{hash=MCM}{%
+         family={Mergenthaler-Canseco},
+         familyi={M\bibinithyphendelim C\bibinitperiod},
+         given={Max},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HR}{%
+         family={Hertwig},
+         familyi={H\bibinitperiod},
+         given={Ralph},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WDU+1}
+    \strng{fullhash}{WDUMCMHR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \verb{doi}
+    \verb 10.1037/bul0000115
+    \endverb
+    \field{issue}{2}
+    \field{pages}{140\bibrangedash 176}
+    \field{title}{A meta-analytic review of two modes of learning and the
+  description-experience gap.}
+    \field{volume}{144}
+    \field{journaltitle}{Psychological Bulletin}
+    \field{year}{2018}
   \endentry
 \enddatalist
 \endinput
