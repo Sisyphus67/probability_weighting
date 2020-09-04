@@ -8,8 +8,6 @@ Stimulus : St. Petersburg lottery comes along
 
 EE-Response to SPL: separation from earlier developments after going back to very first conflicting "evidence" of St. Petersburg lottery -> change optimand to a meaningful observable for typical individual DMs
 
-EE-Response to PW: statistical explanation due to different models of uncertainty
-
 Response to SPL : EUT, i.e. adjust the optimand by introducing utility by keeping its mathematical structure of an expectation value of something intact
 
 Stimulus : Allais paradox, Ellsberg etc.
@@ -19,6 +17,7 @@ Response : Bifurcation/separation of K&T "Heuristics & Biases" research programm
 Respone by K&T : PT, i.e. adjust the optimand by introducing PW & value function by keeping its mathematical structure of an expectation value of something
 
 Stimulus : Stochastic Dominance issues
+
 Respone by K&T : CPT, i.e. rank-dependent cumulative probabilities, aka special form of PW
 
 Briefly survey what K&T camp has done in the meantime in relation to PW, eg. parameter estimation/calibration
@@ -26,3 +25,5 @@ Briefly survey what K&T camp has done in the meantime in relation to PW, eg. par
 Response by Bounded Rationality Camp (incl. Simon, Gigerenzer, Selten, etc): explore non-optimising behaviour (eg. satisfycing), interpret evidence as adaptive heuristics
 
 Briefly survey what BR camp has done in the meantime related to PW (description-experience gap related to PW)
+
+EE-Response to PW: statistical explanation due to different models of uncertainty
