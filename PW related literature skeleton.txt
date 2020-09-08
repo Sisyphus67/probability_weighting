@@ -52,6 +52,36 @@ p.5 "Here we offer..." is part of our critique and should go to the end (or the 
 
 -> Finally, our critique "Ergodicity economics". This is, to an extent, a repetition of the paragraph 2, which is ok -- it's called "cycling:" keep exposing the same idea repeatedly from slightly different angles. Each time we get back to it, we point out another feature.
 
+============
+AA from here
+============
 
+This is not so much a skeleton as a collection of notes, so I will simply add my thoughts here rather than work them in above.
 
+1. Purpose
 
+Twofold
+- To place our paper within the context of existing literature (to acknowledge similar critiques and to connect with those researchers).
+- To explain why our paper is an EE paper.
+
+2. Structure
+
+Both aims require that we tell the story of the development of CPT.
+
+Let's be very explicit about EUT/EE bifurcation at the start, i.e. state that there is a "bifurcation" or "two strands" or similar wording: one which maintains the ensemble average and leads to CPT; and one which replaces it with a time average and produces EE.
+
+At this point, we have no choice but to pick a strand to describe first. At present, we start with the ensemble average strand and finish with the time average strand. I'm ok with that, since it creates a problem-solution narrative
+
+3. Content
+
+However, it is a slightly weird thing to do, in that we must spend a long time telling the reader what we are not doing before we say what we are doing. So the description of EW -> EUT -> (C)PT -> critiques has to be concise.
+
+Therefore, I suggest we purge the text of any recent literature which does not relate to PW, so that we keep this section focused. Probably best to do this exercise first, before writing anything, since it informs what we will write.
+
+One particularly subtle piece of content is...
+
+4. Why is this an EE paper?
+
+Tricky question, since our analysis is independent of the behavioural models with which so much of EE is concerned. We do not, in this paper, propose an alternative behavioural model to one containing an inappropriate ensemble average.
+
+Therefore, we need a clear and simple answer, or else readers will think we are making tenous links to EE to "shoehorn" in references to our work. I share Ole's view above. EE rejects (at leading order) psychological models of human decisions, which start with EUT and lead to CPT. Instead, in EE we start by modelling the external reality to which human decisions are responses. In this paper, that reality is the information available to a DM, e.g. a statement by a DO with no corroborating evidence, a finite sample of observed outcomes, and so on. The EE approach is to ask what a DM can reasonably infer (specifically about the frequencies of different outcomes) from such data, which is precisely what we do in this paper.
