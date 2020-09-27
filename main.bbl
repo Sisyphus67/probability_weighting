@@ -17,149 +17,36 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{AdamouETAL2019}{article}{}
-    \name{author}{4}{}{%
-      {{hash=AA}{%
-         family={Adamou},
-         familyi={A\bibinitperiod},
-         given={Alexander},
-         giveni={A\bibinitperiod},
+  \entry{vonNeumannMorgenstern1944}{book}{}
+    \name{author}{2}{}{%
+      {{hash=vNJ}{%
+         prefix={von},
+         prefixi={v\bibinitperiod},
+         family={Neumann},
+         familyi={N\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
       }}%
-      {{hash=BY}{%
-         family={Berman},
-         familyi={B\bibinitperiod},
-         given={Yonatan},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=MD}{%
-         family={Mavroyiannis},
+      {{hash=MO}{%
+         family={Morgenstern},
          familyi={M\bibinitperiod},
-         given={Diomides},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=PO}{%
-         family={Peters},
-         familyi={P\bibinitperiod},
-         given={Ole},
+         given={Oskar},
          giveni={O\bibinitperiod},
       }}%
     }
-    \strng{namehash}{AA+1}
-    \strng{fullhash}{AABYMDPO1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2019}
-    \field{labeldatesource}{}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \verb{eprint}
-    \verb 1910.02137
-    \endverb
-    \field{title}{Microfoundations of Discounting}
-    \field{journaltitle}{ar{X}iv:1910.02137}
-    \field{eprinttype}{arxiv}
-    \field{year}{2019}
-  \endentry
-
-  \entry{BermanKirstein2020}{article}{}
-    \name{author}{2}{}{%
-      {{hash=BY}{%
-         family={Berman},
-         familyi={B\bibinitperiod},
-         given={Yonatan},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=KM}{%
-         family={Kirstein},
-         familyi={K\bibinitperiod},
-         given={Mark},
-         giveni={M\bibinitperiod},
-      }}%
+    \list{publisher}{1}{%
+      {Princeton University Press}%
     }
-    \strng{namehash}{BYKM1}
-    \strng{fullhash}{BYKM1}
+    \strng{namehash}{vNJMO1}
+    \strng{fullhash}{vNJMO1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2020}
+    \field{labelyear}{1944}
     \field{labeldatesource}{}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
-    \field{title}{Risk Preferences in Time Lotteries}
-    \verb{url}
-    \verb bit.ly/TimeLotteries
-    \endverb
-    \field{journaltitle}{RESEARCHERS.ONE}
-    \field{year}{2020}
-  \endentry
-
-  \entry{BernheimSprenger2020}{article}{}
-    \name{author}{2}{}{%
-      {{hash=BBD}{%
-         family={Bernheim},
-         familyi={B\bibinitperiod},
-         given={B.\bibnamedelima Douglas},
-         giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-      {{hash=SC}{%
-         family={Sprenger},
-         familyi={S\bibinitperiod},
-         given={Charles},
-         giveni={C\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{BBDSC1}
-    \strng{fullhash}{BBDSC1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2020}
-    \field{labeldatesource}{}
-    \field{sortinit}{B}
-    \field{sortinithash}{B}
-    \verb{doi}
-    \verb 10.3982/ecta16646
-    \endverb
-    \field{issue}{4}
-    \field{pages}{1363\bibrangedash 1409}
-    \field{title}{On the Empirical Validity of Cumulative Prospect Theory:
-  Experimental Evidence of Rank-Independent Probability Weighting}
-    \field{volume}{88}
-    \field{journaltitle}{Econometrica}
-    \field{year}{2020}
-  \endentry
-
-  \entry{ChateauneufWakker1999}{article}{}
-    \name{author}{2}{}{%
-      {{hash=CA}{%
-         family={Chateauneuf},
-         familyi={C\bibinitperiod},
-         given={Alain},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=WP}{%
-         family={Wakker},
-         familyi={W\bibinitperiod},
-         given={Peter},
-         giveni={P\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{CAWP1}
-    \strng{fullhash}{CAWP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1999}
-    \field{labeldatesource}{}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \verb{doi}
-    \verb 10.1023/a:1007886529870
-    \endverb
-    \field{issue}{2}
-    \field{pages}{137\bibrangedash 145}
-    \field{title}{An Axiomatization of Cumulative Prospect Theory for Decision
-  Under Risk}
-    \field{volume}{18}
-    \field{journaltitle}{Journal of Risk and Uncertainty}
-    \field{year}{1999}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{Theory of Games and Economic Behavior}
+    \field{year}{1944}
   \endentry
 
   \entry{Cohen1979a}{article}{}
@@ -307,76 +194,6 @@
     \field{year}{2006}
   \endentry
 
-  \entry{GalesicETAL2012}{article}{}
-    \name{author}{3}{}{%
-      {{hash=GM}{%
-         family={Galesic},
-         familyi={G\bibinitperiod},
-         given={Mirta},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=OH}{%
-         family={Olsson},
-         familyi={O\bibinitperiod},
-         given={Henrik},
-         giveni={H\bibinitperiod},
-      }}%
-      {{hash=RJ}{%
-         family={Rieskamp},
-         familyi={R\bibinitperiod},
-         given={Jörg},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GM+1}
-    \strng{fullhash}{GMOHRJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2012}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \verb{doi}
-    \verb 10.1177/0956797612445313
-    \endverb
-    \field{issue}{12}
-    \field{pages}{1515\bibrangedash 1523}
-    \field{title}{Social Sampling Explains Apparent Biases in Judgments of
-  Social Environments}
-    \field{volume}{23}
-    \field{journaltitle}{Psychological Science}
-    \field{year}{2012}
-  \endentry
-
-  \entry{Gigerenzer1991}{article}{}
-    \name{author}{1}{}{%
-      {{hash=GG}{%
-         family={Gigerenzer},
-         familyi={G\bibinitperiod},
-         given={Gerd},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GG1}
-    \strng{fullhash}{GG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1991}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \verb{doi}
-    \verb 10.1080/14792779143000033
-    \endverb
-    \field{issue}{1}
-    \field{pages}{83\bibrangedash 115}
-    \field{title}{How to Make Cognitive Illusions Disappear: Beyond
-  {\textquotedblleft}Heuristics and Biases{\textquotedblright}}
-    \field{volume}{2}
-    \field{journaltitle}{European Review of Social Psychology}
-    \field{year}{1991}
-  \endentry
-
   \entry{Gigerenzer2018}{article}{}
     \name{author}{1}{}{%
       {{hash=GG}{%
@@ -403,211 +220,6 @@
     \field{volume}{5}
     \field{journaltitle}{Review of Behavioral Economics}
     \field{year}{2018}
-  \endentry
-
-  \entry{GigerenzerHertwigPachur2011}{collection}{}
-    \name{editor}{3}{}{%
-      {{hash=GG}{%
-         family={Gigerenzer},
-         familyi={G\bibinitperiod},
-         given={Gerd},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=HR}{%
-         family={Hertwig},
-         familyi={H\bibinitperiod},
-         given={Ralph},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=PT}{%
-         family={Pachur},
-         familyi={P\bibinitperiod},
-         given={Thorsten},
-         giveni={T\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Oxford University Press}%
-    }
-    \strng{namehash}{GG+1}
-    \strng{fullhash}{GGHRPT1}
-    \field{labelnamesource}{editor}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2011}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \verb{doi}
-    \verb 10.1093/acprof:oso/9780199744282.001.0001
-    \endverb
-    \field{subtitle}{The Foundations of Adaptive Behavior}
-    \field{title}{Heuristics}
-    \field{year}{2011}
-  \endentry
-
-  \entry{GigerenzerSelten2002}{proceedings}{}
-    \name{editor}{2}{}{%
-      {{hash=GG}{%
-         family={Gigerenzer},
-         familyi={G\bibinitperiod},
-         given={Gerd},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=SR}{%
-         family={Selten},
-         familyi={S\bibinitperiod},
-         given={Reinhard},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {MIT Press}%
-    }
-    \strng{namehash}{GGSR1}
-    \strng{fullhash}{GGSR1}
-    \field{labelnamesource}{editor}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2002}
-    \field{extradate}{1}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \field{series}{Report of the 84th Dahlem Workshop on Bounded Rationality:
-  The Adaptive Toolbox}
-    \field{subtitle}{The Adaptive Toolbox}
-    \field{title}{{B}ounded {R}ationality}
-    \field{year}{2002}
-    \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{GigerenzerSelten2002b}{inproceedings}{}
-    \name{author}{2}{}{%
-      {{hash=GG}{%
-         family={Gigerenzer},
-         familyi={G\bibinitperiod},
-         given={Gerd},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=SR}{%
-         family={Selten},
-         familyi={S\bibinitperiod},
-         given={Reinhard},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \name{editor}{2}{}{%
-      {{hash=GG}{%
-         family={Gigerenzer},
-         familyi={G\bibinitperiod},
-         given={Gerd},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=SR}{%
-         family={Selten},
-         familyi={S\bibinitperiod},
-         given={Reinhard},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {MIT Press}%
-    }
-    \strng{namehash}{GGSR1}
-    \strng{fullhash}{GGSR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2002}
-    \field{extradate}{2}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \field{booksubtitle}{The Adaptive Toolbox}
-    \field{booktitle}{{B}ounded {R}ationality}
-    \field{pages}{1\bibrangedash 12}
-    \field{series}{Report of the 84th Dahlem Workshop}
-    \field{title}{Rethinking Rationality}
-    \field{year}{2002}
-  \endentry
-
-  \entry{GoldsteinGigerenzer2009}{article}{}
-    \name{author}{2}{}{%
-      {{hash=GDG}{%
-         family={Goldstein},
-         familyi={G\bibinitperiod},
-         given={Daniel\bibnamedelima G.},
-         giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
-      }}%
-      {{hash=GG}{%
-         family={Gigerenzer},
-         familyi={G\bibinitperiod},
-         given={Gerd},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{GDGGG1}
-    \strng{fullhash}{GDGGG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2009}
-    \field{labeldatesource}{}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \verb{doi}
-    \verb 10.1016/j.ijforecast.2009.05.010
-    \endverb
-    \field{issue}{4}
-    \field{pages}{760\bibrangedash 772}
-    \field{title}{Fast and frugal forecasting}
-    \field{volume}{25}
-    \field{journaltitle}{International Journal of Forecasting}
-    \field{year}{2009}
-  \endentry
-
-  \entry{HauETAL2008}{article}{}
-    \name{author}{4}{}{%
-      {{hash=HR}{%
-         family={Hau},
-         familyi={H\bibinitperiod},
-         given={Robin},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=PTJ}{%
-         family={Pleskac},
-         familyi={P\bibinitperiod},
-         given={Timothy\bibnamedelima J.},
-         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=KJ}{%
-         family={Kiefer},
-         familyi={K\bibinitperiod},
-         given={Jürgen},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=HR}{%
-         family={Hertwig},
-         familyi={H\bibinitperiod},
-         given={Ralph},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{HR+1}
-    \strng{fullhash}{HRPTJKJHR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2008}
-    \field{labeldatesource}{}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \verb{doi}
-    \verb 10.1002/bdm.598
-    \endverb
-    \field{issue}{5}
-    \field{pages}{493\bibrangedash 518}
-    \field{title}{The description-experience gap in risky choice: the role of
-  sample size and experienced probabilities}
-    \field{volume}{21}
-    \field{journaltitle}{Journal of Behavioral Decision Making}
-    \field{year}{2008}
   \endentry
 
   \entry{HertwigETAL2004}{article}{}
@@ -637,7 +249,7 @@
          giveni={I\bibinitperiod},
       }}%
     }
-    \strng{namehash}{HR+2}
+    \strng{namehash}{HR+1}
     \strng{fullhash}{HRBGWEUEI1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
@@ -795,75 +407,6 @@
     \field{year}{1944}
   \endentry
 
-  \entry{LiederETAL2018}{article}{}
-    \name{author}{3}{}{%
-      {{hash=LF}{%
-         family={Lieder},
-         familyi={L\bibinitperiod},
-         given={Falk},
-         giveni={F\bibinitperiod},
-      }}%
-      {{hash=GTL}{%
-         family={Griffiths},
-         familyi={G\bibinitperiod},
-         given={Thomas\bibnamedelima L.},
-         giveni={T\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-      {{hash=HM}{%
-         family={Hsu},
-         familyi={H\bibinitperiod},
-         given={Ming},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{LF+1}
-    \strng{fullhash}{LFGTLHM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2018}
-    \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \verb{doi}
-    \verb 10.1037/rev0000074
-    \endverb
-    \field{issue}{1}
-    \field{pages}{1\bibrangedash 32}
-    \field{title}{Overrepresentation of extreme events in decision making
-  reflects rational use of cognitive resources}
-    \field{volume}{125}
-    \field{journaltitle}{Psychological Review}
-    \field{year}{2018}
-  \endentry
-
-  \entry{Lopes1991}{article}{}
-    \name{author}{1}{}{%
-      {{hash=LLL}{%
-         family={Lopes},
-         familyi={L\bibinitperiod},
-         given={Lola\bibnamedelima L.},
-         giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{LLL1}
-    \strng{fullhash}{LLL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1991}
-    \field{labeldatesource}{}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \verb{doi}
-    \verb 10.1177/0959354391011005
-    \endverb
-    \field{issue}{1}
-    \field{pages}{65\bibrangedash 82}
-    \field{title}{The Rhetoric of Irrationality}
-    \field{volume}{1}
-    \field{journaltitle}{Theory {\&} Psychology}
-    \field{year}{1991}
-  \endentry
-
   \entry{Martins2006}{article}{}
     \name{author}{1}{}{%
       {{hash=MACR}{%
@@ -893,99 +436,70 @@
     \field{year}{2006}
   \endentry
 
-  \entry{MederETAL2019}{article}{}
-    \name{author}{8}{}{%
-      {{hash=MD}{%
-         family={Meder},
-         familyi={M\bibinitperiod},
-         given={David},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=RF}{%
-         family={Rabe},
-         familyi={R\bibinitperiod},
-         given={Finn},
-         giveni={F\bibinitperiod},
-      }}%
-      {{hash=MT}{%
-         family={Morville},
-         familyi={M\bibinitperiod},
-         given={Tobias},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=MKH}{%
-         family={Madsen},
-         familyi={M\bibinitperiod},
-         given={Kristoffer\bibnamedelima H.},
-         giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod},
-      }}%
-      {{hash=KMT}{%
-         family={Koudahl},
-         familyi={K\bibinitperiod},
-         given={Magnus\bibnamedelima T.},
-         giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
-      }}%
-      {{hash=DRJ}{%
-         family={Dolan},
-         familyi={D\bibinitperiod},
-         given={Ray\bibnamedelima J.},
-         giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=SHR}{%
-         family={Siebner},
-         familyi={S\bibinitperiod},
-         given={Hartwig\bibnamedelima R.},
-         giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-      {{hash=HOJ}{%
-         family={Hulme},
-         familyi={H\bibinitperiod},
-         given={Oliver\bibnamedelima J.},
-         giveni={O\bibinitperiod\bibinitdelim J\bibinitperiod},
+  \entry{Peters2011a}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PO}{%
+         family={Peters},
+         familyi={P\bibinitperiod},
+         given={Ole},
+         giveni={O\bibinitperiod},
       }}%
     }
-    \strng{namehash}{MD+1}
-    \strng{fullhash}{MDRFMTMKHKMTDRJSHRHOJ1}
+    \strng{namehash}{PO1}
+    \strng{fullhash}{PO1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2019}
+    \field{labelyear}{2011}
+    \field{extradate}{1}
     \field{labeldatesource}{}
-    \field{sortinit}{M}
-    \field{sortinithash}{M}
-    \verb{eprint}
-    \verb 1906.04652
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1080/14697688.2010.513338
     \endverb
-    \field{title}{Ergo\-dicity-Breaking Reveals Time Optimal Economic Behavior
-  in Humans}
-    \field{journaltitle}{ar{X}iv:1906.04652}
-    \field{eprinttype}{arxiv}
-    \field{year}{2019}
+    \field{number}{11}
+    \field{pages}{1593\bibrangedash 1602}
+    \field{title}{Optimal leverage from non-ergodicity}
+    \verb{url}
+    \verb http://dx.doi.org/10.1080/14697688.2010.513338
+    \endverb
+    \field{volume}{11}
+    \field{journaltitle}{Quantitative Finance}
+    \field{month}{11}
+    \field{year}{2011}
   \endentry
 
-  \entry{OSS2015}{article}{}
+  \entry{Peters2011b}{article}{}
     \name{author}{1}{}{%
-      {{hash=O}{%
-         family={{Open Science Collaboration}},
-         familyi={O\bibinitperiod},
+      {{hash=PO}{%
+         family={Peters},
+         familyi={P\bibinitperiod},
+         given={Ole},
+         giveni={O\bibinitperiod},
       }}%
     }
-    \strng{namehash}{O1}
-    \strng{fullhash}{O1}
+    \strng{namehash}{PO1}
+    \strng{fullhash}{PO1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2015}
+    \field{labelyear}{2011}
+    \field{extradate}{2}
     \field{labeldatesource}{}
-    \field{sortinit}{O}
-    \field{sortinithash}{O}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
     \verb{doi}
-    \verb 10.1126/science.aac4716
+    \verb 10.1098/rsta.2011.0065
     \endverb
-    \field{issue}{6251}
-    \field{pages}{943, aac4716\bibrangedash 1\bibrangedash 8}
-    \field{title}{Estimating the reproducibility of psychological science}
-    \field{volume}{349}
-    \field{journaltitle}{Science}
-    \field{year}{2015}
+    \field{number}{1956}
+    \field{pages}{4913\bibrangedash 4931}
+    \field{title}{The time resolution of the {St} {Petersburg} paradox}
+    \verb{url}
+    \verb http://dx.doi.org/10.1098/rsta.2011.0065
+    \endverb
+    \field{volume}{369}
+    \field{journaltitle}{Phil. Trans. R. Soc. A}
+    \field{month}{12}
+    \field{year}{2011}
   \endentry
 
   \entry{Peters2019b}{article}{}
@@ -1034,73 +548,6 @@
     \field{year}{2019}
   \endentry
 
-  \entry{PetersAdamou2015a}{article}{}
-    \name{author}{2}{}{%
-      {{hash=PO}{%
-         family={Peters},
-         familyi={P\bibinitperiod},
-         given={Ole},
-         giveni={O\bibinitperiod},
-      }}%
-      {{hash=AA}{%
-         family={Adamou},
-         familyi={A\bibinitperiod},
-         given={Alexander},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{POAA1}
-    \strng{fullhash}{POAA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2018}
-    \field{labeldatesource}{}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
-    \verb{eprint}
-    \verb 1506.03414
-    \endverb
-    \field{title}{An evolutionary advantage of cooperation}
-    \verb{url}
-    \verb http://arxiv.org/abs/1506.03414
-    \endverb
-    \field{journaltitle}{ar{X}iv:1506.03414}
-    \field{eprinttype}{arxiv}
-    \field{month}{05}
-    \field{year}{2018}
-  \endentry
-
-  \entry{PetersAdamou2020}{article}{}
-    \name{author}{2}{}{%
-      {{hash=PO}{%
-         family={Peters},
-         familyi={P\bibinitperiod},
-         given={Ole},
-         giveni={O\bibinitperiod},
-      }}%
-      {{hash=AA}{%
-         family={Adamou},
-         familyi={A\bibinitperiod},
-         given={Alexander},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{POAA1}
-    \strng{fullhash}{POAA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2020}
-    \field{labeldatesource}{}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
-    \verb{eprint}
-    \verb 1101.4548
-    \endverb
-    \field{title}{Leverage efficiency}
-    \field{eprinttype}{arxiv}
-    \field{year}{2020}
-  \endentry
-
   \entry{Prelec1998}{article}{}
     \name{author}{1}{}{%
       {{hash=PD}{%
@@ -1129,173 +576,96 @@
     \field{year}{1998}
   \endentry
 
-  \entry{RobattoSzentes2017}{article}{}
+  \entry{PrestonBaratta1948}{article}{}
     \name{author}{2}{}{%
-      {{hash=RR}{%
-         family={Robatto},
-         familyi={R\bibinitperiod},
-         given={Roberto},
-         giveni={R\bibinitperiod},
+      {{hash=PMG}{%
+         family={Preston},
+         familyi={P\bibinitperiod},
+         given={Malcolm\bibnamedelima G.},
+         giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
       }}%
-      {{hash=SB}{%
-         family={Szentes},
-         familyi={S\bibinitperiod},
-         given={Balázs},
-         giveni={B\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{RRSB1}
-    \strng{fullhash}{RRSB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2017}
-    \field{labeldatesource}{}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \verb{doi}
-    \verb 10.1016/j.jet.2017.10.002
-    \endverb
-    \field{pages}{410\bibrangedash 422}
-    \field{title}{On the biological foundation of risk preferences}
-    \field{volume}{172}
-    \field{journaltitle}{Journal of Economic Theory}
-    \field{year}{2017}
-  \endentry
-
-  \entry{Robson1996}{article}{}
-    \name{author}{1}{}{%
-      {{hash=RAJ}{%
-         family={Robson},
-         familyi={R\bibinitperiod},
-         given={Arthur\bibnamedelima J.},
-         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{RAJ1}
-    \strng{fullhash}{RAJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1996}
-    \field{labeldatesource}{}
-    \field{sortinit}{R}
-    \field{sortinithash}{R}
-    \verb{doi}
-    \verb 10.1006/jeth.1996.0023
-    \endverb
-    \field{issue}{2}
-    \field{pages}{397\bibrangedash 424}
-    \field{title}{A Biological Basis for Expected and Non-expected Utility}
-    \field{volume}{68}
-    \field{journaltitle}{Journal of Economic Theory}
-    \field{year}{1996}
-  \endentry
-
-  \entry{SarverSadowski2019}{article}{}
-    \name{author}{2}{}{%
-      {{hash=ST}{%
-         family={Sarver},
-         familyi={S\bibinitperiod},
-         given={Todd},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=SP}{%
-         family={Sadowski},
-         familyi={S\bibinitperiod},
-         given={Philipp},
+      {{hash=BP}{%
+         family={Baratta},
+         familyi={B\bibinitperiod},
+         given={Philip},
          giveni={P\bibinitperiod},
       }}%
     }
-    \strng{namehash}{STSP1}
-    \strng{fullhash}{STSP1}
+    \strng{namehash}{PMGBP1}
+    \strng{fullhash}{PMGBP1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2019}
+    \field{labelyear}{1948}
     \field{labeldatesource}{}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
     \verb{doi}
-    \verb 10.2139/ssrn.3501170
+    \verb 10.2307/1416964
     \endverb
-    \field{title}{An Evolutionary Perspective on Updating Risk and Ambiguity
-  Preferences}
-    \field{year}{2019}
+    \field{issue}{2}
+    \field{pages}{183}
+    \field{title}{An Experimental Study of the Auction-Value of an Uncertain
+  Outcome}
+    \field{volume}{61}
+    \field{journaltitle}{American Journal of Psychology}
+    \field{year}{1948}
   \endentry
 
-  \entry{SauermannSelten1962}{article}{}
+  \entry{PriceJones2020}{article}{}
     \name{author}{2}{}{%
-      {{hash=SH}{%
-         family={Sauermann},
-         familyi={S\bibinitperiod},
-         given={Heinz},
-         giveni={H\bibinitperiod},
+      {{hash=PMH}{%
+         family={Price},
+         familyi={P\bibinitperiod},
+         given={Michael\bibnamedelima Holton},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
       }}%
-      {{hash=SR}{%
-         family={Selten},
-         familyi={S\bibinitperiod},
-         given={Reinhard},
-         giveni={R\bibinitperiod},
+      {{hash=JJH}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={James\bibnamedelima Holland},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
       }}%
     }
-    \strng{namehash}{SHSR1}
-    \strng{fullhash}{SHSR1}
+    \strng{namehash}{PMHJJH1}
+    \strng{fullhash}{PMHJJH1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{1962}
+    \field{labelyear}{2020}
     \field{labeldatesource}{}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \verb{eprint}
-    \verb 40748622
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1017/ehs.2020.28
     \endverb
-    \field{pages}{577\bibrangedash 597}
-    \field{title}{{A}nspruchsanpassungstheorie der {U}nternehmung}
-    \verb{url}
-    \verb http://www.digizeitschriften.de/dms/resolveppn/?PPN=GDZPPN001778587
-    \endverb
-    \field{journaltitle}{Zeitschrift für die gesamte Staatswissenschaft}
-    \field{eprinttype}{jstor}
-    \field{year}{1962}
+    \field{pages}{1\bibrangedash 32}
+    \field{title}{Fitness-Maximizers Employ Pessimistic Probability Weighting
+  for Decisions Under Risk}
+    \field{journaltitle}{Evolutionary Human Sciences}
+    \field{year}{2020}
   \endentry
 
-  \entry{Selten2002}{inproceedings}{}
+  \entry{Savage1954}{book}{}
     \name{author}{1}{}{%
-      {{hash=SR}{%
-         family={Selten},
+      {{hash=SLJ}{%
+         family={Savage},
          familyi={S\bibinitperiod},
-         given={Reinhard},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \name{editor}{2}{}{%
-      {{hash=GG}{%
-         family={Gigerenzer},
-         familyi={G\bibinitperiod},
-         given={Gerd},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=SR}{%
-         family={Selten},
-         familyi={S\bibinitperiod},
-         given={Reinhard},
-         giveni={R\bibinitperiod},
+         given={Leonard\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {MIT Press}%
+      {Dover Publications, New York}%
     }
-    \strng{namehash}{SR1}
-    \strng{fullhash}{SR1}
+    \strng{namehash}{SLJ1}
+    \strng{fullhash}{SLJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2002}
+    \field{labelyear}{1954}
     \field{labeldatesource}{}
     \field{sortinit}{S}
     \field{sortinithash}{S}
-    \field{booktitle}{{B}ounded {R}ationality}
-    \field{pages}{13\bibrangedash 36}
-    \field{series}{Report of the 84th Dahlem Workshop}
-    \field{title}{What Is Bounded Rationality?}
-    \field{year}{2002}
+    \field{title}{The Foundations of Statistics}
+    \field{year}{1954}
   \endentry
 
   \entry{SeoETAL2019}{article}{}
@@ -1350,132 +720,6 @@
     \field{year}{2019}
   \endentry
 
-  \entry{Simon1956}{article}{}
-    \name{author}{1}{}{%
-      {{hash=SHA}{%
-         family={Simon},
-         familyi={S\bibinitperiod},
-         given={Herbert\bibnamedelima A.},
-         giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{SHA1}
-    \strng{fullhash}{SHA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1956}
-    \field{labeldatesource}{}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \verb{doi}
-    \verb 10.1037/h0042769
-    \endverb
-    \field{issue}{2}
-    \field{pages}{129\bibrangedash 138}
-    \field{title}{Rational choice and the structure of the environment.}
-    \field{volume}{63}
-    \field{journaltitle}{Psychological Review}
-    \field{year}{1956}
-  \endentry
-
-  \entry{Simon1959}{article}{}
-    \name{author}{1}{}{%
-      {{hash=SHA}{%
-         family={Simon},
-         familyi={S\bibinitperiod},
-         given={Herbert\bibnamedelima A.},
-         giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{SHA1}
-    \strng{fullhash}{SHA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1959}
-    \field{labeldatesource}{}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \verb{eprint}
-    \verb 1809901
-    \endverb
-    \field{issue}{3}
-    \field{pages}{253\bibrangedash 283}
-    \field{title}{Theories of Decision-Making in Economics and Behavioral
-  Science}
-    \field{volume}{49}
-    \field{journaltitle}{American Economic Review}
-    \field{eprinttype}{jstor}
-    \field{year}{1959}
-  \endentry
-
-  \entry{Smith2003a}{article}{}
-    \name{author}{1}{}{%
-      {{hash=SVL}{%
-         family={Smith},
-         familyi={S\bibinitperiod},
-         given={Vernon\bibnamedelima L.},
-         giveni={V\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{SVL1}
-    \strng{fullhash}{SVL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2003}
-    \field{labeldatesource}{}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \verb{doi}
-    \verb 10.1257/000282803322156954
-    \endverb
-    \field{number}{3}
-    \field{pages}{465\bibrangedash 508}
-    \field{title}{Constructivist and Ecological Rationality in Economics}
-    \field{volume}{93}
-    \field{journaltitle}{American Economic Review}
-    \field{year}{2003}
-  \endentry
-
-  \entry{Stewart2006}{article}{}
-    \name{author}{3}{}{%
-      {{hash=SN}{%
-         family={Stewart},
-         familyi={S\bibinitperiod},
-         given={Neil},
-         giveni={N\bibinitperiod},
-      }}%
-      {{hash=CN}{%
-         family={Chater},
-         familyi={C\bibinitperiod},
-         given={Nick},
-         giveni={N\bibinitperiod},
-      }}%
-      {{hash=BGD}{%
-         family={Brown},
-         familyi={B\bibinitperiod},
-         given={Gordon\bibnamedelima D.A.},
-         giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{SN+1}
-    \strng{fullhash}{SNCNBGD1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2006}
-    \field{labeldatesource}{}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \verb{doi}
-    \verb 10.1016/j.cogpsych.2005.10.003
-    \endverb
-    \field{issue}{1}
-    \field{pages}{1\bibrangedash 26}
-    \field{title}{Decision by sampling}
-    \field{volume}{53}
-    \field{journaltitle}{Cognitive Psychology}
-    \field{year}{2006}
-  \endentry
-
   \entry{StewartETAL2015}{article}{}
     \name{author}{3}{}{%
       {{hash=SN}{%
@@ -1518,41 +762,6 @@
     \field{year}{2015}
   \endentry
 
-  \entry{StiglerBecker1977}{article}{}
-    \name{author}{2}{}{%
-      {{hash=SGJ}{%
-         family={Stigler},
-         familyi={S\bibinitperiod},
-         given={George\bibnamedelima J.},
-         giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=BGS}{%
-         family={Becker},
-         familyi={B\bibinitperiod},
-         given={Gary\bibnamedelima S.},
-         giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{SGJBGS1}
-    \strng{fullhash}{SGJBGS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1977}
-    \field{labeldatesource}{}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \verb{eprint}
-    \verb 1807222
-    \endverb
-    \field{issue}{2}
-    \field{pages}{76\bibrangedash 90}
-    \field{title}{{D}e {G}ustibus {N}on {E}st {D}isputandum}
-    \field{volume}{67}
-    \field{journaltitle}{American Economic Review}
-    \field{eprinttype}{jstor}
-    \field{year}{1977}
-  \endentry
-
   \entry{Sunstein2020}{article}{}
     \name{author}{1}{}{%
       {{hash=SCR}{%
@@ -1579,37 +788,6 @@
     \field{urlday}{04}
     \field{urlmonth}{04}
     \field{urlyear}{2020}
-  \endentry
-
-  \entry{Todd2012}{collection}{}
-    \name{editor}{2}{}{%
-      {{hash=TPM}{%
-         family={Todd},
-         familyi={T\bibinitperiod},
-         given={Peter\bibnamedelima M.},
-         giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=GG}{%
-         family={Gigerenzer},
-         familyi={G\bibinitperiod},
-         given={Gerd},
-         giveni={G\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Oxford University Press}%
-    }
-    \strng{namehash}{TPMGG1}
-    \strng{fullhash}{TPMGG1}
-    \field{labelnamesource}{editor}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2012}
-    \field{labeldatesource}{}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \field{subtitle}{Intelligence in the world}
-    \field{title}{Ecological rationality}
-    \field{year}{2012}
   \endentry
 
   \entry{TverskyFox1995}{article}{}
@@ -1789,74 +967,6 @@
     \field{volume}{20}
     \field{journaltitle}{Psychological Science}
     \field{year}{2009}
-  \endentry
-
-  \entry{WakkerTversky1993}{article}{}
-    \name{author}{2}{}{%
-      {{hash=WP}{%
-         family={Wakker},
-         familyi={W\bibinitperiod},
-         given={Peter},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=TA}{%
-         family={Tversky},
-         familyi={T\bibinitperiod},
-         given={Amos},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{WPTA1}
-    \strng{fullhash}{WPTA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1993}
-    \field{labeldatesource}{}
-    \field{sortinit}{W}
-    \field{sortinithash}{W}
-    \verb{doi}
-    \verb 10.1007/bf01065812
-    \endverb
-    \field{issue}{2}
-    \field{pages}{147\bibrangedash 175}
-    \field{title}{An axiomatization of cumulative prospect theory}
-    \field{volume}{7}
-    \field{journaltitle}{Journal of Risk and Uncertainty}
-    \field{year}{1993}
-  \endentry
-
-  \entry{WuGonzalez1996}{article}{}
-    \name{author}{2}{}{%
-      {{hash=WG}{%
-         family={Wu},
-         familyi={W\bibinitperiod},
-         given={George},
-         giveni={G\bibinitperiod},
-      }}%
-      {{hash=GR}{%
-         family={Gonzalez},
-         familyi={G\bibinitperiod},
-         given={Richard},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{WGGR1}
-    \strng{fullhash}{WGGR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1996}
-    \field{labeldatesource}{}
-    \field{sortinit}{W}
-    \field{sortinithash}{W}
-    \verb{doi}
-    \verb 10.1287/mnsc.42.12.1676
-    \endverb
-    \field{issue}{12}
-    \field{pages}{1676\bibrangedash 1690}
-    \field{title}{Curvature of the Probability Weighting Function}
-    \field{volume}{42}
-    \field{journaltitle}{Management Science}
-    \field{year}{1996}
   \endentry
 
   \entry{WulffETAL2018}{article}{}

@@ -15,6 +15,4 @@
 *.snm
 *.gz
 *.toc
-*.bbl
-*.out
-*.bbl
+main.bbl

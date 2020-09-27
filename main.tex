@@ -254,92 +254,77 @@ Z = \frac{X-\overbrace{\mu_X \mathstrut}^{\text{location}}}{\underbrace{\sigma_X
 \ee
 Thus the PDF of $Z$, $p(z)$, is a density function with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the \textit{shape} of the distribution: two distributions have the same \textit{shape} if they can be made to coincide through a linear transformation of the form \eref{SN}.
 
-\subsection{Related literature -- An emerging consensus?}
-% What happened so far. The normative standard model
-Normative models in decision theory prescribe what decision makers should do if they want to act in some sense optimally.
-%
-Since the 17th century rational choice has been codified as the maximisation of expectation values. 
-%
-However, lack of predictive power led to an abundance of paradoxes and puzzles in decision theory.
-%
-The response to disagreements between normative theory and empirical evidence has been ever since the ongoing transformation of the quantities contained in the optimand, \ie probabilities and monetary changes, but to leave the structure of the optimand as an expectation value untouched.
+\newpage
+\subsection{Related literature}
 
-% Recipe: Add some degrees of freedom
-Therefore, the dominant modelling mode in behavioural economics to address these paradoxes and puzzles is to add more degrees of freedom, to the expense of a loss of generality.
-% Descriptive models
-Such models are then labelled descriptive models of decision making. 
-% How to add a DoF
-Possible further degrees of freedom in descriptive models involve nonlinear transformations with additional free parameters.
-% Justification of further DoF
-Often these alterations of the normative model have no theoretical justification per se but are justified \textit{post hoc} by psychological considerations and their ability to fit the data.
-
-Nowadays, expected utility theory (EUT) is the dominant normative model and codifies rational choice in terms of maximisation of the expectation value of the change in utility.
-% No normative and descriptive model can ever exist
-As EUT is irreconcilable with empirical evidence, parts of the community have grown accustomed to the received wisdom that ``no theory of choice can be both normatively adequate and descriptively accurate'' \autocite[p. S251]{TverskyKahneman1986}. This mindset has contributed to the dominance of \person{Kahneman \& Tversky}'s  ``biases and heuristics'' research programme in behavioural economics within the much broader spectrum of possibilities of boundedly rational decision making like for instance satisficing  explored in \textcite{Simon1956,Simon1959,SauermannSelten1962,Selten2002,GigerenzerSelten2002b}.
-% DoF are biases
-\textcite{Lopes1991} criticised that the ``heuristics \& biases'' programme  has led the discipline into a ``rhetoric of irrationality''. \textcite{Gigerenzer2018} raises a similar critique when he identifies a ``bias bias'' in behavioural economics. Judged from the perspective of the normative model all these transformations constitute deviations from the optimal behaviour and are thus negatively connoted as cognitive biases or errors of judgement which lead to poor decisions.
-
-
-% Transition from general Descriptive Models to specific CPT
-The core of the ``biases and heuristics'' research programme in behavioural economics and the
-most influential descriptive model of decision making is cumulative prospect theory (CPT) developed in \textcite{KahnemanTversky1979,TverskyKahneman1992}.
-% What is the content of PW
-CPT was specifically designed to incorporate a stable empirical pattern, \ie the mismatch between (objective) probabilities in a normative model and the same empirically estimated parameters inferred from real people's decisions. The latter probabilities are also called ``decision weights''. If one chooses to plot the CDFs against each other as in \fref{TK1992} this mismatch takes its generic inverse-S shape. The consensus interpretation in the literature of this mismatch is that decision makers use higher decision weights than the objective probabilities in the normative model assign to rare events and (necessarily) assign lower decision weights for common events.
-% Give it a name
-This nonlinear transformation is labelled probability weighting and enters into CPT in terms of the probability weighting function. The inverse-S curvature of the probability weighting function is already in the original formulation of prospect theory in \textcite{KahnemanTversky1979} a key element to explain the fourfold pattern of risk attitudes, \ie risk aversion for gains and risk seeking for losses of high probability and risk seeking for gains and risk aversion for losses of low probability.
-% Orthodox Literature
-Since its inception, both CPT and probability weighting have attracted a lot of attention in the literature, prevailing are calibrations of its free parameters \autocite{LattimoreBakerWitte1992,TverskyFox1995,WuGonzalez1996,Prelec1998} and axiomatisations of CPT \autocite{WakkerTversky1993,TverskyWakker1995,ChateauneufWakker1999}. Only few studies question the origin of the additional degrees of freedom, among others \textcite{StewartETAL2015}. In a meta-analytic review, \textcite[Tab. 9]{WulffETAL2018} find evidence for all three possible forms of the probability weighting curve, alongside linear weighting (which amounts to no weighting) they survey studies that find regular as well as inverse-S curves.
-% From PT to CPT
-CPT was developed from mere prospect theory to overcome violations of stochastic dominance using rank-dependent probability weightings.
-% Bernheim & Sprenger 2020 paragraph (if needed)
-In a recent study \textcite{BernheimSprenger2020} confirm the inverse-S curve, but question the empirical validity of CPT because they find no evidence for the assumption of rank-dependent probability weighting.
-
-% What this paper adds
-Here we offer a statistical explanation of probability weighting, in the form of a mechanism which is capable of generating arbitrary mismatches between objective probabilities in a normative model and decision weights as a result of a generic inference problem solved by the DM. A DM needs to estimate model parameters from observations over time.
-%
-Depending on the direction of the mismatch arbitrary weighting curves are possible. The classical inverse-S curve emerges in the case where the DM cautiously incorporates more uncertainty into his model than a DO does in his model (see \fref{mapping_pdfs} \& \fref{mapping_cdfs}). Our statistical interpretation suggests that this behaviour is an adaptive strategy in decision making under uncertainty.
-%
-Our analysis in \fref{curvefit} suggests along with other studies \autocite{FoxHadar2006} that the statistical explanation of probability weighting is sufficient, at least if judged by its capability to fit the reported data. 
-%
-However, other studies showed that even after eliminating the sampling errors some form of nonlinear weighting persists, which suggests that some psychological effect exists beyond the statistical effect \autocite{FoxHadar2006,UngemachETAL2009}. \textcite{HauETAL2008} even go so far as to equate the overweighting in decisions-from-experience with a form of CPT plus a sampling error.
-%
-In contrast to other studies on the subject, we assume the DM to be aware of and to correct his estimate for his sampling error, whereas existing studies stop at the identification of the sampling error and thus believe the DM to use an underweighted und therefore biased estimate of rare events.
-
-% Ecological/Adaptive Rationality
-\paragraph{Ecological/Adaptive Rationality}
-Our results on probability weighting as being beneficial are compatible with a body of work on ecological or adaptive rationality surveyed in \textcite{Smith2003a,GigerenzerSelten2002b,Selten2002,Todd2012}, that seeks to understand the ecological environment out of which observed behavioural strategies (such as probability weighting) evolved as adaptive behaviours.
-% What is adaptive rationality
-Often deviations from a normative model are found to be not maladaptive detrimental cognitive errors, but rather beneficial adaptive strategies that promote survival. The general question whose bias behavioural economics finds has been asked early on, see for example \textcite{Cohen1979a}. This line of research identified a whole ``adaptive toolbox'' \autocite{GigerenzerSelten2002} of such strategies sometimes called ``fast and frugal heuristics'' \autocite{GoldsteinGigerenzer2009,GigerenzerHertwigPachur2011}.
-% Replication crisis and disappearing cognitive biases
-Similar in spirit to our paper where we provide a mechanism for a behaviour which is commonly labelled as a ``cognitive bias'', many ``cognitive biases'' don't replicate \autocite{OSS2015}, the reverse effects are found as well \autocite[Tab. 1]{WulffETAL2018} or they disappear completely \autocite{Gigerenzer1991,GalesicETAL2012}.
-\textcite{LiederETAL2018} explain probability weighting by recourse to the adaptive and effective use of limited cognitive resources. This suggests that the finding of many ``biases'' stems from imperfect measurement and from an inadequate understanding of human cognition and decision making.
-
-% Decision from Description-Experience Gap
-\paragraph{Description-Experience Gap}
-Our results deduced from the two distinct perspectives of the DO and the DM also resonate with experimental results of the so-called description-experience gap in risky choice. This gap signifies the common finding of different choice behaviour depending on the sampling paradigm used in experiments. People either learn (\eg probabilities) by experiential sampling over time (decisions-from-experience) or learn from descriptions (decisions-from-description)\footcite{HertwigETAL2004,HertwigErev2009,ErevETAL2010,WulffETAL2018}. Our analysis of the perspective of the DM accords with the decisions-from-experience sampling paradigm.\footnote{Let us remark that in animal studies in behavioural ecology only the decisions-from-experience sampling paradigm is feasible.} However, the general finding of the description-experience gap is that in decisions-from-experience people underweighted rare events compared to decisions-from-description.\autocites[535]{HertwigETAL2004}[518]{HertwigErev2009} This is somewhat counterintuitive in relation to probability weighting\autocite[522]{HertwigErev2009}. \textcite{HauETAL2008,WulffETAL2018} report contradictory results and especially emphasise people's tendency to rely on small samples and that the associated large estimation errors of the inferred probabilities lead to stronger probability weighting, which therefore imply that estimation errors lead to regular-S shaped weighting curves. \textcite[Tab. 1]{WulffETAL2018} find all possible forms of weightings in the experience sampling paradigms.
-%
-In \secref{tricky} we agree that different representations together with different interpretations of probabilities carry inherent ambiguity about their cognitive processing. We go beyond this statement by analysing how the adaptive correction for estimation errors leads to consistent differences between the DO's and DM's model of the involved uncertainty.
-
-%  Decision sampling
-\paragraph{Decision sampling}
-Within the decisions-from-experience paradigm, similar inference problems of the DM arise naturally and have been studied in the literature on decision sampling\footcite{Stewart2006,GalesicETAL2012,SeoETAL2019}. \Eg \textcite{Martins2006} explains probability weighting as a heuristic that approximates an evolutionary optimal Bayesian solution to the inference problem and is able to replicate inverse-S curves as well. Similar to our results, \textcite{SeoETAL2019} find that optimal beliefs deviate from the true Bayesian prior in a sequential learning problem. Thus it is optimal to overweight small priors and underweight large priors.
-
-% Behavioural ecology studies ? 
-% \footnote{\MK{Studies on optimal foraging in behavioural ecology show \ldots \footnote{Ask Kacelnik!} \ldots Kacelnik hasn't replied, yet}}
-
-% EE paragraph
-\paragraph{Ergodicity Economics}
-Our work contributes to the growing field of ergodicity economics\autocite{Peters2019b} whose common approach is to explicitly embed decisions within experienced time of the DM. This embedding of decisions within time, leads to a change of the optimand such that the DM maximises the long-time growth rate of his resources, rather than expectation values of psychologically-transformed resource flows (possibly under psychologically-transformed probability measures).
+%  Tell our story
+Many researchers believe probability weighting to be a stable pattern of human behavior. This has been disputed on grounds of poor experimental design and statistical insignificance. Our impression: there is something to this story but the terms of the debate are not well defined, and a deeper understanding is needed to predict with more confidence what effect will be observed in a given situation.
 % 
-Therefore, this paper joins recent studies that demonstrate the explanatory power of the ergodicity economics and its ability to generate testable predictions, \eg on discounting\autocite{AdamouETAL2019}, risk preferences for time lotteries\autocite{BermanKirstein2020}, cooperation\autocite{PetersAdamou2015a}, leverage efficiency\autocite{PetersAdamou2020}.
+To place our contribution within the context of the existing literature on probability weighting we begin with a brief review of the developments in decision theory that led up to cumulative prospect theory in \secref{OptimandHistoryReview} and review existing critiques of CPT and PW in \secref{CPTCritiques}. We add our own critique in \secref{EEview}, which emerges from ergodicity economics (EE). Our critique is aimed at a conceptual element that entered decision theory much earlier than the elements that are more typically critiqued and surveyed in \secref{OptimandHistoryReview} and \secref{CPTCritiques}. Specifically, EE rejects the implicit assumption that the expected value of some quantity -- a linear average over the ensemble of possible future values -- is relevant to a DM. EE studies physically relevant quantities, which forces us to consider carefully the physical situation of an individual. This obviates the needs for psychological explanations: representing the information available to the DM is enough to make testable predictions of probability weighting.
 
-By daring to change the optimand, ergodicity economics produces models and testable predictions, which ultimately decide whether the models are normative and descriptive at the same time. Experimental tests of the statistical interpretation need to control for the amount of uncertainty, but are feasible and may thus be used to design similar decisions-from-experience model comparisons like \textcite{MederETAL2019}, which controlled for wealth dynamics.
+% (We could think of something attractive here, called a promise: what will the reader be able to do/understand after reading our manuscript? A: that psychology, which is problematic because it's subjective and makes no predictions, can be thrown out in many cases)
 
-% Origin of Preferences
-\paragraph{Evolutionary Origin of Risk Preferences}
-We conclude this section with a line of research similar in spirit to ergodicity economics on the evolutionary origin of dynamically consistent risk preferences started by \textcite{Robson1996}. The point of departure of dominant models in economics theory is that successful strategies need to be selected for by evolution in terms of their fitness and first of all by their survival and not by preferences simply given in a model.\autocite{StiglerBecker1977} Those strategies which maximise expected profits are crowded out to the advantage of maximisers of the time-average growth rate. This work has recently been extended\footcite{SarverSadowski2019}, \eg \textcite{RobattoSzentes2017} investigate growth-optimal preferences on a population level. Although the authors still cling to the nonlinear transformation of utilities, they arrive at similar results in terms of agents that maximise the time-average growth rate of their resources. Therefore, we identify an emerging consensus in the literature spread over several disciplines to understand PW and similar empirical regularities as adaptive strategies once the ecological circumstances and cognitive limitations of the DM are taken properly into account. Furthermore, by embedding decision making within time, ergodicity economics provides a coherent framework for these findings.
+\subsubsection{Brief review of the story of the optimand up to CPT} \seclabel{OptimandHistoryReview}
+Since \person{Pascal} and \person{Fermat} in their famous exchange of letters and later Huygens laid the foundations of probability theory in the 17th century as a tool to analyse gambles, expected value theory (EVT) formalised rational choice as an optimisation problem, where an expectation value of some quantity, \eg the gamble payoff, was thought to be \textit{the} suitable optimand.
+%
+Lack of predictive power and misalignment with empirical data led to an abundance of paradoxes and puzzles and to the development of ever new decision theories in response. However, newly developed theories only altered the quantities contained in the optimand, \ie probabilities and absolute monetary changes. In doing so ever more degrees of freedom have been added, while leaving the expectation value as the optimand intact. For instance, in expected utility theory (EUT) a new degree of freedom is introduced with the (possibly nonlinear) transformation of the absolute monetary changes. The axiomatisation of EUT by \cite{vonNeumannMorgenstern1944} and \cite{Savage1954} lend further inept credence to expectation values as optimands and EUT as a normative decision theory. As a reaction to violations of the cherished EUT axioms, \textcite{KahnemanTversky1979} proposed first prospect theory (PT) and later \textcite{TverskyKahneman1992} cumulative prospect theory (CPT) as descriptive decision theories, which allow nonlinear transformations of positive and negative absolute payoffs (value function) and the involved probabilities. The latter transformation is known as probability weighting and the focus of this paper. Following the consensus interpretation, probability weighting is a systematic maladaptive psychological effect of the overestimation of rare events and underestimation of common events.\footnote{An early example of this interpretation can be found in \textcite[Fig. 1, p. 188]{PrestonBaratta1948}.}
+
+\subsubsection{Critiques of CPT} \seclabel{CPTCritiques}
+Several studies question the validity of CPT and more specifically probability weighting. Some critiques concern the origin of the additional degrees of freedom.
+% Origin of degrees of freedom 
+Among others \textcite{StewartETAL2015} find no stable mappings from objective probabilities to subjective equivalents in individual DMs. They find that the specific mappings depend on the choice environment and are influenced to a large extent by the sampling method.
+% They do not question the psychological objective-to-subjective mappings of CPT in principle, but propose even more flexible models with context-dependent mappings for the involved transformations of utility and probability weighting. However, they conclude that the sampling involved in the decision making has a crucial effect (p. 701).
+% Description-Experience Gap
+Research under the heading of the \textit{description-experience gap} further scrutinised the dependence on the sampling method. The description-experience gap signifies the common finding of stronger overweighting of rare events of subjects that learn model parameters (\eg probabilities) from summary descriptions (decisions-from-description) compared to subjects who estimate model parameters from experiential sampling over time and learn through sequential feedback after their individual choices (decisions-from-experience) \textcite{HertwigETAL2004}. Experience-based experiments even commonly find underweighting of rare events \parencite{UngemachETAL2009}.\footnote{It was realised that formerly dominant description-based experiments suffer from lessened external validity. Real-world decisions rarely provide clearly defined probabilities, see also \secref{Reasons_for}. Experience and learning are more important. Therefore, roughly since the year 2000, experience-based experiments prevail or studies contrast sampling modes like \textcite{HertwigETAL2004,HertwigErev2009,ErevETAL2010}. Furthermore, in animal studies only the decisions-from-experience sampling paradigm is feasible.}
+% all possible PW curves are reported
+Such conflicting evidence is also found on a wide level in a meta-analytic review by \textcite[Tab. 9]{WulffETAL2018}, who report all possible forms of probability weighting curves. This clearly weakens any consensus about a typical inverse-S shape of the probability weighting curve.
+% Statistical explanations rather than psychological explanation of PW
+Other studies emphasise statistical explanations rather than psychological explanations of probability weighting. For instance, \textcite{Martins2006} explains probability weighting as a heuristic that approximates an evolutionary optimal Bayesian solution to the inference problem of the DM. Similar to our results but in a Bayesian setting, \textcite{SeoETAL2019} find that optimal beliefs of the DM deviate from the true prior in a sequential learning problem. Thus it is optimal to overweight small priors and underweight large priors.
+% Still PW after controlling sampling 
+However, \textcite{FoxHadar2006,UngemachETAL2009} report that even after eliminating the sampling errors some (under)weighting persists, which suggests that some psychological effects exist beyond the statistical effects.
+
+\subsubsection{Our contribution to the literature} \seclabel{OurContribution}
+% is part of our critique and should go to the end (or the preview at the beginning).
+Here we offer a statistical explanation of probability weighting that quite generally applies to any situation where differences between models of uncertainty arise.
+%
+As a result of the model difference the proposed mechanism is capable of generating arbitrary mismatches between objective probabilities in a normative model (used by a DO) and decision weights (used by a DM) and thus every possible shape of the probability weighting curve.
+%
+An inverse-S curve emerges in the case where the DM cautiously incorporates more uncertainty into his model than a DO does in his model (see \fref{mapping_pdfs} \& \fref{mapping_cdfs}). Our statistical explanation suggests that this behaviour is an adaptive strategy in decision making under uncertainty.
+%
+If solely judged by the capability to fit the reported data in \fref{curvefit}, our proposed mechanism suggests that a statistical explanation of probability weighting is sufficient.
+% 
+Furthermore, this paper helps to showcase how psychological explanations might mislead, as they do not make clear testable predictions.
+%
+In contrast to other studies on the subject, we assume the DM to be aware of and to correct his estimate for his sampling error, whereas existing studies stop at the identification of the sampling error and thus believe the DM to use an underweighted and therefore biased estimate of rare events.
+
+\subsubsection{Then all the other critiques (pick an order that makes sense)}
+\textcite{PriceJones2020}
 
 
+\subsubsection{Ergodicity economics} \seclabel{EEview}
+% "cycling" the same EE idea repeatedly from slightly different angle
+% angle here: no behavioural model 
+The research programme of ergodicity economics started when an alternative behavioural model was proposed in \textcite{Peters2011a,Peters2011b} and more recently in \textcite{Peters2019b},
+
+which identifies that the relevant optimand for individual decision makers is based on the large-time limit
+
+
+on the large-time limit of the growth rate of wealth
+
+ato one containing an inappropriate ensemble average.
+
+The deviation from the developmental path of most other decision theories went 
+
+Although the statistical explanation we offer is strongly motivated by the ergodicity economics research programme, the particular strength is that it does not rely on any specific behavioural model (neither EVT nor EUT nor CPT nor growth-optimal preferences as in EE).
+
+Once we discriminate between two uncertainty models 
+
+The phenomenon labelled probability weighting is a result of a generic inference problem the DM is confronted with, much like in the experience-based setting.
+
+
+
+
+\newpage
 \section{Probability weighting as a difference between models} \seclabel{ModelDiff}
 Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a model of the world. Nor do we assume the DM to know ``the truth'' -- he has another model of the world. From our perspective \fref{TK1992} merely shows that the two models differ. It says nothing about who is right or wrong.
 
