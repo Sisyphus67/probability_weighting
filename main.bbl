@@ -809,6 +809,39 @@
     \field{year}{1948}
   \endentry
 
+  \entry{PriceJones2020}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PMH}{%
+         family={Price},
+         familyi={P\bibinitperiod},
+         given={Michael\bibnamedelima Holton},
+         giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=JJH}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={James\bibnamedelima Holland},
+         giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PMHJJH1}
+    \strng{fullhash}{PMHJJH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1017/ehs.2020.28
+    \endverb
+    \field{pages}{1\bibrangedash 32}
+    \field{title}{Fitness-Maximizers Employ Pessimistic Probability Weighting
+  for Decisions Under Risk}
+    \field{journaltitle}{Evolutionary Human Sciences}
+    \field{year}{2020}
+  \endentry
+
   \entry{Savage1954}{book}{}
     \name{author}{1}{}{%
       {{hash=SLJ}{%
