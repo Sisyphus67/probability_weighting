@@ -372,7 +372,7 @@ Eliminating $(x-\mu)^2$ from \eref{DecisionW} and \eref{p} yields the following 
 w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~.
 \elabel{w_of_p}
 \ee
-We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. If $\alpha>1$ it means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small densities and below it for large densities. If $\alpha<1$ it means that the DM uses a smaller standard deviation than the DO. This can occur, for example, if the DM is an insider and has more information than provided to him by the DO. Instead of an inverse-S shape, this can lead to an S-shaped curve (see \Appref{Scurve}).
+We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. $\alpha>1$ means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small densities and below it for large densities. $0<\alpha<1$ means that the DM uses a smaller standard deviation than the DO. This might occur, for example, if the DM is an ``insider'' with better information than the DO. Instead of an inverse-S shape, this would lead to an S-shaped curve, see \Appref{Scurve}.
 
 Alternatively, we can express the difference between models by plotting the CDFs $F_w$ and $F_p$. We do this in \fref{mapping_cdfs}, where the inverse-S emerges purely from the DM's greater assumed scale, $\alpha \sigma$.
 \begin{figure}[!htb]
@@ -621,24 +621,28 @@ w(x)=p(x) \left(\frac{1+\frac{\err{p}}{p}}{1+\ave{\frac{\err{p}}{p}}}\right),
 \ee
 we see that $w(x)=p(x)$ when $\frac{\err{p}}{p}=\ave{\frac{\err{p}}{p}}.$
 
-\section{The emergence of an S-shaped curve}
+\section{How to draw an S}
 \seclabel{Scurve}
 
-We saw how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges when the DM uses a larger scale in his model of the world than the DO. In the Gaussian it was possible to express the DM's decision weight $w$ as a function of probability $p$:
+We saw how the robust qualitative observation of the inverse-S curve in \fref{TK1992} arises when the DM uses a larger scale in his model of uncertainty than the DO. In the Gaussian case, it was possible to express the decision weight $w$ as a function of the probability $p$,
 \be
-w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~.
+w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
 \ee
+where $\alpha$ is the ratio of the DM's scale parameter to the DO's.
 
-If the DM uses a larger scale in his model than the DO, then $\alpha>1$, and an inverse-S shaped curve emerges when plotting the CDFs $F_w$ and $F_p$. Yet, it is also possible that the DM uses a smaller scale than the DO, \ie $\alpha<1$. This can occur, for example, if the DM is an insider and has more information on the particular decision problem than provided to him by the DO. Instead of an inverse-S shape this would lead to an S-shaped curve, as shown in \fref{mapping_pdfs_cdfs_Sshape} (compare with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$).
+Suppose instead that the DM uses a smaller scale than the DO, such that $0<\alpha<1$. In other words, the DM is more certain about the value $X$ will take than the DO. Then the CDF mapping $F_w(F_p)$ assumes the shape of an S, rather than an inverse-S, as shown in \fref{mapping_pdfs_cdfs_Sshape} (compare with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$). This situation might arise if, for example, the DM were an ``insider'' with better information about the decision problem than was provided to him by the DO.
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{./figs/mapping_pdfs_cdfs_Sshape.pdf}
-\caption{\textbf{Mapping PDFs and CDFs when $\alpha<1$.} Top left: probability PDF (red), estimated by a DO; and decision-weight PDF (blue), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the red line. The DM models $x$ with a smaller scale ($\alpha=1/2$), and assumes the true frequency distribution is the blue line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
-Top right: the difference between decision weights and probabilities can be expressed by plotting the decision weight \vs the probability observed at $x$. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right, and thus start and end at identical vertical positions as on the left. They are shifted to different locations horizontally, due to the non-linear distortion of the horizontal axis.
-Bottom left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is less cautious or have more information, so in his model $X$ follows a narrower Gaussian distribution, $X \sim \ND(0,1/4)$ depicted by $F_w(x)$ (blue).
-Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is smaller than the DO's CDF, $F_p(x) > F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be higher than the DO's.
-Bottom right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays an S-shaped curve rather than the typical inverse-S curve. The arrows start and end at the same vertical values as on the left. Compare figure with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$.}
+\caption{
+\textbf{Generating an S curve.} Analogues of \fref{mapping_pdfs} and \fref{mapping_cdfs} for the case $0<\alpha<1$.
+%Top left: probability PDF (red), estimated by a DO; and decision-weight PDF (blue), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the red line. The DM models $x$ with a smaller scale ($\alpha=1/2$), and assumes the true frequency distribution is the blue line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
+%Top right: the difference between decision weights and probabilities can be expressed by plotting the decision weight \vs the probability observed at $x$. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right, and thus start and end at identical vertical positions as on the left. They are shifted to different locations horizontally, due to the non-linear distortion of the horizontal axis.
+%Bottom left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is less cautious or have more information, so in his model $X$ follows a narrower Gaussian distribution, $X \sim \ND(0,1/4)$ depicted by $F_w(x)$ (blue).
+%Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is smaller than the DO's CDF, $F_p(x) > F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be higher than the DO's.
+%Bottom right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays an S-shaped curve rather than the typical inverse-S curve. The arrows start and end at the same vertical values as on the left. Compare figure with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$.
+}
 \flabel{mapping_pdfs_cdfs_Sshape}
 \end{figure}
 

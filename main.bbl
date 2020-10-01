@@ -17,38 +17,6 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
-  \entry{vonNeumannMorgenstern1944}{book}{}
-    \name{author}{2}{}{%
-      {{hash=vNJ}{%
-         prefix={von},
-         prefixi={v\bibinitperiod},
-         family={Neumann},
-         familyi={N\bibinitperiod},
-         given={John},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=MO}{%
-         family={Morgenstern},
-         familyi={M\bibinitperiod},
-         given={Oskar},
-         giveni={O\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Princeton University Press}%
-    }
-    \strng{namehash}{vNJMO1}
-    \strng{fullhash}{vNJMO1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{1944}
-    \field{labeldatesource}{year}
-    \field{sortinit}{N}
-    \field{sortinithash}{N}
-    \field{title}{Theory of Games and Economic Behavior}
-    \field{year}{1944}
-  \endentry
-
   \entry{AdamouETAL2019}{article}{}
     \name{author}{4}{}{%
       {{hash=AA}{%
@@ -605,6 +573,38 @@
     \field{journaltitle}{ar{X}iv:1906.04652}
     \field{eprinttype}{arxiv}
     \field{year}{2019}
+  \endentry
+
+  \entry{vonNeumannMorgenstern1944}{book}{}
+    \name{author}{2}{}{%
+      {{hash=vNJ}{%
+         prefix={von},
+         prefixi={v\bibinitperiod},
+         family={Neumann},
+         familyi={N\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MO}{%
+         family={Morgenstern},
+         familyi={M\bibinitperiod},
+         given={Oskar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Princeton University Press}%
+    }
+    \strng{namehash}{vNJMO1}
+    \strng{fullhash}{vNJMO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1944}
+    \field{labeldatesource}{year}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{Theory of Games and Economic Behavior}
+    \field{year}{1944}
   \endentry
 
   \entry{Peters2011a}{article}{}
