@@ -13,8 +13,8 @@
 \usepackage{subcaption}
 \usepackage{marvosym}
 \usepackage{makecell,booktabs,siunitx}
-\usepackage{graphicx} 
-\usepackage{ifthen} 
+\usepackage{graphicx}
+\usepackage{ifthen}
 \usepackage[usenames]{color}
 \usepackage{placeins}
 
@@ -40,7 +40,8 @@ arxiv=abs,																					% Link to arXiv abstract page
 autocite=inline,																		% structur of \autocite{key}
 autolang=hyphen,																		% active if langid is set
 % autopunct=false,																	%
-backend=bibtex8,																		% Backend choice BibTeX8 case-sensitive sorting 
+% backend=bibtex,																			% some sorting issues eg vNM
+backend=bibtex8,																		% improved case-sensitive sorting
 backref=true,																				% page cited in the paper
 % bibencoding=latin1,
 bibstyle=authoryear,																% style in bibliography
@@ -91,6 +92,9 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 %     backrefpages = {cit. on pp.} 			% default: for multiple page numbers
 %     backrefpages = {} 								% for multiple page numbers
 % }
+
+\setcounter{biburllcpenalty}{8000}			% easy linebreaking of URLs and DOIs
+
 % =====================================================================
 
 \usepackage{xspace}
@@ -166,14 +170,14 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 \author[1,3,4]{Mark Kirstein\thanks{\texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}}}
 \author[1,5]{Yonatan Berman\thanks{\texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}}
 % \affil[1]{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK}
-\affil[1]{London Mathematical Laboratory, London, UK} % short version
+\affil[1]{London Mathematical Laboratory, UK} % short version
 
 % \affil[2]{Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, 87501 NM, USA}
 \affil[2]{Santa Fe Institute, NM, USA} % short version
 % \affil[3]{Max-Planck-Institute for Mathematics in the Sciences, Inselstraße 22, D-04103 Leipzig, Germany}
 \affil[3]{Max-Planck-Institute for Mathematics in the Sciences, Leipzig, Germany} % short version
 % \affil[4]{Institute of Mathematics, Augustusplatz 10, D-04109 Leipzig University}
-\affil[4]{Institute of Mathematics, Leipzig University, Leipzig, Germany} % short version
+\affil[4]{Institute of Mathematics, Leipzig University, Germany} % short version
 % \affil[5]{The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York}
 \affil[5]{Stone Center on Socio-Economic Inequality, City University of New York, NY, USA}
 
@@ -291,13 +295,13 @@ As research continued, critiques of CPT and specifically of probability weightin
 % They do not question the psychological objective-to-subjective mappings of CPT in principle, but propose even more flexible models with context-dependent mappings for the involved transformations of utility and probability weighting. However, they conclude that the sampling involved in the decision making has a crucial effect (p. 701).
 
 % Description-Experience Gap
-A key confounder turned out to be experimental design. Research under the heading of the \textit{description-experience gap} revealed that it matters how DMs are informed of probabilities in a decision problem. In \textit{decisions-from-description}, DMs are told the probabilities by DOs. In \textit{decisions-from-experience}, DMs must infer the probabilities from their experience over time.\footnote{Roughly since the year 2000, experience-based experiments have prevailed \parencite{HertwigETAL2004,HertwigErev2009,ErevETAL2010}. In animal studies, only the decisions-from-experience paradigm is feasible.} Since there are different possible physical interpretations of probabilities, see \secref{Reasons_for}, decisions-from-description lack potentially relevant semantic information. Decisions-from-experience are clearer in this respect but confront the DM with questions of statistical significance. \textcite{HertwigETAL2004} find different (in their case, stronger) overweighting of rare events in decisions-from-description than in decisions-from-experience. Some experience-based experiments have even found underweighting of rare events \parencite{UngemachETAL2009}.
+A key confounder turned out to be experimental design. Research under the heading of the \textit{description-experience gap} revealed that it matters how DMs are informed of probabilities in a decision problem. In \textit{decisions-from-description}, DMs are told the probabilities by DOs. In \textit{decisions-from-experience}, DMs must infer the probabilities from their experience over time.\footnote{Roughly since the year 2000, experience-based experiments have prevailed \parencite{HertwigETAL2004,HertwigErev2009,ErevETAL2010}. In animal studies, only the decisions-from-experience paradigm is feasible.} Since there are different possible physical interpretations of probabilities, see \secref{Reasons_for}, decisions-from-description lack potentially relevant semantic information. Decisions-from-experience are clearer in this respect but confront the DM with questions of statistical significance. \textcite{HertwigETAL2004} find different (in their case, stronger) overweighting of rare events in decisions-from-description than in decisions-from-experience. Some experience-based experiments have even found underweighting of rare events \parencites{UngemachETAL2009}[see esp. Tab. 9]{WulffETAL2018}.
 % all possible PW curves are reported
 %Such conflicting evidence is also found on a wide level in a meta-analytic review by \textcite[Tab. 9]{WulffETAL2018}, who report all possible forms of probability weighting curves. This clearly weakens any consensus about a typical inverse-S shape of the probability weighting curve.
 
 
 % Statistical explanations rather than psychological explanation of PW
-Decision-from-experience studies emphasise statistical over psychological explanations of probability weighting. \textcite{Martins2006} interprets probability weighting as a heuristic that approximates a Bayesian solution to the problem of inferring probabilities from data. In line with our analysis, \textcite{SeoETAL2019} find that optimal decision weights for a DM deviate from true probabilities in a sequential learning problem, such that it is optimal to overstate small probabilities and understate large ones. \textcite{FoxHadar2006,UngemachETAL2009} report that probability weighting persists even after controlling for such effects, suggesting that a psychological component may still exist.
+Decisions-from-experience studies emphasise statistical over psychological explanations of probability weighting. \textcite{Martins2006} interprets probability weighting as a heuristic that approximates a Bayesian solution to the problem of inferring probabilities from data. In line with our analysis, \textcite{SeoETAL2019} find that optimal decision weights for a DM deviate from true probabilities in a sequential learning problem, such that it is optimal to overstate small probabilities and understate large ones. \textcite{FoxHadar2006,UngemachETAL2009} report that probability weighting persists even after controlling for such effects, suggesting that a (much smaller residual) psychological component may still exist.
 
 In short, recent studies raise questions about the reproducibility of probability weighting, its dependence on the details and context of decisions, and its interpretation as either a maladaptive psychological bias or a beneficial statistical heuristic.
 
@@ -310,7 +314,7 @@ In short, recent studies raise questions about the reproducibility of probabilit
 
 %The DM's experience of outcomes along a timeline is fundamental in ergodicity economics \parencite{Peters2019}. In this paper we thus ask what a DM can reasonably infer about probabilities from the available information, \eg a statement by a DO with no corroborating evidence or a finite sample of observed outcomes. In decision theory as it pertains to individuals, ergodicity economics rejects EVT because expectation values are generally not reflective of what happens to an individual in the long run. focuses on pursues another path right from the outset of decision theory \parencites{Bernoulli1738}[see also][]{Peters2019} in identifying ergodic observables, like the large-time limit of the growth rate of wealth, that captures the experience of individual DMs better than expected quantities do \parencite{Peters2011a,Peters2011b,Peters2019b}. Conventional decision theories, including CPT, maintain ensemble-average quantities as their optimands, and justify that by psychological effects. Ergodicity economics does not refute the psychological effects, but rather postulates that these are secondary to growth-optimal behaviour, which is found to describe well many deviations from standard EUT \parencite{AdamouETAL2019,MederETAL2019}. Our mechanism explains probability weighting as a statistical effect that relies on the distinction between the two models of uncertainty held by the DO and the DM. Importantly, this is independent from a particular behavioural model -- neither EVT, EUT, CPT nor growth-optimal preferences. The phenomenon labelled probability weighting is a result of a generic inference problem, in which the DM is simply confronted with a different risk than the DO.
 
-In our own work, ergodicity economics, the DM's experience of outcomes along a single timeline is fundamental \parencite{Peters2019}. Therefore, in this paper we ask what a DM can reasonably infer about probabilities from available information, \eg a statement by a DO with no corroborating evidence, or a finite sample of observed outcomes. In decision theory as it pertains to individuals, ergodicity economics rejects EVT because there is no physical reason for expectation values to reflect what happens to an individual over time. Instead ergodicity economics uses as its null model the optimization of appropriate growth rates evaluated in the long-time limit \parencite{Peters2011a,Peters2011b,Peters2019b}. For clarity, this is in contrast to conventional decision theories, including CPT, which maintain expectation values (suitably distorted) as their optimands. Ergodicity economics finds that growth-optimal behaviour, defined properly along a single timeline, predicts correctly a number of deviations from standard EUT \parencite{MederETAL2019,AdamouETAL2019}. The mechanism presented here explains probability weighting as arising from the distinction between the models of uncertainty used by the DO (who defines the setup) and by the DM (who must infer it).
+In our own work, ergodicity economics, the DM's experience of outcomes along a single timeline is fundamental \parencite{Peters2019b}. Therefore, in this paper we ask what a DM can reasonably infer about probabilities from available information, \eg a statement by a DO with no corroborating evidence, or a finite sample of observed outcomes. In decision theory as it pertains to individuals, ergodicity economics rejects EVT because there is no physical reason for expectation values to reflect what happens to an individual over time. Instead ergodicity economics uses as its null model the optimization of appropriate growth rates evaluated in the long-time limit \parencite{Peters2011a,Peters2011b,Peters2019b}. For clarity, this is in contrast to conventional decision theories, including CPT, which maintain expectation values (suitably distorted) as their optimands. Ergodicity economics finds that growth-optimal behaviour, defined properly along a single timeline, predicts correctly a number of deviations from standard EUT \parencite{MederETAL2019,AdamouETAL2019,BermanKirstein2020}. The mechanism presented here explains probability weighting as arising from the distinction between the models of uncertainty used by the DO (who defines the setup) and by the DM (who must infer it).
 %Importantly, this is independent from a particular behavioural model -- neither EVT, EUT, CPT nor growth-optimal preferences. The phenomenon labelled probability weighting is a result of a generic inference problem, in which the DM is simply confronted with a different risk than the DO.
 
 % our critique and should go to the end
@@ -374,7 +378,7 @@ w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{
 \ee
 We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. $\alpha>1$ means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small densities and below it for large densities. $0<\alpha<1$ means that the DM uses a smaller standard deviation than the DO. This might occur, for example, if the DM is an ``insider'' with better information than the DO. Instead of an inverse-S shape, this would lead to an S-shaped curve, see \Appref{Scurve}.
 
-Alternatively, we can express the difference between models by plotting the CDFs $F_w$ and $F_p$. We do this in \fref{mapping_cdfs}, where the inverse-S emerges purely from the DM's greater assumed scale, $\alpha \sigma$.
+Alternatively, we can express the identical information about the difference between models by plotting the CDFs $F_w$ and $F_p$. We do this in \fref{mapping_cdfs}, where the inverse-S emerges purely from the DM's greater assumed scale, $\alpha \sigma$.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{./figs/mapping_cdfs.pdf}
@@ -398,7 +402,7 @@ In \fref{Gauss_scale_location_both_KT} we explore what happens if both the scale
 \caption{\textbf{CDF maps for Gaussian distributions.} Top left: Difference in location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1. Top right: Difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO). Bottom left: Differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.64 (broader than DO). Bottom right: Fit to observations reported by \textcite{TverskyKahneman1992}. This is \eref{correspondence} with $\gamma=0.65$. Note the similarity to bottom left.}
 \flabel{Gauss_scale_location_both_KT}
 \end{figure}
-A difference in assumed scales and locations, for simple Gaussian distributions, is sufficient to reproduce the observations. This suggests a different nomenclature and a conceptual clarification. The inverse-S curve does not mean that ``probabilities are re-weighted.'' It means only that experimenters and their subjects have different views about appropriate models of, and responses to, a situation.\footnote{A shift in location only, as in \fref{Gauss_scale_location_both_KT} (top left), corresponds to a DM believing that outcomes are either consistently smaller (shift to the left) or larger (shift to the right) than implied by the DO's model. \textcite{PriceJones2020} employ similar shifts of location to express optimism or pessimism of DMs in a rank-dependent utility model, where pessimism is protective against rare disastrous events.}
+A difference in assumed scales and locations, for simple Gaussian distributions, is sufficient to reproduce the observations. This suggests a different nomenclature and a conceptual clarification. The inverse-S curve does not mean that ``probabilities are re-weighted.'' It means only that experimenters and their subjects have different views about appropriate models of, and responses to, a situation.\footnote{A shift in location only, as in \fref{Gauss_scale_location_both_KT} (top left), corresponds to a DM believing that outcomes are either consistently smaller (shift to the left) or larger (shift to the right) than implied by the DO's model. \textcite{PriceJones2020} employ similar shifts of location to express optimism or pessimism of DMs in a rank-dependent expected utility model, where pessimism is protective against rare disastrous events.}
 
 \FloatBarrier
 
@@ -458,12 +462,13 @@ Whatever the answer, two observations are robust and interesting: first, disagre
 
 An explanation for the first observation is that probability is a slippery concept and the word is used to mean different things. This suggests that phrasing information about probabilities concretely should reduce disagreement between DO and DM. For example, the statement ``10 out of 100 people have this disease'' conveys more, and more precise, information than ``the probability of having this disease is 0.1.'' Specifically, it tells us that a sample of people has been observed and what the size of the sample is.
 
-Furthermore, \textcite{Gigerenzer2018} argues that statements involving integer counts, or what he calls natural frequencies,  (``10 out of 100'') are more readily understood by people than statements involving fractional probabilities (``0.1'').
+Furthermore, \textcite{Gigerenzer2018} argues that statements involving integer counts, or what he calls natural frequencies,  (``10 out of 100'') are more readily understood by people than statements involving fractional probabilities (``0.1'').%
+\footnote{There is a growing body of literature on \textit{how to make cognitive biases disappear} by changing the way probabilities are presented \parencite{Gigerenzer1991} or by controlling for estimation errors and other confounders, for an example from social congnition see \textcite{GalesicETAL2012}.}
 
 The second observation may be explained as follows. A DO often has control over, and essentially perfect knowledge of, the decision problem he poses. A DM does not have such knowledge, and this ignorance will often translate into additional assumed uncertainty. For example, the DO may know the true probabilities of some gamble in an experiment, while the DM may have doubts about the DO's sincerity and his own understanding of the rules of the game. We will return to this in \secref{condition2}.
 
 \subsection{Some meanings of ``probability'' \seclabel{tricky}}
-Many thousands of pages have been written about the meaning of probability. We will not attempt a summary of the philosophical debate and instead highlight a few relevant points.
+Many thousands of pages have been written about the meaning of probability. We will not attempt a summary of the philosophical debate and instead highlight a few relevant points. Their commonality is that although behavioural models often contain probabilities as parameters, probabilities are not an observable but must be inferred from counts.
 
 \subsubsection*{Frequency-in-an-ensemble interpretation of probability}
 Consider the simple probabilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.''
@@ -471,13 +476,16 @@ Consider the simple probabilistic statement: ``the probability of rain here tomo
 It is thus a statement about a model. How exactly it is linked to physical reality is not completely clear.
 
 \subsubsection*{Frequency-over-time interpretation of probability}
-In some situations, the statement ``70\% probability of rain here tomorrow'' refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare today's measurements (of, say, wind and pressure) to those from the past -- weeks, months, or even years earlier. Forecasts were made on the assumption that the weather tomorrow would resemble the weather that had followed similar conditions in the historical record.
+In some situations, the statement ``the probability of rain here tomorrow is 70\%'' refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare today's measurements (of, say, wind and pressure) to those from the past -- weeks, months, or even years earlier. Forecasts were made on the assumption that the weather tomorrow would resemble the weather that had followed similar conditions in the historical record.
 
 Rather than a statement about outcomes of an \textit{in silico} model, the statement may thus be a summary of real-world observations over a long time.
 
 \subsubsection*{Degree-of-belief interpretation of probability}
-No matter how ``probability'' relates to a frequentist physical statement, whether with respect to an ensemble of simultaneously possible futures or to a sequence of actual past futures, it also corresponds to a mental state of believing something with a degree of conviction: ``I'm 90\% sure I left my wallet in that taxi.''
+No matter how ``probability'' relates to a frequentist physical statement, whether with respect to an ensemble of simultaneously possible futures or to a sequence of actual past futures, it also corresponds to a mental state of believing something with a degree of conviction: 
+% ``I'm 90\% sure I left my wallet in that taxi.''
+``I'm 70\% sure of rain here tomorrow.''
 
+Again, probabilities are not observable.
 For our purpose it suffices to say that there's no guarantee that a probabilistic statement will be interpreted by the receiver (the DM) as it was intended by whoever made the statement (the DO).
 
 \subsection{Consistent differences between DO and DM \seclabel{condition2}}
@@ -510,7 +518,7 @@ We write $\phat(x) \equiv n(x)/T\delta x$ as the estimate of $p(x)$, and
 \ee
 as its uncertainty, which we have expressed in terms of the estimate itself.
 
-The standard error, $ \sqrt{\phat(x)/T \delta x}$, in an estimated probability density shrinks as the probability decreases. However, the relative error in the estimate is $1/\sqrt{\phat(x)T\delta x}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, and constitutes the key message of this section. Errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for lower probabilities, but relative errors are larger.
+The standard error, $ \sqrt{\phat(x)/T \delta x}$, in an estimated probability density shrinks as the probability decreases. However, the relative error in the estimate is $1/\sqrt{\phat(x)T\delta x}$, which grows as the event becomes rarer. This is consistent with our claim, that low probabilities come with larger relative errors, and constitutes the key message of this section. Errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for lower probabilities, but relative errors are larger.\footnote{This argument is true for any distribution. \textcite[537-8]{HertwigETAL2004} make the same argument for the special case of a binomial distribution.}
 
 Let's assume that the DM is aware of the uncertainties in his estimates and, furthermore, that he does not like surprises. To avoid surprises, he adds the standard error to his estimate of the probability density, $\phat(x)$, in order to construct his decision weight density, $w(x)$. In effect, he constructs a reasonable worst case for each of his estimates. After normalising, this conservative strategy yields generically,
 \be
@@ -601,6 +609,7 @@ The model of estimating probabilities from real time series, which we discuss in
 
 \appendix
 
+\newpage
 \section{Inverse-S from relative errors in probabilities}
 \seclabel{relative_errors}
 
@@ -621,6 +630,7 @@ w(x)=p(x) \left(\frac{1+\frac{\err{p}}{p}}{1+\ave{\frac{\err{p}}{p}}}\right),
 \ee
 we see that $w(x)=p(x)$ when $\frac{\err{p}}{p}=\ave{\frac{\err{p}}{p}}.$
 
+\newpage
 \section{How to draw an S}
 \seclabel{Scurve}
 
