@@ -82,8 +82,6 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 
 \DeclareFieldFormat{pages}{#1}		% removes pagination (p./pp.) before page numbers
 
-% \renewbibmacro{etal}{\textsc{et al.}}  % find the name for this macro
-
 \renewbibmacro{in:}{}					% print no 'In:' before the <Journal Name>'
 
 % \DefineBibliographyStrings{english}{%
@@ -190,9 +188,12 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 
 \begin{abstract}
 \noindent 
-Behavioural economics provides labels for patterns in human economic behaviour. Probability weighting is one such label. It expresses a mismatch between probabilities used in a formal model of a decision (\ie model parameters) and probabilities inferred from real people's decisions (the same parameters estimated empirically). The inferred probabilities are called ``decision weights.'' It is considered a robust experimental finding that decision weights are higher than probabilities for rare events, and (necessarily, through normalisation) lower than probabilities for common events. Typically this is presented as a cognitive bias, \ie an error of judgement by the person.
-Here we point out that the same observation can be described differently: broadly speaking, probability weighting means that a decision maker has greater uncertainty about the world than the observer.
-We offer a plausible mechanism whereby such differences in uncertainty arise naturally: when a decision maker must estimate probabilities as frequencies in a time series while the observer knows them \textit{a priori}. This suggests an alternative presentation of probability weighting as a principled response by a decision maker to uncertainties unaccounted for in an observer's model.
+Behavioural economics provides labels for patterns in human economic behaviour. Probability weighting is one such label. It expresses a mismatch between probabilities used in a formal model of a decision (\ie model parameters) and probabilities inferred from real people's decisions (the same parameters estimated empirically).
+The inferred probabilities are called ``decision weights.'' It is considered a robust experimental finding that decision weights are higher than probabilities for rare events, and (necessarily, through normalisation) lower than probabilities for common events.
+Typically this is presented as a cognitive bias, \ie an error of judgement by the person.
+Here we point out that the same observation can be described differently: broadly speaking, probability weighting means that a decision maker has greater uncertainty in his model than the observer.
+We offer a plausible mechanism whereby such differences in uncertainty arise naturally: when a decision maker must estimate probabilities as frequencies in a time series while the observer knows them \textit{a priori}.
+This suggests an alternative presentation of probability weighting as a principled response by a decision maker to uncertainties unaccounted for in an observer's model.
 \vspace{1em}
 
 \noindent\textsf{\textbf{Keywords}} ~ Decision Theory, Prospect Theory, Probability Weighting, Ergodicity Economics
@@ -234,10 +235,12 @@ Probability weighting is often summarised visually by comparing
 \bi
 \item cumulative density functions (CDFs) for probabilities, denoted 
 \be
+\elabel{DO_CDF}
 F_p(x)=\int_{-\infty}^x p(s) ds~,
 \ee
 \item and CDFs for decision weights, denoted
 \be
+\elabel{DM_CDF}
 F_w(x)=\int_{-\infty}^x w(s) ds~.
 \ee
 \ei
@@ -331,7 +334,7 @@ We offer a statistical explanation of probability weighting that applies to any 
 %\newpage
 
 \section{Probability weighting as a difference between models} \seclabel{ModelDiff}
-Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a model of the world. Nor do we assume the DM to know ``the truth'' -- he has another model of the world. From our perspective \fref{TK1992} merely shows that the two models differ. It says nothing about who is right or wrong.
+Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a model of the observable. Nor do we assume the DM to know ``the truth'' -- he has another model of the observable. From our perspective \fref{TK1992} merely shows that the two models differ. It says nothing about who is right or wrong.
 
 \subsection{The inverse-S curve\seclabel{The_inverse}}
 \subsubsection{Tversky and Kahneman}
@@ -339,18 +342,18 @@ Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias 
 %
 \be
 \elabel{correspondence}
-\tilde{F}^{TK}_w\left(F_p; \gamma\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(F_p\right)^\gamma+\left(1-F_p\right)^\gamma\right]^{1/\gamma}} ~,
+F^{TK}_w\left(F_p; \gamma\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(F_p\right)^\gamma+\left(1-F_p\right)^\gamma\right]^{1/\gamma}} ~,
 \ee
 %
-which maps from one CDF, $F_p$, to another, $F_w$. We note that no mechanistic motivation was given for fitting this specific family of CDF mappings, parameterised by $\gamma$. The motivation is purely phenomenological: with $\gamma<1$, this function can be made to fit to the data reasonably well.
+which maps from one CDF, $F_p$, to another, $F_w$. We note that no mechanistic motivation was given for fitting this specific family of CDF mappings, parametrised by $\gamma$. The motivation is purely phenomenological: with $\gamma<1$, this function can be made to fit to the data reasonably well.\footnote{Mappings like $F^{TK}$ in \eref{correspondence} or later $F^L$ in \eref{LattimoreFunction} from one CDF to another CDF are themselves not CDFs. We denote the difference between such mappings and proper CDFs which depend on $x$, like $F_p$ and $F_w$ in \eref{DO_CDF} and \eref{DM_CDF} resp., by a superscript throughout the paper.}
 
-The function $\tilde{F}^{TK}_w\left(F_p; \gamma \right)$ has one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $\tilde{F}^{TK}_w\left(F_p\right)=F_p$. Further, $\tilde{F}^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. We consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit.
+The function $F}^{TK}_w\left(F_p; \gamma \right)$ has one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $F^{TK}_w\left(F_p\right)=F_p$. Further, $F^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. We consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit.
 
 \subsubsection{Scale, location, and the inverse-S}
-We now make explicit how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges when the DM uses a larger scale in his model of the world than the DO.
+We now make explicit how the robust qualitative observation of the inverse-S shape in \fref{TK1992} emerges when the DM uses a larger scale in his model of the observable than the DO.
 
 We illustrate this with a Gaussian distribution.
-Let's assume that a DO models an observable $x$ -- which will often be a future change in wealth -- as a Gaussian with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM models the same observable as a Gaussian with the same location, $\mu$, but with a greater scale, so that the variance is $(\alpha\sigma)^2$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{mapping_pdfs}.
+Let's assume that a DO models an observable $x$ -- which will often be a future change in wealth -- as a Gaussian random variable with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM models the same observable as a Gaussian random variable with the same location, $\mu$, but with a greater scale, so that the variance is $(\alpha\sigma)^2$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{mapping_pdfs}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{./figs/mapping_pdfs.pdf}
@@ -383,7 +386,7 @@ Alternatively, we can express the identical information about the difference bet
 \centering
 \includegraphics[width=\textwidth]{./figs/mapping_cdfs.pdf}
 \caption{\textbf{Mapping CDFs.}
-Left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable $X$ follows a wider Gaussian distribution, $X \sim \ND(0,4)$ depicted by $F_w(x)$ (blue).
+Left: The DO models the observable as a Gaussian distributed random variable $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious, in his model the same observable is modelled using a wider Gaussian distributed random variable $X \sim \ND(0,4)$ depicted by $F_w(x)$ (blue).
 %
 Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is larger than the DO's CDF, $F_p(x) < F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be lower than the DO's.
 Right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays the generic inverse-S shape known from prospect theory. The arrows start and end at the same vertical values as on the left.
@@ -463,7 +466,7 @@ Whatever the answer, two observations are robust and interesting: first, disagre
 An explanation for the first observation is that probability is a slippery concept and the word is used to mean different things. This suggests that phrasing information about probabilities concretely should reduce disagreement between DO and DM. For example, the statement ``10 out of 100 people have this disease'' conveys more, and more precise, information than ``the probability of having this disease is 0.1.'' Specifically, it tells us that a sample of people has been observed and what the size of the sample is.
 
 Furthermore, \textcite{Gigerenzer2018} argues that statements involving integer counts, or what he calls natural frequencies,  (``10 out of 100'') are more readily understood by people than statements involving fractional probabilities (``0.1'').%
-\footnote{There is a growing body of literature on \textit{how to make cognitive biases disappear} by changing the way probabilities are presented \parencite{Gigerenzer1991} or by controlling for estimation errors and other confounders, for an example from social congnition see \textcite{GalesicETAL2012}.}
+\footnote{There is a growing body of literature on \textit{how to make cognitive biases disappear} by changing the way probabilities are presented \parencite{Gigerenzer1991} or by controlling for estimation errors and other confounders, for an example from social cognition see \textcite{GalesicETAL2012}.}
 
 The second observation may be explained as follows. A DO often has control over, and essentially perfect knowledge of, the decision problem he poses. A DM does not have such knowledge, and this ignorance will often translate into additional assumed uncertainty. For example, the DO may know the true probabilities of some gamble in an experiment, while the DM may have doubts about the DO's sincerity and his own understanding of the rules of the game. We will return to this in \secref{condition2}.
 
@@ -564,7 +567,7 @@ The most striking example is the universally important case of noisy multiplicat
 The difference between how these two perspectives evaluate the effects of probabilistic events is qualitatively in line with the observed phenomena we set out to explain. The DM typically has large uncertainties, especially for low-probability events, and has an evolutionary incentive to err on the side of caution, \ie to behave as though extreme events have a higher probability than in the DO's model.
 
 \section{Fitting the model to experimental results \seclabel{Fitting_the}}
-Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that Tversky and Kahneman's physically unmotivated function, $\tilde{F}^{TK}_w(F_p)$ in \eref{correspondence}, fits the data no more efficiently than the functions arising from our mechanistic model. This is particularly evident in the bottom panels of \fref{Gauss_scale_location_both_KT}, which show that a Gaussian, $w(x)$, whose scale and location differ from those of $p(x)$, reproduces the fitted functional shape of $\tilde{F}^{TK}_w(F_p)$.
+Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that \person{Tversky} and \person{Kahneman}'s physically unmotivated function, $F^{TK}_w(F_p)$ in \eref{correspondence}, fits the data no more efficiently than the functions arising from our mechanistic model. This is particularly evident in the bottom panels of \fref{Gauss_scale_location_both_KT}, which show that a Gaussian, $w(x)$, whose scale and location differ from those of $p(x)$, reproduces the fitted functional shape of $F^{TK}_w(F_p)$.
 
 For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \textcite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \textcite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
 %
@@ -574,14 +577,14 @@ F_w\left(x\right) = \Phi\left(\frac{\Phi^{-1}\left(F_p\left(x\right)\right) - \m
 %
 where $\Phi$ is the CDF of the standard normal distribution. In the $t$-model, we fit the location and shape parameters, $\mu$ and $\nu$, in the CDF, $F_w(x)$, of a $t$-distributed random variable (see \secref{Different_shapes}). In both cases, we assume that $F_p(x)$ is that of a standard normal distribution.
 
-In addition to \eref{correspondence} used by Tversky and Kahneman, we fit the function
+In addition to \eref{correspondence} used by \person{Tversky} and \person{Kahneman}, we fit the function
 %
 \be
-\tilde{F}^{L}_w\left(F_p; \delta,\gamma\right) =\frac{\delta F_p^{\gamma}}{\delta F_p^{\gamma} + \left(1-F_p\right)^{\gamma}}\,,
+F^{L}_w\left(F_p; \delta,\gamma\right) =\frac{\delta F_p^{\gamma}}{\delta F_p^{\gamma} + \left(1-F_p\right)^{\gamma}}\,,
 \elabel{LattimoreFunction}
 \ee
 %
-suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe probability weighting (also used by \textcite{TverskyWakker1995} and \textcite{Prelec1998}). The reason for fitting \eref{LattimoreFunction} is to ensure a fair comparison: the Gaussian and $t$ models are characterised by two parameters, whereas \eref{correspondence} only has one free parameter. \Eref{LattimoreFunction} has two parameters.
+suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe probability weighting (widely used also \ia in \textcite{TverskyWakker1995,Prelec1998}). The reason for fitting \eref{LattimoreFunction} is to ensure a fair comparison: the Gaussian and $t$ models are characterised by two parameters, whereas \eref{correspondence} only has one free parameter. \Eref{LattimoreFunction} has two parameters.
 
 \Fref{curvefit} presents the fit results. We obtain very good fits to data for both Gaussian and $t$-distributions, as well as for \eref{correspondence} and \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the fitted functions within standard errors. We conclude that our model fits the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a physically plausible mechanism. They are not simply phenomenological.
 
@@ -589,7 +592,7 @@ suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe proba
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/curvefit.pdf}
 \caption{\textbf{Model fitting to experimental data from \textcite{TverskyKahneman1992} (left) and \textcite{TverskyFox1995} (right).}
-Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \textcite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right: \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \textcite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the Levenberg-Marquardt algorithm \parencite{Levenberg1944} for non-linear least squares curve fitting.
+Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \textcite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right: \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \textcite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the \person{Levenberg-Marquardt} algorithm \parencite{Levenberg1944} for non-linear least squares curve fitting.
 }
 \flabel{curvefit}
 \end{figure}
@@ -640,7 +643,7 @@ w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{
 \ee
 where $\alpha$ is the ratio of the DM's scale parameter to the DO's.
 
-Suppose instead that the DM uses a smaller scale than the DO, such that $0<\alpha<1$. In other words, the DM is more certain about the value $X$ will take than the DO. Then the CDF mapping $F_w(F_p)$ assumes the shape of an S, rather than an inverse-S, as shown in \fref{mapping_pdfs_cdfs_Sshape} (compare with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$). This situation would arise if the DM were an ``insider'' with better information about the decision problem than provided to him by the DO. Indeed, the prediction of an S curve under such conditions is an emprically testable prediction, which distinguishes our mechanism for probability weighting from its classical presentation.
+Suppose instead that the DM uses a smaller scale than the DO, such that $0<\alpha<1$. In other words, the DM is more certain about the value $X$ will take than the DO. Then the CDF mapping $F_w(F_p)$ assumes the shape of an S, rather than an inverse-S, as shown in \fref{mapping_pdfs_cdfs_Sshape} (compare with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$). This situation would arise if the DM were an ``insider'' with better information about the decision problem than provided to him by the DO. Indeed, the prediction of an S curve under such conditions is an empirically testable prediction, which distinguishes our mechanism for probability weighting from its classical presentation.
 
 \begin{figure}[!htb]
 \centering
