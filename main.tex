@@ -245,10 +245,16 @@ F_w(x)=\int_{-\infty}^x w(s) ds~.
 \ee
 \ei
 In \fref{TK1992} we reproduce the first such visual summary from \textcite[310]{TverskyKahneman1992}.
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
+%\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p.~310, Fig. 1, relabelled axes]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
+%\flabel{TK1992}
+%\end{figure}
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
-\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p.~310, Fig. 1, relabelled axes]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
+\includegraphics[width=0.5\textwidth]{./figs/PB48.pdf}
+\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p.~188, Fig. 1]{PrestonBaratta1948}, first to empirically document probability weighting. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
 \flabel{TK1992}
 \end{figure}
 
@@ -569,7 +575,8 @@ The difference between how these two perspectives evaluate the effects of probab
 \section{Fitting the model to experimental results \seclabel{Fitting_the}}
 Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that \person{Tversky} and \person{Kahneman}'s physically unmotivated function, $F^{TK}_w(F_p)$ in \eref{correspondence}, fits the data no better than the functions arising from our mechanistic model. This is particularly evident in the bottom panels of \fref{Gauss_scale_location_both_KT}, which show that a Gaussian, $w(x)$, whose scale and location differ from those of $p(x)$, reproduces the fitted functional shape of $F^{TK}_w(F_p)$.
 
-For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \textcite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \textcite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
+%For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \textcite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \textcite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
+For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \textcite{PrestonBaratta1948} (depicted in circles in \fref{TK1992}) and from \textcite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
 %
 \be
 F_w\left(x\right) = \Phi\left(\frac{\Phi^{-1}\left(F_p\left(x\right)\right) - \mu}{\sigma}\right)~,
@@ -588,14 +595,24 @@ suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe proba
 
 \Fref{curvefit} presents the fit results. We obtain very good fits to data for both Gaussian and $t$-distributions, as well as for \eref{correspondence} and \eref{LattimoreFunction}, in the two experiments. It is practically impossible to distinguish between the fitted functions within standard errors. We conclude that our model fits the data well, and unlike \eref{correspondence} or \eref{LattimoreFunction}, the fitted functions are directly derived from a physically plausible mechanism. They are not simply phenomenological.
 
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[width=1.0\textwidth]{./figs/curvefit.pdf}
+%\caption{\textbf{Model fitting to experimental data from \textcite{TverskyKahneman1992} (left) and \textcite{TverskyFox1995} (right).}
+%Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \textcite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right: \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \textcite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the \person{Levenberg-Marquardt} algorithm \parencite{Levenberg1944} for non-linear least squares curve fitting.
+%}
+%\flabel{curvefit}
+%\end{figure}
+
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/curvefit.pdf}
-\caption{\textbf{Model fitting to experimental data from \textcite{TverskyKahneman1992} (left) and \textcite{TverskyFox1995} (right).}
-Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \textcite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right: \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \textcite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the \person{Levenberg-Marquardt} algorithm \parencite{Levenberg1944} for non-linear least squares curve fitting.
+\includegraphics[width=1.0\textwidth]{./figs/curvefit_PB48.pdf}
+\caption{\textbf{Model fitting to experimental data from \textcite{curvefit_BP48} (left) and \textcite{TverskyFox1995} (right).}
+Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.07\right)$, $\gamma=0.59\,\left(\pm0.06\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.09\right)$, $\sigma=1.56\,\left(\pm0.14\right)$; $t$-model: $\nu=1.41\,\left(\pm0.32\right)$, $\mu=0.36\,\left(\pm0.08\right)$; \textcite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.03\right)$. Right: \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \textcite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the \person{Levenberg-Marquardt} algorithm \parencite{Levenberg1944} for non-linear least squares curve fitting.
 }
 \flabel{curvefit}
 \end{figure}
+
 
 \section{Discussion}
 
