@@ -1,3 +1,45 @@
+\begin{frame}
+%[allowframebreaks]
+{Evolution of Decision Criteria : Ensemble Average Maintenance}{Work in progress}
+
+\begin{align*} \elabel{EvoDTs}
+	&	\text{Expectation Value Theory:} &\EV{\D X}	&= \sum_{n=1}^{\infty}
+	&	\underbrace{\Dx_n\strut}_{\text{absolute payout}\strut} &\cdot
+	&	\underbrace{p_n\strut}_{\text{objective probability}\strut}\\
+	%
+	\elabel{EvoDTs2}
+	&	\text{Expected Utility Theory:} &\EV{\Du\left(X\right)}	&= \sum_{n=1}^{\infty}
+	&	\underbrace{\red{\D u\left(x_n\right)}\strut}_{\text{function of Wealth}\strut} 	&	\cdot
+	&	\underbrace{p_n\strut}_{\text{objective probability}\strut}  \\
+	%
+	\elabel{EvoDTs3}
+	&	\text{Cumulative Prospect Theory:} &\mathfrak{V}\left( f_X \right)
+	&=	\sum_{n=1}^{\infty} & \underbrace{\red{\mathfrak{v}\left(\Dx_n\right)}\strut}_{\text{function of the payout}\strut} &	\cdot &	\underbrace{\blue{\pi\left(p_n\right)}\strut}_{\text{function of obj. probability}\strut}
+\end{align*}
+
+% \vfill
+
+\gray{\footnotesize $x$ wealth, $\Dx$ payout, $p$ probability, $u$ utility function, $\mathfrak{V}$ value/prospect,\\
+$\mathfrak{v}$ value function, $\pi$ probability weighting, $f_X$ lottery/probability mass function of a random variable}
+
+\label{EvolutionDT}
+
+% \framebreak
+% 
+% \begin{align*}
+%  \elabel{EvoDTsEDU}
+% 	&	\text{Expected discounted utility:} &\EA{\beta^t\Du\left(X\right)}	&= \sum_{n=1}^{\infty}
+% 	&	\underbrace{\blue{\beta^t \D u\left(x_n\right)}\strut}_{\text{function of Wealth}\strut} 	&	\cdot
+% 	&	\underbrace{p_n\strut}_{\text{objective probability}\strut}  \\
+% 	%
+% 	\elabel{EvoDTsBUT}
+% 	&	\text{Behavioural Utility:} &\mathfrak{V}\left( f_x \right)
+% 	&=	\sum_{n=1}^{\infty} & \underbrace{\blue{\mathfrak{v}\left(\Dx_n\right)}\strut}_{\text{function of the payout}\strut} &	\cdot &	\underbrace{\blue{\pi\left(p_n\right)}\strut}_{\text{function of obj. probability}\strut}
+% \end{align*}
+
+\end{frame}
+
+
 % \section[Probability Weighting]{What are weighting for? A mechanistic explanation of probability weighting}
 \section{Main Results}
 
@@ -31,6 +73,7 @@
 
 \column{0.5\textwidth}
 \begin{itemize}
+%   \item $ w(x) = f\left(F_p(x)\right)$ \parencite{Quiggin1982}
 %   \item low probabilities treated as higher;\\ 
 %   high probabilities treated as lower
   \item empirical pattern: inverse-S shape
@@ -295,9 +338,9 @@ $\hookrightarrow$ small $p(x)$, small count $\rightarrow$ big uncertainty
 
 \begin{frame}{DMs don't like surprises}
 
-To avoid surprises, DMs \blue{add estimation uncertainty $\err{p(x)}$} to every estimated probability, then normalize, s.t.
+To avoid surprises, DMs \blue{add estimation uncertainty $\err{\phat(x)}$} to every estimated probability, then normalize, s.t.
 \begin{equation}
-	w(x)=\frac{p(x)\blue{+\err{p(x)}}}{\int \left(p(s) \blue{+\err{p(s)}} \right)ds}
+	w(x)=\frac{\phat(x)\blue{+\err{\phat(x)}}}{\int \left(\phat(s) \blue{+\err{\phat(s)}} \right)ds}
 \end{equation}
 \pause
 % \ldots visually similar to function chosen by Kahneman and Tversky.
@@ -359,6 +402,9 @@ To avoid surprises, DMs \blue{add estimation uncertainty $\err{p(x)}$} to every 
 
 \section{Conclusion}
 
+
+
+
 \begin{frame}{Conclusion}
 \begin{columns}[T]
 \column{.5\textwidth}
@@ -385,7 +431,7 @@ Ergodicity Economics and PW
 \vfill
 \begin{itemize}
   \item testable prediction $\to$ Let's run an experiment!
-  \item Manuscript at \url{https://www.researchers.one/article/2020-04-14}
+  \item Manuscript at \url{https://bit.ly/lml-pw-r1}
   \item Interactive code at \url{https://bit.ly/lml-pw-count-b}    
 \end{itemize}
 % \vspace{1em}
