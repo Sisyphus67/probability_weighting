@@ -215,7 +215,9 @@ D81 	% Criteria for decision making under Risk and Uncertainty
 \setcounter{page}{2}		% titlepage=page 1, continue with page 2
 
 \section{Introduction}
-\textit{Probability weighting} is a concept that originated in prospect theory \parencite{KahnemanTversky1979,TverskyKahneman1992}. It is one way to conceptualise a pattern in human behaviour of caution with respect to formal models.
+\textit{Probability weighting} is a concept that originated in psychological research going back at least to \textcite{PrestonBaratta1948}.
+Later probability weighting got popularised as a feature of models in behavioural economics such as (cumulative) prospect theory \parencite{KahnemanTversky1979,TverskyKahneman1992}.
+We conceptualise probability weighting as a pattern in human behaviour that represents a variety of the cautionary principle, here with respect to formal models.
 This is best explained by a thought experiment, in which  
 \bi
 	\item a \textit{disinterested observer} (DO), such as an experimenter, tells
@@ -291,11 +293,19 @@ Formal probability theory has its roots in the 1650s as a tool to analyse gamble
 %EUT
 %Lack of predictive power and misalignment with empirical data led to paradoxes and puzzles. This has led, in turn, to new decision theories. These theories only altered the quantities contained in the optimand, \ie probabilities and absolute monetary changes. In doing so, more degrees of freedom have been added, leaving the expectation value as the optimand intact. For instance, in expected utility theory (EUT) a new degree of freedom is introduced with the transformation of the absolute monetary changes. The axiomatisation of EUT by \textcite{vonNeumannMorgenstern1944} and \textcite{Savage1954} lend further credence to expectation values as optimands and EUT as a normative decision theory.
 
-%EUT
-While successful in some circumstances, EVT led to paradoxes and puzzles. The first proposed remedy to these paradoxes was expected utility theory (EUT) \parencite{Bernoulli1738,Laplace1814}. EUT distorts monetary amounts to reflect people's apparent psychological risk aversion, leaving the expectation-value structure of the optimand (a weighted sum) intact. Axiomatisations of EUT by \textcite{vonNeumannMorgenstern1944} and \textcite{Savage1954} helped to establish EUT as a normative decision theory.
+% EUT
+While successful in some circumstances, EVT led to paradoxes and puzzles. The first proposed remedy to these paradoxes was expected utility theory (EUT) \parencite{Bernoulli1738,Laplace1814}.
+EUT distorts monetary amounts to reflect people's apparent psychological risk aversion, leaving the expectation-value structure of the optimand (a weighted sum) intact.
+Axiomatisations of EUT by \textcite{vonNeumannMorgenstern1944} and \textcite{Savage1954} helped to establish EUT as a normative decision theory.
 
-%CPT
-Despite its flexibility, EUT also failed to fit some observations, so prospect theory \parencite{KahnemanTversky1979} and then cumulative prospect theory (CPT) \parencite{TverskyKahneman1992} were proposed as descriptive decision theories. CPT adds a distortion of probabilities to EUT's distortion of monetary amounts. This distortion of probabilities is known as probability weighting and is the focus of this paper. Under the consensus interpretation, probability weighting is a systematic and maladaptive bias, in which people give excessive weight to rare events and insufficient weight to common events in their decisions.\footnote{An early example of this interpretation is in \textcite[Fig. 1, p. 188]{PrestonBaratta1948}.}
+% PW & CPT
+Despite its flexibility, EUT also failed to fit some observations.
+An additional apparent distortion of probabilities has been reported as early as in \textcite[Fig. 1, p. 188]{PrestonBaratta1948}, who introduced \textquote{psychological probabilities} as a function of mathematical probabilities to reconcile experimental data with EVT.
+Today, this additional distortion is known as probability weighting and is the focus of this paper.
+Probability weighting later found its way into descriptive decision theories such as prospect theory \parencite{KahnemanTversky1979} and then cumulative prospect theory (CPT) \parencite{TverskyKahneman1992}.
+CPT combines the distortion of probabilities with EUT's distortion of monetary amounts, again leaving the structure of the optimand as a weighted sum intact.
+Under the consensus interpretation, probability weighting is a systematic and maladaptive bias, in which people give excessive weight to rare events and insufficient weight to common events in their decisions.
+%\parencite{PrestonBaratta1948,KahnemanTversky1979,TverskyKahneman1992}.
 
 %\subsubsection{Critiques of CPT} \seclabel{CPTCritiques}
 %Many studies question the validity of the CPT explanation of probability weighting. Some critiques concern the origin of the additional degrees of freedom. 
@@ -327,7 +337,10 @@ In our own work, ergodicity economics, the DM's experience of outcomes along a s
 %Importantly, this is independent from a particular behavioural model -- neither EVT, EUT, CPT nor growth-optimal preferences. The phenomenon labelled probability weighting is a result of a generic inference problem, in which the DM is simply confronted with a different risk than the DO.
 
 % our critique and should go to the end
-We offer a statistical explanation of probability weighting that applies to any situation where differences between models of uncertainty exist. The mechanism we propose can generate mismatches between probabilities and decision weights which produce a variety of probability weighting curves, including the standard inverse-S curve of CPT. The inverse-S is predicted whenever a DM cautiously incorporates more uncertainty into his model than a DO, which we imagine to be a commonly encountered scenario in experiments. More specifically, we find the inverse-S when a DM cautiously adjusts a frequentist probability estimate to account for sampling errors.
+We offer a statistical explanation of probability weighting that applies to any situation where differences between models of uncertainty exist.
+The mechanism we propose can generate mismatches between probabilities and decision weights which produce a variety of probability weighting curves, including the standard inverse-S curve.
+The inverse-S is predicted whenever a DM cautiously incorporates more uncertainty into his model than a DO, which we imagine to be a commonly encountered scenario in experiments.
+More specifically, we find the inverse-S when a DM cautiously adjusts a frequentist probability estimate to account for sampling errors.
 %Our statistical explanation suggests that this behaviour is a plausible strategy in decision making under uncertainty.
 %
 %If solely judged by the capability to fit the reported data in \fref{curvefit}, our proposed mechanism suggests that a statistical explanation of probability weighting is sufficient.
@@ -386,7 +399,10 @@ Eliminating $(x-\mu)^2$ from \eref{DecisionW} and \eref{p} yields the following 
 w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~.
 \elabel{w_of_p}
 \ee
-We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. $\alpha>1$ means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small densities and below it for large densities. $0<\alpha<1$ means that the DM uses a smaller standard deviation than the DO. This might occur, for example, if the DM is an ``insider'' with better information than the DO. Instead of an inverse-S shape, this would lead to an S-shaped curve, see \Appref{Scurve}.
+We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. $\alpha>1$ means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small densities and below it for large densities. $0<\alpha<1$ means that the DM uses a smaller standard deviation than the DO.
+This might occur, for example, if the DM is an ``insider'' with better information than the DO.
+Another case arises if we observe two DMs and express the probabilities as a function of that model which happens to have relatively less uncertainty	.
+Instead of an inverse-S shape, both cases would lead to an S-shaped curve, see \Appref{Scurve}.
 
 Alternatively, we can express the identical information about the difference between models by plotting the CDFs $F_w$ and $F_p$. We do this in \fref{mapping_cdfs}, where the inverse-S emerges purely from the DM's greater assumed scale, $\alpha \sigma$.
 \begin{figure}[!htb]
@@ -656,7 +672,7 @@ w(x)=p(x) \left(\frac{1+\frac{\err{p}}{p}}{1+\ave{\frac{\err{p}}{p}}}\right),
 we see that $w(x)=p(x)$ when $\frac{\err{p}}{p}=\ave{\frac{\err{p}}{p}}.$
 
 \newpage
-\section{How to draw an S}
+\section{Cases of a regular S}
 \seclabel{Scurve}
 
 We saw how the robust qualitative observation of the inverse-S curve in \fref{TK1992} arises when the DM uses a larger scale in his model of uncertainty than the DO. In the Gaussian case, it was possible to express the decision weight $w$ as a function of the probability $p$,
@@ -666,6 +682,8 @@ w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{
 where $\alpha$ is the ratio of the DM's scale parameter to the DO's.
 
 Suppose instead that the DM uses a smaller scale than the DO, such that $0<\alpha<1$. In other words, the DM is more certain about the value $X$ will take than the DO. We expect this to happen, for instance, if the DM has insider information. Then the CDF mapping $F_w(F_p)$ assumes the shape of an S, rather than an inverse-S, as shown in \fref{mapping_pdfs_cdfs_Sshape} (compare with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$). The prediction of an S curve under such conditions is an empirically testable prediction with discriminating power: it does not arise under the classical interpretation of PW.
+
+More common to real-world decisions might be the case with no ``true" model at all, \ie we observe the choices of two DMs and happen to express the implied probabilities as a function of the DM whose model has relatively more uncertainty. 
 
 \begin{figure}[!htb]
 \centering

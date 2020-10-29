@@ -7,7 +7,6 @@
 *.blg
 *.out
 *bcf
-/tmp/
 *-blx.bib
 *.aux
 *.nav
