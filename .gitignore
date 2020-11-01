@@ -6,7 +6,7 @@
 *.out
 *.blg
 *.out
-*bcf
+*.bcf
 *-blx.bib
 *.aux
 *.nav

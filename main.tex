@@ -166,7 +166,7 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 \author[1,2]{Ole Peters\thanks{\texttt{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}}}}
 \author[1]{Alexander Adamou\thanks{\texttt{\href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}}}}
 \author[1,3,4]{Mark Kirstein\thanks{\texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}}}
-\author[1,5]{Yonatan Berman\thanks{\texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}}
+\author[1]{Yonatan Berman\thanks{\texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}}
 % \affil[1]{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK}
 \affil[1]{London Mathematical Laboratory, UK} % short version
 
@@ -246,7 +246,7 @@ F_p(x)=\int_{-\infty}^x p(s) ds~,
 F_w(x)=\int_{-\infty}^x w(s) ds~.
 \ee
 \ei
-In \fref{TK1992} we reproduce the first such visual summary from \textcite[310]{TverskyKahneman1992}.
+In \fref{PB1948} we reproduce the first such visual summary from \textcite[188]{PrestonBaratta1948}.
 %\begin{figure}[!htb]
 %\centering
 %\includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
@@ -256,8 +256,8 @@ In \fref{TK1992} we reproduce the first such visual summary from \textcite[310]{
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/PB48_2.pdf}
-\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite{PrestonBaratta1948}, the first to empirically document probability weighting (they refer to the cumulative probabilities as `mathematical probabilities' and to the cumulative decision weights as `psychological probabilities'). The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
-\flabel{TK1992}
+\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite{PrestonBaratta1948}, the first to empirically document probability weighting (they refer to the objective probabilities as `mathematical probabilities' and to the decision weights as `psychological probabilities'). The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
+\flabel{PB1948}
 \end{figure}
 
 Plotting $F_w$ as a function of $F_p$ generates a curve, whose generic shape we shall call the ``inverse-S''. The inverse-S is the main observational finding in probability weighting: it sits above the diagonal $F_w=F_p$ for events of low cumulative probability (such that $F_w>F_p$ for these events) and below the diagonal for events of high cumulative probability (such that $F_w<F_p$).
@@ -354,11 +354,11 @@ More specifically, we find the inverse-S when a DM cautiously adjusts a frequent
 %\newpage
 
 \section{Probability weighting as a difference between models} \seclabel{ModelDiff}
-Behavioural economics interprets \fref{TK1992} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a stochastic model. Nor do we assume the DM to know ``the truth'' -- he has another stochastic model. From our perspective \fref{TK1992} merely shows that the two models differ. It says nothing about who is right or wrong.
+Behavioural economics interprets \fref{PB1948} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a stochastic model. Nor do we assume the DM to know ``the truth'' -- he has another stochastic model. From our perspective \fref{PB1948} merely shows that the two models differ. It says nothing about who is right or wrong.
 
 \subsection{The inverse-S curve\seclabel{The_inverse}}
 \subsubsection{Tversky and Kahneman}
-\textcite{TverskyKahneman1992} chose to fit empirical data, qualitatively similar to the data presented in \fref{TK1992} from \textcite{PrestonBaratta1948}, with the following function,
+\textcite{TverskyKahneman1992} chose to fit empirical data, qualitatively similar to the data presented in \fref{PB1948} from \textcite{PrestonBaratta1948}, with the following function,
 %
 \be
 \elabel{correspondence}
@@ -403,7 +403,7 @@ w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{
 \ee
 We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. $\alpha>1$ means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small densities and below it for large densities. $0<\alpha<1$ means that the DM uses a smaller standard deviation than the DO.
 This might occur, for example, if the DM is an ``insider'' with better information than the DO.
-It can also occur if the DO observes two DMs and expresses the inferred densities as a function of the model with the lower relative uncertainty of the two.
+It can also occur if the DO observes two DMs and expresses the inferred densities as a function of the model with the higher relative uncertainty of the two.
 Instead of an inverse-S shape, both cases would lead to an S-shaped curve, see \Appref{Scurve}.
 
 Alternatively, we can express the identical information about the difference between models by plotting the CDFs $F_w$ and $F_p$. We do this in \fref{mapping_cdfs}, where the inverse-S emerges purely from the DM's greater assumed scale, $\alpha \sigma$.
@@ -591,10 +591,10 @@ The most striking example is the universally important case of noisy multiplicat
 The difference between how these two perspectives evaluate the effects of probabilistic events is qualitatively in line with the observed phenomena we set out to explain. The DM typically has large uncertainties, especially for low-probability events, and has an evolutionary incentive to err on the side of caution, \ie to behave as though extreme events have a higher probability than in the DO's model.
 
 \section{Fitting the model to experimental results \seclabel{Fitting_the}}
-Visually, looking at the figures and the level of noise in the data in \fref{TK1992}, one would conclude that \person{Tversky} and \person{Kahneman}'s physically unmotivated function, $F^{TK}_w(F_p)$ in \eref{correspondence}, fits the data no better than the functions arising from our mechanistic model. This is particularly evident in the bottom panels of \fref{Gauss_scale_location_both_KT}, which show that a Gaussian, $w(x)$, whose scale and location differ from those of $p(x)$, reproduces the fitted functional shape of $F^{TK}_w(F_p)$.
+Visually, looking at the figures and the level of noise in the data in \fref{PB1948}, one would conclude that \person{Tversky} and \person{Kahneman}'s physically unmotivated function, $F^{TK}_w(F_p)$ in \eref{correspondence}, fits the data no better than the functions arising from our mechanistic model. This is particularly evident in the bottom panels of \fref{Gauss_scale_location_both_KT}, which show that a Gaussian, $w(x)$, whose scale and location differ from those of $p(x)$, reproduces the fitted functional shape of $F^{TK}_w(F_p)$.
 
 %For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \textcite{TverskyKahneman1992} (depicted in circles in \fref{TK1992}) and from \textcite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
-For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \textcite{PrestonBaratta1948} (depicted in circles in \fref{TK1992}) and from \textcite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
+For completeness and scientific hygiene, in the present section we fit location and scale parameters in the Gaussian and $t$ models for $F_w$ to experimental data from \textcite{PrestonBaratta1948} (depicted in circles in \fref{PB1948}) and from \textcite{TverskyFox1995}. Specifically, in the Gaussian model we fit the location and scale parameters $\mu$ and $\sigma$ in the CDF,
 %
 \be
 F_w\left(x\right) = \Phi\left(\frac{\Phi^{-1}\left(F_p\left(x\right)\right) - \mu}{\sigma}\right)~,
@@ -625,7 +625,7 @@ suggested by \textcite{LattimoreBakerWitte1992} to parametrically describe proba
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/curvefit_PB48_2.pdf}
-\caption{\textbf{Model fitting to experimental data from \textcite{curvefit_BP48} (left) and \textcite{TverskyFox1995} (right).}
+\caption{\textbf{Model fitting to experimental data from \textcite{PrestonBaratta1948} (left) and \textcite{TverskyFox1995} (right).}
 Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.71\,\left(SE = 0.05\right)$, $\gamma=0.56\,\left(\pm0.04\right)$; Gaussian model: $\mu=0.36\,\left(\pm0.07\right)$, $\sigma=1.65\,\left(\pm0.10\right)$; $t$-model: $\nu=1.24\,\left(\pm0.20\right)$, $\mu=0.28\,\left(\pm0.06\right)$; \textcite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.61\,\left(\pm0.02\right)$. Right: \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \textcite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the \person{Levenberg-Marquardt} algorithm \parencite{Levenberg1944} for non-linear least squares curve fitting.
 }
 \flabel{curvefit}
@@ -677,7 +677,7 @@ we see that $w(x)=p(x)$ when $\frac{\err{p}}{p}=\ave{\frac{\err{p}}{p}}.$
 \section{Cases of a regular S}
 \seclabel{Scurve}
 
-We saw how the robust qualitative observation of the inverse-S curve in \fref{TK1992} arises when the DM uses a larger scale in his model of uncertainty than the DO. In the Gaussian case, it was possible to express the decision weight $w$ as a function of the probability $p$,
+We saw how the robust qualitative observation of the inverse-S curve in \fref{PB1948} arises when the DM uses a larger scale in his model of uncertainty than the DO. In the Gaussian case, it was possible to express the decision weight $w$ as a function of the probability $p$,
 \be
 w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
 \ee
