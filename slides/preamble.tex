@@ -270,16 +270,11 @@
 
 \logo{\includegraphics[width=1.cm]{img/LML_logo_only.jpg}}
 
-\AtBeginSection[]
-{
-% 	\begin{frame}{Agenda}
-% 		\tableofcontents
-%  	\end{frame}
-%
+% \AtBeginSection[]{
 %  \begin{frame}{Agenda}
 % 	 \tableofcontents[currentsection,hideothersubsections]
 %  \end{frame}
-}
+% }
 
 \setbeamertemplate{navigation symbols}{
 % 	\insertshortauthor \hfill \insertshorttitle \hfill \insertshortdate \hfill%
@@ -346,11 +341,14 @@
 \newcommand{\toinf}{{\rightarrow\infty}}
 
 \newcommand{\err}[1]{\varepsilon\left[#1\right]}
-\newcommand{\phat}{\hat{p}}
-\newcommand{\nhat}{\hat{n}}
+\newcommand{\ND}{\ensuremath{\mathcal{N}}\xspace}			% Normal distribution
+\newcommand{\nhat}{\ensuremath{\hat{n}}\xspace}
+\newcommand{\nn}{\nonumber}
+\newcommand{\phat}{\ensuremath{\hat{p}}\xspace}
 
-\newcommand{\D}{{\Delta}}
-\newcommand{\Dx}{{\Delta x}}
+\newcommand{\D}{\ensuremath{\Delta}\xpsace}
+\newcommand{\Dx}{\ensuremath{\Delta x}\xspace}
+\newcommand{\dx}{\ensuremath{\delta x}\xspace}
 \newcommand{\Dy}{{\Delta y}}
 \newcommand{\Du}{{\Delta u}}
 \newcommand{\Dt}{{\Delta t}}

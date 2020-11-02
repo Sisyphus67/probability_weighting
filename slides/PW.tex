@@ -30,9 +30,9 @@
 
 
 % \section[Probability Weighting]{What are weighting for? A mechanistic explanation of probability weighting}
-\section{Main Results}
+\section{Main Result}
 
-\begin{frame}{Main results}
+\begin{frame}{Main result}
 \begin{center}
 \only<1->{
 	\includegraphics[width=.45\textwidth]{../figs/KT_result_nolegend.pdf}
@@ -51,6 +51,10 @@
 % \hyperlink{weight_vs_estimate}{\beamergotobutton{PW K\&T 1979}}
 \end{frame}
 
+% \begin{frame}{Agenda}
+%  \tableofcontents[hidesubsections]
+% \end{frame}
+
 \section{Probability Weighting}
 
 \begin{frame}{Definition of Probability Weighting (PW)}
@@ -59,8 +63,10 @@
 \column{0.5\textwidth}
 % {\centering	\includegraphics[width=.9\textwidth]{../figs/TK1992.pdf} }
 % \parencite[p. 310, Fig. 1,relabelled axes]{TverskyKahneman1992}
-{\centering	\includegraphics[width=.9\textwidth]{../figs/PB48.pdf} }
-\parencite[p. 188, Fig. 1, relabelled axes]{PrestonBaratta1948}
+{\centering	\includegraphics[width=.9\textwidth]{../figs/PB48_connectedDots.pdf} }
+\parencite[p. 188, Fig. 1, relabelled axes]{PrestonBaratta1948} \\
+\vspace{.5em}
+\textquote[p. 186]{The existence [\ldots] a scale of \blue{\textit{psychological probability}} and its functional relationship to the scale of \red{\textit{mathematical probability}}}
 
 \column{0.5\textwidth}
 \begin{itemize}
@@ -68,7 +74,7 @@
 %   \item low probabilities treated as higher;\\ 
 %   high probabilities treated as lower
   \item empirical pattern: inverse-S shape
-  \item Cumulative Prospect Theory (CPT) \nocite{}
+  \item important component in behavioural economics (Cumulative Prospect Theory)
 \end{itemize}
 \vspace{1em}
 \red{Classical interpretation of PW:}
@@ -90,24 +96,25 @@
 \section[Literature]{Related Literature}
 \begin{frame}{Related Literature}
 \begin{itemize}
-  \item TTBOOK no motivation of the functional form, all functions (and parameters therein) used in the literature have no meaning besides producing a fit
-  \item no stable mapping from $ p \to w$ \parencite{StewartETAL2015}
-  \item \textcite{UngemachETAL2009,WulffETAL2018} meta-analysis find all possible weighting curves
-  \item Description-experience gap, experimental design is a key confounder, \ie less overweighting in decisions-from-experience \parencite{HertwigETAL2004,HertwigErev2009}
+  \item no motivation of the functional form of weighting curve other than fit
+  \item origin of PW preferences? no stable mappings \parencite{StewartETAL2015} 
+  \item experimental design is a key confounder $\rightarrow$ description-experience gap, \ie less (even under-) overweighting in decisions-from-experience \parencite{HertwigETAL2004,HertwigErev2009}
+  \item meta-analyses find all possible weighting curves \parencites[][Tab. 9]{UngemachETAL2009,WulffETAL2018} 
 \end{itemize}
-
+\vspace{1em}
 Statistical explanations
 \begin{itemize}
-  \item 
-	\item PW as a Bayesian heuristic \parencite{Martins2006}
+  \item PW due to biased estimation \parencite{FoxHadar2006}
+  \item PW is optimal in sequential learning problems \parencite{SeoETAL2019}
+	\item PW heuristic as an approximate Bayesian solution for the inference problem \parencite{Martins2006}
 \end{itemize}  
+\bc $\hookrightarrow$ reproducibility, context dependence, (mal)adaptive \ec 
 \end{frame}
 
-
 \section{Setup}
-\begin{frame}{Setup}
+\begin{frame}{Setup}{No \textit{truth}, only difference in models of uncertainty}
 \begin{center}
-Task: model payout, $x$, of a gamble as a random variable.
+\textbf{Task:} model payout, $x$, of a gamble as a random variable.
 \end{center}
 \begin{columns}[T]
 \column{0.5\textwidth}
@@ -196,6 +203,23 @@ Task: model payout, $x$, of a gamble as a random variable.
 % 	}
 \end{frame}
 
+\begin{frame}{Asymmetric Inverse-S = diff. in uncertainty + diff. in locations}
+\centering
+	\includegraphics[width=0.75\textwidth]{../figs/Gauss_scale_location_both_KT.pdf}
+	\label{LocationScale}
+\end{frame}
+
+\begin{frame}
+Numerically feasible for arbitrary distributions:
+\begin{enumerate}
+	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
+	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
+	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
+% 	\item map DM's CDF onto DO's CDF, \ie \blue{$F_w(F_p)$}
+\end{enumerate}
+% XXX illustrate with corresponding lists and figure
+\end{frame}
+
 \section{Functional Form}
 \begin{frame}{Functional form of the weighting function}
 Gaussian case with different scale:
@@ -213,29 +237,37 @@ Gaussian case with different scale:
 \end{equation}
 where
 \begin{itemize}
-  \item DO's scale is $\sigma$
-  \item DM's scale is $\alpha\sigma$
-%   \item $\alpha < 1 \to$ S shape
-%   \item $\alpha > 1 \to	$ inverse-S shape
+  \item DO's scale is $\sigma$, $\red{X \sim \ND\left(\mu,\sigma^2\right)}$
+  \item DM's scale is $\alpha\sigma$, $\blue{X \sim \ND\left(\mu,(\alpha\sigma)^2\right)}$
+  \item DO uses greater uncertainty $\alpha < 1 \to$ S shape
+  \item DM uses greater uncertainty $\alpha > 1 \to	$ inverse-S shape
+  \item uncertainty measured by the standard deviation
 \end{itemize}
 \end{frame}
 
-% \begin{frame}
-% Numerically easy for any pair of distributions (models):
-% \begin{enumerate}
-% 	\item list values of DO's CDF, \red{$F_p(x)$}, at set ${x_i}$
-% 	\item list values of DM's CDF, \blue{$F_w(x)$}, at same ${x_i}$
-% 	\item plot \blue{$F_w(x)$} \vs \red{$F_p(x)$}
-% % 	\item map DM's CDF onto DO's CDF, \ie \blue{$F_w(F_p)$}
-% \end{enumerate}
-% % XXX illustrate with corresponding lists and figure
-% \end{frame}
+\begin{frame}{Functional Forms}
+% \hyperlink{InterimConclusion}{\beamerreturnbutton{Gaussian}}} \label{FunctionalForms}
+\textcite[$\gamma = 0.68$]{TverskyKahneman1992}
+\be \label{correspondence}
+	F^{TK}_w\left(F_p; \gamma\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(F_p\right)^\gamma+\left(1-F_p\right)^\gamma\right]^{1/\gamma}}
+\ee
 
-% \begin{frame}{Asymmetry from different locations}
-% \centering
-% 	\includegraphics[width=0.75\textwidth]{../../figs/Gauss_scale_location_both_KT.pdf}
-% 	\label{LocationScale}
-% \end{frame}
+\textcite{LattimoreBakerWitte1992}
+\be \label{LattimoreFunction}
+F^{L}_w\left(F_p; \delta,\gamma\right) =\frac{\delta F_p^{\gamma}}{\delta F_p^{\gamma} + \left(1-F_p\right)^{\gamma}}
+\ee
+
+Gaussian case with greater DM scale $\alpha \sigma$
+\be \elabel{w_of_p}
+w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
+\ee
+which is a power law in $p$ with a pre-factor to ensure normalisation
+\end{frame}
+
+\section{Fitting Functions}
+\begin{frame}
+\centering \includegraphics[width=\textwidth]{../figs/curvefit_PB48.pdf}
+\end{frame}
 
 
 \begin{frame}{Interim conclusion}
@@ -259,11 +291,13 @@ where
 \begin{frame}{The Ergodicity Question}
 \begin{columns}[T]
 \column{.35\textwidth}
+	\includegraphics[height=3cm]{img/TverskyKahnemanFunny} \\
 	\bc \textbf{Typical DO concern} \ec
 	What happens on average to the \red{ensemble} of subjects?
 \column{.02\textwidth}
-\centering \vspace{4em}  \red{\large $\neq$}
+\centering \vspace{10em}  \red{\large $\neq$}
 \column{.35\textwidth}
+	\includegraphics[height=3cm]{img/LabRat} \\
 	\bc \textbf{Typical DM concern} \ec
 	What happens to me \\
 	\blue{on average over time}?
@@ -288,7 +322,8 @@ where
 \begin{frame}{Experiencing probabilities}
 
 \begin{itemize}
-%  \item ``probability'' is polysemous \quelle{\parencite{Gigerenzer1991,Gigerenzer2018,HertwigGigerenzer1999}}
+ \item ``probability'' is polysemous
+ \item \quelle{natural frequencies \textquote{10 out of 100} vs 10\% \parencite{Gigerenzer1991,Gigerenzer2018,HertwigGigerenzer1999}}
   \item probabilities are not observable
   \item probabilities encountered as
   	\begin{itemize}
@@ -308,7 +343,7 @@ where
 \textbf{Rare Event} %\hfill \includegraphics[height=1.5cm]{img/BlackSwan} \hfill
 \begin{itemize}
   \item $p(x) = 0.001$
-  \item \num{100} observations
+  \item $T=\num{100}$ observations
   \item $\sim 99.5\%$ get 0 or 1 events
   \item $\phat(x) = 0$ or $\phat(x)=0.01$
   \item[$\hookrightarrow$] $\phat(x)$ off by \num{1000}\% 
@@ -317,7 +352,7 @@ where
 \textbf{Common Event} %\hfill \includegraphics[height=1.5cm]{img/WhiteSwan}  \hfill
 \begin{itemize}
   \item $p(x)=0.5$
-  \item \num{100} observations
+  \item $T= \num{100}$ observations
   \item $\sim 99.5\%$ get between 35 and 65 events,
   \item $0.35< \phat(x) <0.65$
   \item[$\hookrightarrow$] $\phat(x)$ off by 30\%
@@ -352,8 +387,27 @@ $\hookrightarrow$ small $p(x)$, small count $\rightarrow$ big uncertainty
 % \end{center}
 % \end{frame}
 
-\begin{frame}{DMs don't like surprises}
+\begin{frame}{Scaling of uncertainty: small count $\rightarrow$ big uncertainty}
+\begin{enumerate}
+  \item scaling of counts $n(x)$:
+  	$$n(x) \sim p(x)\dx T \quad \Longleftrightarrow \quad p(x) \sim \nicefrac{n(x)}{T\dx}$$
+  \item uncertainty in Poisson-distributed counts $\sim \sqrt{n(x)}$
+  \item estimate of the asymptotic probability density
+  \begin{equation}
+    	p(x) \approx \underbrace{\frac{n(x)}{T\dx}\strut}_{\text{estimate}} \pm \underbrace{\frac{\sqrt{n(x)}}{T\dx}\mathstrut}_{\text{relative uncertainty}}
+  \end{equation}
+  \item express the uncertainty in terms of the estimate itself
+  \begin{equation}
+    \err{\phat(x)}	\equiv \frac{\sqrt{n(x)}}{T \dx} = \sqrt{\frac{\phat(x)}{T\dx}}
+  \end{equation}
+  \item standard error $ \lim\limits_{p(x) \to 0} \sqrt{\phat(x)/T \delta x}$ in $\phat$ shrinks
+  \item relative error in the estimate $\lim\limits_{p(x) \to 0} 1/\sqrt{\phat(x)T\delta x}$ grows,
+  \item   $\lim_{T \to \infty} \phat \to p$ 
+  \hspace{2cm} 
+\end{enumerate}
+\end{frame}
 
+\begin{frame}{Cautionary principle : DMs don't like surprises}
 To avoid surprises, DMs \blue{add estimation uncertainty $\err{\phat(x)}$} to every estimated probability, then normalize, s.t.
 \begin{equation}
 	w(x)=\frac{\phat(x)\blue{+\err{\phat(x)}}}{\int \left(\phat(s) \blue{+\err{\phat(s)}} \right)ds}
@@ -362,65 +416,17 @@ To avoid surprises, DMs \blue{add estimation uncertainty $\err{\phat(x)}$} to ev
 % \ldots visually similar to function chosen by Kahneman and Tversky.
 \centering
 	\includegraphics[width=.9\textwidth]{../figs/square_root_error_1Gaussian.pdf} \\
+	Interactive code at \url{https://bit.ly/lml-pw-count-b}
 \end{frame}
 
-
-%\begin{frame}{Estimation of the decision weights}
-%
-%	Using the count $n(x)$ to form the best estimate and add to it the uncertainty about best estimate 
-%	\begin{align}
-%		w(x)						&\approx	\frac{n(x)}{T\delta x} \pm \frac{\sqrt{n(x)}}{T \delta x} \\
-%		w(x)						&\approx	\phat(x) \pm \err{\phat(x)} 	\elabel{prob_est}
-%	\end{align}
-%	with the standard error expressed in terms of the estimate itself
-%	\begin{align}
-%		\err{\phat(x)}	&\equiv		\frac{\sqrt{n(x)}}{T \delta x} = \sqrt{\frac{\phat(x)}{T \delta x}} \\
-%		\lim_{T\to\infty} w(x)	&\to p(x)					
-%	\end{align}
-%
-%\end{frame}
-%
-%\begin{frame}
-%\begin{center}
-%  \includegraphics[width=.8\textwidth]{../../figs/dm_count_sim}
-%\end{center}
-%\end{frame}
-%
-%
-%\end{frame}
-
-% \begin{frame}{Simulation of the Estimation}
-% \begin{center}
-% 	\includegraphics[width=.65\textwidth]{img/dm_count_sim} \\
-% 	$T = 100$, estimates of \red{$\phat(x)$} in red, estimates with one standard error \blue{$\phat(x) + \err{\phat(x)}$} in blue 
-% \end{center}
-% 
-% \end{frame}
-% 
-% \begin{frame}
-% 	Using the fact that $n(x)$ is a random variable itself, $n(x) \sim Poisson$, its fluctuations scale like $\sqrt{n(x)}$ \\
-% 
-% 	Using the count $n(x)$ to infer the asymptotic PDF as
-% 	\begin{align}	  
-% 		p(x)	&\approx \frac{n(x)}{T\delta x} \pm \frac{\sqrt{n(x)}}{T \delta x} \\
-% 					&\approx \phat(x) \pm \err{\phat(x)}
-% 	\elabel{prob_est}
-% 	\end{align}
-% 	with the standard error (expressed in terms of the estimate itself)
-% 	$$\err{\phat(x)} \equiv \frac{\sqrt{n(x)}}{T \delta x} = \sqrt{\frac{\phat(x)}{T \delta x}}$$
-% 	\bi
-% 		\item standard error $\err{\phat(x)}$ shrinks as the probability decreases
-% 		\item relative error in the estimate is $1/\sqrt{\phat(x)T\delta x}$ grows as the event becomes rarer
-% 		\item consistent with our claim, that low probabilities come with larger relative errors
-% 		\item[$\hookrightarrow$] Errors in probability estimates behave differently for low probabilities than for high probabilities: absolute errors are smaller for lower probabilities, but relative errors are larger
-% 	\ei
-% \end{frame}
+\begin{frame}%{Simulation}
+\begin{center}
+	\includegraphics[width=.75\textwidth]{../figs/dm_count_sim.pdf}\\
+	\quelle{$T = 100, \dx = 0.4$, estimates of \red{$\phat(x)$} in red, estimates with one standard error \blue{$\phat(x) + \err{\phat(x)}$} in blue.}
+\end{center}
+\end{frame}
 
 \section{Conclusion}
-
-
-
-
 \begin{frame}{Conclusion}
 \begin{columns}[T]
 \column{.5\textwidth}
@@ -447,17 +453,17 @@ Ergodicity Economics and PW
 \vfill
 \begin{itemize}
   \item testable prediction $\to$ Let's run an experiment!
-  \item Manuscript at \url{https://bit.ly/lml-pw-r1}
-  \item Interactive code at \url{https://bit.ly/lml-pw-count-b}    
+  \item Manuscript at \url{bit.ly/lml-pw-r1}
+  \item Interactive code at \url{bit.ly/lml-pw-count-b}    
 \end{itemize}
 % \vspace{1em}
 % \begin{center}
 % 	\includegraphics[width=.8\textwidth]{../../figs/Our_result_LocScale_vs_KT.pdf}
 % \end{center}
 
-\pause
-\centering
-\vfill
-{\Large \textsc{\textbf{Thank you for your attention!}}}
+% \pause
+% \centering
+% \vfill
+% {\Large \textsc{\textbf{Thank you for your attention!}}}
 
 \end{frame}
