@@ -420,7 +420,7 @@ arxiv=abs,												% Link to arXiv abstract Seite
 url=true,doi=true,eprint=true,		% print url,doi,eprint
 useprefix=true,										% Berücksichtigung der von, van, de, etc.
 mincrossrefs=0,										% Min. Anzahl ab der ein crossref auch ins LitVz kommt
-maxcitenames=4,										% Ab wann wird et alii gesetzt
+maxcitenames=2,										% Ab wann wird et alii gesetzt
 mincitenames=1,										% Auf wie viele wird mit et alii reduziert
 maxbibnames=5,									% Autorenanzahl auf X begrenzt im LitVz
 % minbibnames=10									% Angabe wie vieler Autoren nach Schnitt
@@ -434,7 +434,7 @@ maxbibnames=5,									% Autorenanzahl auf X begrenzt im LitVz
 \def\blx@maxline{77}
 \makeatother
 
-\addbibresource{../../../LML_bibliography/bibliography}
+\addbibresource{../../LML_bibliography/bibliography}
 
 \renewbibmacro{in:}{}					% print no 'In:' before the <Journal Name>'	
 \DeclareFieldFormat{url}{\textsf{URL:}\space\url{#1}}

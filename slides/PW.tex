@@ -1,43 +1,32 @@
-\begin{frame}
-%[allowframebreaks]
-{Evolution of Decision Criteria : Ensemble Average Maintenance}{Work in progress}
-
-\begin{align*} \elabel{EvoDTs}
-	&	\text{Expectation Value Theory:} &\EV{\D X}	&= \sum_{n=1}^{\infty}
-	&	\underbrace{\Dx_n\strut}_{\text{absolute payout}\strut} &\cdot
-	&	\underbrace{p_n\strut}_{\text{objective probability}\strut}\\
-	%
-	\elabel{EvoDTs2}
-	&	\text{Expected Utility Theory:} &\EV{\Du\left(X\right)}	&= \sum_{n=1}^{\infty}
-	&	\underbrace{\red{\D u\left(x_n\right)}\strut}_{\text{function of Wealth}\strut} 	&	\cdot
-	&	\underbrace{p_n\strut}_{\text{objective probability}\strut}  \\
-	%
-	\elabel{EvoDTs3}
-	&	\text{Cumulative Prospect Theory:} &\mathfrak{V}\left( f_X \right)
-	&=	\sum_{n=1}^{\infty} & \underbrace{\red{\mathfrak{v}\left(\Dx_n\right)}\strut}_{\text{function of the payout}\strut} &	\cdot &	\underbrace{\blue{\pi\left(p_n\right)}\strut}_{\text{function of obj. probability}\strut}
-\end{align*}
-
-% \vfill
-
-\gray{\footnotesize $x$ wealth, $\Dx$ payout, $p$ probability, $u$ utility function, $\mathfrak{V}$ value/prospect,\\
-$\mathfrak{v}$ value function, $\pi$ probability weighting, $f_X$ lottery/probability mass function of a random variable}
-
-\label{EvolutionDT}
-
-% \framebreak
-% 
-% \begin{align*}
-%  \elabel{EvoDTsEDU}
-% 	&	\text{Expected discounted utility:} &\EA{\beta^t\Du\left(X\right)}	&= \sum_{n=1}^{\infty}
-% 	&	\underbrace{\blue{\beta^t \D u\left(x_n\right)}\strut}_{\text{function of Wealth}\strut} 	&	\cdot
+% l	&	\underbrace{\red{\D u\left(x_n\right)}\strut}_{\text{function of Wealth}\strut} 	&	\cdot
 % 	&	\underbrace{p_n\strut}_{\text{objective probability}\strut}  \\
 % 	%
-% 	\elabel{EvoDTsBUT}
-% 	&	\text{Behavioural Utility:} &\mathfrak{V}\left( f_x \right)
-% 	&=	\sum_{n=1}^{\infty} & \underbrace{\blue{\mathfrak{v}\left(\Dx_n\right)}\strut}_{\text{function of the payout}\strut} &	\cdot &	\underbrace{\blue{\pi\left(p_n\right)}\strut}_{\text{function of obj. probability}\strut}
+% 	\elabel{EvoDTs3}
+% 	&	\text{Cumulative Prospect Theory:} &\mathfrak{V}\left( f_X \right)
+% 	&=	\sum_{n=1}^{\infty} & \underbrace{\red{\mathfrak{v}\left(\Dx_n\right)}\strut}_{\text{function of the payout}\strut} &	\cdot &	\underbrace{\blue{\pi\left(p_n\right)}\strut}_{\text{function of obj. probability}\strut}
 % \end{align*}
-
-\end{frame}
+% 
+% % \vfill
+% 
+% \gray{\footnotesize $x$ wealth, $\Dx$ payout, $p$ probability, $u$ utility function, $\mathfrak{V}$ value/prospect,\\
+% $\mathfrak{v}$ value function, $\pi$ probability weighting, $f_X$ lottery/probability mass function of a random variable}
+% 
+% \label{EvolutionDT}
+% 
+% % \framebreak
+% % 
+% % \begin{align*}
+% %  \elabel{EvoDTsEDU}
+% % 	&	\text{Expected discounted utility:} &\EA{\beta^t\Du\left(X\right)}	&= \sum_{n=1}^{\infty}
+% % 	&	\underbrace{\blue{\beta^t \D u\left(x_n\right)}\strut}_{\text{function of Wealth}\strut} 	&	\cdot
+% % 	&	\underbrace{p_n\strut}_{\text{objective probability}\strut}  \\
+% % 	%
+% % 	\elabel{EvoDTsBUT}
+% % 	&	\text{Behavioural Utility:} &\mathfrak{V}\left( f_x \right)
+% % 	&=	\sum_{n=1}^{\infty} & \underbrace{\blue{\mathfrak{v}\left(\Dx_n\right)}\strut}_{\text{function of the payout}\strut} &	\cdot &	\underbrace{\blue{\pi\left(p_n\right)}\strut}_{\text{function of obj. probability}\strut}
+% % \end{align*}
+% 
+% \end{frame}
 
 
 % \section[Probability Weighting]{What are weighting for? A mechanistic explanation of probability weighting}
@@ -46,10 +35,10 @@ $\mathfrak{v}$ value function, $\pi$ probability weighting, $f_X$ lottery/probab
 \begin{frame}{Main results}
 \begin{center}
 \only<1->{
-	\includegraphics[width=.45\textwidth]{../../figs/KT_result_nolegend.pdf}
+	\includegraphics[width=.45\textwidth]{../figs/KT_result_nolegend.pdf}
 	}
 \uncover<2>{
-\includegraphics[width=.45\textwidth]{../../figs/Our_result_nolegend.pdf}
+\includegraphics[width=.45\textwidth]{../figs/Our_result_nolegend.pdf}
 	}
 \end{center}
 
@@ -68,8 +57,10 @@ $\mathfrak{v}$ value function, $\pi$ probability weighting, $f_X$ lottery/probab
 
 \begin{columns}%[T]
 \column{0.5\textwidth}
-{\centering	\includegraphics[width=.9\textwidth]{../../figs/TK1992.pdf} }
-\parencite[p. 310, Fig. 1,relabelled axes]{TverskyKahneman1992}
+% {\centering	\includegraphics[width=.9\textwidth]{../figs/TK1992.pdf} }
+% \parencite[p. 310, Fig. 1,relabelled axes]{TverskyKahneman1992}
+{\centering	\includegraphics[width=.9\textwidth]{../figs/PB48.pdf} }
+\parencite[p. 188, Fig. 1, relabelled axes]{PrestonBaratta1948}
 
 \column{0.5\textwidth}
 \begin{itemize}
@@ -85,16 +76,33 @@ $\mathfrak{v}$ value function, $\pi$ probability weighting, $f_X$ lottery/probab
 	\item	\red{maladaptive irrational cognitive bias}
 \ei
 \vspace{1em}
-\begin{block}{In search of a mechanism}
+% \begin{block}{In search of a mechanism}
 	\begin{itemize}
 	  \item[$\hookrightarrow$] How does this pattern emerge?
   	\item[$\hookrightarrow$] Can we derive a functional form\\ 
 	(rather than fit a function)?
 	\end{itemize}
-\end{block}
+% \end{block}
 
 \end{columns}
 \end{frame}
+
+\section[Literature]{Related Literature}
+\begin{frame}{Related Literature}
+\begin{itemize}
+  \item TTBOOK no motivation of the functional form, all functions (and parameters therein) used in the literature have no meaning besides producing a fit
+  \item no stable mapping from $ p \to w$ \parencite{StewartETAL2015}
+  \item \textcite{UngemachETAL2009,WulffETAL2018} meta-analysis find all possible weighting curves
+  \item Description-experience gap, experimental design is a key confounder, \ie less overweighting in decisions-from-experience \parencite{HertwigETAL2004,HertwigErev2009}
+\end{itemize}
+
+Statistical explanations
+\begin{itemize}
+  \item 
+	\item PW as a Bayesian heuristic \parencite{Martins2006}
+\end{itemize}  
+\end{frame}
+
 
 \section{Setup}
 \begin{frame}{Setup}
@@ -122,7 +130,12 @@ Task: model payout, $x$, of a gamble as a random variable.
 	\vspace{1em}
 % 	\centering
 	DO assigns \red{PDF $p(x)$} \\
-  $\hookrightarrow$ \red{CDF $F_p(x)$}\\
+% 	probabilities\\
+  $\hookrightarrow$ \red{CDF $F_p(x)$}%\\
+%   \begin{equation} \elabel{DO_CDF}
+  $$  \red{F_p(x)=\int_{-\infty}^x p(s) \dif s} $$
+%   \end{equation}
+  
 \column{0.2\textwidth}
 % \centering
 % 	\includegraphics[height=3cm]{img/coinflip}
@@ -130,7 +143,10 @@ Task: model payout, $x$, of a gamble as a random variable.
 	\vspace{1em}
 % 	\centering
   DM assigns different \blue{PDF $w(x)$}\\
-  $\hookrightarrow$ \blue{CDF $F_w(x)$}\\
+%   weights\\
+  $\hookrightarrow$ \blue{CDF $F_w(x)$}%\\
+ $$ \blue{F_w(x)=\int_{-\infty}^x w(s) \dif s} $$
+  
 \end{columns}
 \end{frame}
 
@@ -140,17 +156,17 @@ Task: model payout, $x$, of a gamble as a random variable.
 
 \begin{frame}{Scales, Locations, Shapes}
 \centering
-	\includegraphics[width=0.78\textwidth]{../../figs/2GaussianPDFs2Scales2Locations.pdf}
+	\includegraphics[width=0.78\textwidth]{../figs/2GaussianPDFs2Scales2Locations.pdf}
 % 	\includegraphics[width=0.35\textwidth]{../../figs/pdfs_diff_scale_and_loc.pdf}
-	\includegraphics[width=0.42\textwidth]{../../figs/diff_shapes_Gauss_t.pdf}
+	\includegraphics[width=0.42\textwidth]{../figs/diff_shapes_Gauss_t.pdf}
 \end{frame}
 
 \begin{frame}{Thought Experiment: DM assumes greater scale}
 \centering
-	\includegraphics[width=.35\textwidth]{../../figs/2GaussianPDFs2Scales.pdf} \\
+	\includegraphics[width=.35\textwidth]{../figs/2GaussianPDFs2Scales.pdf} \\
 % 2. Corresponding CDFs\\
 % \only<2>{
-	\includegraphics[width=.8\textwidth]{../../figs/mapping_cdfs_noarrows.pdf} \\
+	\includegraphics[width=.8\textwidth]{../figs/mapping_cdfs_noarrows.pdf} \\
 % 	}
 % 3. Add arrows to CDFs\\
 % \only<3>{
@@ -224,7 +240,7 @@ where
 
 \begin{frame}{Interim conclusion}
 \label{InterimConclusion}
-\centering \includegraphics[width=0.9\textwidth]{../../figs/KT_vs_Our_result_LocScale.pdf}
+\centering \includegraphics[width=0.9\textwidth]{../figs/KT_vs_Our_result_LocScale.pdf}
 
 % \vspace{2em}
 \bi
@@ -345,7 +361,7 @@ To avoid surprises, DMs \blue{add estimation uncertainty $\err{\phat(x)}$} to ev
 \pause
 % \ldots visually similar to function chosen by Kahneman and Tversky.
 \centering
-	\includegraphics[width=.9\textwidth]{../../figs/square_root_error_1Gaussian.pdf} \\
+	\includegraphics[width=.9\textwidth]{../figs/square_root_error_1Gaussian.pdf} \\
 \end{frame}
 
 
