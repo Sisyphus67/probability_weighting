@@ -79,6 +79,7 @@
 \vspace{1em}
 \red{Classical interpretation of PW:}
 \bi
+	\item as a cognitive process
 	\item	\red{maladaptive irrational cognitive bias}
 \ei
 \vspace{1em}
@@ -99,14 +100,15 @@
   \item no motivation of the functional form of weighting curve other than fit
   \item origin of PW preferences? no stable mappings \parencite{StewartETAL2015} 
   \item experimental design is a key confounder $\rightarrow$ description-experience gap, \ie less (even under-) overweighting in decisions-from-experience \parencite{HertwigETAL2004,HertwigErev2009}
-  \item meta-analyses find all possible weighting curves \parencites[][Tab. 9]{UngemachETAL2009,WulffETAL2018} 
+  \item meta-analyses find all possible weighting curves \parencites[][Tab. 9]{UngemachETAL2009,WulffETAL2018}
+  \item non-human animals \parencite{TrimmerETAL2011,AndrewsETAL2018,ConstantinopleETAL2019}
 \end{itemize}
 \vspace{1em}
 Statistical explanations
 \begin{itemize}
-  \item PW due to biased estimation \parencite{FoxHadar2006}
-  \item PW is optimal in sequential learning problems \parencite{SeoETAL2019}
-	\item PW heuristic as an approximate Bayesian solution for the inference problem \parencite{Martins2006}
+  \item PW maladaptive, due to biased estimation \parencite{FoxHadar2006}
+  \item PW adaptive in sequential learning problems \parencite{SeoETAL2019}
+	\item PW adaptive heuristic as an approximate Bayesian solution for the inference problem \parencite{Martins2006}
 \end{itemize}  
 \bc $\hookrightarrow$ reproducibility, context dependence, (mal)adaptive \ec 
 \end{frame}
@@ -224,6 +226,7 @@ Numerically feasible for arbitrary distributions:
 \begin{frame}{Functional form of the weighting function}
 Gaussian case with different scale:
 \begin{equation}
+\nn
 	w(p) =
 % 	\underbrace{
 	p^{\frac{1}{\alpha^2}}
@@ -239,7 +242,7 @@ where
 \begin{itemize}
   \item DO's scale is $\sigma$, $\red{X \sim \ND\left(\mu,\sigma^2\right)}$
   \item DM's scale is $\alpha\sigma$, $\blue{X \sim \ND\left(\mu,(\alpha\sigma)^2\right)}$
-  \item DO uses greater uncertainty $\alpha < 1 \to$ S shape
+  \item DO uses greater uncertainty $\alpha < 1 \to$ regular-S shape
   \item DM uses greater uncertainty $\alpha > 1 \to	$ inverse-S shape
   \item uncertainty measured by the standard deviation
 \end{itemize}
@@ -247,21 +250,24 @@ where
 
 \begin{frame}{Functional Forms}
 % \hyperlink{InterimConclusion}{\beamerreturnbutton{Gaussian}}} \label{FunctionalForms}
-\textcite[$\gamma = 0.68$]{TverskyKahneman1992}
+(EE mechanism) Gaussian case:
+\be \elabel{w_of_p}
+\boxed{
+w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha}
+}
+\ee
+% which is a power law in $p$ with a pre-factor to ensure normalisation.
+
+\textcite[$\gamma = 0.68$]{TverskyKahneman1992}:
 \be \label{correspondence}
 	F^{TK}_w\left(F_p; \gamma\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(F_p\right)^\gamma+\left(1-F_p\right)^\gamma\right]^{1/\gamma}}
 \ee
 
-\textcite{LattimoreBakerWitte1992}
+\textcite{LattimoreBakerWitte1992}:
 \be \label{LattimoreFunction}
 F^{L}_w\left(F_p; \delta,\gamma\right) =\frac{\delta F_p^{\gamma}}{\delta F_p^{\gamma} + \left(1-F_p\right)^{\gamma}}
 \ee
 
-Gaussian case with greater DM scale $\alpha \sigma$
-\be \elabel{w_of_p}
-w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
-\ee
-which is a power law in $p$ with a pre-factor to ensure normalisation
 \end{frame}
 
 \section{Fitting Functions}
@@ -302,12 +308,18 @@ which is a power law in $p$ with a pre-factor to ensure normalisation
 	What happens to me \\
 	\blue{on average over time}?
 \end{columns}
+\vspace{1em}
+\pause
+\bi
+\item[$\hookrightarrow$] Broken ergodicity is more fundamental than being just about \textit{correct} behavioural models
+\item broken ergodicity leads to a collision of ensemble and time perspective 
+in mathematical statements like $F_w(F_p)$ \ei
 \end{frame}
 
 
 \section{Estimation}
 
-\begin{frame}{Why DM's greater scale?}
+\begin{frame}{Reasons for different uncertainty models}
 %DM's adaptive rationality: err on the side of caution:
 \begin{itemize}
   \item DM has no control over experiment
@@ -323,21 +335,23 @@ which is a power law in $p$ with a pre-factor to ensure normalisation
 
 \begin{itemize}
  \item ``probability'' is polysemous
- \item \quelle{natural frequencies \textquote{10 out of 100} vs 10\% \parencite{Gigerenzer1991,Gigerenzer2018,HertwigGigerenzer1999}}
+ \item natural frequencies: \textquote{10 out of 100} vs 10\% \quelle{\parencite{Gigerenzer1991,Gigerenzer2018,HertwigGigerenzer1999}}
   \item probabilities are not observable
   \item probabilities encountered as
   	\begin{itemize}
   		\item known frequencies in ensemble of experiments (DO)
   		\item frequencies estimated over time (DM)
   	\end{itemize}
-  \item[$\hookrightarrow$] \textbf{estimates have uncertainties -- cautious DM accounts for these}
+  \item[$\hookrightarrow$] \textbf{estimates have uncertainties}
+  \item[$\hookrightarrow$] \textbf{cautious (rational?) DM accounts for these uncertainties}
+  \item[$\hookrightarrow$] \textbf{small probabilities come with large relative uncertainties}
 %  \item typical situation: rarer event $\longrightarrow$ larger relative error estimated probability
 
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Estimating probabilities}
+\begin{frame}{probabilities are not observable, but counts are}{Estimating probabilities}
 \begin{columns}[T]
 \column{0.5\textwidth}
 \textbf{Rare Event} %\hfill \includegraphics[height=1.5cm]{img/BlackSwan} \hfill
@@ -360,7 +374,9 @@ which is a power law in $p$ with a pre-factor to ensure normalisation
 \end{columns}
 \vspace{2em}
  \centering
-$\hookrightarrow$ small $p(x)$, small count $\rightarrow$ big uncertainty
+\boxed{
+$\hookrightarrow$ \blue{small $p(x)$, small count $\rightarrow$ big uncertainty}
+}
 \end{frame}
 
 
@@ -388,9 +404,9 @@ $\hookrightarrow$ small $p(x)$, small count $\rightarrow$ big uncertainty
 % \end{frame}
 
 \begin{frame}{Scaling of uncertainty: small count $\rightarrow$ big uncertainty}
-\begin{enumerate}
+\begin{enumerate}[<+->]
   \item scaling of counts $n(x)$:
-  	$$n(x) \sim p(x)\dx T \quad \Longleftrightarrow \quad p(x) \sim \nicefrac{n(x)}{T\dx}$$
+  	$$n(x) \sim p(x)\dx T \pause \quad \Longleftrightarrow \quad p(x) \sim \nicefrac{n(x)}{T\dx}$$
   \item uncertainty in Poisson-distributed counts $\sim \sqrt{n(x)}$
   \item estimate of the asymptotic probability density
   \begin{equation}
@@ -402,7 +418,7 @@ $\hookrightarrow$ small $p(x)$, small count $\rightarrow$ big uncertainty
   \end{equation}
   \item standard error $ \lim\limits_{p(x) \to 0} \sqrt{\phat(x)/T \delta x}$ in $\phat$ shrinks
   \item relative error in the estimate $\lim\limits_{p(x) \to 0} 1/\sqrt{\phat(x)T\delta x}$ grows,
-  \item   $\lim_{T \to \infty} \phat \to p$ 
+  \item \textbf{\blue{Prediction:}}  $\lim_{T \to \infty} \phat \to p$ 
   \hspace{2cm} 
 \end{enumerate}
 \end{frame}
@@ -426,6 +442,8 @@ To avoid surprises, DMs \blue{add estimation uncertainty $\err{\phat(x)}$} to ev
 \end{center}
 \end{frame}
 
+\frame{Switch to sketch of experimental design}
+
 \section{Conclusion}
 \begin{frame}{Conclusion}
 \begin{columns}[T]
@@ -439,7 +457,7 @@ Classical interpretation of PW
 \column{.5\textwidth}
 Ergodicity Economics and PW
 \begin{itemize}
-  \item inverse-S shape: neutral indicator of different models of the world
+  \item inverse-S shape: neutral indicator of different models of uncertainty
 %   \item relative probability estimation errors are greater for rarer events
 	\item reported observations consistent with DM's extra uncertainty
 	\item may arise from DM estimating probabilities over time
@@ -452,7 +470,7 @@ Ergodicity Economics and PW
 \end{columns}
 \vfill
 \begin{itemize}
-  \item testable prediction $\to$ Let's run an experiment!
+  \item testable prediction(s) $\to$ Let's run an experiment!
   \item Manuscript at \url{bit.ly/lml-pw-r1}
   \item Interactive code at \url{bit.ly/lml-pw-count-b}    
 \end{itemize}
