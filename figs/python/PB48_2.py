@@ -15,8 +15,8 @@ fig.tight_layout(pad=3)
 #plot
 axes.plot(xx, xx, '--k', label=r'')
 axes.plot(PB1948[:, 0], PB1948[:, 1], 'ok', markersize=5)
-axes.set_xlabel(r'CDF $F_p$')
-axes.set_ylabel(r'decision weights CDF $F_w$')
+axes.set_xlabel(r'Probability')
+axes.set_ylabel(r'Weight')
 axes.set_xticks(np.arange(0, 1.1, step=0.2))
 axes.set_yticks(np.arange(0, 1.1, step=0.2))
 
