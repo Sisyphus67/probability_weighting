@@ -226,7 +226,7 @@ D81 	% Criteria for decision making under Risk and Uncertainty
 
 \section{Introduction}
 \textit{Probability weighting} is a concept that originated in psychology, going back at least to \textcite{PrestonBaratta1948}.
-It was later popularised as a key feature of models in behavioural economics such as prospect theory \parencite{KahnemanTversky1979,TverskyKahneman1992}.
+It was later popularised as a key feature of models in behavioural economics, such as prospect theory \parencite{KahnemanTversky1979} and cumulative prospect theory \parencite{TverskyKahneman1992}.
 We conceptualise probability weighting as a pattern of caution with respect to formal models.
 This is best explained by a thought experiment, in which  
 \bi
@@ -237,20 +237,22 @@ that an event occurs with some probability. The DO observes the DM's behaviour (
 % 
 \bi
 	\item By ``\textit{probabilities,}'' expressed as probability density functions (PDFs) and denoted $p(x)$, we will mean the numbers specified by a DO.
-	\item By ``\textit{decision weights,}'' also expressed as PDFs and denoted $w(x)$, we will mean the numbers that best describe the behaviour of a DM in the DO's behavioural model.\footnote{In the literature, decision weights are not always normalised, but for simplicity we will work with normalised decision weights. Mathematically speaking, they are therefore proper probabilities even though we don't call them that. Our results are unaffected because normalising just means dividing by a constant (the sum or integral of the non-normalised decision weights).}
+	\item By ``\textit{weights,}'' also expressed as PDFs and denoted $w(x)$, we will mean the numbers that best describe the behaviour of a DM in the DO's behavioural model.\footnote{In the literature, weights are not always normalised, but for simplicity we will work with normalised weights. Mathematically speaking, they are therefore proper probabilities even though we don't call them that. Our results are unaffected because normalising just means dividing by a constant (the sum or integral of the unnormalised weights).}
 \ei
 Here, $x$ is a realisation of a random variable, $X$. For example, $X$ might be the payout of a gamble which the DM is invited to accept or decline.
 
-Different behavioural models may result in different inferred decision weights. Our focus is not on how these weights are inferred, but on the robust observation that decision weights, $w(x)$ (used by DMs), are higher than probabilities, $p(x)$ (declared by DOs), for extreme events, \ie when $p(x)$ is small. Thus, we do not consider any specific behavioural model: our aim is to find a general mechanistic explanation for probability weighting.
+\AA{The main nomenclature change must start in the above para. I may have a stab at this in the morning.}
+
+Different behavioural models may result in different inferred weights. Our focus is not on how these weights are inferred, but on the robust observation that weights, $w(x)$, are higher than probabilities, $p(x)$, for extreme events, \ie when $p(x)$ is small. Thus, we do not consider any specific behavioural model: our aim is to find a general mechanistic explanation for probability weighting.
 
 Probability weighting is often summarised visually by comparing 
 \bi
-\item cumulative density functions (CDFs) for probabilities, denoted 
+\item cumulative probabilities, denoted 
 \be
 \elabel{DO_CDF}
 F_p(x)=\int_{-\infty}^x p(s) ds~,
 \ee
-\item and CDFs for decision weights, denoted
+\item and cumulative weights, denoted
 \be
 \elabel{DM_CDF}
 F_w(x)=\int_{-\infty}^x w(s) ds~.
@@ -260,23 +262,23 @@ In \fref{PB1948} we produce such a visual summary of the data in \textcite[188]{
 %\begin{figure}[!htb]
 %\centering
 %\includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
-%\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p.~310, Fig. 1, relabelled axes]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
+%\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p.~310, Fig. 1, relabelled axes]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
 %\flabel{TK1992}
 %\end{figure}
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/PB48_2.pdf}
-\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite{PrestonBaratta1948}, the first to empirically document probability weighting (they refer to the objective probabilities as `mathematical probabilities' and to the decision weights as `psychological probabilities'). 
-Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. This qualitative relationship is referred to as an ``inverse-S shape.''}
+\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite{PrestonBaratta1948}, the first to empirically document probability weighting (they refer to the objective probabilities as `mathematical probabilities' and to the weights as `psychological probabilities'). 
+Low cumulative probabilities (left) are exceeded by their corresponding cumulative weights, and for high cumulative probabilities it's the other way around. This qualitative relationship is referred to as an ``inverse-S shape.''}
 \flabel{PB1948}
 \end{figure}
 
 Plotting $F_w$ as a function of $F_p$ generates a curve, whose most commonly observed shape we shall call the ``inverse-S'' (very noisy in \fref{PB1948}, but noise-free in \fref{mapping_cdfs}. The inverse-S is the main observational finding in probability weighting: it sits above the diagonal $F_w=F_p$ for events of low cumulative probability (such that $F_w>F_p$ for these events) and below the diagonal for events of high cumulative probability (such that $F_w<F_p$).
 
-As a final piece of nomenclature, we will use the terms \textit{location}, \textit{scale}, and \textit{shape} when discussing probability densities. 
+As a final piece of nomenclature, we will use the terms \textit{location}, \textit{scale}, and \textit{shape} when discussing probability density functions. 
 %Consider a standard normal distribution $\ND(0,1)$, whose parameters indicate location 0 and squared scale 1 (for a Gaussian, the location is the mean and scale is the standard deviation). 
-In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the \textit{shape} of the distribution:
-For a general random variable $X$, with arbitrary location parameter $\mu_X$ and scale parameter $\sigma_X$, the following transformation produces a standardised random variable with identically-shaped distribution, but with location $\mu_Z=0$ and scale $\sigma_Z=1$:
+In a plot of a density function, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the \textit{shape} of the distribution:
+For a general random variable $X$, with arbitrary location parameter $\mu_X$ and scale parameter $\sigma_X$, the following transformation produces a standardised random variable with an identically-shaped density function, but with location $\mu_Z=0$ and scale $\sigma_Z=1$:
 %
 \be
 Z = \frac{X-\overbrace{\mu_X \mathstrut}^{\text{location}}}{\underbrace{\sigma_X\mathstrut}_{\text{scale}}}~.
@@ -315,10 +317,8 @@ EUT distorts monetary amounts to reflect people's apparent psychological risk av
 Axiomatisations of EUT by \textcite{vonNeumannMorgenstern1944} and \textcite{Savage1954} helped to establish EUT as a normative decision theory.
 
 % PW & CPT
-Despite its flexibility, EUT failed to fit some empirical observations, which prompted \textcite{PrestonBaratta1948}
-%An additional apparent distortion of probabilities has been reported as early as in \textcite[Fig. 1, p. 188]{PrestonBaratta1948}, 
-to introduce psychological distortions not of wealth but of probabilities.
-% \textquote{psychological probabilities} as a function of mathematical probabilities to reconcile experimental data with EVT.
+Despite its flexibility, EUT failed to fit some empirical observations, which prompted \textcite{PrestonBaratta1948} to introduce a psychological distortion not of wealth but of probabilities.
+%An additional apparent distortion of probabilities has been reported as early as in \textcite[Fig. 1, p. 188]{PrestonBaratta1948}, who introduced \textquote{psychological probabilities} as a function of mathematical probabilities to reconcile experimental data with EVT.
 Today, this alternative distortion is known as probability weighting and is the focus of our study.
 Probability weighting later found its way into descriptive decision theories such as prospect theory \parencite{KahnemanTversky1979} and then cumulative prospect theory (CPT) \parencite{TverskyKahneman1992}.
 %CPT combines the distortion of probabilities with EUT's distortion of monetary amounts, again leaving the structure of the optimand as a weighted sum intact.
@@ -328,7 +328,7 @@ Under the consensus interpretation, probability weighting is a systematic and ma
 %\subsubsection{Critiques of CPT} \seclabel{CPTCritiques}
 %Many studies question the validity of the CPT explanation of probability weighting. Some critiques concern the origin of the additional degrees of freedom. 
 %OP: unclear. References?
-As research continued, critiques of probability weighting emerged. With both monetary amounts and probabilities now transformed by freely chosen nonlinear functions, there is a risk of overfitting: parameters which fit past data well may fit new data poorly. Indeed, \textcite{StewartETAL2015} fail to find stable mappings from objective probabilities to subjective decision weights in individual DMs. They find that specific mappings depend on the choice environment and are influenced to a large extent by the sampling method.
+As research continued, critiques of probability weighting emerged. With both monetary amounts and probabilities now transformed by freely chosen nonlinear functions, there is a risk of overfitting: parameters which fit past data well may fit new data poorly. Indeed, \textcite{StewartETAL2015} fail to find stable mappings from objective probabilities to subjective weights in individual DMs. They find that specific mappings depend on the choice environment and are influenced to a large extent by the sampling method.
 % They do not question the psychological objective-to-subjective mappings of CPT in principle, but propose even more flexible models with context-dependent mappings for the involved transformations of utility and probability weighting. However, they conclude that the sampling involved in the decision making has a crucial effect (p. 701).
 
 % Description-Experience Gap
@@ -337,7 +337,7 @@ A key confounder turned out to be experimental design. Research under the headin
 %Such conflicting evidence is also found on a wide level in a meta-analytic review by \textcite[Tab. 9]{WulffETAL2018}, who report all possible forms of probability weighting curves. This clearly weakens any consensus about a typical inverse-S shape of the probability weighting curve.
 
 % Statistical explanations rather than psychological explanation of PW
-Decisions-from-experience studies emphasise statistical over psychological explanations of probability weighting. \textcite{Martins2006} interprets probability weighting as a heuristic that approximates a Bayesian solution to the problem of inferring probabilities from data. In line with our analysis, \textcite{SeoETAL2019} find that optimal decision weights for a DM deviate from true probabilities in a sequential learning problem, such that it is optimal to overstate small probabilities and understate large ones. \textcite{FoxHadar2006,UngemachETAL2009} report that probability weighting persists even after controlling for such effects, suggesting that a (much smaller residual) psychological component may still exist.
+Decisions-from-experience studies emphasise statistical over psychological explanations of probability weighting. \textcite{Martins2006} interprets probability weighting as a heuristic that approximates a Bayesian solution to the problem of inferring probabilities from data. In line with our analysis, \textcite{SeoETAL2019} find that optimal weights for a DM deviate from true probabilities in a sequential learning problem, such that it is optimal to overstate small probabilities and understate large ones. \textcite{FoxHadar2006,UngemachETAL2009} report that probability weighting persists even after controlling for such effects, suggesting that a (much smaller residual) psychological component may still exist.
 
 In short, recent studies raise questions about the reproducibility of probability weighting, its dependence on the details and context of decisions, and its interpretation as either a maladaptive psychological bias or a beneficial statistical heuristic. Our impression is that an empirical effect of apparent probability weighting exists, but it is less clear than early studies suggested, and, as we shall see, its interpretation as a maladaptive cognitive bias is questionable.
 
@@ -356,7 +356,7 @@ In our own work, ergodicity economics (EE), the DM's experience along a single t
 % our critique and should go to the end
 We offer a statistical explanation of probability weighting that applies to any situation where DO and DM have different uncertainties.
 
-%The mechanism we propose can generate mismatches between probabilities and decision weights which produce a variety of probability weighting curves, including the standard inverse-S curve (see \fref{mapping_cdfs}).
+%The mechanism we propose can generate mismatches between probabilities and weights which produce a variety of probability weighting curves, including the standard inverse-S curve (see \fref{mapping_cdfs}).
 %The inverse S is predicted whenever a DM cautiously incorporates more uncertainty into his model than a DO, which we imagine to be a commonly encountered scenario in experiments.
 %More specifically, we find the inverse-S when a DM cautiously adjusts a frequentist probability estimate to account for sampling errors.
 %Our statistical explanation suggests that this behaviour is a plausible strategy in decision making under uncertainty.
@@ -371,7 +371,9 @@ We offer a statistical explanation of probability weighting that applies to any 
 %\newpage
 
 \section{Probability weighting as a difference between models} \seclabel{ModelDiff}
-Behavioural economics interprets \fref{PB1948} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a stochastic model. Nor do we assume the DM to know ``the truth'' -- he has another stochastic model. From our perspective \fref{PB1948} merely shows that the two models differ. It says nothing about who is right or wrong.
+Behavioural economics interprets \fref{PB1948} as evidence for a cognitive bias of the DM, an error of judgement. We will keep a neutral stance. We don't assume the DO to know ``the truth'' -- he has a formal model. Nor do we assume the DM to know ``the truth'' -- he has another model, perhaps less formal, on which he bases his actions. From our perspective \fref{PB1948} merely shows that the two models differ. It says nothing about who is right or wrong.
+
+\AA{In the interests of diversity and clarity, let's make the DO male and the DM female.}
 
 \subsection{The inverse-S curve\seclabel{The_inverse}}
 \subsubsection{Tversky and Kahneman}
@@ -385,23 +387,25 @@ F^{TK}_w\left(F_p; \gamma\right) = \left(F_p\right)^\gamma \frac{1}{\left[\left(
 which maps from one CDF, $F_p$, to another, $F_w$. We note that no mechanistic motivation was given for fitting this specific family of CDF mappings, parametrised by $\gamma$. The motivation is purely phenomenological: with $\gamma<1$, this function can be made to fit to the data reasonably well.
 %\footnote{Note that the argument of $F^{TK}$ in \eref{correspondence} and $F^L$ in \eref{LattimoreFunction} is the value of a CDF, not the value of $x$.} 
 
-The function $F^{TK}_w\left(F_p; \gamma \right)$ has one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $F^{TK}_w\left(F_p\right)=F_p$. Further, $F^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point $1/2$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. We consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit.
+The function $F^{TK}_w\left(F_p; \gamma \right)$ has one free parameter, $\gamma$. For $\gamma=1$ it is the identity, and the CDFs coincide, $F^{TK}_w\left(F_p\right)=F_p$. Further, $F^{TK}_w$ has the following property: any curvature moves the intersection with the diagonal away from the mid-point, $(\tfrac{1}{2},\tfrac{1}{2})$. This means if the function is used to fit an inverse-S (where $\gamma<1$), the fitting procedure itself introduces a shift of the intersection to the left. We consider the key observation to be the inverse-S shape, whereas the shift to the left may be an artefact of the function chosen for the fit.
+
+\AA{We should show a plot of this inverse-S curve here, since we no longer show it in \fref{PB1948}. The above discussion is hard to follow without a visual reference. I suggest showing it fitted to the TK1992 data, since we reproduce this fit (without introduction) in \fref{Gauss_scale_location_both_KT}.}
 
 \subsubsection{Scale, location, and the inverse-S}
 We now make explicit how the robust qualitative observation of the inverse-S shape emerges when the DM uses a larger scale in his model than the DO.
 
 We illustrate this with a Gaussian distribution.
-Let's assume that a DO models a future change in wealth, $x$, as a Gaussian random variable with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM models this change as a Gaussian random variable with the same location, $\mu$, but with a greater scale, so that the variance is $(\alpha\sigma)^2$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{mapping_pdfs}.
+Let's assume that a DO models a future change in wealth, $x$, as a Gaussian random variable with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM models this change as a Gaussian random variable with the same location, $\mu$, but with a greater scale, such that the variance is $(\alpha\sigma)^2$ with $\alpha>1$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{mapping_pdfs}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{./figs/mapping_pdfs.pdf}
 \caption{\textbf{Mapping PDFs.} Left: probability density function (red), estimated by a DO; and decision-weight density function (blue), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the red line. The DM models $x$ with a greater scale (here 2 times greater, $\alpha=2$), and assumes the true frequency distribution is the blue line. Comparing the two curves, the DM appears to the DO as someone who overestimates probability densities where they are low and underestimates them when high, indicated by vertical arrows.
-Right: the difference between decision weights and probabilities can also be expressed by directly plotting, for any value of $x$, the decision weight \vs the probability observed at $x$. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right. They therefore start and end at identical vertical positions as on the left. Because of the non-linear distortion of the horizontal axis, they are shifted to different locations horizontally.}
+Right: the difference between weights and probabilities can also be expressed by directly plotting, for any value of $x$, the weight \vs the probability observed at $x$. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right. They therefore start and end at identical vertical positions as on the left. Because of the non-linear distortion of the horizontal axis, they are shifted to different locations horizontally.}
 \flabel{mapping_pdfs}
 \end{figure}
 
-If the DM uses a greater scale in his model, then decision weights are higher than probabilities where probability is low, and (because of normalisation) lower than probabilities where probability is high. 
-We can express this by plotting, for any value of $x$, the decision weight \vs the probability observed at $x$, right panel of \fref{mapping_pdfs}.
+If the DM uses a greater scale in his model, then weights are higher than probabilities where probability is low, and (because of normalisation) lower than probabilities where probability is high. 
+We can express this by plotting, for any value of $x$, the weight \vs the probability observed at $x$, right panel of \fref{mapping_pdfs}.
 
 In the Gaussian case we can write the distributions explicitly as
 \be
@@ -413,12 +417,14 @@ and
 p(x)=\frac{1}{\sqrt{2\pi \sigma^2}}\exp\left[\frac{-(x -\mu )^2}{2 \sigma^2}\right] ~.
 \elabel{p}
 \ee
-Eliminating $(x-\mu)^2$ from \eref{DecisionW} and \eref{p} yields the following expression for decision weight as a function of probability:
+Eliminating $(x-\mu)^2$ from \eref{DecisionW} and \eref{p} yields the following expression for weight as a function of probability:
 \be
 w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~.
 \elabel{w_of_p}
 \ee
-We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. $\alpha>1$ means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small densities and below it for large densities. $0<\alpha<1$ means that the DM uses a smaller standard deviation than the DO.
+We plot this in the right panel of \fref{mapping_pdfs}. As a sanity check, consider the shape of the $w(p)$ (blue curve, right panel \fref{mapping_pdfs}): for a given value of $\alpha$, it is just a power law in $p$ with some pre-factor that ensures normalization. $\alpha>1$ means that the DM uses a greater standard deviation than the DO. In this case, the exponent of $p$ satisfies $\frac{1}{\alpha^2}<1$, and the blue curve is above the diagonal for small densities and below it for large densities.
+
+If instead we had $0<\alpha<1$, it would mean that the DM uses a smaller standard deviation than the DO.
 This might occur, for example, if the DM is an ``insider'' with better information than the DO.
 It can also occur if the DO observes two DMs and expresses the inferred densities as a function of the model with the higher relative uncertainty of the two.
 Instead of an inverse-S shape, both cases would lead to an S-shaped curve, see \Appref{Scurve}.
@@ -430,7 +436,7 @@ Alternatively, we can express the identical information about the difference bet
 \caption{\textbf{Mapping CDFs.}
 Left: The DO models $x$ as a Gaussian-distributed random variable $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious and uses a wider Gaussian-distributed random variable $X \sim \ND(0,4)$ depicted by $F_w(x)$ (blue).
 %
-Following the vertical arrows (left to right), we see that for low values of $x$ (small cumulative probabilities) the DM's CDF is larger than the DO's CDF, $F_p(x) < F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; for large values of $x$ (large cumulative probabilities) the DM's CDF is lower than the DO's.
+Following the vertical arrows (left to right), we see that for low values of $x$ (small cumulative probabilities) the DM's CDF is larger than the DO's CDF, $F_p(x) < F_w(x)$; the curves coincide at $x=0$ because no difference in location is assumed; for large values of $x$ (large cumulative probabilities) the DM's CDF is lower than the DO's.
 Right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays the generic inverse-S shape known from prospect theory. The arrows start and end at the same vertical values as on the left.
 }
 \flabel{mapping_cdfs}
@@ -440,7 +446,7 @@ Right: the same CDFs as on the left but now plotted not against $x$ but against 
 
 \subsection{Different scales and locations\seclabel{A_mismatch}}
 
-In \fref{Gauss_scale_location_both_KT} we explore what happens if both the scales and the locations of the DO's and DM's models differ. Visually, this produces an excellent fit to empirical data, to which we will return in \secref{Fitting_the}.
+In \fref{Gauss_scale_location_both_KT} we explore what happens if both the scales and the locations of the DO's and DM's models differ. Visually, this produces an excellent fit to empirical data reported by \textcite{TverskyKahneman1992}, see also \secref{Fitting_the}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
@@ -452,14 +458,14 @@ A difference in assumed scales and locations, for simple Gaussian distributions,
 \FloatBarrier
 
 \subsection{Different shapes\seclabel{Different_shapes}}
-Numerically, our procedure can be applied to arbitrary distributions:
+Numerically, our procedure can be applied to arbitrary distributions. For a set of outcomes, $\{x_i\}$:
 \begin{enumerate}
 \item
-construct a list of values for the CDF assumed by the DO, $F_p(x)$.
+construct the list of cumulative probabilities assumed by the DO, $\{F_p(x_i)\}$;
 \item
-construct a list of values for the CDF assumed by the DM, $F_w(x)$.
+construct the list of cumulative weights used by the DM, $\{F_w(x_i)\}$; and
 \item
-plot $F_w(x)$ \vs $F_p(x)$.
+plot $\{F_w(x_i)\}$ \vs $\{F_p(x_i)\}$.
 \end{enumerate}
 Of course, the DM could even assume a distribution whose shape differs from that of the DO's distribution.
 The inverse-S arises whenever a DM assumes a greater scale for a unimodal distribution.
@@ -505,8 +511,8 @@ Commenting on another so-called cognitive bias regarding probabilities, the repr
 
 Whatever the answer, two observations are robust and interesting: first, disagreement is common; and, second, the disagreement tends to go in the same direction, with DMs assuming a greater range of plausible outcomes than DOs.
 
-An explanation for the first observation is that probability is a slippery concept and the word is used to mean different things. This suggests that phrasing information about probabilities concretely should reduce disagreement between DO and DM. For example, the statement ``10 out of 100 people have this disease'' conveys more, and more precise, information than ``the probability of having this disease is 0.1.'' Specifically, it tells us that a sample of people has been observed and what the size of the sample is.\footnote{This may contribute to an explanation of the observation of less overweighting in decisions-from-experience experiments reported in \textcite{HertwigETAL2004,HertwigErev2009}.} Furthermore, \textcite{Gigerenzer2018} argues that statements involving integer counts, or what he calls natural frequencies,  (``10 out of 100'') are more readily understood by people than statements involving fractional probabilities (``0.1'').%
-\footnote{There is a growing body of literature on \textit{how to make cognitive biases disappear} by changing the way probabilities are presented \parencite{Gigerenzer1991} or by controlling for estimation errors and other confounders, for an example from social cognition see \textcite{GalesicETAL2012}.}
+An explanation for the first observation is that probability is a slippery concept and the word is used to mean different things. This suggests that phrasing information about probabilities concretely should reduce disagreement between DO and DM. For example, the statement ``10 out of 100 people have this disease'' conveys more precise information than ``the probability of having this disease is 0.1.'' Specifically, it tells us that a sample of people has been observed and what the size of the sample is.\footnote{This may contribute to an explanation of the observation of less overweighting in decisions-from-experience experiments reported in \textcite{HertwigETAL2004,HertwigErev2009}.} Furthermore, \textcite{Gigerenzer2018} argues that statements involving integer counts, or what he calls natural frequencies,  (``10 out of 100'') are more readily understood by people than statements involving fractional probabilities (``0.1'').%
+\footnote{There is a growing body of literature on how to make cognitive biases disappear by changing the way probabilities are presented \parencite{Gigerenzer1991} or by controlling for estimation errors and other confounders, for an example from social cognition see \textcite{GalesicETAL2012}.}
 
 The second observation may be explained as follows. A DO often has control over, and essentially perfect knowledge of, the decision problem he poses. A DM does not have such knowledge, and this ignorance will often translate into additional assumed uncertainty. For example, the DO may know the true probabilities of some gamble in an experiment, while the DM may have doubts about the DO's sincerity and his own understanding of the rules of the game. We will return to this in \secref{condition2}.
 
@@ -514,9 +520,8 @@ The second observation may be explained as follows. A DO often has control over,
 Many thousands of pages have been written about the meaning of probability. We will not attempt a summary of the philosophical debate and instead highlight a few relevant points. Their commonality is that although behavioural models often contain probabilities as parameters, probabilities are not directly observable but must be inferred from counts.
 
 \subsubsection*{Frequency-in-an-ensemble interpretation of probability}
-Consider the simple probabilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.''
-
-It is thus a statement about a model. How exactly it is linked to physical reality is not completely clear.
+Consider the simple probabilistic statement: ``the probability of rain here tomorrow is 70\%.'' Tomorrow only happens once, so one might ask: in 70\% of what will it rain? The technical answer to this question is often: rain happens in 70\% of the members of an ensemble of computer simulations, run by a weather service, of what may happen tomorrow. So one interpretation of ``probability'' is ``relative frequency in a hypothetical ensemble of simulated possible futures.'' It is thus a statement about a model.
+%How exactly it is linked to physical reality is not completely clear.
 
 \subsubsection*{Frequency-over-time interpretation of probability}
 In some situations, the statement ``the probability of rain here tomorrow is 70\%'' refers to the relative frequency over time. Before the advent of computer models in weather forecasting, people used to compare today's measurements (of, say, wind and pressure) to those from the past -- weeks, months, or even years earlier. Forecasts were made on the assumption that the weather tomorrow would resemble the weather that had followed similar conditions in the historical record.
@@ -536,7 +541,7 @@ For our purpose it suffices to say that there's no guarantee that a probabilisti
 \subsubsection*{Estimation errors for probabilities}
 Let's assume that both the DO and the DM mean by ``probability'' the relative frequency of an event in an infinitely long time series of observations. Of course, real time series have finite length, so probabilities defined this way are model parameters and cannot actually be observed. But, from a real time series, we can estimate the best values to put into a model, by counting how often we see an event.
 
-As the probability of an event gets smaller, so does the number of times we see it in a finite time series. If we want to say something about the uncertainty in this number, we can measure it -- or imagine measuring it -- in several time series to see how much it varies. The variations from one time series to another get smaller for rarer events, but the \textit{relative} variations get larger, and so does the relative uncertainty in our estimate of probabilities. Take an extreme simplified example: asymptotically an event occurs in 0.1\% of observations, and we have a time series of 100 observations.
+As the probability of an event gets smaller, so does the number of times we count it in a finite time series. If we want to say something about the uncertainty in this number, we can measure it -- or imagine measuring it -- in several time series to see how much it varies. The variations in count from one time series to another get smaller for rarer events, but the \textit{relative} variations get larger, and so does the relative uncertainty in our estimate of probabilities. Take an extreme simplified example: asymptotically an event occurs in 0.1\% of observations, and we have a time series of 100 observations.
 Around 99.5\% of such time series will contain 0 or 1 events. Na\"{i}vely, then, we would estimate the probability as either 0 or 1\%. In other words, we would estimate the event as either impossible or occurring ten times more frequently than it really would in a long series. However, if the event occurs 50\% of the time asymptotically, then around 99.5\% of time series would contain between 35 and 65 events, leading to a much smaller relative error in probability estimates.
 
 A DM who must estimate probabilities from observations is well advised to account for this behaviour of uncertainties in his decision making. Specifically, the DM should acknowledge that, due to his lack of information, \textit{prima facie} rare events may be rather more common than his data suggest, while common events, being revealed more often, are more easily characterised. In such circumstances, caution may dictate that the DM assign to rare events higher probabilities than his estimates, commensurate with his uncertainty in them. This would look like probability weighting to a DO and, indeed, would constitute a mechanistic reason for it.\footnote{Interestingly, \textcite[281]{KahnemanTversky1979} made the same point, noting that ``overestimation that is commonly found in the assessment of the probability of rare events'' has the same effect on human decisions as probability weighting. Since they assumed that subjects in experiments adopt unquestioningly the stated probabilities, they argued that probability weighting was necessary to explain their observations. We make no such assumption here.}
@@ -563,7 +568,7 @@ as its uncertainty, which we have expressed in terms of the estimate itself.
 
 The standard error, $ \sqrt{\phat(x)/T \delta x}$, in an estimated probability density shrinks as the density decreases. However, the relative error in the estimate is $1/\sqrt{\phat(x)T\delta x}$, which grows as the event becomes rarer. This is consistent with our claim, that low densities come with larger relative errors, and constitutes the key message of this section. Errors in density estimates behave differently for low densities than for high densities: absolute errors are smaller for lower densities, but relative errors are larger.\footnote{This argument is true for any distribution. \textcite[537-8]{HertwigETAL2004} make the same argument for the special case of a binomial distribution.}
 
-Let's assume that the DM is aware of the uncertainties in his estimates and, furthermore, that he does not like surprises. To avoid surprises, he adds the standard error to his estimate of the probability density, $\phat(x)$, in order to construct his decision weight density, $w(x)$. In effect, he constructs a reasonable worst case for each of his estimates. After normalising, this conservative strategy yields generically,
+Let's assume that the DM is aware of the uncertainties in his estimates and, furthermore, that he does not like surprises. To avoid surprises, he adds the standard error to his estimate of the probability density, $\phat(x)$, in order to construct his weight density, $w(x)$. In effect, he constructs a reasonable worst case for each of his estimates. After normalising, this conservative strategy yields generically,
 \be
 w(x) = \frac{\phat(x)+\err{\phat(x)}}{\int_{-\infty}^{\infty}\left(\phat(s)+\err{\phat(s)}\right)ds}~,
 \elabel{weight_density_gen}
@@ -582,21 +587,21 @@ Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_den
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/square_root_error.pdf}
-\caption{\textbf{Mapping PDFs and CDFs with estimation errors.} PDFs (left) and inverse-S curves (right) arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a $t$-distribution (shape 2, location 0, bottom line), and the DM uses decision weights according to \eref{weight_density_spec} with $T\delta x=10$. For the fat-tailed $t$-distribution (in the bottom line) the difference between $p(x)$ and $w(x)$ is more pronounced.}
+\caption{\textbf{Mapping PDFs and CDFs with estimation errors.} PDFs (left) and inverse-S curves (right) arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a $t$-distribution (shape 2, location 0, bottom line), and the DM uses weights according to \eref{weight_density_spec} with $T\delta x=10$. For the fat-tailed $t$-distribution (in the bottom line) the difference between $p(x)$ and $w(x)$ is more pronounced.}
 \flabel{square_root_error}
 \end{figure}
 
-\Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which he counts into bins. In the simulation, a probability density, $\phat(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err{\phat(x)}$, is obtained numerically as the standard deviation in each $\phat(x)$ over 1000 parallel simulations. The DM's decision weights are then obtained according to \eref{weight_density_gen}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
+\Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which he counts into bins. In the simulation, a probability density, $\phat(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err{\phat(x)}$, is obtained numerically as the standard deviation in each $\phat(x)$ over 1000 parallel simulations. The DM's weights are then obtained according to \eref{weight_density_gen}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/dm_count_sim.pdf}
-\caption{\textbf{Simulations of a DM estimating probability densities by counting events in a finite series of observations.} Left: estimated probability densities for $T=100$ Gaussian (top; location 0, scale 2) and $t$-distributed (bottom; location 0, scale 1, shape 1.5) variates counted in bins of width $\delta x=0.4$. Red bars show the estimates, $\phat(x)$, and blue bars show the estimates with one standard error added, $\phat(x)+\err{\phat(x)}$. Right: inverse-S curves for a DO who assumes $p(x)$ follows a Gaussian (top) and $t$-distribution (bottom), while the DM uses decision weight density, $w(x)$, derived by normalising his conservative estimates (blue bars on left) according to \eref{weight_density_gen}.
+\caption{\textbf{Simulations of a DM estimating probability densities by counting events in a finite series of observations.} Left: estimated probability densities for $T=100$ Gaussian (top; location 0, scale 2) and $t$-distributed (bottom; location 0, scale 1, shape 1.5) variates counted in bins of width $\delta x=0.4$. Red bars show the estimates, $\phat(x)$, and blue bars show the estimates with one standard error added, $\phat(x)+\err{\phat(x)}$. Right: inverse-S curves for a DO who assumes $p(x)$ follows a Gaussian (top) and $t$-distribution (bottom), while the DM uses weight density, $w(x)$, derived by normalising his conservative estimates (blue bars on left) according to \eref{weight_density_gen}.
 }
 \flabel{dm_count_sim}
 \end{figure}
 
 \subsubsection{Typical situations of DO and DM: ergodicity}
-To recap: behavioural economists observe that DOs tend to assign lower decision weights to low probabilities than DMs. While behavioural economists commonly assume that the DM is wrong, we make no such judgement. In any decision problem, the aim of the decision must be taken into account. Crucially, this aim depends on the situation of the individual.
+To recap: behavioural economists observe that DOs tend to assign lower weights to low probabilities than DMs. While behavioural economists commonly assume that the DM is wrong, we make no such judgement. In any decision problem, the aim of the decision must be taken into account. Crucially, this aim depends on the situation of the individual.
 
 The two types of modellers (DO and DM) pursue different goals. In our thought experiment, the DO is a behavioural scientist without personal exposure to the success or failure of the DM, whom we imagine as a test subject or someone whose behaviour is being observed in the wild. The DM, of course, has such exposure. Throughout the history of economics, it has been a common mistake, by DOs, to assume that DMs optimise what happens to them on average in an ensemble. To the DM, what happens to the ensemble is seldom a primary concern. Instead, he is concerned with what happens to him over time. Not distinguishing between these two perspectives is only permissible if they lead to identical predictions, meaning only if the relevant observables are ergodic \parencite{Peters2019b}.
 
@@ -661,7 +666,7 @@ It also calls for caution against cavalierly presuming a behavioral bias: starti
 
 The term ``probability weighting'' suggests an obscure mental process, where a DM carries out operations on probabilities. It seems more natural to us to consider a DM modelling events about whose probabilities he is unsure. From this latter point of view, it is easy to think of reasons for a DM's model to differ from a DO's. DMs will often have cause to include additional uncertainty, leading to the frequently observed inverse-S curve.
 
-The model of estimating probabilities from real time series, which we discuss in \secref{Reasons_for}, has qualitative features that display a degree of universality. Relative errors in the DM's probability estimates are always greater for rarer events. A dislike of the unexpected, which explains the systematic overestimation of low probabilities, is similarly common. ``Probability weighting'' is purely descriptive and comes with the ill-conceived connotation of DMs suffering from a cognitive error. The phenomenon is better thought of as DMs making wise decisions given the information available to them. Such information is necessarily limited because, for example, DMs are constrained to collect such information in time.
+The model of estimating probabilities from real time series, which we discuss in \secref{Reasons_for}, has qualitative features that display a degree of universality. Relative errors in the DM's probability estimates are always greater for rarer events. A dislike of the unexpected, which explains the systematic overestimation of low probabilities, is similarly common. ``Probability weighting'' is purely descriptive and comes with the unwarranted connotation of DMs suffering from cognitive errors. The same phenomenon may be well characterised as DMs making wise decisions given the information available to them. Such information is necessarily limited because, for example, DMs are constrained to collect such information over time.
 
 \newpage
 \printbibliography
@@ -672,7 +677,7 @@ The model of estimating probabilities from real time series, which we discuss in
 \section{Inverse-S from relative errors in probabilities}
 \seclabel{relative_errors}
 
-For an inverse-S curve to emerge, small probability densities have to be overestimated ($w>p$) and large ones underestimated ($w<p$), as is indeed the case, for example in \fref{square_root_error}. Let's connect this statement to one about relative uncertainties. The decision weight is arrived at by adding the probability density $p(x)$ to its uncertainty $\err{p(x)}$ and normalising, as we did in \eref{weight_density_gen}, \ie
+For an inverse-S curve to emerge, small probability densities have to be overestimated ($w>p$) and large ones underestimated ($w<p$), as is indeed the case, for example in \fref{square_root_error}. Let's connect this statement to one about relative uncertainties. The weight is arrived at by adding the probability density $p(x)$ to its uncertainty $\err{p(x)}$ and normalising, as we did in \eref{weight_density_gen}, \ie
 \be
 w(x)=\frac{p(x)+\err{p(x)}}{\int_{-\infty}^{\infty} \left( p(s)+\err{p(s)} \right) ds}~.
 \ee
@@ -693,7 +698,7 @@ we see that $w(x)=p(x)$ when $\frac{\err{p}}{p}=\ave{\frac{\err{p}}{p}}.$
 \section{Cases of a regular S}
 \seclabel{Scurve}
 
-We saw how the robust qualitative observation of the inverse-S curve in \fref{PB1948} arises when the DM uses a larger scale in his model of uncertainty than the DO. In the Gaussian case, it was possible to express the decision weight $w$ as a function of the probability $p$,
+We saw how the robust qualitative observation of the inverse-S curve in \fref{PB1948} arises when the DM uses a larger scale in his model of uncertainty than the DO. In the Gaussian case, it was possible to express the weight $w$ as a function of the probability $p$,
 \be
 w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
 \ee
@@ -709,7 +714,7 @@ Another common case might be when there is no ``true" model, \eg if the DO obser
 \caption{
 \textbf{Generating an S curve.} Analogues of \fref{mapping_pdfs} and \fref{mapping_cdfs} for the case $0<\alpha<1$.
 %Top left: probability PDF (red), estimated by a DO; and decision-weight PDF (blue), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the red line. The DM models $x$ with a smaller scale ($\alpha=1/2$), and assumes the true frequency distribution is the blue line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
-%Top right: the difference between decision weights and probabilities can be expressed by plotting the decision weight \vs the probability observed at $x$. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right, and thus start and end at identical vertical positions as on the left. They are shifted to different locations horizontally, due to the non-linear distortion of the horizontal axis.
+%Top right: the difference between weights and probabilities can be expressed by plotting the weight \vs the probability observed at $x$. This corresponds to a non-linear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right, and thus start and end at identical vertical positions as on the left. They are shifted to different locations horizontally, due to the non-linear distortion of the horizontal axis.
 %Bottom left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is less cautious or have more information, so in his model $X$ follows a narrower Gaussian distribution, $X \sim \ND(0,1/4)$ depicted by $F_w(x)$ (blue).
 %Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is smaller than the DO's CDF, $F_p(x) > F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be higher than the DO's.
 %Bottom right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays an S-shaped curve rather than the typical inverse-S curve. The arrows start and end at the same vertical values as on the left. Compare figure with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$.
