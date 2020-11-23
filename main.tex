@@ -256,7 +256,7 @@ F_p(x)=\int_{-\infty}^x p(s) ds~,
 F_w(x)=\int_{-\infty}^x w(s) ds~.
 \ee
 \ei
-In \fref{PB1948} we reproduce the first such visual summary from \textcite[188]{PrestonBaratta1948}.
+In \fref{PB1948} we produce such a visual summary of the data in \textcite[188]{PrestonBaratta1948}.
 %\begin{figure}[!htb]
 %\centering
 %\includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
@@ -267,21 +267,23 @@ In \fref{PB1948} we reproduce the first such visual summary from \textcite[188]{
 \centering
 \includegraphics[width=0.5\textwidth]{./figs/PB48_2.pdf}
 \caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative decision weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite{PrestonBaratta1948}, the first to empirically document probability weighting (they refer to the objective probabilities as `mathematical probabilities' and to the decision weights as `psychological probabilities'). 
-%The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative decision weight $F_w$ used by a DM). 
-Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
+Low cumulative probabilities (left) are exceeded by their corresponding cumulative decision weights, and for high cumulative probabilities it's the other way around. This qualitative relationship is referred to as an ``inverse-S shape.''}
 \flabel{PB1948}
 \end{figure}
 
-Plotting $F_w$ as a function of $F_p$ generates a curve, whose generic shape we shall call the ``inverse-S''. The inverse-S is the main observational finding in probability weighting: it sits above the diagonal $F_w=F_p$ for events of low cumulative probability (such that $F_w>F_p$ for these events) and below the diagonal for events of high cumulative probability (such that $F_w<F_p$).
+Plotting $F_w$ as a function of $F_p$ generates a curve, whose most commonly observed shape we shall call the ``inverse-S'' (very noisy in \fref{PB1948}, but noise-free in \fref{mapping_cdfs}. The inverse-S is the main observational finding in probability weighting: it sits above the diagonal $F_w=F_p$ for events of low cumulative probability (such that $F_w>F_p$ for these events) and below the diagonal for events of high cumulative probability (such that $F_w<F_p$).
 
-As a final piece of nomenclature, we will use the terms \textit{location}, \textit{scale}, and \textit{shape} when discussing probability densities. Consider a standard normal distribution $\ND(0,1)$, whose parameters indicate location 0 and squared scale 1 (for a Gaussian, the location is the mean and scale is the standard deviation). For a general random variable $X$, with arbitrary location parameter $\mu_X$ and scale parameter $\sigma_X$, the following transformation produces a standardised random variable with identically-shaped distribution, but with location 0 and scale 1:
+As a final piece of nomenclature, we will use the terms \textit{location}, \textit{scale}, and \textit{shape} when discussing probability densities. 
+%Consider a standard normal distribution $\ND(0,1)$, whose parameters indicate location 0 and squared scale 1 (for a Gaussian, the location is the mean and scale is the standard deviation). 
+In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the \textit{shape} of the distribution:
+For a general random variable $X$, with arbitrary location parameter $\mu_X$ and scale parameter $\sigma_X$, the following transformation produces a standardised random variable with identically-shaped distribution, but with location $\mu_Z=0$ and scale $\sigma_Z=1$:
 %
 \be
 Z = \frac{X-\overbrace{\mu_X \mathstrut}^{\text{location}}}{\underbrace{\sigma_X\mathstrut}_{\text{scale}}}~.
 \elabel{SN}
 \ee
 %
-Thus the PDF of $Z$, $p(z)$, is a density function with location $\mu_Z=0$ and scale $\sigma_Z=1$. In a graph of a distribution, a change of location shifts the curve to the left or right, and a change in scale shrinks or blows up the width of its features. Neither operation changes the \textit{shape} of the distribution: two distributions have the same \textit{shape} if they can be made to coincide through a linear transformation of the form \eref{SN}.
+Two distributions have the same \textit{shape} if they can be made to coincide through a linear transformation of the form \eref{SN}.
 
 %\newpage
 \subsection{Related literature}
@@ -313,11 +315,13 @@ EUT distorts monetary amounts to reflect people's apparent psychological risk av
 Axiomatisations of EUT by \textcite{vonNeumannMorgenstern1944} and \textcite{Savage1954} helped to establish EUT as a normative decision theory.
 
 % PW & CPT
-Despite its flexibility, EUT has failed to fit some empirical observations.
-An additional apparent distortion of probabilities has been reported as early as in \textcite[Fig. 1, p. 188]{PrestonBaratta1948}, who introduced \textquote{psychological probabilities} as a function of mathematical probabilities to reconcile experimental data with EVT.
-Today, this additional distortion is known as probability weighting and is the focus of this paper.
+Despite its flexibility, EUT failed to fit some empirical observations, which prompted \textcite{PrestonBaratta1948}
+%An additional apparent distortion of probabilities has been reported as early as in \textcite[Fig. 1, p. 188]{PrestonBaratta1948}, 
+to introduce psychological distortions not of wealth but of probabilities.
+% \textquote{psychological probabilities} as a function of mathematical probabilities to reconcile experimental data with EVT.
+Today, this alternative distortion is known as probability weighting and is the focus of our study.
 Probability weighting later found its way into descriptive decision theories such as prospect theory \parencite{KahnemanTversky1979} and then cumulative prospect theory (CPT) \parencite{TverskyKahneman1992}.
-CPT combines the distortion of probabilities with EUT's distortion of monetary amounts, again leaving the structure of the optimand as a weighted sum intact.
+%CPT combines the distortion of probabilities with EUT's distortion of monetary amounts, again leaving the structure of the optimand as a weighted sum intact.
 Under the consensus interpretation, probability weighting is a systematic and maladaptive bias, in which people give excessive weight to rare events and insufficient weight to common events in their decisions.
 %\parencite{PrestonBaratta1948,KahnemanTversky1979,TverskyKahneman1992}.
 
@@ -335,7 +339,7 @@ A key confounder turned out to be experimental design. Research under the headin
 % Statistical explanations rather than psychological explanation of PW
 Decisions-from-experience studies emphasise statistical over psychological explanations of probability weighting. \textcite{Martins2006} interprets probability weighting as a heuristic that approximates a Bayesian solution to the problem of inferring probabilities from data. In line with our analysis, \textcite{SeoETAL2019} find that optimal decision weights for a DM deviate from true probabilities in a sequential learning problem, such that it is optimal to overstate small probabilities and understate large ones. \textcite{FoxHadar2006,UngemachETAL2009} report that probability weighting persists even after controlling for such effects, suggesting that a (much smaller residual) psychological component may still exist.
 
-In short, recent studies raise questions about the reproducibility of probability weighting, its dependence on the details and context of decisions, and its interpretation as either a maladaptive psychological bias or a beneficial statistical heuristic.
+In short, recent studies raise questions about the reproducibility of probability weighting, its dependence on the details and context of decisions, and its interpretation as either a maladaptive psychological bias or a beneficial statistical heuristic. Our impression is that an empirical effect of apparent probability weighting exists, but it is less clear than early studies suggested, and, as we shall see, its interpretation as a maladaptive cognitive bias is questionable.
 
 %\subsubsection{Then all the other critiques (pick an order that makes sense)}\seclabel{OtherCritiques}
 %\MK{If we find it useful to discuss further material we could do it here, I think esp. about  \textcite{PriceJones2020} \ldots}
@@ -346,14 +350,15 @@ In short, recent studies raise questions about the reproducibility of probabilit
 
 %The DM's experience of outcomes along a timeline is fundamental in ergodicity economics \parencite{Peters2019}. In this paper we thus ask what a DM can reasonably infer about probabilities from the available information, \eg a statement by a DO with no corroborating evidence or a finite sample of observed outcomes. In decision theory as it pertains to individuals, ergodicity economics rejects EVT because expectation values are generally not reflective of what happens to an individual in the long run. focuses on pursues another path right from the outset of decision theory \parencites{Bernoulli1738}[see also][]{Peters2019} in identifying ergodic observables, like the large-time limit of the growth rate of wealth, that captures the experience of individual DMs better than expected quantities do \parencite{Peters2011a,Peters2011b,Peters2019b}. Conventional decision theories, including CPT, maintain ensemble-average quantities as their optimands, and justify that by psychological effects. Ergodicity economics does not refute the psychological effects, but rather postulates that these are secondary to growth-optimal behaviour, which is found to describe well many deviations from standard EUT \parencite{AdamouETAL2019,MederETAL2019}. Our mechanism explains probability weighting as a statistical effect that relies on the distinction between the two models of uncertainty held by the DO and the DM. Importantly, this is independent from a particular behavioural model -- neither EVT, EUT, CPT nor growth-optimal preferences. The phenomenon labelled probability weighting is a result of a generic inference problem, in which the DM is simply confronted with a different risk than the DO.
 
-In our own work, ergodicity economics, the DM's experience of outcomes along a single timeline is fundamental \parencite{Peters2019b}. Therefore, in this paper we ask what a DM can reasonably infer about probabilities from available information, \eg a statement by a DO with no corroborating evidence, or a finite sample of observed outcomes. In decision theory as it pertains to individuals, ergodicity economics rejects EVT because there is no physical reason for expectation values to reflect what happens to an individual over time. Instead ergodicity economics uses as its null model the optimization of appropriate growth rates evaluated in the long-time limit \parencite{Peters2011a,Peters2011b,Peters2019b}. For clarity, this is in contrast to decision theories which maintain expectation values (suitably distorted) as their optimands. Ergodicity economics finds that growth-optimal behaviour, defined properly along a single timeline, predicts correctly a number of deviations from standard EUT \parencite{MederETAL2019,AdamouETAL2019,BermanKirstein2020}. The mechanism presented here explains probability weighting as arising from the distinction between the models of uncertainty used by the DO (who defines the setup) and by the DM (who must infer it).
+In our own work, ergodicity economics (EE), the DM's experience along a single timeline is fundamental \parencite{Peters2019b}. Therefore, in this paper we beging by asking what a DM can reasonably infer about probabilities from available information, \eg a statement by a DO with no corroborating evidence, or a finite sample of observed outcomes. In decision theory as it pertains to individuals, EE rejects EVT because there is no {\it a priori} physical reason for expectation values to reflect what happens to an individual over time. Instead, EE uses as its null model the optimization of appropriate growth rates evaluated in the long-time limit \parencite{Peters2011a,Peters2011b,Peters2019b}. For clarity, this is in contrast to decision theories which rely on expectation values (suitably distorted) as their optimands. EE finds that growth-optimal behaviour, defined properly along a single timeline, predicts correctly a number of deviations from standard EUT \parencite{MederETAL2019,AdamouETAL2019,BermanKirstein2020}. The mechanism presented here explains probability weighting as arising from the distinction between the models of uncertainty used by the DO (who defines the setup) and by the DM (who must infer it).
 %Importantly, this is independent from a particular behavioural model -- neither EVT, EUT, CPT nor growth-optimal preferences. The phenomenon labelled probability weighting is a result of a generic inference problem, in which the DM is simply confronted with a different risk than the DO.
 
 % our critique and should go to the end
-We offer a statistical explanation of probability weighting that applies to any situation where differences between models of uncertainty exist.
-The mechanism we propose can generate mismatches between probabilities and decision weights which produce a variety of probability weighting curves, including the standard inverse-S curve.
-The inverse-S is predicted whenever a DM cautiously incorporates more uncertainty into his model than a DO, which we imagine to be a commonly encountered scenario in experiments.
-More specifically, we find the inverse-S when a DM cautiously adjusts a frequentist probability estimate to account for sampling errors.
+We offer a statistical explanation of probability weighting that applies to any situation where DO and DM have different uncertainties.
+
+%The mechanism we propose can generate mismatches between probabilities and decision weights which produce a variety of probability weighting curves, including the standard inverse-S curve (see \fref{mapping_cdfs}).
+%The inverse S is predicted whenever a DM cautiously incorporates more uncertainty into his model than a DO, which we imagine to be a commonly encountered scenario in experiments.
+%More specifically, we find the inverse-S when a DM cautiously adjusts a frequentist probability estimate to account for sampling errors.
 %Our statistical explanation suggests that this behaviour is a plausible strategy in decision making under uncertainty.
 %
 %If solely judged by the capability to fit the reported data in \fref{curvefit}, our proposed mechanism suggests that a statistical explanation of probability weighting is sufficient.
@@ -395,8 +400,8 @@ Right: the difference between decision weights and probabilities can also be exp
 \flabel{mapping_pdfs}
 \end{figure}
 
-If the DM uses a greater scale in his model, then decision weights are higher than probabilities for 
-where the latter are low, and (because of normalisation) lower than probabilities when probability is high. We can express this by plotting, for any value of $x$, the decision weight \vs the probability observed at $x$, right panel of \fref{mapping_pdfs}.
+If the DM uses a greater scale in his model, then decision weights are higher than probabilities where probability is low, and (because of normalisation) lower than probabilities where probability is high. 
+We can express this by plotting, for any value of $x$, the decision weight \vs the probability observed at $x$, right panel of \fref{mapping_pdfs}.
 
 In the Gaussian case we can write the distributions explicitly as
 \be
@@ -488,10 +493,11 @@ The result is qualitatively similar to the bottom right panel of \fref{mapping_c
 \end{figure}
 
 \section{Reasons for different models\seclabel{Reasons_for}}
-Probability weighting is usually interpreted as a cognitive bias that leads to errors of judgement and poor decisions by DMs.\footnote{Indeed, its originators presented it as such.
-Introducing prospect theory, \textcite[277]{KahnemanTversky1979} wrote ``we are compelled to assume [\dots] that decision weights do not coincide with stated probabilities. These departures from expected utility theory must lead to normatively unacceptable consequences''.
-They classified prospect theory as descriptive rather than normative, \ie as relating to actual rather than optimal behaviour \parencite[p. S252]{TverskyKahneman1986}.
-Put simply, prospect theory aims to model systematic errors in human decision making, arising (in part) from inappropriate psychological adjustments of known probabilities.}
+Probability weighting is usually interpreted as a cognitive bias that leads to errors of judgement and poor decisions by DMs.\footnote{Indeed, its originators presented it as such. \textcite{PrestonBaratta1948} pointed out that ``the mathematical expectation has a certain usefulness in defining `rational' behavior.'' They go on to argue that time-average changes in wealth due to gambling are to be modelled as identical to their expectation values, \ie that wealth changes under gambling is to be modelled as ergodic. This leads them to conclude that ``????the payment of amounts in excess of the mathematical expectation [...] is peculiarly irrational.'' We note that this declares irrational the purchase of any typical insurance product.}
+
+%Introducing prospect theory, \textcite[277]{KahnemanTversky1979} wrote ``we are compelled to assume [\dots] that decision weights do not coincide with stated probabilities. These departures from expected utility theory must lead to normatively unacceptable consequences''.
+%They classified prospect theory as descriptive rather than normative, \ie as relating to actual rather than optimal behaviour \parencite[p. S252]{TverskyKahneman1986}.
+%Put simply, prospect theory aims to model systematic errors in human decision making, arising (in part) from inappropriate psychological adjustments of known probabilities.}
 We caution against this interpretation.
 At least we should keep in mind that it is unclear who suffers from the bias: experimenter or test subject (or neither or both)?
 We are by no means the first to raise this question.
@@ -499,9 +505,7 @@ Commenting on another so-called cognitive bias regarding probabilities, the repr
 
 Whatever the answer, two observations are robust and interesting: first, disagreement is common; and, second, the disagreement tends to go in the same direction, with DMs assuming a greater range of plausible outcomes than DOs.
 
-An explanation for the first observation is that probability is a slippery concept and the word is used to mean different things. This suggests that phrasing information about probabilities concretely should reduce disagreement between DO and DM. For example, the statement ``10 out of 100 people have this disease'' conveys more, and more precise, information than ``the probability of having this disease is 0.1.'' Specifically, it tells us that a sample of people has been observed and what the size of the sample is.\footnote{This may contribute to an explanation of the observation of less overweighting in decisions-from-experience experiments reported in \textcite{HertwigETAL2004,HertwigErev2009}.}
-
-Furthermore, \textcite{Gigerenzer2018} argues that statements involving integer counts, or what he calls natural frequencies,  (``10 out of 100'') are more readily understood by people than statements involving fractional probabilities (``0.1'').%
+An explanation for the first observation is that probability is a slippery concept and the word is used to mean different things. This suggests that phrasing information about probabilities concretely should reduce disagreement between DO and DM. For example, the statement ``10 out of 100 people have this disease'' conveys more, and more precise, information than ``the probability of having this disease is 0.1.'' Specifically, it tells us that a sample of people has been observed and what the size of the sample is.\footnote{This may contribute to an explanation of the observation of less overweighting in decisions-from-experience experiments reported in \textcite{HertwigETAL2004,HertwigErev2009}.} Furthermore, \textcite{Gigerenzer2018} argues that statements involving integer counts, or what he calls natural frequencies,  (``10 out of 100'') are more readily understood by people than statements involving fractional probabilities (``0.1'').%
 \footnote{There is a growing body of literature on \textit{how to make cognitive biases disappear} by changing the way probabilities are presented \parencite{Gigerenzer1991} or by controlling for estimation errors and other confounders, for an example from social cognition see \textcite{GalesicETAL2012}.}
 
 The second observation may be explained as follows. A DO often has control over, and essentially perfect knowledge of, the decision problem he poses. A DM does not have such knowledge, and this ignorance will often translate into additional assumed uncertainty. For example, the DO may know the true probabilities of some gamble in an experiment, while the DM may have doubts about the DO's sincerity and his own understanding of the rules of the game. We will return to this in \secref{condition2}.
@@ -582,7 +586,7 @@ Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_den
 \flabel{square_root_error}
 \end{figure}
 
-\Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which he counts into bins. In the simulation, a probability density, $\phat(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err{\phat(x)}$, is obtained numerically as standard deviation in each $\phat(x)$ over 1000 parallel simulations. The DM's decision weights are then obtained according to \eref{weight_density_gen}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
+\Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which he counts into bins. In the simulation, a probability density, $\phat(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err{\phat(x)}$, is obtained numerically as the standard deviation in each $\phat(x)$ over 1000 parallel simulations. The DM's decision weights are then obtained according to \eref{weight_density_gen}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=1.0\textwidth]{./figs/dm_count_sim.pdf}
@@ -648,7 +652,7 @@ Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.71\
 
 On 28 February 2020, an opinion piece appeared on Bloomberg \textcite{Sunstein2020}, arguing that
 %, a behavioural economist, legal scholar, and former United States Administrator of the Office of Information and Regulatory Affairs, 
-people's concern about a potential coronavirus outbreak in the US was attributable to an extreme case of probability weighting: people were neglecting the fact that such an event had a low probability. When the piece was published, many disagreed: it seemed reasonable to them to take precautions; the author himself, they said, might have underestimated both the severity and likelihood of a pandemic. They asked the \textcite{Cohen1979a} question: ``Whose is the fallacy?''
+people's concern about a potential coronavirus outbreak in the US was attributable to an extreme case of probability weighting: people were neglecting the fact that such an event had a low probability. When it was published, many disagreed: it seemed reasonable to them to take precautions; the author himself, they said, might have underestimated both the severity and likelihood of a pandemic. They asked the \textcite{Cohen1979a} question: ``Whose is the fallacy?''
 As we write this, in November 2020, more than 250,000 US Americans have died of the virus.
 
 This episode illustrates that an inverse-S curve is indeed a neutral indicator of a difference in opinion. 
