@@ -28,7 +28,8 @@ for i in xs:
     axes[0, 0].arrow(i,stat.norm.pdf(i, l1, s1), 0, stat.norm.pdf(i, l2, s2) - stat.norm.pdf(i, l1, s1), head_width=0.16, head_length=0.045, length_includes_head=True, fc='k', ec='k', zorder=10)
 
 axes[0, 0].set_xlabel(r'$x$')
-axes[0, 0].set_ylabel(r'PDFs')
+#axes[0, 0].set_ylabel(r'PDFs')
+axes[0, 0].set_ylabel(r'density')
 axes[0, 0].set_xticks(np.arange(-4, 5, step=2))
 axes[0, 0].set_yticks(np.arange(0, 0.9, step=0.1))
 axes[0, 0].legend(loc='upper left', fontsize='x-small')
@@ -41,8 +42,9 @@ axes[0, 1].plot(DO, DM, 'b', lineWidth='2', label=r'$w$')
 for i in xs:
     axes[0, 1].arrow(stat.norm.pdf(i, l1, s1),stat.norm.pdf(i, l1, s1), 0, stat.norm.pdf(i, l2, s2) - stat.norm.pdf(i, l1, s1), head_width=0.008, head_length=0.045, length_includes_head=True, fc='k', ec='k', zorder=10)
 
-axes[0, 1].set_xlabel(r'PDF $p$')
-axes[0, 1].set_ylabel(r'PDFs')
+axes[0, 1].set_xlabel(r'$p$')
+#axes[0, 1].set_ylabel(r'PDFs')
+axes[0, 1].set_ylabel(r'density')
 axes[0, 1].set_xticks(np.arange(0, .5, step=0.1))
 axes[0, 1].set_yticks(np.arange(0, 0.9, step=0.1))
 axes[0, 1].legend(loc='upper left', fontsize='x-small')

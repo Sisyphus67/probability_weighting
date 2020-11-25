@@ -51,11 +51,13 @@ axes[1, 0].set_yticks(np.arange(0, 1.1, step=0.2))
 axes[1, 0].legend(loc='upper left', fontsize='x-small')
 
 # plot Tversky and Kahneman (1992) approximated decision weights CDF
-beta = 0.65
+#beta = 0.65
+# plot TPreston and Baratta (1948) approximated decision weights CDF
+beta = 0.6148196942297306
 axes[1, 1].plot(DO, DO, 'r', lineWidth='2', label=r'$F_p$')
 axes[1, 1].axvline(x=0.5, LineStyle='--')
 axes[1, 1].plot(DO, s(DO, beta), 'b', lineWidth='2', label=r'$F_w$')
-axes[1, 1].set_title('Tversky and Kahneman (1992)')
+axes[1, 1].set_title('Preston & Baratta (1948)')
 axes[1, 1].set_xlabel(r'CDF $F_p$')
 axes[1, 1].set_ylabel(r'CDFs')
 axes[1, 1].set_xticks(np.arange(0, 1.1, step=0.2))
