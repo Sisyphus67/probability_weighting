@@ -1,0 +1,92 @@
+\documentclass[12pt,letter,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+%\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{setspace} 
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{pdfpages}
+
+
+%\usepackage[scale=1]{geometry} % Reduce document margins
+\usepackage[margin=0.85in]{geometry}
+%\linespread{1.5}
+
+\doublespacing
+%\onehalfspacing
+%\singlespacing
+%\linespread{1.5}
+
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%\usepackage[scale=0.75]{geometry} 
+\usepackage[english]{babel}
+\usepackage{blindtext}
+%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox}
+\usepackage[round]{natbib}
+\bibliographystyle{unsrtnat}
+\setlength{\bibsep}{0pt}
+%\patchcmd{\makelettertitle}{\hfill}{}{}{}
+%\patchcmd{\makelettertitle}{\raggedleft}{\raggedright}{}{}
+
+\firstname{Ole} % Your first name
+\familyname{Peters, Alexander Adamou, Mark Kirstein and Yonatan Berman} % Your last name
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+%\title{Curriculum Vitae}
+\address{\centering{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, United Kingdom}}
+%\mobile{+972-(0)58-5432154}
+%\email{yonatanb@post.tau.ac.il}
+%\homepage{www.yonatanberman.com}{www.yonatanberman.com}
+
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+\begin{document}
+
+\noindent
+\begin{flushleft}
+%\includegraphics[width=0.35\textwidth] {./pse-logo-hd.jpg}
+\includegraphics[width=0.35\textwidth] {./lml_LOGO_whiteBG.png}
+%\\ \vspace{-7pt}
+%\rule{155mm}{1.5pt}
+\end{flushleft}
+
+\vskip\medskipamount % or other desired dimension
+\leaders\vrule width \textwidth\vskip1.5pt % or other desired thickness
+\vskip\medskipamount % ditto
+\vskip\medskipamount % ditto
+\nointerlineskip
+
+%lml_LOGO_whiteBG
+
+\vspace{2mm}
+\recipient{\textit{American Economic Review}}{2403 Sidney Street, Suite 260\\Pittsburgh, PA 15203\\United States}
+\date{\today}
+\opening{Dear Prof. Duflo,}
+\closing{Sincerely,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+We are pleased to submit our paper -- \textit{What are we weighting for? A mechanistic model for probability weighting} -- for publication in the \textit{American Economic Review}.
+
+We would like to suggest Stefano DellaVigna to handle this manuscript as a coeditor.
+
+We hope the paper will be of interest to the journal. Thank you.
+
+\makeletterclosing
+
+\end{document}

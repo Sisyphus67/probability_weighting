@@ -2,7 +2,7 @@
 % * British English
 % * Footnotes are sentences, not only references in a footnote
 
-\documentclass[a4paper, 12pt]{article}
+\documentclass[12pt,letter,timesnewroman]{article}
 
 \usepackage{amsthm, amsmath, amssymb, mathrsfs, multirow, url}
 \usepackage{amsfonts} 
@@ -17,20 +17,11 @@
 \usepackage{ifthen}
 \usepackage[usenames]{color}
 \usepackage{placeins}
-
-\usepackage[margin=1in]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\lhead{\scalebox{0.25}{
-\includegraphics{resone-logo.png}}
-\rhead{
-{\small 
-\url{https://www.researchers.one/article/2020-04-14}}
-% \url{https://bit.ly/LML-pw}} % fill in URL here
-}
-}
+\usepackage{geometry}
 
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=red,citecolor=blue]{hyperref}
+
+\geometry{left=1.5in,right=1.5in,top=1.5in,bottom=1.5in}
 
 % =====================================================================
 % =========================  BibLateX w/ BibTeX   =====================
@@ -66,7 +57,7 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 \def\blx@maxline{77}
 \makeatother
 
-\addbibresource{../LML_bibliography/bibliography}
+\addbibresource{../../../LML_bibliography/bibliography}
 
 % =====================================================================
 % ===================   STYLE OF THE REFERENCES   =====================
@@ -96,6 +87,9 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 % =====================================================================
 
 \usepackage{xspace}
+\usepackage{setspace}
+
+\onehalfspacing
 
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ei}{\end{itemize}}
@@ -159,8 +153,9 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 \newcommand{\YB}[1]{{\it ***YB: #1 YB***}}
 \renewcommand{\AA}[1]{{\it ***AA: #1 AA***}}
 
+
 \title{What are we weighting for? \\
-{\normalsize A mechanistic model for probability weighting\thanks{The code to generate the figures and simulations is available at \href{https://bit.ly/lml-pw-code}{bit.ly/lml-pw-code}.
+{\normalsize A mechanistic model for probability weighting\thanks{The code to generate the figures is available at \href{https://bit.ly/lml-pw-code}{bit.ly/lml-pw-code}.
 We benefited from comments by seminar participants at
 the Max Planck Institute (MPI) for Human Development, Berlin,
 MPI for Mathematics in the Sciences, Leipzig,
@@ -170,9 +165,12 @@ Erich-Schneider-Research-Seminar at Christian-Albrecht University of Kiel,
 Institute for Socioeconomics at University of Duisburg-Essen,
 and from conference participants at
 the first scientific workshop of the German Network for Pluralism in Economics
-and the D-TEA Conference 2020.}}}
+and the D-TEA Conference 2020.
+}}}
 
 % Authors with Email addresses as footnotes
+%\author{Ole Peters\thanks{London Mathematical Laboratory and Santa Fe Institute,~\protect\url{o.peters@lml.org.uk}}\and Alexander Adamou\thanks{London Mathematical Laboratory,~\protect\url{a.adamou@lml.org.uk}}\and Mark Kirstein\thanks{London Mathematical Laboratory, Max-Planck-Institute for Mathematics in the Sciences, Leipzig and Institute of Mathematics, Leipzig University,~\protect\url{m.kirstein@lml.org.uk}}\and Yonatan Berman\thanks{London Mathematical Laboratory,~\protect\url{y.berman@lml.org.uk}}}
+
 \author[1,2]{Ole Peters\thanks{\texttt{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}}}}
 \author[1]{Alexander Adamou\thanks{\texttt{\href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}}}}
 \author[1,3,4]{Mark Kirstein\thanks{\texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}}}
@@ -189,40 +187,26 @@ and the D-TEA Conference 2020.}}}
 % \affil[5]{The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York}
 %\affil[5]{Stone Center on Socio-Economic Inequality, City University of New York, NY, USA}
 
-\date{\today}
+%
+\date{}
 
 \begin{document}
 \begin{titlepage}
 	\maketitle
-\thispagestyle{fancy}
+%\thispagestyle{fancy}
 
 \begin{abstract}
-\noindent 
-Behavioural economics provides labels for patterns in human economic behaviour. Probability weighting is one such label. It expresses a mismatch between probabilities used in a formal model of a decision (\ie model parameters) and probabilities inferred from real people's decisions (the same parameters estimated empirically).
-The inferred probabilities are called ``decision weights.'' It is considered a robust experimental finding that weights are higher than probabilities for rare events, and (necessarily, through normalisation) lower than probabilities for common events.
-Typically this is presented as a cognitive bias of  the decision maker, \ie an error of judgement.
-Here we point out that the same observation can be described differently: broadly speaking, probability weighting means that a decision maker has greater uncertainty than the observer.
-We offer a plausible mechanism whereby such differences in uncertainty arise naturally: when a decision maker must estimate probabilities as frequencies in a time series while the observer knows them \textit{a priori}.
-This suggests an alternative presentation of probability weighting as a principled response by a decision maker to uncertainties unaccounted for in an observer's model.
-\vspace{1em}
-
-\noindent\textsf{\textbf{Keywords}} ~ Decision Theory, Prospect Theory, Probability Weighting, Ergodicity Economics
-\vspace{.5em}
-
-\noindent\textsf{\textbf{JEL Codes}} ~
-\href{https://www.aeaweb.org/econlit/jelCodes.php?view=jel#C}{%
-C61		% Optimization Techniques • Programming Models • Dynamic Analysis
-$\cdot$
-}%
-\href{https://www.aeaweb.org/econlit/jelCodes.php?view=jel#D}{%
-D01 	% Microeconomic Behaviour: Underlying Principles
-$\cdot$
-D81 	% Criteria for decision making under Risk and Uncertainty
-}
+\noindent Probability weighting expresses a mismatch between probabilities specified in a model and weights inferred from human decisions. Typically weights are larger than probabilities for rare events and smaller for common events in experiments. This is presented as a cognitive bias of decision makers. We provide an alternative interpretation: decision makers and observers have different uncertainty about events. We offer a mechanism generating differences in uncertainty: when a decision maker estimates probabilities as frequencies while the observer knows them \textit{a priori}. We argue that many phenomena labelled as probability weighting may be principled responses to uncertainties unaccounted for in observer models.
+\\
+\\
+\noindent\textbf{Keywords:}~ Decision Theory, Prospect Theory, Probability Weighting, Ergodicity Economics
+\\
+\noindent\textbf{JEL Codes:} C61, D01, D81\\
+\bigskip
 \end{abstract}
 \end{titlepage}
  
-\setcounter{page}{2}		% titlepage=page 1, continue with page 2
+%\setcounter{page}{2}		% titlepage=page 1, continue with page 2
 
 \section{Introduction}
 ``Probability weighting'' is a concept that originated in psychology, going back at least to \textcite{PrestonBaratta1948}.
@@ -262,13 +246,13 @@ In other words, we are confining our attention to probabilities and weights of e
 \Fref{PB1948} summarises the data in \textcite[188]{PrestonBaratta1948} (for non-cumulative probabilities and weights). In our framework, we would plot $F_w$ as a function of $F_p$ to generate a curve, whose most commonly observed shape we call the ``inverse-S.'' This curve sits above the diagonal, $F_w=F_p$, for events of low cumulative probability (such that $F_w>F_p$ for these events) and below the diagonal for events of high cumulative probability (such that $F_w<F_p$).
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/PB48_withfit.pdf}
+\includegraphics[width=1.0\textwidth]{../../figs/PB48_withfit.pdf}
 \caption{\textbf{Empirical phenomenon of probability weighting.} Left: weights \vs probabilities as reported by \textcite{PrestonBaratta1948}, the first to document probability weighting empirically (they refer to probabilities as ``mathematical probabilities,'' weights as ``psychological probabilities,'' and consider events of non-cumulative type). Low probabilities are exceeded by their corresponding weights and \vv for high probabilities. Right: fitting a curve to these data produces an inverse-S, see \secref{The_inverse} for details.}
 \flabel{PB1948}
 \end{figure}
 %\begin{figure}[!htb]
 %\centering
-%\includegraphics[width=0.5\textwidth]{./figs/TK1992.pdf}
+%\includegraphics[width=0.5\textwidth]{../../figs/TK1992.pdf}
 %\caption{\textbf{Empirical phenomenon of probability weighting.} Cumulative weights $F_w$ (used by decision makers) versus cumulative probabilities $F_p$ (used by disinterested observers), as reported by \textcite[p.~310, Fig. 1, relabelled axes]{TverskyKahneman1992}. The figure is to be read as follows: pick a point along the horizontal axis (the cumulative probability $F_p$ used by a DO) and look up the corresponding value on the vertical axis of the dotted inverse-S curve (the cumulative weight $F_w$ used by a DM). Low cumulative probabilities (left) are exceeded by their corresponding cumulative weights, and for high cumulative probabilities it's the other way around. It's the inverse-S shape of the curve that indicates this qualitative relationship.}
 %\flabel{TK1992}
 %\end{figure}
@@ -393,7 +377,7 @@ We illustrate this with a Gaussian distribution.
 Let's assume that a DO models a future change in wealth, $X$, as a Gaussian random variable with location $\mu$ and variance $\sigma^2$. And let's further assume that a DM models this change as a Gaussian random variable with the same location, $\mu$, but with a greater scale, such that the variance is $(\alpha\sigma)^2$ with $\alpha>1$. The DM simply assumes a broader range -- $\alpha$ times greater -- of plausible values, left panel of \fref{mapping_pdfs}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\textwidth]{./figs/mapping_pdfs.pdf}
+\includegraphics[width=\textwidth]{../../figs/mapping_pdfs.pdf}
 \caption{\textbf{Mapping density functions.}
 Left: probability density function (red) used by a DO; and weight density function (blue) used by a DM. The DO models $X$ as a standard Gaussian random variable, $X \sim \ND(0,1)$, whose density function is the red line. The DM models $X$ as a Gaussian random variable with twice the scale, $X \sim \ND(0,4)$, whose density function is the blue line. Comparing the two curves, the DM appears to the DO as someone who overestimates probability densities where they are low and underestimates them when high, indicated by vertical arrows.
 Right: the difference between weight and probability densities can be expressed by directly plotting, for any value of $x$, the weight density \vs the probability density observed at $x$. The arrows on the left correspond to the same $x$-values as on the right. Therefore, they start and end at identical vertical positions as on the left.
@@ -428,7 +412,7 @@ Instead of an inverse-S shape, both situations	 would lead to an S-shaped curve,
 Alternatively, we can express the identical information about the difference between models by plotting the CDFs, $F_w$ and $F_p$. We do this in \fref{mapping_cdfs}, where the inverse-S emerges purely from the DM's greater assumed scale, $\alpha \sigma$.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=\textwidth]{./figs/mapping_cdfs.pdf}
+\includegraphics[width=\textwidth]{../../figs/mapping_cdfs.pdf}
 \caption{\textbf{Mapping CDFs.}
 Left: the DO models $X$ as a standard Gaussian random variable, $X \sim \ND(0,1)$, with CDF, $F_p(x) = \Phi_{0,1}(x)$. The DM is more cautious and uses a wider Gaussian random variable, $X \sim \ND(0,4)$, depicted by $F_w(x)$ (blue).
 Following the vertical arrows (left to right), we see that: for low values of $x$ (small cumulative probabilities) the cumulative weights are larger than the cumulative probabilities, $F_w(x) > F_p(x)$; the curves coincide at $x=0$; and for large values of $x$ (large cumulative probabilities) the cumulative weights are smaller than the cumulative probabilities, $F_w(x) < F_p(x)$.
@@ -444,7 +428,7 @@ Right: the same CDFs as on the left but now plotted against the cumulative proba
 In \fref{Gauss_scale_location_both_KT} we explore what happens if both the scales and the locations of the DO's and DM's models differ. Visually, this produces an excellent fit to empirical data reported by \textcite{PrestonBaratta1948}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/Gauss_scale_location_both_KT.pdf}
+\includegraphics[width=1.0\textwidth]{../../figs/Gauss_scale_location_both_KT.pdf}
 \caption{\textbf{CDF maps for Gaussian distributions.} Top left: difference in location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1. Top right: difference in scale. DO assumes location 0, scale 1; DM assumes location 0, scale 1.64 (broader than DO). Bottom left: differences in scale and location. DO assumes location 0, scale 1; DM assumes location 0.23 (bigger than DO), scale 1.64 (broader than DO). Bottom right: fit to observations reported by \textcite{PrestonBaratta1948}. This is \eref{correspondence} with $\gamma=0.61$. Note the similarity to bottom left.}
 \flabel{Gauss_scale_location_both_KT}
 \end{figure}
@@ -488,7 +472,7 @@ In the limit $\nu \rightarrow \infty$, the $t$-distribution converges to a Gauss
 The result is qualitatively similar to the bottom right panel of \fref{mapping_cdfs}, corresponding to \eref{correspondence}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.5\textwidth]{./figs/Student-t.pdf}
+\includegraphics[width=0.5\textwidth]{../../figs/Student-t.pdf}
 \caption{\textbf{Probability weighting for $t$-distributions.} The DM uses different shape and location parameters (1 and 0.35 respectively) from those of the DO (3 and 0.2).}
 \flabel{Student-t}
 \end{figure}
@@ -582,7 +566,7 @@ Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_den
 \Fref{square_root_error} shows the resulting probability and weight densities and CDF mappings generated by setting $\phat(x)$ in \eref{weight_density_spec} to be the density functions of a Gaussian distribution and a fat-tailed $t$-distribution. Inverse-S curves are found for both distributions and the effect is more pronounced for the fat-tailed distribution.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/square_root_error.pdf}
+\includegraphics[width=1.0\textwidth]{../../figs/square_root_error.pdf}
 \caption{\textbf{Mapping density functions and CDFs with estimation errors.} Density functions (left) and inverse-S curves (right) arising when the DO assumes a Gaussian (scale 1, location 0, top line) or a $t$-distribution (shape 2, location 0, bottom line) and the DM constructs weight densities according to \eref{weight_density_spec} with $T\delta x=10$. For the fat-tailed $t$-distribution (in the bottom line) the difference between $p(x)$ and $w(x)$ is more pronounced.}
 \flabel{square_root_error}
 \end{figure}
@@ -590,7 +574,7 @@ Does our analysis, culminating in \eref{weight_density_gen} and \eref{weight_den
 \Fref{dm_count_sim} shows the results of a computer simulation of a DM who observes a series of realisations of either Gaussian or $t$-distributed random variables, which she counts into bins. In the simulation, a probability density, $\phat(x)$, is estimated for each bin as $n(x)/T\delta x$ and its uncertainty, $\err{\phat(x)}$, is obtained numerically as the standard deviation in each $\phat(x)$ over 1000 parallel simulations. The DM's weight density is then obtained according to \eref{weight_density_gen}. Again, inverse-S curves are found for both distributions, corroborating our scaling arguments.
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/dm_count_sim.pdf}
+\includegraphics[width=1.0\textwidth]{../../figs/dm_count_sim.pdf}
 \caption{\textbf{Simulations of a DM estimating probability densities by counting events in a finite series of observations.} Left: estimated probability densities for $T=100$ Gaussian (top; location 0, scale 2) and $t$-distributed (bottom; location 0, scale 1, shape 1.5) variates counted in bins of width $\delta x=0.4$. Red bars show the estimates, $\phat(x)$, and blue bars show the estimates with one standard error added, $\phat(x)+\err{\phat(x)}$. Right: inverse-S curves for a DO who assumes $p(x)$ follows a Gaussian (top) and $t$-distribution (bottom), while the DM uses weight density, $w(x)$, derived by normalising her conservative estimates (blue bars on left) according to \eref{weight_density_gen}.}
 \flabel{dm_count_sim}
 \end{figure}
@@ -633,7 +617,7 @@ suggested by \textcite{LattimoreBakerWitte1992} to describe probability weightin
 
 %\begin{figure}[!htb]
 %\centering
-%\includegraphics[width=1.0\textwidth]{./figs/curvefit.pdf}
+%\includegraphics[width=1.0\textwidth]{../../figs/curvefit.pdf}
 %\caption{\textbf{Model fitting to experimental data from \textcite{TverskyKahneman1992} (left) and \textcite{TverskyFox1995} (right).}
 %Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.67\,\left(SE = 0.04\right)$, $\gamma=0.58\,\left(\pm0.03\right)$; Gaussian model: $\mu=0.38\,\left(\pm0.06\right)$, $\sigma=1.60\,\left(\pm0.10\right)$; $t$-model: $\nu=1.27\,\left(\pm0.28\right)$, $\mu=0.40\,\left(\pm0.07\right)$; \textcite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.60\,\left(\pm0.02\right)$. Right: \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \textcite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the \person{Levenberg-Marquardt} algorithm \parencite{Levenberg1944} for nonlinear least squares curve fitting.
 %}
@@ -642,7 +626,7 @@ suggested by \textcite{LattimoreBakerWitte1992} to describe probability weightin
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=1.0\textwidth]{./figs/curvefit_PB48_2.pdf}
+\includegraphics[width=1.0\textwidth]{../../figs/curvefit_PB48_2.pdf}
 \caption{\textbf{Model fitting to experimental data from \textcite{PrestonBaratta1948} (left) and \textcite{TverskyFox1995} (right).}
 Left: \textcite{LattimoreBakerWitte1992} \eref{LattimoreFunction}: $\delta=0.71\,\left(SE = 0.05\right)$, $\gamma=0.56\,\left(\pm0.04\right)$; Gaussian model: $\mu=0.36\,\left(\pm0.07\right)$, $\sigma=1.65\,\left(\pm0.10\right)$; $t$-model: $\nu=1.24\,\left(\pm0.20\right)$, $\mu=0.28\,\left(\pm0.06\right)$; \textcite{TverskyKahneman1992} \eref{correspondence}: $\gamma=0.61\,\left(\pm0.02\right)$. Right: \textcite{LattimoreBakerWitte1992}: $\delta=0.77\,\left(\pm0.01\right)$, $\gamma=0.69\,\left(\pm0.01\right)$; Gaussian model: $\mu=0.22\,\left(\pm0.01\right)$, $\sigma=1.41\,\left(\pm0.03\right)$; $t$-model: $\nu=1.41\,\left(\pm0.21\right)$, $\mu=0.22\,\left(\pm0.03\right)$; \textcite{TverskyKahneman1992}: $\gamma=0.68\,\left(\pm0.01\right)$. Shaded areas indicate two standard errors in the fitted parameter values. The fit was done by implementing the \person{Levenberg-Marquardt} algorithm \parencite{Levenberg1944} for nonlinear least squares curve fitting.
 }
@@ -672,6 +656,34 @@ The model of estimating probabilities from real time series, which we discuss in
 \appendix
 
 \newpage
+\section{Cases of a regular S}
+\seclabel{Scurve}
+
+We saw how the robust qualitative observation of the inverse-S curve in \fref{PB1948} arises when the DM uses a larger scale in her model of uncertainty than the DO. In the Gaussian case, it was possible to express the weight density, $w$, as a function of the probability density, $p$,
+\be
+w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
+\ee
+where $\alpha$ is the ratio of the DM's scale parameter to the DO's.
+
+Suppose instead that the DM uses a smaller scale than the DO, such that $0<\alpha<1$. In other words, the DM is more certain about the value $X$ will take than the DO. We expect this to happen if, for instance, the DM has insider information. Then the CDF mapping $F_w(F_p)$ assumes the shape of an S, rather than an inverse-S, as shown in \fref{mapping_pdfs_cdfs_Sshape} (compare with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$). The prediction of an S curve under such conditions is an empirically testable prediction with discriminating power: it does not arise under the classical interpretation of probability weighting.
+
+Another common case might be when there is no ``true" model, \eg, if the DO observes the choices of two DMs and expresses the implied densities as a function of the DM's whose model has relatively more uncertainty.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{../../figs/mapping_pdfs_cdfs_Sshape.pdf}
+\caption{
+\textbf{Generating an S curve.} Analogues of \fref{mapping_pdfs} and \fref{mapping_cdfs} for the case $0<\alpha<1$.
+%Top left: probability density function (red), estimated by a DO; and weight density function (blue), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the red line. The DM models $x$ with a smaller scale ($\alpha=1/2$), and assumes the true frequency distribution is the blue line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
+%Top right: the difference between weights and probabilities can be expressed by plotting the weight \vs the probability observed at $x$. This corresponds to a nonlinear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right, and thus start and end at identical vertical positions as on the left. They are shifted to different locations horizontally, due to the nonlinear distortion of the horizontal axis.
+%Bottom left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is less cautious or have more information, so in her model $X$ follows a narrower Gaussian distribution, $X \sim \ND(0,1/4)$ depicted by $F_w(x)$ (blue).
+%Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is smaller than the DO's CDF, $F_p(x) > F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be higher than the DO's.
+%Bottom right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays an S-shaped curve rather than the typical inverse-S curve. The arrows start and end at the same vertical values as on the left. Compare figure with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$.
+}
+\flabel{mapping_pdfs_cdfs_Sshape}
+\end{figure}
+
+\newpage
 \section{Inverse-S from relative errors in probabilities}
 \seclabel{relative_errors}
 
@@ -691,33 +703,5 @@ We can say one more thing about this procedure. If an inverse-S curve exists, th
 w(x)=p(x) \left(\frac{1+\frac{\err{p}}{p}}{1+\ave{\frac{\err{p}}{p}}}\right),
 \ee
 we see that $w(x)=p(x)$ when $\frac{\err{p}}{p}=\ave{\frac{\err{p}}{p}}.$
-
-\newpage
-\section{Cases of a regular S}
-\seclabel{Scurve}
-
-We saw how the robust qualitative observation of the inverse-S curve in \fref{PB1948} arises when the DM uses a larger scale in her model of uncertainty than the DO. In the Gaussian case, it was possible to express the weight density, $w$, as a function of the probability density, $p$,
-\be
-w(p)= p^{\frac{1}{\alpha^2}} \frac{\left(2\pi\sigma^2\right)^{\frac{1-\alpha^2}{2\alpha^2}}}{\alpha} ~,
-\ee
-where $\alpha$ is the ratio of the DM's scale parameter to the DO's.
-
-Suppose instead that the DM uses a smaller scale than the DO, such that $0<\alpha<1$. In other words, the DM is more certain about the value $X$ will take than the DO. We expect this to happen if, for instance, the DM has insider information. Then the CDF mapping $F_w(F_p)$ assumes the shape of an S, rather than an inverse-S, as shown in \fref{mapping_pdfs_cdfs_Sshape} (compare with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$). The prediction of an S curve under such conditions is an empirically testable prediction with discriminating power: it does not arise under the classical interpretation of probability weighting.
-
-Another common case might be when there is no ``true" model, \eg, if the DO observes the choices of two DMs and expresses the implied densities as a function of the DM's whose model has relatively more uncertainty.
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=\textwidth]{./figs/mapping_pdfs_cdfs_Sshape.pdf}
-\caption{
-\textbf{Generating an S curve.} Analogues of \fref{mapping_pdfs} and \fref{mapping_cdfs} for the case $0<\alpha<1$.
-%Top left: probability density function (red), estimated by a DO; and weight density function (blue), estimated by a DM. The DO models $x$ with a best estimate for the scale (standard deviation) and assumes the true frequency distribution is the red line. The DM models $x$ with a smaller scale ($\alpha=1/2$), and assumes the true frequency distribution is the blue line. Comparing the two curves, the DM appears to the DO as someone who over-estimates probabilities of low-probability events and underestimates probabilities of high-probability events, indicated by vertical arrows.
-%Top right: the difference between weights and probabilities can be expressed by plotting the weight \vs the probability observed at $x$. This corresponds to a nonlinear distortion of the horizontal axis. The arrows on the left correspond to the same $x$-values as on the right, and thus start and end at identical vertical positions as on the left. They are shifted to different locations horizontally, due to the nonlinear distortion of the horizontal axis.
-%Bottom left: The DO assumes the observable $X$ follows Gaussian distribution $X \sim \ND(0,1)$, which results in the red CDF of the standard normal, $F_p(x) = \Phi_{0,1}(x)$. The DM is less cautious or have more information, so in her model $X$ follows a narrower Gaussian distribution, $X \sim \ND(0,1/4)$ depicted by $F_w(x)$ (blue).
-%Following the vertical arrows (left to right), we see that for low values of the event probability $x$ the DM's CDF is smaller than the DO's CDF, $F_p(x) > F_w(x)$; the curves coincide at 0.5 because no difference in location is assumed; necessarily for large values of the event probability $x$ the DM's CDF must be higher than the DO's.
-%Bottom right: the same CDFs as on the left but now plotted not against $x$ but against the CDF $F_p$. Trivially, the CDF $F_p$ plotted against itself is the diagonal; the CDF $F_w$ now displays an S-shaped curve rather than the typical inverse-S curve. The arrows start and end at the same vertical values as on the left. Compare figure with \fref{mapping_pdfs} and \fref{mapping_cdfs} for $\alpha>1$.
-}
-\flabel{mapping_pdfs_cdfs_Sshape}
-\end{figure}
 
 \end{document}
