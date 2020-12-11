@@ -6,7 +6,7 @@
 
 \usepackage{amsthm, amsmath, amssymb, mathrsfs, multirow, url}
 \usepackage{amsfonts} 
-\usepackage[blocks,auth-sc-lg,affil-it]{authblk}
+\usepackage[noblocks,auth-sc-lg]{authblk}
 \renewcommand\Affilfont{\itshape\small}
 \usepackage{caption}
 \usepackage{csquotes}
@@ -153,9 +153,11 @@ useprefix=true,																			% consider nobiliary particle von, van, de, et
 \newcommand{\YB}[1]{{\it ***YB: #1 YB***}}
 \renewcommand{\AA}[1]{{\it ***AA: #1 AA***}}
 
-
-\title{What are we weighting for? \\
-{\normalsize A mechanistic model for probability weighting\thanks{The code to generate the figures is available at \href{https://bit.ly/lml-pw-code}{bit.ly/lml-pw-code}.
+\title{%
+\vspace{-3em}
+What are we weighting for?\\
+\large{A mechanistic model for probability weighting}
+\thanks{The code to generate the figures is available at \url{https://bit.ly/lml-pw-code}.
 We benefited from comments by seminar participants at
 the Max Planck Institute (MPI) for Human Development, Berlin,
 MPI for Mathematics in the Sciences, Leipzig,
@@ -165,48 +167,72 @@ Erich-Schneider-Research-Seminar at Christian-Albrecht University of Kiel,
 Institute for Socioeconomics at University of Duisburg-Essen,
 and from conference participants at
 the first scientific workshop of the German Network for Pluralism in Economics
-and the D-TEA Conference 2020.
-}}}
+and the D-TEA Conference 2020.}
+}
 
-% Authors with Email addresses as footnotes
-%\author{Ole Peters\thanks{London Mathematical Laboratory and Santa Fe Institute,~\protect\url{o.peters@lml.org.uk}}\and Alexander Adamou\thanks{London Mathematical Laboratory,~\protect\url{a.adamou@lml.org.uk}}\and Mark Kirstein\thanks{London Mathematical Laboratory, Max-Planck-Institute for Mathematics in the Sciences, Leipzig and Institute of Mathematics, Leipzig University,~\protect\url{m.kirstein@lml.org.uk}}\and Yonatan Berman\thanks{London Mathematical Laboratory,~\protect\url{y.berman@lml.org.uk}}}
+% AUTHORS WITH EMAIL+AFFIL IN A FOOTNOTE EACH
+\author{\hfill Ole Peters\thanks{London Mathematical Laboratory and Santa Fe Institute, \texttt{\href{mailto:o.peters@lml.org.uk}{\Letter~o.peters@lml.org.uk}}}
+\hfill
+Alexander Adamou\thanks{London Mathematical Laboratory, \texttt{\href{mailto:a.adamou@lml.org.uk}{\Letter~a.adamou@lml.org.uk}}}
+\hfill
+Mark Kirstein\thanks{London Mathematical Laboratory, Institute of Mathematics at Leipzig University and Max-Planck-Institute for Mathematics in the Sciences, Leipzig, \texttt{\href{mailto:m.kirstein@lml.org.uk}{\Letter~m.kirstein@lml.org.uk}}}
+Yonatan Berman\thanks{London Mathematical Laboratory and Stone Center on Socio-Economic Inquality at City University New York, \texttt{\href{mailto:y.berman@lml.org.uk}{\Letter~y.berman@lml.org.uk}}}
+\hfill
+}
 
-\author[1,2]{Ole Peters\thanks{\texttt{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}}}}
-\author[1]{Alexander Adamou\thanks{\texttt{\href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}}}}
-\author[1,3,4]{Mark Kirstein\thanks{\texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}}}
-\author[1]{Yonatan Berman\thanks{\texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}}
+% AUTHORS WITH AFFIL BLOCK and EMAILS IN A SINGLE FOOTNOTE
+% \author[1,2]{Ole Peters}
+% \author[1]{Alexander Adamou}
+% \author[1,3,4]{Mark Kirstein}
+% \author[1]{Yonatan Berman%
+% \thanks{
+% \texttt{
+% \href{mailto:o.peters@lml.org.uk}{\Letter~o.peters@lml.org.uk}
+% \href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}
+% \href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}
+% \href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}
+% }}
+% }
+
+% AUTHORS WITH AFFIL BLOCK and EMAILS IN A FOOTNOTE EACH
+% \author[1,2]{Ole Peters\thanks{\texttt{\href{mailto:o.peters@lml.org.uk}{~\Letter~o.peters@lml.org.uk}}}}
+% \author[1]{Alexander Adamou\thanks{\texttt{\href{mailto:a.adamou@lml.org.uk}{~\Letter~a.adamou@lml.org.uk}}}}
+% \author[1,3,4]{Mark Kirstein\thanks{\texttt{\href{mailto:m.kirstein@lml.org.uk}{~\Letter~m.kirstein@lml.org.uk}}}}
+% \author[1]{Yonatan Berman\thanks{\texttt{\href{mailto:y.berman@lml.org.uk}{~\Letter~y.berman@lml.org.uk}}}}
+
+% SHORT VERSIONS OF THE AFFILIATIONS
+% \affil[1]{London Mathematical Laboratory, UK}
+% \affil[2]{Santa Fe Institute, NM, USA}
+% \affil[3]{Max-Planck-Institute for Mathematics in the Sciences, Leipzig, Germany}
+% \affil[4]{Institute of Mathematics, Leipzig University, Germany}
+% \affil[5]{Stone Center on Socio-Economic Inequality, City University of New York, NY, USA}
+
+% LONGER VERSIONS OF THE AFFILIATIONS
 % \affil[1]{London Mathematical Laboratory, 8 Margravine Gardens, London W6 8RH, UK}
-\affil[1]{London Mathematical Laboratory, UK} % short version
-
 % \affil[2]{Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, 87501 NM, USA}
-\affil[2]{Santa Fe Institute, NM, USA} % short version
 % \affil[3]{Max-Planck-Institute for Mathematics in the Sciences, Inselstraße 22, D-04103 Leipzig, Germany}
-\affil[3]{Max-Planck-Institute for Mathematics in the Sciences, Leipzig, Germany} % short version
 % \affil[4]{Institute of Mathematics, Augustusplatz 10, D-04109 Leipzig University}
-\affil[4]{Institute of Mathematics, Leipzig University, Germany} % short version
 % \affil[5]{The Graduate Center and Stone Center on Socio-Economic Inequality, City University of New York}
-%\affil[5]{Stone Center on Socio-Economic Inequality, City University of New York, NY, USA}
 
-%
-\date{}
+% \date{\today}
 
 \begin{document}
 \begin{titlepage}
 	\maketitle
 %\thispagestyle{fancy}
-
+% \vspace{-1em}
 \begin{abstract}
 \noindent Probability weighting expresses a mismatch between probabilities specified in a model and weights inferred from human decisions. Typically weights are larger than probabilities for rare events and smaller for common events in experiments. This is presented as a cognitive bias of decision makers. We provide an alternative interpretation: decision makers and observers have different uncertainty about events. We offer a mechanism generating differences in uncertainty: when a decision maker estimates probabilities as frequencies while the observer knows them \textit{a priori}. We argue that many phenomena labelled as probability weighting may be principled responses to uncertainties unaccounted for in observer models.
-\\
-\\
-\noindent\textbf{Keywords:}~ Decision Theory, Prospect Theory, Probability Weighting, Ergodicity Economics
-\\
-\noindent\textbf{JEL Codes:} C61, D01, D81\\
+(\textit{JEL} C61, D01, D81)
+% \\
+% \noindent\textbf{Keywords:}~ Probability Weighting, Ergodicity Economics
+% \\
+% \noindent\textbf{JEL Codes:} C61, D01, D81\\
 \bigskip
 \end{abstract}
 \end{titlepage}
  
-%\setcounter{page}{2}		% titlepage=page 1, continue with page 2
+\setcounter{page}{2}		% titlepage=page 1, continue with page 2
 
 \section{Introduction}
 ``Probability weighting'' is a concept that originated in psychology, going back at least to \textcite{PrestonBaratta1948}.
